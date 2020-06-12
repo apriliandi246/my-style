@@ -1,0 +1,23 @@
+.quote {
+   width: 900px;
+   margin: 50px auto;
+   box-sizing: border-box;
+}
+
+.quote blockquote {
+   padding: 15px;
+   line-height: 25px;
+   font-style: italic;
+   background-color: whitesmoke;
+   quotes: "\201C""\201D""\2018""\2019";
+   border-left: 10px solid rgb(204, 204, 204);
+}
+
+.quote blockquote:before {
+   color: #ccc;
+   font-size: 4em;
+   line-height: 0.1em;
+   content: open-quote;
+   margin-right: 0.25em;
+   vertical-align: -0.4em;
+}
