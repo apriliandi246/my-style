@@ -1,0 +1,18 @@
+body {
+   background-color: rgb(21, 32, 43);
+}
+
+nav {
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(21, 32, 43);
+   box-shadow: 0 0 2px 4px rgba(64, 74, 77, 0.2);
+}
+
+nav .logo {
+   font-size: 28px;
+   color: whitesmoke;
+   font-family: monospace;
+}
