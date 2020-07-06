@@ -11,6 +11,12 @@ form .input-form {
    margin-top: 32px;
 }
 
+form .input-form label {
+   font-size: 20px;
+   font-weight: 520;
+   font-family: monospace;
+}
+
 form .input-form input {
    width: 100%;
    border: none;
@@ -32,11 +38,6 @@ form .input-form input::placeholder {
    font-family: monospace;
 }
 
-form .input-form label {
-   font-size: 20px;
-   font-family: monospace;
-}
-
 form button {
    width: 100%;
    padding: 10px;
@@ -45,8 +46,8 @@ form button {
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
-   margin-bottom: 10px;
    color: whitesmoke;
+   margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
    background-color: rgb(37, 51, 65);

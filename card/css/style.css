@@ -3,7 +3,7 @@
 }
 
 .card {
-   width: 660px;
+   width: 620px;
    box-sizing: border-box;
    border: 1px solid #38444d;
    background-color: rgb(25, 39, 52);
@@ -19,14 +19,15 @@
    padding: 15px;
    margin-top: 3px;
    margin-bottom: 4px;
+   letter-spacing: 2px;
 }
 
 .card .head img {
+   float: left;
    width: 50px;
    height: 50px;
-   float: left;
    border-radius: 50%;
-   border: 1px solid #38444d;
+   border: 2px solid #38444d;
 }
 
 .card .head a {
@@ -58,7 +59,7 @@
 
 .card .description {
    padding: 15px;
-   font-size: 19px;
+   font-size: 17px;
    line-height: 25px;
    color: whitesmoke;
    margin-top: -18px;
@@ -69,10 +70,9 @@
 }
 
 .card .footer {
-   z-index: 5;
    float: right;
    padding: 15px;
    color: white;
-   font-size: 18px;
+   font-size: 17px;
    font-family: monospace;
 }

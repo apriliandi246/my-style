@@ -6,7 +6,8 @@
 
 .quote blockquote {
    padding: 15px;
-   line-height: 25px;
+   font-size: 20px;
+   line-height: 28px;
    font-style: italic;
    background-color: whitesmoke;
    quotes: "\201C""\201D""\2018""\2019";
@@ -15,9 +16,9 @@
 
 .quote blockquote:before {
    color: #ccc;
-   font-size: 4em;
-   line-height: 0.1em;
+   font-size: 80px;
+   line-height: 7px;
+   margin-right: 8px;
    content: open-quote;
-   margin-right: 0.25em;
    vertical-align: -0.4em;
 }

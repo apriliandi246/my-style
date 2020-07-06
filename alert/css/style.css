@@ -1,7 +1,7 @@
 .alert {
    margin: auto;
    width: 500px;
-   padding: 13px;
+   padding: 10px;
    font-size: 16px;
    font-weight: bold;
    color: whitesmoke;
@@ -15,6 +15,11 @@
 }
 
 .alert span {
+   padding: 3px;
    cursor: pointer;
    font-size: 20px;
+}
+
+.alert span:hover {
+   text-decoration: underline;
 }
