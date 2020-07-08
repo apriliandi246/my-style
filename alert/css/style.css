@@ -18,8 +18,9 @@
    padding: 3px;
    cursor: pointer;
    font-size: 20px;
+   transition: .1s;
 }
 
 .alert span:hover {
-   text-decoration: underline;
+   transform: scale(1.2, 1.2);
 }

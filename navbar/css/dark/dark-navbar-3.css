@@ -4,11 +4,11 @@ body {
 
 nav {
    height: 70px;
+   background-color: rgb(21, 32, 43);
+   box-shadow: 0 0 2px 4px rgba(64, 74, 77, 0.2);
    display: flex;
    align-items: center;
    justify-content: center;
-   background-color: rgb(21, 32, 43);
-   box-shadow: 0 0 2px 4px rgba(64, 74, 77, 0.2);
 }
 
 nav .logo {
