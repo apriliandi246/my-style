@@ -1,3 +1,7 @@
+body {
+   background-color: rgb(21, 32, 43);
+}
+
 .card {
    margin: 90px auto;
 }
@@ -11,8 +15,8 @@
 
 .card::after {
    content: "";
-   display: block;
    clear: both;
+   display: block;
 }
 
 .card .head {

@@ -1,8 +1,12 @@
+body {
+   background-color: whitesmoke;
+}
+
 .quote {
    width: 900px;
    margin: 50px auto;
-   color: whitesmoke;
    box-sizing: border-box;
+   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .quote blockquote {
@@ -10,13 +14,13 @@
    font-size: 20px;
    line-height: 28px;
    font-style: italic;
-   background-color: rgb(25, 39, 52);
+   background-color: whitesmoke;
    quotes: "\201C""\201D""\2018""\2019";
-   border-left: 10px solid #38444d;
+   border-left: 10px solid rgb(204, 204, 204);
 }
 
 .quote blockquote:before {
-   color: white;
+   color: #ccc;
    font-size: 80px;
    line-height: 7px;
    margin-right: 8px;

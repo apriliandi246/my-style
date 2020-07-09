@@ -1,6 +1,11 @@
+body {
+   background-color: rgb(21, 32, 43);
+}
+
 .container form {
    margin: 50px auto;
 }
+
 
 form {
    width: 360px;
@@ -14,6 +19,7 @@ form .input-form {
 form .input-form label {
    font-size: 20px;
    font-weight: 520;
+   color: whitesmoke;
    font-family: monospace;
 }
 
@@ -28,6 +34,7 @@ form .input-form input {
    color: whitesmoke;
    box-sizing: border-box;
    background-color: rgb(37, 51, 65);
+   transition: .2s;
 }
 
 form .input-form input:focus {
@@ -40,9 +47,9 @@ form .input-form input::placeholder {
 
 form button {
    width: 100%;
-   padding: 10px;
    border: none;
    outline: none;
+   padding: 10px;
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;

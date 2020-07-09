@@ -1,7 +1,6 @@
-const close = document.querySelectorAll('.alert span');
-
-close.forEach(el => {
-   el.addEventListener('click', function () {
-      el.parentElement.remove();
+document.querySelectorAll('.alert span')
+   .forEach((el) => {
+      el.addEventListener('click', function () {
+         el.parentElement.remove();
+      });
    });
-});
