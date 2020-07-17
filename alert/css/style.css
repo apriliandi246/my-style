@@ -18,10 +18,10 @@
    padding: 3px;
    cursor: pointer;
    font-size: 20px;
-   transition: .1s;
+   transition: .2s;
    font-family: monospace;
 }
 
 .alert span:hover {
-   transform: scale(1.2, 1.2);
+   color: #38444d;
 }
