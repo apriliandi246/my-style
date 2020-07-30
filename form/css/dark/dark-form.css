@@ -12,29 +12,28 @@ form {
 }
 
 form .input-form {
-   color: black;
    margin-top: 32px;
 }
 
 form .input-form label {
+   color: white;
    font-size: 20px;
    font-weight: 520;
-   color: whitesmoke;
    font-family: monospace;
 }
 
 form .input-form input {
    width: 100%;
    border: none;
+   color: white;
    padding: 12px;
    outline: none;
    display: block;
    font-size: 17px;
+   transition: .2s;
    margin-top: 15px;
-   color: whitesmoke;
    box-sizing: border-box;
    background-color: rgb(37, 51, 65);
-   transition: .2s;
 }
 
 form .input-form input:focus {
@@ -49,38 +48,35 @@ form button {
    width: 100%;
    border: none;
    outline: none;
+   color: white;
    padding: 10px;
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
-   color: whitesmoke;
+   transition: 0.2s;
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
    background-color: rgb(37, 51, 65);
-   transition: 0.2s;
-}
-
-form button:hover {
-   background-color: #38444d;
 }
 
 form a {
    width: 100%;
    border: none;
+   color: white;
    padding: 11px;
    outline: none;
    display: block;
    font-size: 18px;
    margin-top: 16px;
    text-align: center;
-   color: whitesmoke;
    text-decoration: none;
    font-family: monospace;
    box-sizing: border-box;
    background-color: rgb(37, 51, 65);
 }
 
+form button:hover,
 form a:hover {
    background-color: #38444d;
 }

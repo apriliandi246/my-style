@@ -1,7 +1,9 @@
 const modal = document.querySelector('.modal-area');
+const modalCancelButton = document.querySelector('button.cancel-btn');
+const modalTrigger = document.querySelector('.trigger');
 
-document.querySelector('.trigger').addEventListener('click', opeModal);
-document.querySelector('button.cancel-btn').addEventListener('click', closeModal);
+modalTrigger.addEventListener('click', opeModal);
+modalCancelButton.addEventListener('click', closeModal);
 
 function opeModal() {
    modal.style.display = 'block';

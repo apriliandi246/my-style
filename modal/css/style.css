@@ -1,9 +1,9 @@
 button.trigger {
-   display: block;
-   margin: 60px auto;
    padding: 10px;
-   font-size: 16px;
+   display: block;
    cursor: pointer;
+   font-size: 16px;
+   margin: 60px auto;
 }
 
 .modal-area {
@@ -19,7 +19,7 @@ button.trigger {
 }
 
 .modal {
-   width: 400px;
+   width: 600px;
    padding: 10px;
    color: white;
    margin: 10% auto;

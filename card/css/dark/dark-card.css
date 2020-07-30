@@ -19,22 +19,22 @@ body {
    display: block;
 }
 
-.card .head {
+.card .card-head {
    padding: 15px;
    margin-top: 3px;
    margin-bottom: 4px;
    letter-spacing: 2px;
 }
 
-.card .head img {
+.card .card-head img {
    float: left;
    width: 50px;
    height: 50px;
-   border-radius: 50%;
+   border-radius: 100%;
    border: 2px solid #38444d;
 }
 
-.card .head a {
+.card .card-head a {
    float: left;
    color: white;
    font-size: 19px;
@@ -46,26 +46,26 @@ body {
    transition: 0.1s;
 }
 
-.card .head a:hover {
+.card .card-head a:hover {
    color: blueviolet;
 }
 
-.card .image {
+.card .card-image {
    margin-top: 55px;
    text-align: center;
    margin-bottom: 13px;
 }
 
-.card .image img {
+.card .card-image img {
    width: 100%;
    height: 100%;
 }
 
-.card .description {
-   padding: 15px;
+.card .card-description {
+   color: white;
+   padding: 17px;
    font-size: 17px;
    line-height: 25px;
-   color: whitesmoke;
    margin-top: -18px;
    margin-bottom: 17px;
    white-space: pre-line;
@@ -73,7 +73,7 @@ body {
    font-family: Arial, Helvetica, sans-serif;
 }
 
-.card .footer {
+.card .card-footer {
    float: right;
    padding: 15px;
    color: white;
