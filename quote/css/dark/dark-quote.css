@@ -15,9 +15,9 @@ blockquote.dark-quote {
    font-style: italic;
    box-sizing: border-box;
    border: 1px solid #38444d;
+   border-left: 10px solid #38444d;
    background-color: rgb(25, 39, 52);
    quotes: "\201C""\201D""\2018""\2019";
-   border-left: 10px solid #38444d;
 }
 
 blockquote.dark-quote::before {

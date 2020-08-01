@@ -2,31 +2,31 @@ body {
    background-color: rgb(21, 32, 43);
 }
 
-.card {
+.dark-card {
    margin: 90px auto;
 }
 
-.card {
+.dark-card {
    width: 620px;
    box-sizing: border-box;
    border: 1px solid #38444d;
    background-color: rgb(25, 39, 52);
 }
 
-.card::after {
+.dark-card::after {
    content: "";
    clear: both;
    display: block;
 }
 
-.card .card-head {
+.dark-card .card-head {
    padding: 15px;
    margin-top: 3px;
    margin-bottom: 4px;
    letter-spacing: 2px;
 }
 
-.card .card-head img {
+.dark-card .card-head img {
    float: left;
    width: 50px;
    height: 50px;
@@ -34,7 +34,7 @@ body {
    border: 2px solid #38444d;
 }
 
-.card .card-head a {
+.dark-card .card-head a {
    float: left;
    color: white;
    font-size: 19px;
@@ -46,22 +46,22 @@ body {
    transition: 0.1s;
 }
 
-.card .card-head a:hover {
+.dark-card .card-head a:hover {
    color: blueviolet;
 }
 
-.card .card-image {
+.dark-card .card-image {
    margin-top: 55px;
    text-align: center;
    margin-bottom: 13px;
 }
 
-.card .card-image img {
+.dark-card .card-image img {
    width: 100%;
    height: 100%;
 }
 
-.card .card-description {
+.dark-card .card-description {
    color: white;
    padding: 17px;
    font-size: 17px;
@@ -73,7 +73,7 @@ body {
    font-family: Arial, Helvetica, sans-serif;
 }
 
-.card .card-footer {
+.dark-card .card-footer {
    float: right;
    padding: 15px;
    color: white;
