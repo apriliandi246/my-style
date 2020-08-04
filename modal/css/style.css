@@ -1,9 +1,27 @@
+body {
+   background-color: rgb(21, 32, 43);
+}
+
+
 button.trigger {
+   border: none;
+   outline: none;
+   color: white;
    padding: 10px;
    display: block;
    cursor: pointer;
-   font-size: 16px;
+   font-size: 18px;
+   margin-top: 45px;
+   transition: 0.2s;
    margin: 60px auto;
+   margin-bottom: 10px;
+   font-family: monospace;
+   box-sizing: border-box;
+   background-color: rgb(37, 51, 65);
+}
+
+button.trigger:hover {
+   background-color: #38444d;
 }
 
 .modal-area {
@@ -24,7 +42,7 @@ button.trigger {
    color: white;
    margin: 10% auto;
    font-family: monospace;
-   border: 2px solid whitesmoke;
+   border: 1px solid rgb(194, 181, 181);
    background-color: rgb(41, 47, 54);
 }
 
@@ -50,6 +68,7 @@ button.trigger {
    padding: 10px;
    cursor: pointer;
    font-size: 16px;
+   transition: 0.2s;
    margin-right: 18px;
    color: whitesmoke;
    font-family: monospace;
@@ -58,6 +77,5 @@ button.trigger {
 }
 
 .modal .modal-footer button:hover {
-   transition: 0.2s;
    background-color: #38444d;
 }

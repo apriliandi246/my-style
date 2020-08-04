@@ -1,5 +1,13 @@
+/* for centering the component */
+.container {
+   width: 600px;
+   margin: 50px auto;
+   text-align: center;
+}
+
+
+
 .alert {
-   margin: auto;
    width: 500px;
    padding: 10px;
    display: flex;

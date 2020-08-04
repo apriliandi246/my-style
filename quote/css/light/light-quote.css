@@ -2,10 +2,12 @@ body {
    background-color: whitesmoke;
 }
 
-.quote {
+.container {
    width: 900px;
    margin: 50px auto;
 }
+
+
 
 blockquote.light-quote {
    padding: 15px;

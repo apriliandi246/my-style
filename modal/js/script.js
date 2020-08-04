@@ -1,14 +1,11 @@
 const modal = document.querySelector('.modal-area');
+const triggerButton = document.querySelector('.trigger');
 const modalCancelButton = document.querySelector('button.cancel-btn');
-const modalTrigger = document.querySelector('.trigger');
 
-modalTrigger.addEventListener('click', opeModal);
-modalCancelButton.addEventListener('click', closeModal);
-
-function opeModal() {
+triggerButton.addEventListener('click', function () {
    modal.style.display = 'block';
-}
+});
 
-function closeModal() {
+modalCancelButton.addEventListener('click', function () {
    modal.style.display = 'none';
-}
+});

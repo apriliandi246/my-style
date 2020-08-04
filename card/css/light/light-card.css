@@ -2,21 +2,18 @@ body {
    background-color: whitesmoke;
 }
 
+/* for centering the component */
 .light-card {
    margin: 90px auto;
 }
+
+
 
 .light-card {
    width: 620px;
    box-sizing: border-box;
    background-color: #fafafa;
    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
-}
-
-.light-card::after {
-   content: "";
-   clear: both;
-   display: block;
 }
 
 .light-card .head {
@@ -40,15 +37,15 @@ body {
    color: black;
    font-size: 19px;
    margin-top: 15px;
+   transition: 0.2s;
    margin-left: 18px;
    text-align: center;
    text-decoration: none;
    font-family: sans-serif;
-   transition: 0.1s;
 }
 
 .light-card .head a:hover {
-   color: blueviolet;
+   color: blue;
 }
 
 .light-card .image {
