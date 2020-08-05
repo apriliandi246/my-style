@@ -42,8 +42,8 @@ button.trigger:hover {
    color: white;
    margin: 10% auto;
    font-family: monospace;
+   background-color: rgb(44, 50, 58);
    border: 1px solid rgb(194, 181, 181);
-   background-color: rgb(41, 47, 54);
 }
 
 .modal .modal-head {

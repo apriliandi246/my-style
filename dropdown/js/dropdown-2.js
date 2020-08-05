@@ -1,13 +1,20 @@
-const dropdownBtn = document.querySelector('button.dropbtn');
+const dropdownBtn = document.querySelector('button.dropdown-btn');
 const dropdownContent = document.querySelector('.dropdown-content');
 
 dropdownBtn.addEventListener('click', () => {
    if (dropdownContent.style.display === '' || dropdownContent.style.display === 'none') {
       statusDisplay('block');
-      setBgColor('red');
+      setFontColor('blueviolet');
    } else {
       statusDisplay('none');
-      setBgColor('inherit');
+      setFontColor('white');
+   }
+});
+
+window.addEventListener('click', (event) => {
+   if (event.target !== dropdownBtn) {
+      statusDisplay('none');
+      setFontColor('white');
    }
 });
 
@@ -15,6 +22,6 @@ function statusDisplay(value) {
    dropdownContent.style.display = value;
 }
 
-function setBgColor(value) {
-   dropdownBtn.style.backgroundColor = value;
+function setFontColor(value) {
+   dropdownBtn.style.color = value;
 }

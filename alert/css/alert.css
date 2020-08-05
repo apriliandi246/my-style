@@ -1,3 +1,7 @@
+body {
+   background-color: rgb(21, 32, 43);
+}
+
 /* for centering the component */
 .container {
    width: 600px;
@@ -26,7 +30,7 @@
    padding: 3px;
    cursor: pointer;
    font-size: 20px;
-   transition: .2s;
+   transition: 0.4s;
    font-family: monospace;
 }
 

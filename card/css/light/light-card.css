@@ -11,6 +11,7 @@ body {
 
 .light-card {
    width: 620px;
+   color: black;
    box-sizing: border-box;
    background-color: #fafafa;
    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
@@ -28,7 +29,7 @@ body {
    width: 50px;
    height: 50px;
    border-radius: 50%;
-   border: 1px solid rgb(243, 235, 234);
+   border: 2px solid rgb(243, 235, 234);
    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -45,7 +46,7 @@ body {
 }
 
 .light-card .head a:hover {
-   color: blue;
+   color: blueviolet;
 }
 
 .light-card .image {
@@ -60,7 +61,6 @@ body {
 }
 
 .light-card .description {
-   color: black;
    padding: 15px;
    font-size: 17px;
    line-height: 25px;
@@ -74,7 +74,6 @@ body {
 .light-card .footer {
    float: right;
    padding: 15px;
-   color: black;
    font-size: 17px;
    font-family: monospace;
 }
