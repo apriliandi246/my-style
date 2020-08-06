@@ -43,7 +43,7 @@ button.trigger:hover {
    margin: 10% auto;
    font-family: monospace;
    background-color: rgb(44, 50, 58);
-   border: 1px solid rgb(194, 181, 181);
+   box-shadow: 0 0 10px 5px rgba(64, 74, 77, 0.2);
 }
 
 .modal .modal-head {
