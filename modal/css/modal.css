@@ -2,6 +2,9 @@ body {
    background-color: rgb(21, 32, 43);
 }
 
+:root {
+   --modal-width: 600px;
+}
 
 button.trigger {
    border: none;
@@ -37,7 +40,7 @@ button.trigger:hover {
 }
 
 .modal {
-   width: 600px;
+   width: var(--modal-width);
    padding: 10px;
    color: white;
    margin: 10% auto;

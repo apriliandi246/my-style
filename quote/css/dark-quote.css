@@ -2,13 +2,12 @@ body {
    background-color: rgb(21, 32, 43);
 }
 
+
 /* for centering components */
 .container {
    width: 900px;
    margin: 50px auto;
 }
-
-
 
 blockquote.dark-quote {
    color: white;

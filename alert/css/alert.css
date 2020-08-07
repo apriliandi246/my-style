@@ -2,6 +2,11 @@ body {
    background-color: rgb(21, 32, 43);
 }
 
+
+:root {
+   --alert-width: 500px;
+}
+
 /* for centering the component */
 .container {
    width: 600px;
@@ -9,10 +14,8 @@ body {
    text-align: center;
 }
 
-
-
 .alert {
-   width: 500px;
+   width: var(--alert-width);
    padding: 10px;
    display: flex;
    font-size: 16px;

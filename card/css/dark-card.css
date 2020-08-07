@@ -2,15 +2,19 @@ body {
    background-color: rgb(21, 32, 43);
 }
 
+
+
+:root {
+   --dark-card-width: 620px;
+}
+
 /* for centering the component */
 .dark-card {
    margin: 90px auto;
 }
 
-
-
 .dark-card {
-   width: 620px;
+   width: var(--dark-card-width);
    color: white;
    box-sizing: border-box;
    border: 1px solid #38444d;

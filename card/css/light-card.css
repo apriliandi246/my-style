@@ -2,15 +2,18 @@ body {
    background-color: whitesmoke;
 }
 
+
+:root {
+   --light-card-width: 620px;
+}
+
 /* for centering the component */
 .light-card {
    margin: 90px auto;
 }
 
-
-
 .light-card {
-   width: 620px;
+   width: var(--light-card-width);
    color: black;
    box-sizing: border-box;
    background-color: #fafafa;

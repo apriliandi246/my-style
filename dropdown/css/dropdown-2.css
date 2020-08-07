@@ -2,12 +2,16 @@ body {
    background-color: rgb(21, 32, 43);
 }
 
+
+:root {
+   --dropdown-content-width: 160px;
+}
+
 /* for centering the component */
 .container {
    width: 200px;
    margin: 10px auto;
 }
-
 
 .dropdown button.dropdown-btn {
    border: none;
@@ -30,7 +34,7 @@ body {
 
 .dropdown .dropdown-content {
    z-index: 1;
-   width: 160px;
+   width: var(--dropdown-content-width);
    display: none;
    font-size: 18px;
    position: absolute;

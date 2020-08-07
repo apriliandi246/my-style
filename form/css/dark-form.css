@@ -2,16 +2,20 @@ body {
    background-color: rgb(21, 32, 43);
 }
 
+
+
+:root {
+   --dark-form-width: 370px;
+}
+
 /* for centering the component */
 .container {
    width: 400px;
-   margin: 50px auto;
+   margin: 80px auto;
 }
 
-
-
 form {
-   width: 370px;
+   width: var(--dark-form-width);
 }
 
 form .input-form {

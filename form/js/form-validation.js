@@ -2,7 +2,6 @@ const button = document.querySelector('button');
 const inputs = document.querySelectorAll('input');
 const [username, email, password, confirmPassword] = inputs;
 
-
 // regex patterns
 const patterns = {
    name: /^[\S*]{5,12}$/i,
@@ -10,7 +9,6 @@ const patterns = {
    confirmPassword: /^[\w@-]{6,}$/,
    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
 }
-
 
 // check all of inputs
 inputs.forEach((input) => {
@@ -20,7 +18,6 @@ inputs.forEach((input) => {
       validate();
    });
 });
-
 
 // add valid class or invalid class in input
 function addClass(input, regex) {
@@ -33,7 +30,6 @@ function addClass(input, regex) {
       input.classList.remove('valid');
    }
 }
-
 
 // check password input and confirm password input
 function checkPasswordInput() {
@@ -55,7 +51,6 @@ function checkPasswordInput() {
    }
 }
 
-
 // check all of input field
 function validate() {
    if (
@@ -70,7 +65,6 @@ function validate() {
       setStatusButton(true, 'default');
    }
 }
-
 
 // set disbaled status and cursor style button
 function setStatusButton(status, cursorStyle) {
