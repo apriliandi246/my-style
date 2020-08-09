@@ -1,0 +1,31 @@
+body {
+   background-color: rgb(21, 32, 43);
+}
+
+
+/* for centering the component */
+.container {
+   width: 300px;
+   margin: 40px auto;
+}
+
+select {
+   width: 100%;
+   border: none;
+   color: white;
+   outline: none;
+   padding: 12px;
+   cursor: pointer;
+   font-size: 16px;
+   transition: 0.2s;
+   -moz-appearance: none;
+   box-sizing: border-box;
+   font-family: monospace;
+   text-align-last: center;
+   -webkit-appearance: none;
+   background-color: rgb(37, 51, 65);
+}
+
+select:hover {
+   background-color: #38444d;
+}
