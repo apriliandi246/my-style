@@ -117,7 +117,7 @@ input.invalid+p {
    opacity: 1;
    height: auto;
    color: orangered;
-   transition: 0.2s;
+   transition: 0.3s;
    margin-top: 10px;
    font-size: 16.5px;
    line-height: 23px;
