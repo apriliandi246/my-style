@@ -12,8 +12,8 @@ body {
    height: 60px;
    margin-top: -30px;
    margin-left: -30px;
-   border-radius: 50%;
    position: absolute;
+   border-radius: 100%;
    box-sizing: border-box;
    border: 4px solid blueviolet;
    border-top-color: white;
@@ -29,13 +29,13 @@ body {
    height: 60px;
    margin-top: -30px;
    margin-left: -30px;
-   border-radius: 50%;
    position: absolute;
+   border-radius: 100%;
    box-sizing: border-box;
-   border: 4px solid white;
+   border: 5px solid #38444d;
    border-top-color: blueviolet;
    border-bottom-color: blueviolet;
-   animation: spinner 1s linear infinite;
+   animation: spinner 0.8s linear infinite;
 }
 
 /* Spinner 3 */
@@ -47,12 +47,12 @@ body {
    height: 65px;
    margin-top: -30px;
    margin-left: -30px;
-   border-radius: 50%;
    position: absolute;
+   border-radius: 100%;
    box-sizing: border-box;
    border-top: 4px solid blueviolet;
    border-right: 4px solid transparent;
-   animation: spinner 1s linear infinite;
+   animation: spinner 0.8s linear infinite;
 }
 
 
@@ -65,16 +65,15 @@ body {
    height: 65px;
    margin-top: -30px;
    margin-left: -30px;
-   border-radius: 50%;
    position: absolute;
+   border-radius: 100%;
    box-sizing: border-box;
-   border-top: 8px solid red;
-   border-right: 8px solid orange;
-   border-bottom: 8px solid green;
-   border-left: 8px solid blueviolet;
-   animation: spinner 1s linear infinite;
+   border-top: 7px solid red;
+   border-right: 7px solid orange;
+   border-bottom: 7px solid green;
+   border-left: 7px solid blueviolet;
+   animation: spinner 0.8s linear infinite;
 }
-
 
 @keyframes spinner {
    to {
