@@ -1,0 +1,53 @@
+body {
+   background-color: rgb(21, 32, 43);
+}
+
+:root {
+   --close-btn-space: 13px 15px 0 0;
+}
+
+
+/* for centering the component */
+.container {
+   width: 500px;
+   margin: 70px auto;
+   text-align: center;
+}
+
+.search-input {
+   position: relative;
+}
+
+.search-input input {
+   width: 100%;
+   border: none;
+   color: white;
+   padding: 12px;
+   outline: none;
+   display: block;
+   font-size: 17px;
+   transition: 0.2s;
+   margin-top: 15px;
+   box-sizing: border-box;
+   background-color: rgb(37, 51, 65);
+}
+
+.search-input input:focus {
+   background-color: #38444d;
+}
+
+.search-input input::placeholder {
+   font-family: monospace;
+}
+
+span.clear-btn {
+   top: 0;
+   right: 0;
+   opacity: 0;
+   color: white;
+   cursor: pointer;
+   font-size: 18px;
+   position: absolute;
+   margin: var(--close-btn-space);
+   font-family: sans-serif;
+}

@@ -32,11 +32,11 @@ body {
 .alert span {
    padding: 3px;
    cursor: pointer;
-   font-size: 20px;
-   transition: 0.4s;
-   font-family: monospace;
+   font-size: 18px;
+   transition: 0.2s;
+   font-family: sans-serif;
 }
 
 .alert span:hover {
-   color: orange;
+   color: rgb(21, 32, 43);
 }
