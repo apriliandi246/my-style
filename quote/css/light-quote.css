@@ -1,5 +1,5 @@
 body {
-   background-color: whitesmoke;
+   background-color: #f5f5f5;
 }
 
 
@@ -17,8 +17,8 @@ blockquote.light-quote {
    box-sizing: border-box;
    background-color: #fafafa;
    quotes: "\201C""\201D""\2018""\2019";
-   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
-   border-left: 10px solid rgb(204, 204, 204);
+   box-shadow: 0 0 3px 1px #0000001a;
+   border-left: 10px solid #cccccc;
 }
 
 blockquote.light-quote::before {

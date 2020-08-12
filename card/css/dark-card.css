@@ -1,5 +1,5 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202b;
 }
 
 
@@ -18,7 +18,7 @@ body {
    color: white;
    box-sizing: border-box;
    border: 1px solid #38444d;
-   background-color: rgb(25, 39, 52);
+   background-color: #192734;
 }
 
 .dark-card .card-head {
@@ -38,18 +38,18 @@ body {
 
 .dark-card .card-head a {
    float: left;
-   color: white;
+   color: #ffffff;
    font-size: 19px;
    margin-top: 15px;
-   transition: 0.2s;
    margin-left: 18px;
    text-align: center;
    text-decoration: none;
+   transition: color 0.2s;
    font-family: sans-serif;
 }
 
 .dark-card .card-head a:hover {
-   color: blueviolet;
+   color: #8a2be2;
 }
 
 .dark-card .card-image {

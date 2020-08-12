@@ -1,5 +1,5 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202b;
 }
 
 :root {
@@ -21,15 +21,15 @@ body {
 .search-input input {
    width: 100%;
    border: none;
-   color: white;
+   color: #ffffff;
    padding: 12px;
    outline: none;
    display: block;
    font-size: 17px;
-   transition: 0.2s;
    margin-top: 15px;
    box-sizing: border-box;
-   background-color: rgb(37, 51, 65);
+   transition: background-color 0.2s;
+   background-color: #253341;
 }
 
 .search-input input:focus {
@@ -44,7 +44,7 @@ span.clear-btn {
    top: 0;
    right: 0;
    opacity: 0;
-   color: white;
+   color: #ffffff;
    cursor: pointer;
    font-size: 18px;
    position: absolute;

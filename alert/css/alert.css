@@ -1,5 +1,5 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202B;
 }
 
 
@@ -25,7 +25,7 @@ body {
    align-items: center;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: orangered;
+   background-color: #ff4500;
    justify-content: space-between;
 }
 
@@ -33,10 +33,10 @@ body {
    padding: 3px;
    cursor: pointer;
    font-size: 18px;
-   transition: 0.2s;
+   transition: color 0.2s;
    font-family: sans-serif;
 }
 
 .alert span:hover {
-   color: rgb(21, 32, 43);
+   color: #38444d;
 }

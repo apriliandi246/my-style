@@ -1,5 +1,5 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202b;
 }
 
 
@@ -10,7 +10,7 @@ body {
 }
 
 blockquote.dark-quote {
-   color: white;
+   color: #ffffff;
    padding: 15px;
    font-size: 20px;
    line-height: 28px;
@@ -18,7 +18,7 @@ blockquote.dark-quote {
    box-sizing: border-box;
    border: 1px solid #38444d;
    border-left: 10px solid #38444d;
-   background-color: rgb(25, 39, 52);
+   background-color: #192734;
    quotes: "\201C""\201D""\2018""\2019";
 }
 

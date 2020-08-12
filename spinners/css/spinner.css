@@ -1,5 +1,5 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202b;
 }
 
 
@@ -15,8 +15,8 @@ body {
    position: absolute;
    border-radius: 100%;
    box-sizing: border-box;
-   border: 4px solid blueviolet;
-   border-top-color: white;
+   border: 4px solid #8a2be2;
+   border-top-color: #ffffff;
    animation: spinner 1s linear infinite;
 }
 
@@ -33,8 +33,8 @@ body {
    border-radius: 100%;
    box-sizing: border-box;
    border: 5px solid #38444d;
-   border-top-color: blueviolet;
-   border-bottom-color: blueviolet;
+   border-top-color: #8a2be2;
+   border-bottom-color: #8a2be2;
    animation: spinner 0.8s linear infinite;
 }
 
@@ -50,7 +50,7 @@ body {
    position: absolute;
    border-radius: 100%;
    box-sizing: border-box;
-   border-top: 4px solid blueviolet;
+   border-top: 4px solid #8a2be2;
    border-right: 4px solid transparent;
    animation: spinner 0.8s linear infinite;
 }
@@ -68,10 +68,10 @@ body {
    position: absolute;
    border-radius: 100%;
    box-sizing: border-box;
-   border-top: 7px solid red;
-   border-right: 7px solid orange;
-   border-bottom: 7px solid green;
-   border-left: 7px solid blueviolet;
+   border-top: 7px solid #ff0000;
+   border-right: 7px solid #ffa500;
+   border-bottom: 7px solid #008000;
+   border-left: 7px solid #8a2be2;
    animation: spinner 0.8s linear infinite;
 }
 

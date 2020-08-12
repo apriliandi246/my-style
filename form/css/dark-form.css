@@ -1,7 +1,6 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202b;
 }
-
 
 
 :root {
@@ -23,7 +22,7 @@ form .input-form {
 }
 
 form .input-form label {
-   color: white;
+   color: #ffffff;
    font-size: 20px;
    font-weight: 520;
    font-family: monospace;
@@ -32,15 +31,15 @@ form .input-form label {
 form .input-form input {
    width: 100%;
    border: none;
-   color: white;
+   color: #ffffff;
    padding: 12px;
    outline: none;
    display: block;
    font-size: 17px;
-   transition: 0.2s;
    margin-top: 15px;
    box-sizing: border-box;
-   background-color: rgb(37, 51, 65);
+   transition: background-color 0.2s;
+   background-color: #253341;
 }
 
 form .input-form input:focus {
@@ -55,7 +54,7 @@ form button {
    width: 100%;
    border: none;
    outline: none;
-   color: white;
+   color: #ffffff;
    padding: 10px;
    cursor: pointer;
    font-size: 18px;
@@ -64,32 +63,33 @@ form button {
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: rgb(37, 51, 65);
+   background-color: #253341;
+   transition: color 0.2s, background-color 0.2s;
 }
 
 form a {
    width: 100%;
    border: none;
-   color: white;
+   color: #ffffff;
    padding: 11px;
    outline: none;
    display: block;
    font-size: 18px;
    margin-top: 16px;
-   transition: 0.2s;
    text-align: center;
    text-decoration: none;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: rgb(37, 51, 65);
+   background-color: #253341;
+   transition: color 0.2s, background-color 0.2s;
 }
 
 form button:hover,
 form a:hover {
-   color: lightskyblue;
-   background-color: rgb(25, 39, 52);
+   color: #87cefa;
+   background-color: #192734;
 }
 
 form hr {
-   border: 2px dashed rgb(37, 51, 65);
+   border: 2px dashed #253341;
 }

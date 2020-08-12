@@ -1,5 +1,5 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202b;
 }
 
 
@@ -12,18 +12,17 @@ body {
 select {
    width: 100%;
    border: none;
-   color: white;
+   color: #ffffff;
    outline: none;
    padding: 12px;
    cursor: pointer;
    font-size: 16px;
-   transition: 0.2s;
    -moz-appearance: none;
    box-sizing: border-box;
    font-family: monospace;
-   text-align-last: center;
    -webkit-appearance: none;
-   background-color: rgb(37, 51, 65);
+   transition: background-color 0.2s;
+   background-color: #253341;
 }
 
 select:hover {

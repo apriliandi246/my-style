@@ -1,5 +1,5 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202b;
 }
 
 
@@ -16,7 +16,7 @@ body {
 .dropdown button.dropdown-btn {
    border: none;
    outline: none;
-   color: white;
+   color: #ffffff;
    padding: 10px;
    cursor: pointer;
    font-size: 18px;
@@ -25,11 +25,11 @@ body {
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: rgb(37, 51, 65);
+   background-color: #253341;
 }
 
 .dropdown button.dropdown-btn:hover {
-   color: blueviolet;
+   color: #8a2be2;
 }
 
 .dropdown .dropdown-content {
@@ -40,12 +40,12 @@ body {
    position: absolute;
    font-family: monospace;
    background-color: #38444d;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   box-shadow: 0px 8px 16px 0px #00000033;
 }
 
 .dropdown .dropdown-content a {
    float: none;
-   color: white;
+   color: #ffffff;
    display: block;
    text-align: left;
    padding: 12px 16px;
@@ -54,5 +54,5 @@ body {
 
 .dropdown .dropdown-content a:hover {
    transition: 0.2;
-   color: blueviolet;
+   color: #8a2be2;
 }
