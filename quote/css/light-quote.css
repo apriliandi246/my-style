@@ -16,9 +16,9 @@ blockquote.light-quote {
    font-style: italic;
    box-sizing: border-box;
    background-color: #fafafa;
-   quotes: "\201C""\201D""\2018""\2019";
-   box-shadow: 0 0 3px 1px #0000001a;
    border-left: 10px solid #cccccc;
+   box-shadow: 0 0 3px 1px #0000001a;
+   quotes: "\201C""\201D""\2018""\2019";
 }
 
 blockquote.light-quote::before {

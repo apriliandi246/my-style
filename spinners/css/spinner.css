@@ -69,9 +69,9 @@ body {
    border-radius: 100%;
    box-sizing: border-box;
    border-top: 7px solid #ff0000;
+   border-left: 7px solid #8a2be2;
    border-right: 7px solid #ffa500;
    border-bottom: 7px solid #008000;
-   border-left: 7px solid #8a2be2;
    animation: spinner 0.8s linear infinite;
 }
 

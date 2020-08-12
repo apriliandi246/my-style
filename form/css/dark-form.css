@@ -31,10 +31,10 @@ form .input-form label {
 form .input-form input {
    width: 100%;
    border: none;
-   color: #ffffff;
    padding: 12px;
    outline: none;
    display: block;
+   color: #ffffff;
    font-size: 17px;
    margin-top: 15px;
    box-sizing: border-box;
@@ -54,8 +54,8 @@ form button {
    width: 100%;
    border: none;
    outline: none;
-   color: #ffffff;
    padding: 10px;
+   color: #ffffff;
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
@@ -70,10 +70,10 @@ form button {
 form a {
    width: 100%;
    border: none;
-   color: #ffffff;
    padding: 11px;
    outline: none;
    display: block;
+   color: #ffffff;
    font-size: 18px;
    margin-top: 16px;
    text-align: center;

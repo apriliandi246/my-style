@@ -12,17 +12,17 @@ body {
 select {
    width: 100%;
    border: none;
-   color: #ffffff;
    outline: none;
    padding: 12px;
+   color: #ffffff;
    cursor: pointer;
    font-size: 16px;
    -moz-appearance: none;
    box-sizing: border-box;
    font-family: monospace;
    -webkit-appearance: none;
-   transition: background-color 0.2s;
    background-color: #253341;
+   transition: background-color 0.2s;
 }
 
 select:hover {

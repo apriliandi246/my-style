@@ -1,5 +1,5 @@
 body {
-   background-color: rgb(21, 32, 43);
+   background-color: #15202b;
 }
 
 
@@ -22,7 +22,7 @@ form .input-form {
 }
 
 form .input-form label {
-   color: white;
+   color: #ffffff;
    font-size: 20px;
    font-weight: 520;
    font-family: monospace;
@@ -31,15 +31,15 @@ form .input-form label {
 form .input-form input {
    width: 100%;
    border: none;
-   color: white;
    padding: 12px;
    outline: none;
    display: block;
+   color: #ffffff;
    font-size: 17px;
    margin-top: 15px;
    box-sizing: border-box;
+   background-color: #253341;
    transition: background-color 0.2s;
-   background-color: rgb(37, 51, 65);
 }
 
 form .input-form input:focus {
@@ -54,15 +54,15 @@ form button {
    width: 100%;
    border: none;
    outline: none;
-   color: white;
    padding: 10px;
+   color: #ffffff;
    cursor: default;
    font-size: 18px;
    margin-top: 45px;
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: rgb(37, 51, 65);
+   background-color: #253341;
    transition: color 0.2s, background-color 0.2s;
 }
 
@@ -73,28 +73,28 @@ form button:disabled {
 form a {
    width: 100%;
    border: none;
-   color: white;
    padding: 11px;
    outline: none;
    display: block;
+   color: #ffffff;
    font-size: 18px;
    margin-top: 16px;
    text-align: center;
    text-decoration: none;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: rgb(37, 51, 65);
+   background-color: #253341;
    transition: color 0.2s, background-color 0.2s;
 }
 
 form button:hover,
 form a:hover {
-   color: lightskyblue;
-   background-color: rgb(25, 39, 52);
+   color: #87cefa;
+   background-color: #192734;
 }
 
 form hr {
-   border: 2px dashed rgb(37, 51, 65);
+   border: 2px dashed #253341;
 }
 
 
@@ -104,9 +104,9 @@ form hr {
 input+p {
    height: 0;
    opacity: 0;
+   color: #ff4500;
    font-size: 16px;
    transition: 0.2s;
-   color: orangered;
    line-height: 23px;
    text-align: center;
    font-family: monospace;
@@ -116,7 +116,7 @@ input+p {
 input.invalid+p {
    opacity: 1;
    height: auto;
-   color: orangered;
+   color: #ff4500;
    margin-top: 10px;
    font-size: 16.5px;
    line-height: 23px;

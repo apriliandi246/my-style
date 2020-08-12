@@ -16,8 +16,8 @@ body {
 .dropdown button.dropdown-btn {
    border: none;
    outline: none;
-   color: #ffffff;
    padding: 10px;
+   color: #ffffff;
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
@@ -45,14 +45,14 @@ body {
 
 .dropdown .dropdown-content a {
    float: none;
-   color: #ffffff;
    display: block;
+   color: #ffffff;
    text-align: left;
    padding: 12px 16px;
    text-decoration: none;
 }
 
 .dropdown .dropdown-content a:hover {
-   transition: 0.2;
    color: #8a2be2;
+   transition: 0.2;
 }

@@ -10,15 +10,15 @@ body {
 }
 
 blockquote.dark-quote {
-   color: #ffffff;
    padding: 15px;
+   color: #ffffff;
    font-size: 20px;
    line-height: 28px;
    font-style: italic;
    box-sizing: border-box;
+   background-color: #192734;
    border: 1px solid #38444d;
    border-left: 10px solid #38444d;
-   background-color: #192734;
    quotes: "\201C""\201D""\2018""\2019";
 }
 

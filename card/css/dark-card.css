@@ -3,7 +3,6 @@ body {
 }
 
 
-
 :root {
    --dark-card-width: 620px;
 }
@@ -15,7 +14,7 @@ body {
 
 .dark-card {
    width: var(--dark-card-width);
-   color: white;
+   color: #ffffff;
    box-sizing: border-box;
    border: 1px solid #38444d;
    background-color: #192734;
