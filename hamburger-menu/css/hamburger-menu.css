@@ -2,6 +2,7 @@ body {
    background-color: #15202b;
 }
 
+
 /* for centering the component */
 .container {
    width: 400px;
@@ -33,7 +34,7 @@ body {
    width: 28px;
    height: 2.5px;
    display: block;
-   transition: all 0.3s;
+   transition: all 0.2s;
    background-color: #ffffff;
 }
 
@@ -47,7 +48,7 @@ body {
 }
 
 .menu-toggle input:checked~span:nth-child(2) {
-   background-color: #f5f5f5;
+   background-color: #ffffff;
    transform: rotate(45deg) translate(1px, -1px);
 }
 
@@ -57,6 +58,6 @@ body {
 }
 
 .menu-toggle input:checked~span:nth-child(4) {
-   background-color: #f5f5f5;
+   background-color: #ffffff;
    transform: rotate(-45deg) translate(-1px, 1px);
 }

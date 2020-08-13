@@ -17,15 +17,15 @@ nav ul {
    width: 40%;
    display: flex;
    list-style: none;
-   justify-content: space-around;
+   justify-content: space-between;
 }
 
 nav ul li a {
    color: #f5f5f5;
    font-size: 20px;
-   transition: 0.1s;
    text-decoration: none;
    font-family: monospace;
+   transition: color 0.2s;
 }
 
 nav ul li a:hover {

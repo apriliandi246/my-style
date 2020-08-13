@@ -21,26 +21,25 @@ body {
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
-   transition: 0.2s;
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
    background-color: #253341;
+   transition: background-color 0.2s;
 }
 
 .dropdown button.dropdown-btn:hover {
-   color: #8a2be2;
+   background-color: #38444d;
 }
 
 .dropdown .dropdown-content {
    z-index: 1;
-   width: var(--dropdown-content-width);
    display: none;
    font-size: 18px;
    position: absolute;
    font-family: monospace;
    background-color: #38444d;
-   box-shadow: 0px 8px 16px 0px #00000033;
+   width: var(--dropdown-content-width);
 }
 
 .dropdown .dropdown-content a {
@@ -50,9 +49,10 @@ body {
    text-align: left;
    padding: 12px 16px;
    text-decoration: none;
+   transition: color 0.2s, background-color 0.2s;
 }
 
 .dropdown .dropdown-content a:hover {
    color: #8a2be2;
-   transition: 0.2;
+   background-color: #192734;
 }

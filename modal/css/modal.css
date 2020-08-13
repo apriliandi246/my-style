@@ -20,8 +20,8 @@ button.trigger {
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   transition: background-color 0.2s;
    background-color: #253341;
+   transition: background-color 0.2s;
 }
 
 button.trigger:hover {
@@ -75,8 +75,8 @@ button.trigger:hover {
    margin-right: 18px;
    font-family: monospace;
    box-sizing: border-box;
-   transition: background-color 0.2s;
    background-color: #1f2831;
+   transition: background-color 0.2s;
 }
 
 .modal .modal-footer button:hover {

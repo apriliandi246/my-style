@@ -7,8 +7,8 @@ nav {
    left: 0;
    right: 0;
    bottom: 0;
+   z-index: 1;
    height: 65px;
-   z-index: 9999;
    display: flex;
    position: fixed;
    overflow: hidden;
@@ -21,7 +21,7 @@ nav {
 nav ul {
    width: 20%;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
 }
 
 nav ul li {
@@ -35,8 +35,8 @@ nav ul li span {
 nav .logo {
    width: 65px;
    height: 65px;
-   transition: 0.1s;
    background-size: cover;
+   transition: box-shadow 0.2s;
    background-repeat: no-repeat;
    background-position: -1px 2px;
    box-shadow: 0 0 1px 1px #404a4d33;
@@ -50,9 +50,9 @@ nav .logo:hover {
 nav ul li a {
    color: #ffffff;
    font-size: 20px;
-   transition: 0.1s;
    text-decoration: none;
    font-family: monospace;
+   transition: color 0.2s;
 }
 
 nav ul li a:hover {
