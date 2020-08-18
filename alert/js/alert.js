@@ -1,7 +1,10 @@
-const alerts = document.querySelectorAll('.alert span');
+const alerts = document.querySelectorAll('.alert');
 
 alerts.forEach((alert) => {
-   alert.addEventListener('click', () => {
-      alert.parentElement.remove();
+   alert.addEventListener('click', (event) => {
+      if (event.target.className) {
+         event.preventDefault();
+         event.target.parentElement.remove();
+      }
    });
 });
