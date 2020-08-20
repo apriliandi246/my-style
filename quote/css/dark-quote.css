@@ -16,6 +16,7 @@ blockquote.dark-quote {
    line-height: 28px;
    font-style: italic;
    box-sizing: border-box;
+   font-family: monospace;
    background-color: #192734;
    border: 1px solid #38444d;
    border-left: 10px solid #38444d;

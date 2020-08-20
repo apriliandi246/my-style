@@ -22,12 +22,13 @@ nav {
 nav h3 {
    font-size: 28px;
    font-weight: bolder;
-   font-family: Ubuntu;
+   font-family: monospace;
 }
 
 nav ul {
    width: 40%;
    display: flex;
+   font-family: monospace;
    justify-content: space-between;
 }
 
