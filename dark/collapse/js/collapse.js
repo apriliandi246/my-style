@@ -1,19 +1,38 @@
-const coll = document.getElementsByClassName('collapsible');
-const icon = document.querySelector('.collapsible span');
+const collapseButton = document.querySelector('.collapse-button');
+const icon = document.querySelector('.collapse-button .collapse-icon');
 
-for (let i = 0; i < coll.length; i++) {
-   coll[i].addEventListener('click', function () {
-      const collapseContent = this.nextElementSibling;
 
-      this.classList.toggle('active');
+// for one collapse component
+collapseButton.addEventListener('click', () => {
+   const collapseContent = collapseButton.nextElementSibling;
 
-      if (collapseContent.style.display === 'block') {
-         icon.innerHTML = '&#65291';
-         collapseContent.style.display = 'none';
+   collapseButton.classList.toggle('active');
 
-      } else {
-         icon.innerHTML = '&#8212';
-         collapseContent.style.display = 'block'
-      }
-   });
-}
+   if (collapseContent.style.display === 'block') {
+      icon.innerText = '+';
+      collapseContent.style.display = 'none';
+
+   } else {
+      icon.innerText = '-';
+      collapseContent.style.display = 'block'
+   }
+});
+
+
+// for more than one collapse components
+// for (let index = 0; index < collapse.length; index++) {
+//    collapse[index].addEventListener('click', function () {
+//       const collapseContent = this.nextElementSibling;
+
+//       this.classList.toggle('active');
+
+//       if (collapseContent.style.display === 'block') {
+//          icon.innerText = '+';
+//          collapseContent.style.display = 'none';
+
+//       } else {
+//          icon.innerText = '-';
+//          collapseContent.style.display = 'block'
+//       }
+//    });
+// }
