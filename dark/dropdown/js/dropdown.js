@@ -11,7 +11,7 @@ dropdownBtn.addEventListener('click', () => {
    }
 });
 
-window.addEventListener('click', (event) => {
+document.addEventListener('click', (event) => {
    if (event.target !== dropdownBtn) {
       statusDisplay('none');
       setFontColor('white');

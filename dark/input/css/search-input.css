@@ -37,8 +37,6 @@ body {
    color: #ffffff;
    cursor: pointer;
    font-size: 17px;
-   transition: 0.2s;
-   font-weight: bold;
    font-family: monospace;
    box-sizing: border-box;
    background-color: #38444d;
@@ -46,6 +44,5 @@ body {
 }
 
 .searchbar .search-btn:hover {
-   color: #87cefa;
    background-color: #192734;
 }

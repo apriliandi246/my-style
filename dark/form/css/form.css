@@ -38,8 +38,8 @@ form .input-form input {
    font-size: 17px;
    margin-top: 15px;
    box-sizing: border-box;
-   transition: background-color 0.2s;
    background-color: #253341;
+   transition: background-color 0.2s;
 }
 
 form .input-form input:focus {
@@ -59,7 +59,6 @@ form button {
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
-   transition: 0.2s;
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
