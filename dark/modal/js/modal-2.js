@@ -1,11 +1,14 @@
-const modal = document.querySelector('.modal-area');
 const triggerButton = document.querySelector('.trigger');
 const modalCancelButton = document.querySelector('button.cancel-btn');
 
 triggerButton.addEventListener('click', () => {
-   modal.style.display = 'block';
+   setDisplayValue('block');
 });
 
 modalCancelButton.addEventListener('click', () => {
-   modal.style.display = 'none';
+   setDisplayValue('none');
 });
+
+function setDisplayValue(value) {
+   document.querySelector('.modal-area').style.display = value;
+}

@@ -1,6 +1,4 @@
-const alerts = document.querySelectorAll('.alert');
-
-alerts.forEach((alert) => {
+document.querySelectorAll('.alert').forEach((alert) => {
    alert.addEventListener('click', (event) => {
       if (event.target.className) {
          event.preventDefault();

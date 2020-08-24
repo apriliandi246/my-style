@@ -46,10 +46,10 @@ button.trigger:hover {
    margin: 10% auto;
    position: relative;
    font-family: monospace;
-   animation-duration: 0.3s;
+   animation-duration: 0.4s;
    width: var(--modal-width);
-   background-color: #2c323a;
    animation-name: animatetop;
+   background-color: #2c323a;
 }
 
 .modal .modal-head {

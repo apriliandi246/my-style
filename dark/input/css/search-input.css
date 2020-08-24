@@ -37,9 +37,10 @@ body {
    color: #ffffff;
    cursor: pointer;
    font-size: 17px;
-   font-family: monospace;
+   letter-spacing: 2px;
    box-sizing: border-box;
    background-color: #38444d;
+   font-family: Arial, Helvetica, sans-serif;
    transition: color 0.2s, background-color 0.2s;
 }
 

@@ -3,22 +3,22 @@ const dropdownContent = document.querySelector('.dropdown-content');
 
 dropdownBtn.addEventListener('click', () => {
    if (dropdownContent.style.display === '' || dropdownContent.style.display === 'none') {
-      statusDisplay('block');
+      setDisplayValue('block');
       setFontColor('#8a2be2');
    } else {
-      statusDisplay('none');
+      setDisplayValue('none');
       setFontColor('white');
    }
 });
 
 document.addEventListener('click', (event) => {
    if (event.target !== dropdownBtn) {
-      statusDisplay('none');
+      setDisplayValue('none');
       setFontColor('white');
    }
 });
 
-function statusDisplay(value) {
+function setDisplayValue(value) {
    dropdownContent.style.display = value;
 }
 
