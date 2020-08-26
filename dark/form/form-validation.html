@@ -14,32 +14,34 @@
    <div class="container">
       <form spellcheck="false" autocomplete="off">
          <div class="input-form">
-            <label for="username">Username</label>
-            <input type="text" id="username" placeholder="username" name="name" autofocus>
-            <p>username must be and contain 5 - 12 characters and no whitespace</p>
+            <label for="username" class="input-form__label">Username</label>
+            <input type="text" id="username" placeholder="username" name="name" class="input-form__input" autofocus>
+            <p class="input-form__message">username must be and contain 5 - 12 characters and no whitespace</p>
          </div>
 
          <div class="input-form">
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="email" name="email">
-            <p>email must be a valid address, e.g. me@mydomain.com</p>
+            <label for="email" class="input-form__label">Email</label>
+            <input type="text" id="email" placeholder="email" name="email" class="input-form__input">
+            <p class="input-form__message">email must be a valid address, e.g. me@mydomain.com</p>
          </div>
 
          <div class="input-form">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="password" name="password">
-            <p>password must alphanumeric (@, _ and - are also allowed) and be 6 or more characters</p>
+            <label for="password" class="input-form__label">Password</label>
+            <input type="password" id="password" placeholder="password" name="password" class="input-form__input">
+            <p class="input-form__message">password must alphanumeric (@, _ and - are also allowed) and be 6 or more
+               characters</p>
          </div>
 
          <div class="input-form">
-            <label for="confirm-password">Password Confirm</label>
-            <input type="password" id="confirm-password" placeholder="password confirm" name="confirmPassword" disabled>
-            <p>must be same with the first password</p>
+            <label for="confirm-password" class="input-form__label">Password Confirm</label>
+            <input type="password" id="confirm-password" placeholder="password confirm" name="confirmPassword"
+               class="input-form__input" disabled>
+            <p class="input-form__message">must be same with the first password</p>
          </div>
 
-         <button type="submit" disabled>Register</button>
-         <hr>
-         <a href="#">Login</a>
+         <button type="submit" class="button-form" disabled>Register</button>
+         <hr class="line-space-button">
+         <a href="#" class="redirect-form">Login</a>
       </form>
    </div>
 </body>

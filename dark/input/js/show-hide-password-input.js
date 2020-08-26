@@ -1,5 +1,5 @@
-const inputPassword = document.querySelector('.input-form #password');
-const togglePassword = document.querySelector('.input-form .togglePassword');
+const inputPassword = document.querySelector('.input-form__input');
+const togglePassword = document.querySelector('.input-form__button');
 
 togglePassword.addEventListener('click', () => {
    inputPassword.getAttribute('type') === 'password' ? changeInputType('text', 'hide') : changeInputType('password', 'show');

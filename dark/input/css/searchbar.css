@@ -8,7 +8,7 @@ body {
    margin: 40px auto;
 }
 
-.searchbar .search-input {
+.searchbar__input {
    width: 80%;
    float: left;
    border: none;
@@ -21,15 +21,15 @@ body {
    transition: background-color 0.2s;
 }
 
-.searchbar .search-input:focus {
+.searchbar__input:focus {
    background-color: #38444d;
 }
 
-.searchbar .search-input::placeholder {
+.searchbar__input::placeholder {
    font-family: monospace;
 }
 
-.searchbar .search-btn {
+.searchbar__button {
    float: left;
    border: none;
    outline: none;
@@ -44,6 +44,6 @@ body {
    transition: color 0.2s, background-color 0.2s;
 }
 
-.searchbar .search-btn:hover {
+.searchbar__button:hover {
    background-color: #192734;
 }

@@ -6,20 +6,38 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css-reset/reset.css">
    <link rel="stylesheet" href="./css/navbar-1.css">
-   <title>navbar-dark-1</title>
+   <script defer src="./js/navbar-1.js"></script>
+   <title>navbar-1</title>
 </head>
 
 <body>
-   <nav>
-      <a href="#">
-         <div class="logo"></div>
-      </a>
+   <nav class="navbar">
+      <h3 class="navbar__logo">Navbar</h3>
 
-      <ul>
-         <li><a href="#"><span>/</span>me</a></li>
-         <li><a href="#"><span>/</span>search</a></li>
-         <li><a href="#"><span>/</span>logout</a></li>
+      <ul class="navbar__items">
+         <li class="items__item">
+            <a href="#" class="item__link">Home</a>
+         </li>
+         <li class="items__item">
+            <a href="#" class="item__link">Product</a>
+         </li>
+         <li class="items__item">
+            <a href="#" class="item__link">Service</a>
+         </li>
+         <li class="items__item">
+            <a href="#" class="item__link">Gallery</a>
+         </li>
+         <li class="items__item">
+            <a href="#" class="item__link">About</a>
+         </li>
       </ul>
+
+      <div class="toggle-menu">
+         <input type="checkbox" class="toggle-menu__trigger">
+         <span class="toggle-menu__block"></span>
+         <span class="toggle-menu__block"></span>
+         <span class="toggle-menu__block"></span>
+      </div>
    </nav>
 </body>
 

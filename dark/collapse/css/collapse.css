@@ -8,7 +8,7 @@ body {
    margin: 50px auto;
 }
 
-.collapse-button {
+.collapse__button {
    width: 100%;
    border: none;
    outline: none;
@@ -23,17 +23,17 @@ body {
    transition: background-color 0.2s;
 }
 
-.collapse-button .collapse-icon {
+.collapse-button__icon {
    float: right;
    font-weight: bolder;
 }
 
-.active,
-.collapse-button:hover {
+.collapse__button--active,
+.collapse__button:hover {
    background-color: #38444d;
 }
 
-.collapse-content {
+.collapse__content {
    padding: 18px;
    display: none;
    color: #ffffff;

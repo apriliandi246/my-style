@@ -1,7 +1,7 @@
-const dropdownBtn = document.querySelector('button.dropdown-btn');
-const dropdownContent = document.querySelector('.dropdown-content');
+const dropdownButton = document.querySelector('.dropdown__button');
+const dropdownContent = document.querySelector('.dropdown__content');
 
-dropdownBtn.addEventListener('click', () => {
+dropdownButton.addEventListener('click', () => {
    if (dropdownContent.style.display === '' || dropdownContent.style.display === 'none') {
       setDisplayValue('block');
       setFontColor('#8a2be2');
@@ -12,7 +12,7 @@ dropdownBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('click', (event) => {
-   if (event.target !== dropdownBtn) {
+   if (event.target !== dropdownButton) {
       setDisplayValue('none');
       setFontColor('white');
    }
@@ -23,5 +23,5 @@ function setDisplayValue(value) {
 }
 
 function setFontColor(value) {
-   dropdownBtn.style.color = value;
+   dropdownButton.style.color = value;
 }

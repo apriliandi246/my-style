@@ -29,13 +29,13 @@ body {
    justify-content: space-between;
 }
 
-.alert .close {
+.alert__close-button {
    padding: 3px;
    cursor: pointer;
    font-size: 28px;
    transition: color 0.2s;
 }
 
-.alert .close:hover {
+.alert__close-button:hover {
    color: #38444d;
 }

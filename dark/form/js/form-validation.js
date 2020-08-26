@@ -1,5 +1,5 @@
-const button = document.querySelector('button');
-const inputs = document.querySelectorAll('input');
+const button = document.querySelector('.button-form');
+const inputs = document.querySelectorAll('.input-form__input');
 const [username, email, password, confirmPassword] = inputs;
 
 // regex patterns
@@ -23,10 +23,10 @@ inputs.forEach((input) => {
 function addClass(input, regex) {
    if (regex.test(input.value)) {
       input.classList.add('valid');
-      input.classList.remove('invalid');
+      input.classList.remove('input-form__input--invalid');
 
    } else {
-      input.classList.add('invalid');
+      input.classList.add('input-form__input--invalid');
       input.classList.remove('valid');
    }
 }
@@ -37,7 +37,7 @@ function checkPasswordInput() {
       confirmPassword.disabled = false;
 
       if (confirmPassword.value !== password.value) {
-         confirmPassword.classList.add('invalid');
+         confirmPassword.classList.add('input-form__input--invalid');
          confirmPassword.classList.remove('valid');
 
          setStatusButton(true, 'default');

@@ -1,12 +1,12 @@
-const collapseButton = document.querySelector('.collapse-button');
-const icon = document.querySelector('.collapse-button .collapse-icon');
+const collapseButton = document.querySelector('.collapse__button');
+const icon = document.querySelector('.collapse-button__icon');
 
 
 // for one collapse component
 collapseButton.addEventListener('click', () => {
    const collapseContent = collapseButton.nextElementSibling;
 
-   collapseButton.classList.toggle('active');
+   collapseButton.classList.toggle('collapse__button--active');
 
    if (collapseContent.style.display === 'block') {
       icon.innerText = '+';
@@ -19,12 +19,12 @@ collapseButton.addEventListener('click', () => {
 });
 
 
-// for more than one collapse components
+// ! For more than one collapse components
 // for (let index = 0; index < collapse.length; index++) {
 //    collapse[index].addEventListener('click', function () {
 //       const collapseContent = this.nextElementSibling;
 
-//       this.classList.toggle('active');
+//       this.classList.toggle('collapse__button--active');
 
 //       if (collapseContent.style.display === 'block') {
 //          icon.innerText = '+';
