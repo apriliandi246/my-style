@@ -66,7 +66,7 @@ form {
    transition: color 0.2s, background-color 0.2s;
 }
 
-.redirect-form {
+.redirect-button-form {
    width: 100%;
    border: none;
    padding: 11px;
@@ -84,7 +84,7 @@ form {
 }
 
 .button-form:hover,
-.redirect-form:hover {
+.redirect-button-form:hover {
    color: #87cefa;
    background-color: #192734;
 }

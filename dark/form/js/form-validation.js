@@ -4,7 +4,7 @@ const [username, email, password, confirmPassword] = inputs;
 
 // regex patterns
 const patterns = {
-   name: /^[\S*]{5,12}$/i,
+   username: /^[\S*]{5,12}$/i,
    password: /^[\w@-]{6,}$/,
    confirmPassword: /^[\w@-]{6,}$/,
    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/

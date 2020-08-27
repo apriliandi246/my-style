@@ -9,11 +9,11 @@ collapseButton.addEventListener('click', () => {
    collapseButton.classList.toggle('collapse__button--active');
 
    if (collapseContent.style.display === 'block') {
-      icon.innerText = '+';
+      icon.innerHTML = '&#9650;';
       collapseContent.style.display = 'none';
 
    } else {
-      icon.innerText = '-';
+      icon.innerHTML = '&#9660;';
       collapseContent.style.display = 'block'
    }
 });
