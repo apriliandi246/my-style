@@ -33,8 +33,9 @@ function addClass(input, regex) {
 
 // check password input and confirm password input
 function checkPasswordInput() {
-   if (password.classList[0] === 'valid') {
+   if (password.classList[1] === 'valid') {
       confirmPassword.disabled = false;
+      confirmPassword.focus();
 
       if (confirmPassword.value !== password.value) {
          confirmPassword.classList.add('input-form__input--invalid');
@@ -54,10 +55,10 @@ function checkPasswordInput() {
 // check all of input field
 function validate() {
    if (
-      username.classList.value === 'valid'
-      && email.classList.value === 'valid'
-      && password.classList.value === 'valid'
-      && confirmPassword.classList.value === 'valid'
+      username.classList[1] === 'valid'
+      && email.classList[1] === 'valid'
+      && password.classList[1] === 'valid'
+      && confirmPassword.classList[1] === 'valid'
    ) {
       setStatusButton(false, 'pointer');
 

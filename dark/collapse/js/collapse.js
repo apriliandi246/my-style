@@ -2,7 +2,7 @@ const collapseButton = document.querySelector('.collapse__button');
 const icon = document.querySelector('.collapse-button__icon');
 
 
-// for one collapse component
+// ! For one collapse component
 collapseButton.addEventListener('click', () => {
    const collapseContent = collapseButton.nextElementSibling;
 
