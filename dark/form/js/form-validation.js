@@ -2,6 +2,7 @@ const button = document.querySelector('.button-form');
 const inputs = document.querySelectorAll('.input-form__input');
 const [username, email, password, confirmPassword] = inputs;
 
+
 // regex patterns
 const patterns = {
    username: /^[\S*]{5,12}$/i,
