@@ -4,7 +4,7 @@ body {
 
 
 :root {
-   --card-width: 620px;
+   --card-width: 600px;
 }
 
 /* for centering the component */
@@ -17,14 +17,13 @@ body {
    box-sizing: border-box;
    width: var(--card-width);
    background-color: #fafafa;
-   box-shadow: 0 0 3px 1px #0000001a;
+   box-shadow: 0 0 3px 2px #0000001a;
 }
 
 .card__head {
    padding: 15px;
    margin-top: 3px;
    margin-bottom: 4px;
-   letter-spacing: 2px;
 }
 
 .card-head__profile-photo {
@@ -43,9 +42,10 @@ body {
    margin-top: 15px;
    margin-left: 18px;
    text-align: center;
+   letter-spacing: 1px;
    text-decoration: none;
    transition: color 0.2s;
-   font-family: sans-serif;
+   font-family: monospace;
 }
 
 .card-head__username:hover {
@@ -65,13 +65,13 @@ body {
 
 .card__description {
    padding: 15px;
-   font-size: 17px;
+   font-size: 18px;
    line-height: 25px;
    margin-top: -18px;
    margin-bottom: 17px;
    white-space: pre-line;
    box-sizing: border-box;
-   font-family: monospace;
+   font-family: sans-serif;
 }
 
 .card__footer {

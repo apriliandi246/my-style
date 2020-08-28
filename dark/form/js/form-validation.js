@@ -35,7 +35,6 @@ function addClass(input, regex) {
 function checkPasswordInput() {
    if (password.classList[1] === 'valid') {
       confirmPassword.disabled = false;
-      confirmPassword.focus();
 
       if (confirmPassword.value !== password.value) {
          confirmPassword.classList.add('input-form__input--invalid');
