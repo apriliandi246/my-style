@@ -18,23 +18,25 @@ body {
    padding: 8px;
    display: flex;
    color: #ffffff;
-   font-size: 17px;
+   font-weight: bolder;
    margin-bottom: 55px;
    align-items: center;
-   font-weight: bolder;
-   font-family: monospace;
    box-sizing: border-box;
+   font-family: monospace;
    width: var(--alert-width);
    background-color: #ff4500;
    justify-content: space-between;
-   text-shadow: 1px 1px 1.4px #51a97d;
+}
+
+.alert__message {
+   font-size: 17px;
+   text-shadow: 1px 1px 1.2px #51a97d;
 }
 
 .alert__close-button {
    padding: 3px;
    cursor: pointer;
-   font-size: 28px;
-   text-shadow: none;
+   font-size: 26px;
    transition: color 0.2s;
 }
 
