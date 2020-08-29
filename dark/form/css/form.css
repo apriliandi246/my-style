@@ -17,18 +17,18 @@ form {
    width: var(--dark-form-width);
 }
 
-form .input-form {
+.input-form {
    margin-top: 32px;
 }
 
-form .input-form label {
+.input-form__label {
    color: #ffffff;
    font-size: 20px;
    font-weight: 520;
    font-family: monospace;
 }
 
-form .input-form input {
+.input-form__input {
    width: 100%;
    border: none;
    padding: 12px;
@@ -42,15 +42,15 @@ form .input-form input {
    transition: background-color 0.2s;
 }
 
-form .input-form input:focus {
+.input-form__input:focus {
    background-color: #38444d;
 }
 
-form .input-form input::placeholder {
+.input-form__input::placeholder {
    font-family: monospace;
 }
 
-form button {
+.button-form {
    width: 100%;
    border: none;
    outline: none;
@@ -66,7 +66,7 @@ form button {
    transition: color 0.2s, background-color 0.2s;
 }
 
-form a {
+.redirect-button-form {
    width: 100%;
    border: none;
    padding: 11px;
@@ -83,12 +83,12 @@ form a {
    transition: color 0.2s, background-color 0.2s;
 }
 
-form button:hover,
-form a:hover {
+.button-form:hover,
+.redirect-button-form:hover {
    color: #87cefa;
    background-color: #192734;
 }
 
-form hr {
+.line-space-button {
    border: 2px dashed #253341;
 }

@@ -1,10 +1,11 @@
-const button = document.querySelector('button');
-const inputs = document.querySelectorAll('input');
+const button = document.querySelector('.button-form');
+const inputs = document.querySelectorAll('.input-form__input');
 const [username, email, password, confirmPassword] = inputs;
+
 
 // regex patterns
 const patterns = {
-   name: /^[\S*]{5,12}$/i,
+   username: /^[\S*]{5,12}$/i,
    password: /^[\w@-]{6,}$/,
    confirmPassword: /^[\w@-]{6,}$/,
    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
@@ -23,21 +24,21 @@ inputs.forEach((input) => {
 function addClass(input, regex) {
    if (regex.test(input.value)) {
       input.classList.add('valid');
-      input.classList.remove('invalid');
+      input.classList.remove('input-form__input--invalid');
 
    } else {
-      input.classList.add('invalid');
+      input.classList.add('input-form__input--invalid');
       input.classList.remove('valid');
    }
 }
 
 // check password input and confirm password input
 function checkPasswordInput() {
-   if (password.classList[0] === 'valid') {
+   if (password.classList[1] === 'valid') {
       confirmPassword.disabled = false;
 
       if (confirmPassword.value !== password.value) {
-         confirmPassword.classList.add('invalid');
+         confirmPassword.classList.add('input-form__input--invalid');
          confirmPassword.classList.remove('valid');
 
          setStatusButton(true, 'default');
@@ -54,10 +55,10 @@ function checkPasswordInput() {
 // check all of input field
 function validate() {
    if (
-      username.classList.value === 'valid'
-      && email.classList.value === 'valid'
-      && password.classList.value === 'valid'
-      && confirmPassword.classList.value === 'valid'
+      username.classList[1] === 'valid'
+      && email.classList[1] === 'valid'
+      && password.classList[1] === 'valid'
+      && confirmPassword.classList[1] === 'valid'
    ) {
       setStatusButton(false, 'pointer');
 

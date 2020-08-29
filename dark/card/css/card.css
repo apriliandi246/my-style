@@ -4,30 +4,29 @@ body {
 
 
 :root {
-   --dark-card-width: 620px;
+   --card-width: 600px;
 }
 
 /* for centering the component */
-.dark-card {
+.card {
    margin: 90px auto;
 }
 
-.dark-card {
+.card {
    color: #ffffff;
    box-sizing: border-box;
+   width: var(--card-width);
    border: 1px solid #38444d;
    background-color: #192734;
-   width: var(--dark-card-width);
 }
 
-.dark-card .card-head {
+.card__head {
    padding: 15px;
    margin-top: 3px;
    margin-bottom: 4px;
-   letter-spacing: 2px;
 }
 
-.dark-card .card-head img {
+.card-head__profile-photo {
    float: left;
    width: 50px;
    height: 50px;
@@ -35,49 +34,51 @@ body {
    border: 2px solid #38444d;
 }
 
-.dark-card .card-head a {
+.card-head__username {
    float: left;
    color: #ffffff;
    font-size: 19px;
    margin-top: 15px;
    margin-left: 18px;
    text-align: center;
+   letter-spacing: 1px;
    text-decoration: none;
    transition: color 0.2s;
-   font-family: sans-serif;
+   font-family: monospace;
 }
 
-.dark-card .card-head a:hover {
+.card-head__username:hover {
    color: #8a2be2;
 }
 
-.dark-card .card-image {
+.card__image {
    margin-top: 55px;
    text-align: center;
    margin-bottom: 13px;
 }
 
-.dark-card .card-image img {
+.card-image__image {
    width: 100%;
    height: 100%;
    border-top: 1px solid #38444d;
    border-bottom: 1px solid #38444d;
 }
 
-.dark-card .card-description {
+.card__description {
    padding: 17px;
-   font-size: 17px;
+   font-size: 18px;
    line-height: 25px;
    margin-top: -18px;
    margin-bottom: 17px;
    white-space: pre-line;
    box-sizing: border-box;
-   font-family: monospace;
+   font-family: sans-serif;
 }
 
-.dark-card .card-footer {
+.card__footer {
    float: right;
    padding: 15px;
    font-size: 17px;
+   letter-spacing: 1px;
    font-family: monospace;
 }

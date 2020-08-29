@@ -9,7 +9,7 @@ body {
    margin: 50px auto;
 }
 
-blockquote.light-quote {
+.quote {
    padding: 15px;
    font-size: 20px;
    line-height: 28px;
@@ -22,7 +22,7 @@ blockquote.light-quote {
    quotes: "\201C""\201D""\2018""\2019";
 }
 
-blockquote.light-quote::before {
+.quote::before {
    color: #ccc;
    font-size: 80px;
    line-height: 7px;

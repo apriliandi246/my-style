@@ -7,7 +7,7 @@ body {
    --modal-width: 600px;
 }
 
-button.trigger {
+.modal-trigger-button {
    border: none;
    outline: none;
    padding: 10px;
@@ -24,11 +24,12 @@ button.trigger {
    transition: background-color 0.2s;
 }
 
-button.trigger:hover {
+.modal-trigger-button:hover {
    background-color: #38444d;
 }
 
-.modal-area {
+
+.modal {
    top: 0;
    left: 0;
    z-index: 1;
@@ -40,7 +41,7 @@ button.trigger:hover {
    background-color: #00000066;
 }
 
-.modal {
+.modal__body {
    width: var(--modal-width);
    padding: 10px;
    color: #ffffff;
@@ -49,23 +50,24 @@ button.trigger:hover {
    background-color: #2c323a;
 }
 
-.modal .modal-head {
+.modal-body__head {
    padding: 12px;
    font-size: 25px;
    font-weight: bolder;
 }
 
-.modal .modal-content {
+.modal-body__content {
    padding: 12px;
    font-size: 16px;
    line-height: 23px;
 }
 
-.modal .modal-footer {
+.modal-body__footer {
    padding: 12px;
 }
 
-.modal .modal-footer button {
+.footer__cancel-button,
+.footer__submit-button {
    border: none;
    outline: none;
    padding: 10px;
@@ -79,6 +81,7 @@ button.trigger:hover {
    transition: background-color 0.2s;
 }
 
-.modal .modal-footer button:hover {
+.footer__cancel-button:hover,
+.footer__submit-button:hover {
    background-color: #38444d;
 }
