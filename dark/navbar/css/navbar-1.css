@@ -31,14 +31,14 @@ body {
    justify-content: space-between;
 }
 
-.item__link {
+.navbar__link {
    color: #ffffff;
    font-size: 20px;
    text-decoration: none;
    transition: color 0.2s;
 }
 
-.item__link:hover {
+.navbar__link:hover {
    color: #8a2be2;
 }
 
@@ -131,7 +131,7 @@ body {
       display: flex;
    }
 
-   .navbar__items--slide {
+   .navbar--slide {
       opacity: 1;
       transform: translateX(0);
    }

@@ -42,7 +42,7 @@ body {
    width: var(--dropdown-content-width);
 }
 
-.dropdown-content__item {
+.dropdown__item {
    float: none;
    display: block;
    color: #ffffff;
@@ -52,7 +52,7 @@ body {
    transition: color 0.2s, background-color 0.2s;
 }
 
-.dropdown-content__item:hover {
+.dropdown__item:hover {
    color: #8a2be2;
    background-color: #192734;
 }

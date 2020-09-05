@@ -11,5 +11,5 @@ collapseButton.addEventListener('click', () => {
 
 function setStatusCollapseContent(status, collapseIcon) {
    collapseContent.style.display = status;
-   document.querySelector('.collapse-button__icon').innerHTML = collapseIcon;
+   document.querySelector('.collapse__icon').innerHTML = collapseIcon;
 }

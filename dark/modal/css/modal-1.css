@@ -50,24 +50,24 @@ body {
    background-color: #2c323a;
 }
 
-.modal-body__head {
+.modal__head {
    padding: 12px;
    font-size: 25px;
    font-weight: bolder;
 }
 
-.modal-body__content {
+.modal__content {
    padding: 12px;
    font-size: 16px;
    line-height: 23px;
 }
 
-.modal-body__footer {
+.modal__footer {
    padding: 12px;
 }
 
-.footer__cancel-button,
-.footer__submit-button {
+.modal__cancel-button,
+.modal__submit-button {
    border: none;
    outline: none;
    padding: 10px;
@@ -81,7 +81,7 @@ body {
    transition: background-color 0.2s;
 }
 
-.footer__cancel-button:hover,
-.footer__submit-button:hover {
+.modal__cancel-button:hover,
+.modal__submit-button:hover {
    background-color: #38444d;
 }

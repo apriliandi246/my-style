@@ -1,6 +1,6 @@
 // ! For more than one collapse components
 
-const icons = document.querySelectorAll('.collapse-button__icon');
+const icons = document.querySelectorAll('.collapse__icon');
 const collapseButtons = document.querySelectorAll('.collapse__button');
 
 
