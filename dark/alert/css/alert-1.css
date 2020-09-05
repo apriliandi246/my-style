@@ -5,7 +5,6 @@ body {
 
 :root {
    --alert-width: 500px;
-   --alert-background-color: #ff4500;
 }
 
 /* for centering the component */
@@ -25,8 +24,8 @@ body {
    box-sizing: border-box;
    font-family: monospace;
    width: var(--alert-width);
+   background-color: #ff4500;
    justify-content: space-between;
-   background-color: var(--alert-background-color);
 }
 
 .alert__message {

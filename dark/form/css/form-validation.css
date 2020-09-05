@@ -4,7 +4,7 @@ body {
 
 
 :root {
-   --dark-form-width: 370px;
+   --form-width: 370px;
 }
 
 /* for centering the component */
@@ -14,7 +14,7 @@ body {
 }
 
 form {
-   width: var(--dark-form-width);
+   width: var(--form-width);
 }
 
 .input-form {
