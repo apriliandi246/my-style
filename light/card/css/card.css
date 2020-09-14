@@ -17,7 +17,7 @@ body {
    box-sizing: border-box;
    width: var(--card-width);
    background-color: #fafafa;
-   box-shadow: 0 0 3px 2px #0000001a;
+   box-shadow: 0 0 1px 1px #0000001a;
 }
 
 .card__head {
@@ -49,7 +49,7 @@ body {
 }
 
 .card__username:hover {
-   color: #8a2be2;
+   color: #0000ff;
 }
 
 .card__image {

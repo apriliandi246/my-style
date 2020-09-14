@@ -18,7 +18,7 @@ body {
    font-family: monospace;
    background-color: #fafafa;
    border-left: 10px solid #cccccc;
-   box-shadow: 0 0 3px 1px #0000001a;
+   box-shadow: 0 0 1px 1px #0000001a;
    quotes: "\201C""\201D""\2018""\2019";
 }
 
