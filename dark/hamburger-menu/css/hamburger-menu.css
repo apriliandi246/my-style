@@ -31,7 +31,7 @@ body {
 
 .toggle-menu__block {
    width: 28px;
-   height: 2.5px;
+   height: 3px;
    display: block;
    transition: all 0.2s;
    background-color: #ffffff;
