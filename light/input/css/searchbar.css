@@ -3,10 +3,12 @@ body {
 }
 
 
+/* for centering the component */
 .container {
    width: 500px;
    margin: 40px auto;
 }
+
 
 .searchbar__input {
    width: 80%;
@@ -20,14 +22,6 @@ body {
    background-color: #fafafa;
    transition: background-color 0.2s;
    box-shadow: 0 0 1px 1px #0000001a;
-}
-
-.searchbar__input:focus {
-   background-color: #f3ebea;
-}
-
-.searchbar__input::placeholder {
-   font-family: monospace;
 }
 
 .searchbar__button {
@@ -45,6 +39,14 @@ body {
    box-shadow: 0 0 1px 1px #0000001a;
    font-family: Arial, Helvetica, sans-serif;
    transition: color 0.2s, background-color 0.2s;
+}
+
+.searchbar__input:focus {
+   background-color: #f3ebea;
+}
+
+.searchbar__input::placeholder {
+   font-family: monospace;
 }
 
 .searchbar__button:hover {
