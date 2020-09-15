@@ -8,6 +8,7 @@ body {
    margin: 50px auto;
 }
 
+
 .collapse__button {
    width: 100%;
    border: none;
@@ -29,11 +30,6 @@ body {
    font-weight: bolder;
 }
 
-.collapse__button--active,
-.collapse__button:hover {
-   background-color: #f3ebea;
-}
-
 .collapse__content {
    padding: 18px;
    display: none;
@@ -49,4 +45,9 @@ body {
    border-right: 1px solid #f3ebea;
    border-bottom: 1px solid #f3ebea;
    box-shadow: 0 0 1px 1px #0000001a;
+}
+
+.collapse__button--active,
+.collapse__button:hover {
+   background-color: #f3ebea;
 }
