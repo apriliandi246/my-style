@@ -52,6 +52,7 @@ body {
    transition: color 0.2s, background-color 0.2s;
 }
 
+.dropdown__button--active,
 .dropdown__button:hover {
    background-color: #f3ebea;
 }
