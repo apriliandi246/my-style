@@ -1,5 +1,8 @@
+@import '../../color-variables/style.css';
+
+
 body {
-   background-color: #15202b;
+   background-color: var(--body-bg-color);
 }
 
 
@@ -14,17 +17,18 @@ select {
    border: none;
    outline: none;
    padding: 12px;
-   color: #ffffff;
    cursor: pointer;
    font-size: 16px;
    -moz-appearance: none;
    box-sizing: border-box;
    font-family: monospace;
    -webkit-appearance: none;
-   background-color: #253341;
    transition: background-color 0.2s;
+   color: var(--component-font-color);
+   background-color: var(--component-bg-color);
+   border: 1px solid var(--component-border-color);
 }
 
 select:hover {
-   background-color: #38444d;
+   background-color: var(--component-hover-color);
 }

@@ -1,5 +1,8 @@
+@import '../../color-variables/style.css';
+
+
 body {
-   background-color: #15202b;
+   background-color: var(--body-bg-color);
 }
 
 
@@ -9,18 +12,19 @@ body {
    margin: 50px auto;
 }
 
+
 .quote {
    padding: 20px;
-   color: #ffffff;
    font-size: 20px;
    line-height: 28px;
    font-style: italic;
    box-sizing: border-box;
    font-family: monospace;
-   background-color: #192734;
-   border: 1px solid #38444d;
-   border-left: 15px solid #38444d;
+   color: var(--component-font-color);
+   border: 1px solid var(--component-border-color);
    quotes: "\201C""\201D""\2018""\2019";
+   border-left: 15px solid var(--component-border-color);
+   background-color: var(--component-bg-color);
 }
 
 .quote::before {

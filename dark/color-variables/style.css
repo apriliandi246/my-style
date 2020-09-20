@@ -1,0 +1,9 @@
+:root {
+   --body-bg-color: #15202b;
+   --component-bg-color: #192734;
+   --component-hover-color: #38444d;
+   --component-font-color: #ffffff;
+   --component-border-color: #38444d;
+   --second-component-bg-color: #192734;
+   --component-box-shadow: 0 0 4px 4px #404a4d33;
+}

@@ -1,36 +1,35 @@
+@import '../../color-variables/style.css';
+
+
 body {
-   background-color: #15202B;
+   background-color: var(--body-bg-color);
 }
 
-
-:root {
-   --alert-width: 500px;
-}
 
 /* for centering the component */
 .container {
-   width: 600px;
+   width: 550px;
    margin: 50px auto;
    text-align: center;
 }
 
+
 .alert {
+   width: 100%;
    padding: 8px;
    display: flex;
-   color: #ffffff;
    font-weight: bolder;
    margin-bottom: 55px;
    align-items: center;
    box-sizing: border-box;
    font-family: monospace;
-   width: var(--alert-width);
    background-color: #ff4500;
    justify-content: space-between;
+   color: var(--component-font-color);
 }
 
 .alert__message {
    font-size: 17px;
-   text-shadow: 1px 1px 1.2px #51a97d;
 }
 
 .alert__close-button {

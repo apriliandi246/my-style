@@ -1,11 +1,10 @@
+@import '../../color-variables/style.css';
+
+
 body {
-   background-color: #15202b;
+   background-color: var(--body-bg-color);
 }
 
-
-:root {
-   --dropdown-content-width: 160px;
-}
 
 /* for centering the component */
 .container {
@@ -13,46 +12,49 @@ body {
    margin: 10px auto;
 }
 
+
 .dropdown__button {
    border: none;
    outline: none;
    padding: 10px;
-   color: #ffffff;
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: #253341;
    transition: background-color 0.2s;
+   color: var(--component-font-color);
+   background-color: var(--component-bg-color);
+   border: 1px solid var(--component-border-color);
 }
 
+.dropdown__button--active,
 .dropdown__button:hover {
-   background-color: #38444d;
+   background-color: var(--component-hover-color);
 }
 
 .dropdown__content {
    z-index: 1;
+   width: 160px;
    display: none;
    font-size: 18px;
    position: absolute;
    font-family: monospace;
-   background-color: #38444d;
-   width: var(--dropdown-content-width);
+   background-color: var(--component-bg-color);
+   border: 1px solid var(--component-border-color);
 }
 
 .dropdown__item {
    float: none;
    display: block;
-   color: #ffffff;
    text-align: left;
    padding: 12px 16px;
    text-decoration: none;
+   color: var(--component-font-color);
    transition: color 0.2s, background-color 0.2s;
 }
 
 .dropdown__item:hover {
-   color: #8a2be2;
-   background-color: #192734;
+   background-color: var(--component-hover-color);
 }

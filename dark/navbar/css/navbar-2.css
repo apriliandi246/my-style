@@ -1,5 +1,8 @@
+@import '../../color-variables/style.css';
+
+
 body {
-   background-color: #15202b;
+   background-color: var(--body-bg-color);
 }
 
 
@@ -12,12 +15,12 @@ body {
    display: flex;
    position: fixed;
    align-items: center;
-   background-color: #15202b;
    justify-content: space-around;
-   box-shadow: 0 0 2px 4px #404a4d33;
+   background-color: var(--body-bg-color);
+   box-shadow: var(--component-box-shadow);
 }
 
-.navbar__logo {
+.navbar__brand {
    width: 65px;
    height: 65px;
    background-size: cover;
@@ -28,7 +31,7 @@ body {
    background-image: url(../img/logo.png);
 }
 
-.navbar__logo:hover {
+.navbar__brand:hover {
    box-shadow: 0 0 5px 5px #404a4d33;
 }
 
@@ -43,11 +46,11 @@ body {
 }
 
 .navbar__link {
-   color: #ffffff;
    font-size: 20px;
    text-decoration: none;
    font-family: monospace;
    transition: color 0.2s;
+   color: var(--component-font-color);
 }
 
 .navbar__link:hover {
@@ -85,7 +88,7 @@ body {
    display: block;
    border-radius: 3px;
    transition: all 0.2s;
-   background-color: #ffffff;
+   background-color: var(--component-font-color);
 }
 
 .toggle-menu__block:nth-child(2) {
@@ -97,7 +100,7 @@ body {
 }
 
 .toggle-menu__trigger:checked~.toggle-menu__block:nth-child(2) {
-   background-color: #ffffff;
+   background-color: var(--component-font-color);
    transform: rotate(45deg) translate(1px, -1px);
 }
 
@@ -107,7 +110,7 @@ body {
 }
 
 .toggle-menu__trigger:checked~.toggle-menu__block:nth-child(4) {
-   background-color: #ffffff;
+   background-color: var(--component-font-color);
    transform: rotate(-45deg) translate(-1px, 1px);
 }
 
@@ -131,15 +134,14 @@ body {
       z-index: 2;
       width: 100%;
       height: 100vh;
-      color: #ffffff;
       position: absolute;
       align-items: center;
       font-weight: bolder;
-      transition: all 0.2s;
+      transition: all 0.3s;
       flex-direction: column;
-      background-color: #192734;
       transform: translateY(100%);
       justify-content: space-evenly;
+      background-color: var(--second-component-bg-color);
    }
 
    .toggle-menu {

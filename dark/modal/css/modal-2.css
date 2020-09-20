@@ -1,18 +1,16 @@
+@import '../../color-variables/style.css';
+
+
 body {
-   background-color: #15202b;
+   background-color: var(--body-bg-color);
 }
 
-
-:root {
-   --modal-width: 600px;
-}
 
 .modal-trigger-button {
    border: none;
    outline: none;
    padding: 10px;
    display: block;
-   color: #ffffff;
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
@@ -20,13 +18,16 @@ body {
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: #253341;
    transition: background-color 0.2s;
+   color: var(--component-font-color);
+   background-color: var(--component-bg-color);
+   border: 1px solid var(--component-border-color);
 }
 
 .modal-trigger-button:hover {
-   background-color: #38444d;
+   background-color: var(--component-hover-color);
 }
+
 
 .modal {
    top: 0;
@@ -41,15 +42,16 @@ body {
 }
 
 .modal__body {
+   width: 600px;
    padding: 10px;
-   color: #ffffff;
    margin: 10% auto;
    position: relative;
    font-family: monospace;
-   animation-duration: 0.4s;
-   width: var(--modal-width);
+   animation-duration: 0.5s;
    animation-name: animatetop;
-   background-color: #2c323a;
+   color: var(--component-font-color);
+   background-color: var(--component-bg-color);
+   border: 1px solid var(--component-border-color);
 }
 
 .modal__head {
@@ -73,19 +75,20 @@ body {
    border: none;
    outline: none;
    padding: 10px;
-   color: #f5f5f5;
    cursor: pointer;
    font-size: 16px;
    margin-right: 18px;
    font-family: monospace;
    box-sizing: border-box;
-   background-color: #1f2831;
+   color: var(--component-font-color);
    transition: background-color 0.2s;
+   background-color: var(--component-bg-color);
+   border: 1px solid var(--component-border-color);
 }
 
 .modal__cancel-button:hover,
 .modal__submit-button:hover {
-   background-color: #38444d;
+   background-color: var(--component-hover-color);
 }
 
 
