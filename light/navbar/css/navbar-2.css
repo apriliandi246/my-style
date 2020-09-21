@@ -15,19 +15,24 @@ body {
    display: flex;
    position: fixed;
    align-items: center;
-   justify-content: space-around;
-   background-color: var(--component-bg-color);
-   box-shadow: var(--component-second-box-shadow);
+   padding: 0 55px 0 55px;
+   justify-content: space-between;
+   background-color: var(--body-bg-color);
+   box-shadow: var(--component-box-shadow);
 }
 
-.navbar__logo {
-   width: 65px;
-   height: 65px;
+.navbar__brand {
+   width: 62px;
+   height: 62px;
    background-size: cover;
    transition: box-shadow 0.2s;
    background-repeat: no-repeat;
-   box-shadow: 0 0 1px 1px #404a4d33;
    background-image: url(../img/logo.png);
+   box-shadow: var(--component-box-shadow);
+}
+
+.navbar__brand:hover {
+   box-shadow: 0 0 4px 4px #404a4d33;
 }
 
 .navbar__items {
@@ -41,28 +46,23 @@ body {
 }
 
 .navbar__link {
-   color: var(--component-font-color);
    font-size: 20px;
    text-decoration: none;
    font-family: monospace;
-   transition: color 0.2s;
+   transition: color 0.3s;
+   color: var(--component-font-color);
+}
+
+.navbar__link:hover {
+   color: #8a2be2;
 }
 
 .navbar__slash-icon {
    margin-right: 3px;
 }
 
-.navbar__logo:hover {
-   box-shadow: 0 0 5px 5px#404a4d33;
-}
 
-.navbar__link:hover {
-   color: #0000ff;
-}
-
-
-
-/* Toggle Menu / Hamburger Menu */
+/* Toggle Menu */
 .toggle-menu {
    height: 20px;
    display: none;
@@ -75,8 +75,8 @@ body {
    top: -7px;
    opacity: 0;
    z-index: 2;
-   left: -11px;
-   width: 42px;
+   left: -10px;
+   width: 40px;
    height: 27px;
    cursor: pointer;
    position: absolute;
@@ -86,7 +86,8 @@ body {
    width: 28px;
    height: 3px;
    display: block;
-   transition: all 0.3s;
+   border-radius: 3px;
+   transition: all 0.2s;
    background-color: var(--component-font-color);
 }
 
@@ -115,15 +116,11 @@ body {
 
 
 /* Responsive Breakpoint */
-@media screen and (max-width: 768px) {
-   .navbar__items {
-      width: 60%;
-   }
-}
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 900px) {
    .navbar {
       height: 60px;
+      padding: 0 55px 0 55px;
    }
 
    .navbar__items {
@@ -133,7 +130,6 @@ body {
       z-index: 2;
       width: 100%;
       height: 100vh;
-      color: #000000;
       position: absolute;
       align-items: center;
       transition: all 0.3s;
@@ -151,5 +147,66 @@ body {
    .navbar--slide {
       opacity: 1;
       transform: translateX(0);
+   }
+}
+
+@media screen and (min-width: 901px) {
+   .navbar__brand {
+      width: 65px;
+      height: 65px;
+   }
+
+   .navbar__items {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+@media screen and (min-width: 1000px) {
+   .navbar {
+      padding: 0 95px 0 95px
+   }
+
+   .navbar__items {
+      width: 45%;
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .navbar {
+      padding: 0 115px 0 115px
+   }
+
+   .navbar__items {
+      width: 37%;
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+@media screen and (min-width: 1400px) {
+   .navbar {
+      padding: 0 175px 0 175px
+   }
+
+   .navbar__items {
+      width: 37%;
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+@media screen and (min-width: 1680px) {
+   .navbar {
+      padding: 0 245px 0 245px
+   }
+
+   .navbar__items {
+      width: 32%;
+      display: flex;
+      justify-content: space-between;
    }
 }

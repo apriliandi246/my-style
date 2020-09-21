@@ -5,6 +5,7 @@ body {
    background-color: var(--body-bg-color);
 }
 
+
 .navbar {
    top: 0;
    left: 0;
@@ -13,13 +14,14 @@ body {
    display: flex;
    position: fixed;
    align-items: center;
-   justify-content: space-around;
-   background-color: var(--component-bg-color);
-   box-shadow: var(--component-second-box-shadow);
+   justify-content: space-between;
+   background-color: var(--body-bg-color);
+   box-shadow: var(--component-box-shadow);
 }
 
-.navbar__logo {
+.navbar__brand {
    font-size: 28px;
+   font-weight: bolder;
    font-family: monospace;
    color: var(--component-font-color);
 }
@@ -44,6 +46,7 @@ body {
 
 
 /* Toggle Menu */
+
 .toggle-menu {
    height: 20px;
    display: none;
@@ -56,8 +59,8 @@ body {
    top: -7px;
    opacity: 0;
    z-index: 2;
-   left: -11px;
-   width: 42px;
+   left: -10px;
+   width: 40px;
    height: 27px;
    cursor: pointer;
    position: absolute;
@@ -67,6 +70,7 @@ body {
    width: 28px;
    height: 3px;
    display: block;
+   border-radius: 3px;
    transition: all 0.3s;
    background-color: var(--component-font-color);
 }
@@ -96,15 +100,11 @@ body {
 
 
 /* Responsive Breakpoint */
-@media screen and (max-width: 768px) {
-   .navbar__items {
-      width: 60%;
-   }
-}
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 850px) {
    .navbar {
       height: 60px;
+      padding: 0 60px 0 60px;
    }
 
    .navbar__items {
@@ -114,7 +114,6 @@ body {
       z-index: 1;
       width: 50%;
       height: 100vh;
-      color: #000000;
       position: absolute;
       align-items: center;
       transition: all 0.3s;
@@ -133,5 +132,55 @@ body {
    .navbar--slide {
       opacity: 1;
       transform: translateX(0);
+   }
+}
+
+@media screen and (min-width: 851px) {
+   .navbar {
+      padding: 0 35px 0 35px;
+   }
+
+   .navbar__items {
+      width: 68%;
+   }
+}
+
+@media screen and (min-width: 1000px) {
+   .navbar {
+      padding: 0 67px 0 67px;
+   }
+
+   .navbar__items {
+      width: 65%;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .navbar {
+      padding: 0 97px 0 97px;
+   }
+
+   .navbar__items {
+      width: 60%;
+   }
+}
+
+@media screen and (min-width: 1500px) {
+   .navbar {
+      padding: 0 125px 0 125px;
+   }
+
+   .navbar__items {
+      width: 54%;
+   }
+}
+
+@media screen and (min-width: 1760px) {
+   .navbar {
+      padding: 0 175px 0 175px;
+   }
+
+   .navbar__items {
+      width: 48%;
    }
 }
