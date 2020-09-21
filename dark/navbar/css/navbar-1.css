@@ -71,7 +71,7 @@ body {
    height: 3px;
    display: block;
    border-radius: 3px;
-   transition: all 0.2s;
+   transition: all 0.3s;
    background-color: var(--component-font-color);
 }
 
