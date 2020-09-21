@@ -1,5 +1,8 @@
+@import '../../color-variables/style.css';
+
+
 body {
-   background-color: #f5f5f5;
+   background-color: var(--body-bg-color);
 }
 
 
@@ -12,9 +15,9 @@ body {
    display: flex;
    position: fixed;
    align-items: center;
-   background-color: #fafafa;
    justify-content: space-around;
-   box-shadow: 0 0 1.2px 1.2px #0000001a;
+   background-color: var(--component-bg-color);
+   box-shadow: var(--component-second-box-shadow);
 }
 
 .navbar__logo {
@@ -38,7 +41,7 @@ body {
 }
 
 .navbar__link {
-   color: #000000;
+   color: var(--component-font-color);
    font-size: 20px;
    text-decoration: none;
    font-family: monospace;
@@ -83,8 +86,8 @@ body {
    width: 28px;
    height: 3px;
    display: block;
-   transition: all 0.2s;
-   background-color: #15202B;
+   transition: all 0.3s;
+   background-color: var(--component-font-color);
 }
 
 .toggle-menu__block:nth-child(2) {
@@ -96,7 +99,7 @@ body {
 }
 
 .toggle-menu__trigger:checked~.toggle-menu__block:nth-child(2) {
-   background-color: #000000;
+   background-color: var(--component-font-color);
    transform: rotate(45deg) translate(1px, -1px);
 }
 
@@ -106,7 +109,7 @@ body {
 }
 
 .toggle-menu__trigger:checked~.toggle-menu__block:nth-child(4) {
-   background-color: #000000;
+   background-color: var(--component-font-color);
    transform: rotate(-45deg) translate(-1px, 1px);
 }
 
@@ -133,11 +136,11 @@ body {
       color: #000000;
       position: absolute;
       align-items: center;
-      transition: all 0.2s;
+      transition: all 0.3s;
       flex-direction: column;
-      background-color: #fafafa;
       transform: translateY(100%);
       justify-content: space-evenly;
+      background-color: var(--component-bg-color);
    }
 
    .toggle-menu {
