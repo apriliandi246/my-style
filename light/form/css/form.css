@@ -24,7 +24,6 @@ form {
 .input-form__label {
    color: var(--component-font-color);
    font-size: 20px;
-   font-weight: 520;
    font-family: monospace;
 }
 

@@ -21,7 +21,6 @@ body {
 
 .navbar__brand {
    font-size: 28px;
-   font-weight: bolder;
    font-family: monospace;
    color: var(--component-font-color);
 }
