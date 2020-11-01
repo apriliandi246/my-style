@@ -1,10 +1,8 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
-
 
 .navbar {
    top: 0;
@@ -17,8 +15,8 @@ body {
    align-items: center;
    padding: 0 55px 0 55px;
    justify-content: space-between;
-   background-color: var(--body-bg-color);
    box-shadow: var(--component-box-shadow);
+   background-color: var(--component-box-shadow);
 }
 
 .navbar__brand {
@@ -61,7 +59,6 @@ body {
    margin-right: 3px;
 }
 
-
 /* Toggle Menu */
 .toggle-menu {
    height: 20px;
@@ -99,21 +96,20 @@ body {
    transform-origin: 0 100%;
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(2) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(2) {
    background-color: var(--component-font-color);
    transform: rotate(45deg) translate(1px, -1px);
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(3) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(3) {
    opacity: 0;
    transform: scale(0);
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(4) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(4) {
    background-color: var(--component-font-color);
    transform: rotate(-45deg) translate(-1px, 1px);
 }
-
 
 /* Responsive Breakpoint */
 
@@ -165,7 +161,7 @@ body {
 
 @media screen and (min-width: 1000px) {
    .navbar {
-      padding: 0 95px 0 95px
+      padding: 0 95px 0 95px;
    }
 
    .navbar__items {
@@ -177,7 +173,7 @@ body {
 
 @media screen and (min-width: 1200px) {
    .navbar {
-      padding: 0 115px 0 115px
+      padding: 0 115px 0 115px;
    }
 
    .navbar__items {
@@ -189,7 +185,7 @@ body {
 
 @media screen and (min-width: 1400px) {
    .navbar {
-      padding: 0 175px 0 175px
+      padding: 0 175px 0 175px;
    }
 
    .navbar__items {
@@ -201,7 +197,7 @@ body {
 
 @media screen and (min-width: 1680px) {
    .navbar {
-      padding: 0 245px 0 245px
+      padding: 0 245px 0 245px;
    }
 
    .navbar__items {
