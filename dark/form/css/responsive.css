@@ -1,0 +1,62 @@
+.container {
+   width: 88%;
+   margin: 80px auto;
+}
+
+@media screen and (min-width: 600px) {
+   .container {
+      width: 67%;
+   }
+}
+
+@media screen and (min-width: 760px) {
+   .container {
+      width: 52%;
+   }
+
+   .input-form__input {
+      font-size: 17px;
+   }
+}
+
+@media screen and (min-width: 910px) {
+   .container {
+      width: 41%;
+   }
+}
+
+@media screen and (min-width: 1080px) {
+   .container {
+      width: 37%;
+   }
+}
+
+@media screen and (min-width: 1240px) {
+   .container {
+      width: 33%;
+   }
+}
+
+@media screen and (min-width: 1390px) {
+   .container {
+      width: 28%;
+   }
+}
+
+@media screen and (min-width: 1601px) {
+   .container {
+      width: 25%;
+   }
+}
+
+@media screen and (min-width: 1751px) {
+   .container {
+      width: 23%;
+   }
+}
+
+@media screen and (min-width: 1860px) {
+   .container {
+      width: 20%;
+   }
+}
