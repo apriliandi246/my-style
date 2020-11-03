@@ -1,17 +1,14 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
 
-
 /* for centering the component */
 .container {
-   width: 370px;
+   width: 88%;
    margin: 80px auto;
 }
-
 
 form {
    width: 100%;
@@ -22,15 +19,16 @@ form {
 }
 
 .input-form__label {
-   color: var(--component-font-color);
-   font-size: 20px;
+   font-size: 1rem;
+   letter-spacing: 1px;
    font-family: monospace;
+   color: var(--component-font-color);
 }
 
 .input-form__input {
    width: 100%;
    border: none;
-   padding: 12px;
+   padding: 11px;
    outline: none;
    display: block;
    font-size: 17px;
@@ -48,8 +46,8 @@ form {
    outline: none;
    padding: 10px;
    cursor: pointer;
-   font-size: 18px;
    margin-top: 34px;
+   font-size: 0.9rem;
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
@@ -65,8 +63,8 @@ form {
    padding: 11px;
    outline: none;
    display: block;
-   font-size: 18px;
    margin-top: 16px;
+   font-size: 0.9rem;
    text-align: center;
    text-decoration: none;
    font-family: monospace;
@@ -82,14 +80,71 @@ form {
 }
 
 .input-form__input:focus {
-   background-color: var(--component-hover-color);
+   background-color: var(--body-bg-color);
 }
 
 .input-form__input::placeholder {
+   letter-spacing: 1px;
    font-family: monospace;
 }
 
 .button-form:hover,
 .redirect-button-form:hover {
-   background-color: var(--component-hover-color);
+   background-color: var(--body-bg-color);
+}
+
+/* Responsive */
+
+@media screen and (min-width: 600px) {
+   .container {
+      width: 67%;
+   }
+}
+
+@media screen and (min-width: 760px) {
+   .input-form__input {
+      font-size: 17px;
+   }
+}
+
+@media screen and (min-width: 910px) {
+   .container {
+      width: 41%;
+   }
+}
+
+@media screen and (min-width: 1080px) {
+   .container {
+      width: 37%;
+   }
+}
+
+@media screen and (min-width: 1240px) {
+   .container {
+      width: 33%;
+   }
+}
+
+@media screen and (min-width: 1390px) {
+   .container {
+      width: 28%;
+   }
+}
+
+@media screen and (min-width: 1601px) {
+   .container {
+      width: 25%;
+   }
+}
+
+@media screen and (min-width: 1751px) {
+   .container {
+      width: 23%;
+   }
+}
+
+@media screen and (min-width: 1860px) {
+   .container {
+      width: 20%;
+   }
 }
