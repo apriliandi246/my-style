@@ -1,17 +1,13 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
 
-
-/* for centering components */
 .container {
    width: 900px;
    margin: 50px auto;
 }
-
 
 .quote {
    padding: 20px;

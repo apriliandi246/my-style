@@ -1,10 +1,8 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
-
 
 .navbar {
    top: 0;
@@ -42,7 +40,6 @@ body {
 .navbar__link:hover {
    color: #8a2be2;
 }
-
 
 /* Toggle Menu */
 
@@ -82,21 +79,20 @@ body {
    transform-origin: 0 100%;
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(2) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(2) {
    background-color: var(--component-font-color);
    transform: rotate(45deg) translate(1px, -1px);
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(3) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(3) {
    opacity: 0;
    transform: scale(0);
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(4) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(4) {
    background-color: var(--component-font-color);
    transform: rotate(-45deg) translate(-1px, 1px);
 }
-
 
 /* Responsive Breakpoint */
 

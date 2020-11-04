@@ -1,17 +1,13 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
 
-
-/* for centering the component */
 .container {
    width: 400px;
    margin: 70px auto;
 }
-
 
 .toggle-menu {
    height: 20px;
@@ -48,17 +44,17 @@ body {
    transform-origin: 0 100%;
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(2) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(2) {
    background-color: var(--component-font-color);
    transform: rotate(45deg) translate(1px, -1px);
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(3) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(3) {
    opacity: 0;
    transform: scale(0);
 }
 
-.toggle-menu__trigger:checked~.toggle-menu__block:nth-child(4) {
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(4) {
    background-color: var(--component-font-color);
    transform: rotate(-45deg) translate(-1px, 1px);
 }

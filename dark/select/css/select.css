@@ -1,12 +1,9 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
 
-
-/* for centering the component */
 .container {
    width: 500px;
    margin: 40px auto;

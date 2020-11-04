@@ -2,7 +2,6 @@ body {
    background-color: #15202b;
 }
 
-
 /* Spinner 1 */
 .spinner-1::before {
    top: 50%;
@@ -54,7 +53,6 @@ body {
    border-right: 4px solid transparent;
    animation: spinner 1s linear infinite;
 }
-
 
 /* Spinner 4 */
 .spinner-4::before {

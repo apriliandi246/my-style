@@ -4,7 +4,6 @@ body {
    background-color: var(--body-bg-color);
 }
 
-/* for centering the component */
 .container {
    width: 550px;
    margin: 50px auto;
