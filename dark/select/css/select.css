@@ -13,9 +13,9 @@ select {
    width: 100%;
    border: none;
    outline: none;
-   padding: 12px;
+   padding: 10.4px;
    cursor: pointer;
-   font-size: 16px;
+   font-size: 1rem;
    -moz-appearance: none;
    box-sizing: border-box;
    font-family: monospace;
@@ -28,4 +28,10 @@ select {
 
 select:hover {
    background-color: var(--component-hover-color);
+}
+
+@media screen and (min-width: 900px) {
+   select {
+      font-size: 0.9rem;
+   }
 }
