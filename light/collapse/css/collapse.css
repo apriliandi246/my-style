@@ -1,24 +1,21 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
-
 
 .container {
    width: 600px;
    margin: 50px auto;
 }
 
-
 .collapse__button {
    width: 100%;
    border: none;
    outline: none;
-   padding: 15px;
+   padding: 13px;
    cursor: pointer;
-   font-size: 18px;
+   font-size: 1rem;
    text-align: left;
    font-family: monospace;
    box-sizing: border-box;
@@ -36,9 +33,9 @@ body {
 .collapse__content {
    padding: 18px;
    display: none;
-   font-size: 18px;
+   font-size: 1rem;
    overflow: hidden;
-   line-height: 24px;
+   line-height: 25px;
    letter-spacing: 1px;
    box-sizing: border-box;
    font-family: monospace;
@@ -53,4 +50,16 @@ body {
 .collapse__button--active,
 .collapse__button:hover {
    background-color: var(--component-hover-color);
+}
+
+@media screen and (min-width: 900px) {
+   .collapse__button {
+      padding: 12px;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+   }
+
+   .collapse__content {
+      font-size: 0.9rem;
+   }
 }
