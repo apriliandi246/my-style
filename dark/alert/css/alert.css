@@ -1,10 +1,8 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
-
 
 /* for centering the component */
 .container {
@@ -13,11 +11,10 @@ body {
    text-align: center;
 }
 
-
 .alert {
    width: 100%;
-   padding: 8px;
    display: flex;
+   padding: 8.3px;
    font-weight: bolder;
    margin-bottom: 55px;
    align-items: center;
@@ -29,16 +26,27 @@ body {
 }
 
 .alert__message {
-   font-size: 17px;
+   font-size: 1rem;
+   letter-spacing: 0.5px;
 }
 
 .alert__close-button {
    padding: 3px;
    cursor: pointer;
-   font-size: 26px;
+   font-size: 1.3rem;
    transition: color 0.2s;
 }
 
 .alert__close-button:hover {
    color: #38444d;
+}
+
+@media screen and (min-width: 1260px) {
+   .alert__message {
+      font-size: 0.9rem;
+   }
+
+   .alert {
+      padding: 8px;
+   }
 }
