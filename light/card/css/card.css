@@ -1,23 +1,19 @@
-@import '../../color-variables/style.css';
-
+@import "../../color-variables/style.css";
 
 body {
    background-color: var(--body-bg-color);
 }
 
-
-/* for centering the component */
 .card {
-   margin: 90px auto;
+   margin: 50px auto;
 }
-
 
 .card {
    width: 600px;
    color: #000000;
    box-sizing: border-box;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
+   background-color: #f9f9f9;
 }
 
 .card__head {
@@ -30,13 +26,13 @@ body {
    float: left;
    width: 50px;
    height: 50px;
-   border-radius: 50%;
+   border-radius: 100%;
    box-shadow: var(--component-box-shadow);
 }
 
 .card__username {
    float: left;
-   font-size: 19px;
+   font-size: 1rem;
    margin-top: 15px;
    margin-left: 18px;
    text-align: center;
@@ -56,7 +52,7 @@ body {
 
 .card__description {
    padding: 15px;
-   font-size: 18px;
+   font-size: 1rem;
    line-height: 25px;
    margin-top: -15px;
    margin-bottom: 17px;
@@ -68,10 +64,22 @@ body {
 .card__footer {
    float: right;
    padding: 15px;
-   font-size: 17px;
+   font-size: 0.9rem;
+   letter-spacing: 1px;
    font-family: monospace;
 }
 
 .card__username:hover {
    color: #0000ff;
+   border-bottom: 1px solid #0000ff;
+}
+
+@media screen and (min-width: 1196px) {
+   .card__username {
+      font-size: 0.9rem;
+   }
+
+   .card__description {
+      font-size: 0.9rem;
+   }
 }
