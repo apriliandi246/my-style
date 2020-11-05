@@ -22,10 +22,6 @@ body {
    background-color: var(--component-bg-color);
 }
 
-.modal-trigger-button:hover {
-   background-color: var(--component-hover-color);
-}
-
 .modal {
    top: 0;
    left: 0;
@@ -39,10 +35,11 @@ body {
 }
 
 .modal__body {
-   width: 600px;
+   width: 88%;
    padding: 10px;
    color: #000000;
-   margin: 10% auto;
+   margin: 40% auto;
+   border-radius: 4px;
    font-family: monospace;
    background-color: var(--component-bg-color);
 }
@@ -50,13 +47,13 @@ body {
 .modal__head {
    padding: 12px;
    font-size: 25px;
-   font-weight: bolder;
+   font-weight: bold;
 }
 
 .modal__content {
    padding: 12px;
-   font-size: 16px;
-   line-height: 23px;
+   font-size: 1rem;
+   line-height: 25px;
 }
 
 .modal__footer {
@@ -70,13 +67,17 @@ body {
    padding: 10px;
    color: #000000;
    cursor: pointer;
-   font-size: 16px;
+   font-size: 0.9rem;
    margin-right: 18px;
    font-family: monospace;
    box-sizing: border-box;
    transition: background-color 0.2s;
    box-shadow: var(--component-box-shadow);
    background-color: var(--component-bg-color);
+}
+
+.modal-trigger-button:hover {
+   background-color: var(--component-hover-color);
 }
 
 .modal__cancel-button:hover,
