@@ -39,20 +39,18 @@ body {
    justify-content: space-between;
 }
 
-.navbar__item {
-   display: inline;
-}
-
 .navbar__link {
-   font-size: 20px;
+   font-size: 1rem;
+   letter-spacing: 1px;
    text-decoration: none;
    font-family: monospace;
-   transition: color 0.3s;
    color: var(--component-font-color);
+   transition: color 0.2s, border-color 0.2s;
 }
 
 .navbar__link:hover {
    color: #8a2be2;
+   border-color: #0000ff;
 }
 
 .navbar__slash-icon {
@@ -109,100 +107,4 @@ body {
 .toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(4) {
    background-color: var(--component-font-color);
    transform: rotate(-45deg) translate(-1px, 1px);
-}
-
-/* Responsive Breakpoint */
-
-@media screen and (max-width: 900px) {
-   .navbar {
-      height: 60px;
-      padding: 0 55px 0 55px;
-   }
-
-   .navbar__items {
-      top: 0;
-      right: 0;
-      opacity: 0;
-      z-index: 2;
-      width: 100%;
-      height: 100vh;
-      position: absolute;
-      align-items: center;
-      transition: all 0.3s;
-      flex-direction: column;
-      transform: translateY(100%);
-      justify-content: space-evenly;
-      background-color: var(--component-bg-color);
-   }
-
-   .toggle-menu {
-      z-index: 2;
-      display: flex;
-   }
-
-   .navbar--slide {
-      opacity: 1;
-      transform: translateX(0);
-   }
-}
-
-@media screen and (min-width: 901px) {
-   .navbar__brand {
-      width: 65px;
-      height: 65px;
-   }
-
-   .navbar__items {
-      width: 50%;
-      display: flex;
-      justify-content: space-between;
-   }
-}
-
-@media screen and (min-width: 1000px) {
-   .navbar {
-      padding: 0 95px 0 95px;
-   }
-
-   .navbar__items {
-      width: 45%;
-      display: flex;
-      justify-content: space-between;
-   }
-}
-
-@media screen and (min-width: 1200px) {
-   .navbar {
-      padding: 0 115px 0 115px;
-   }
-
-   .navbar__items {
-      width: 37%;
-      display: flex;
-      justify-content: space-between;
-   }
-}
-
-@media screen and (min-width: 1400px) {
-   .navbar {
-      padding: 0 175px 0 175px;
-   }
-
-   .navbar__items {
-      width: 37%;
-      display: flex;
-      justify-content: space-between;
-   }
-}
-
-@media screen and (min-width: 1680px) {
-   .navbar {
-      padding: 0 245px 0 245px;
-   }
-
-   .navbar__items {
-      width: 32%;
-      display: flex;
-      justify-content: space-between;
-   }
 }
