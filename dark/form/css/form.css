@@ -86,3 +86,8 @@ form {
 .redirect-button-form:hover {
    background-color: var(--body-bg-color);
 }
+
+.button-form:focus,
+.redirect-button-form:focus {
+   background-color: var(--component-border-color);
+}

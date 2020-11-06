@@ -86,7 +86,12 @@ body {
 
 .modal__cancel-button:hover,
 .modal__submit-button:hover {
-   background-color: var(--component-hover-color);
+   background-color: var(--body-bg-color);
+}
+
+.modal__cancel-button:focus,
+.modal__submit-button:focus {
+   background-color: var(--component-border-color);
 }
 
 @keyframes animatetop {

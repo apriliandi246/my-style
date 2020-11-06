@@ -91,6 +91,11 @@ form {
    background-color: var(--body-bg-color);
 }
 
+.button-form:focus,
+.redirect-button-form:focus {
+   background-color: var(--component-border-color);
+}
+
 /* validation style */
 
 /* make elemen p disappear, when user not type any characters */
