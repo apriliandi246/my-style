@@ -1,19 +1,17 @@
-// ! For more than one collapse components
-const icons = document.querySelectorAll(".collapse__icon");
-const collapseButtons = document.querySelectorAll(".collapse__button");
+document.querySelector(".collapses").addEventListener("click", (event) => {
+   if (event.target.classList[0] !== "collapse__button") return;
 
-for (let index = 0; index < collapseButtons.length; index++) {
-   collapseButtons[index].addEventListener("click", function () {
-      const collapseContent = collapseButtons[index].nextElementSibling;
+   let collapseButton = event.target;
+   let buttonIcon = collapseButton.firstElementChild;
+   let collapseContent = event.target.nextElementSibling;
 
-      this.classList.toggle("collapse__button--active");
+   collapseButton.classList.toggle("collapse__button--active");
 
-      if (collapseContent.style.display === "block") {
-         icons[index].innerHTML = "&#9650;";
-         collapseContent.style.display = "none";
-      } else {
-         icons[index].innerHTML = "&#9660;";
-         collapseContent.style.display = "block";
-      }
-   });
-}
+   if (collapseContent.style.display === "block") {
+      buttonIcon.innerHTML = "&#9650;";
+      collapseContent.style.display = "none";
+   } else {
+      buttonIcon.innerHTML = "&#9660;";
+      collapseContent.style.display = "block";
+   }
+});
