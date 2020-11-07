@@ -9,7 +9,7 @@ body {
    left: 0;
    right: 0;
    z-index: 1;
-   height: 65px;
+   height: 66px;
    display: flex;
    position: fixed;
    align-items: center;
@@ -42,15 +42,16 @@ body {
 .navbar__link {
    color: #000000;
    font-size: 1rem;
-   letter-spacing: 1px;
+   font-weight: 550;
+   letter-spacing: 1.2px;
    text-decoration: none;
    font-family: monospace;
    transition: color 0.2s, border-color 0.2s;
 }
 
 .navbar__link:hover {
-   color: #8a2be2;
-   border-color: #0000ff;
+   padding-bottom: 21px;
+   border-bottom: 3px solid black;
 }
 
 .navbar__slash-icon {

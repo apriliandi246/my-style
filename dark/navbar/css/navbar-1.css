@@ -8,7 +8,7 @@ body {
    top: 0;
    left: 0;
    right: 0;
-   height: 70px;
+   height: 67px;
    display: flex;
    position: fixed;
    align-items: center;
@@ -32,14 +32,16 @@ body {
 .navbar__link {
    color: #ffffff;
    font-size: 1rem;
-   letter-spacing: 1px;
+   font-weight: 550;
+   letter-spacing: 1.2px;
    text-decoration: none;
    font-family: monospace;
    transition: color 0.2s;
 }
 
 .navbar__link:hover {
-   color: #8a2be2;
+   padding-bottom: 21px;
+   border-bottom: 2px solid #ffffff;
 }
 
 /* Toggle Menu */

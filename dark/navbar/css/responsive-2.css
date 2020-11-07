@@ -20,7 +20,8 @@
    }
 
    .navbar__link {
-      padding-bottom: 4px;
+      padding-bottom: 5px;
+      transition: padding-bottom 0.2s;
       border-bottom: 2px solid #ffffff;
    }
 
