@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .container {
@@ -33,7 +33,7 @@ body {
    height: 3px;
    display: block;
    transition: all 0.3s;
-   background-color: var(--component-font-color);
+   background-color: #ffffff;
 }
 
 .toggle-menu__block:nth-child(2) {
@@ -45,7 +45,7 @@ body {
 }
 
 .toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(2) {
-   background-color: var(--component-font-color);
+   background-color: #ffffff;
    transform: rotate(45deg) translate(1px, -1px);
 }
 
@@ -55,6 +55,6 @@ body {
 }
 
 .toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(4) {
-   background-color: var(--component-font-color);
+   background-color: #ffffff;
    transform: rotate(-45deg) translate(-1px, 1px);
 }

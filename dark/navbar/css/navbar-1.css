@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .navbar {
@@ -20,7 +20,7 @@ body {
 .navbar__brand {
    font-size: 1.3rem;
    font-family: monospace;
-   color: var(--component-font-color);
+   color: #ffffff;
 }
 
 .navbar__items {
@@ -35,7 +35,7 @@ body {
    text-decoration: none;
    font-family: monospace;
    transition: color 0.2s;
-   color: var(--component-font-color);
+   color: #ffffff;
 }
 
 .navbar__link:hover {
@@ -69,7 +69,7 @@ body {
    display: block;
    border-radius: 3px;
    transition: all 0.3s;
-   background-color: var(--component-font-color);
+   background-color: #ffffff;
 }
 
 .toggle-menu__block:nth-child(2) {
@@ -81,7 +81,7 @@ body {
 }
 
 .toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(2) {
-   background-color: var(--component-font-color);
+   background-color: #ffffff;
    transform: rotate(45deg) translate(1px, -1px);
 }
 
@@ -91,6 +91,6 @@ body {
 }
 
 .toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(4) {
-   background-color: var(--component-font-color);
+   background-color: #ffffff;
    transform: rotate(-45deg) translate(-1px, 1px);
 }

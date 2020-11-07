@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .container {
@@ -21,7 +21,7 @@ body {
    font-family: monospace;
    background-color: #ff4500;
    justify-content: space-between;
-   color: var(--component-font-color);
+   color: #ffffff;
 }
 
 .alert__message {

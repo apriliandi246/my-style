@@ -22,7 +22,7 @@
       flex-direction: column;
       transform: translateX(100%);
       justify-content: space-evenly;
-      background-color: var(--second-component-bg-color);
+      background-color: var(--fifth);
    }
 
    .toggle-menu {

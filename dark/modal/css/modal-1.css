@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .modal-trigger-button {
@@ -16,10 +16,10 @@ body {
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   color: var(--component-font-color);
+   color: #ffffff;
    transition: background-color 0.2s;
-   background-color: var(--component-bg-color);
-   border: 1px solid var(--component-border-color);
+   background-color: var(--second);
+   border: 1px solid var(--fourth);
 }
 
 .modal {
@@ -40,9 +40,9 @@ body {
    margin: 40% auto;
    border-radius: 4px;
    font-family: monospace;
-   color: var(--component-font-color);
-   background-color: var(--component-bg-color);
-   border: 1px solid var(--component-border-color);
+   color: #ffffff;
+   background-color: var(--second);
+   border: 1px solid var(--fourth);
 }
 
 .modal__head {
@@ -72,21 +72,21 @@ body {
    font-family: monospace;
    box-sizing: border-box;
    transition: background-color 0.2s;
-   color: var(--component-font-color);
-   background-color: var(--component-bg-color);
-   border: 1px solid var(--component-border-color);
+   color: #ffffff;
+   background-color: var(--second);
+   border: 1px solid var(--fourth);
 }
 
 .modal-trigger-button:hover {
-   background-color: var(--component-hover-color);
+   background-color: var(--third);
 }
 
 .modal__cancel-button:hover,
 .modal__submit-button:hover {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .modal__cancel-button:focus,
 .modal__submit-button:focus {
-   background-color: var(--component-border-color);
+   background-color: var(--fourth);
 }

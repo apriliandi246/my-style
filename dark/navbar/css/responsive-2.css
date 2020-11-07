@@ -16,7 +16,7 @@
       flex-direction: column;
       transform: translateY(100%);
       justify-content: space-evenly;
-      background-color: var(--second-component-bg-color);
+      background-color: var(--fifth);
    }
 
    .navbar__link {
