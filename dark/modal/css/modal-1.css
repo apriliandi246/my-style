@@ -5,21 +5,18 @@ body {
 }
 
 .modal-trigger-button {
-   border: none;
    outline: none;
    padding: 10px;
    display: block;
+   color: #ffffff;
    cursor: pointer;
    font-size: 18px;
-   margin-top: 45px;
    margin: 60px auto;
-   margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   color: #ffffff;
-   transition: background-color 0.2s;
    background-color: var(--second);
    border: 1px solid var(--fourth);
+   transition: background-color 0.2s;
 }
 
 .modal {
@@ -37,10 +34,10 @@ body {
 .modal__body {
    width: 88%;
    padding: 10px;
+   color: #ffffff;
    margin: 40% auto;
    border-radius: 4px;
    font-family: monospace;
-   color: #ffffff;
    background-color: var(--second);
    border: 1px solid var(--fourth);
 }
@@ -63,18 +60,17 @@ body {
 
 .modal__cancel-button,
 .modal__submit-button {
-   border: none;
    outline: none;
    padding: 10px;
+   color: #ffffff;
    cursor: pointer;
    font-size: 0.9rem;
    margin-right: 18px;
    font-family: monospace;
    box-sizing: border-box;
-   transition: background-color 0.2s;
-   color: #ffffff;
    background-color: var(--second);
    border: 1px solid var(--fourth);
+   transition: background-color 0.2s;
 }
 
 .modal-trigger-button:hover {

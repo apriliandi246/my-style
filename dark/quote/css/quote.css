@@ -11,15 +11,15 @@ body {
 
 .quote {
    padding: 18px;
+   color: #ffffff;
    font-size: 1rem;
    line-height: 26px;
    font-style: italic;
    box-sizing: border-box;
    font-family: monospace;
-   color: #ffffff;
-   quotes: "\201C""\201D""\2018""\2019";
    background-color: var(--first);
    border: 1px solid var(--fourth);
+   quotes: "\201C""\201D""\2018""\2019";
    border-left: 15px solid var(--fourth);
 }
 

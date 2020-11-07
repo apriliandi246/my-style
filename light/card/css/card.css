@@ -12,8 +12,8 @@ body {
    width: 600px;
    color: #000000;
    box-sizing: border-box;
-   box-shadow: var(--component-box-shadow);
    background-color: #f9f9f9;
+   box-shadow: var(--component-box-shadow);
 }
 
 .card__head {
@@ -32,6 +32,7 @@ body {
 
 .card__username {
    float: left;
+   color: #000000;
    font-size: 1rem;
    margin-top: 15px;
    margin-left: 18px;
@@ -40,7 +41,6 @@ body {
    text-decoration: none;
    transition: color 0.2s;
    font-family: monospace;
-   color: #000000;
 }
 
 .card__image {

@@ -13,14 +13,14 @@ body {
    position: fixed;
    align-items: center;
    justify-content: space-between;
-   box-shadow: var(--component-box-shadow);
    background-color: var(--second);
+   box-shadow: var(--component-box-shadow);
 }
 
 .navbar__brand {
+   color: #000000;
    font-size: 1.3rem;
    font-family: monospace;
-   color: #000000;
 }
 
 .navbar__items {
@@ -30,11 +30,11 @@ body {
 }
 
 .navbar__link {
+   color: #000000;
    font-size: 1rem;
    letter-spacing: 1px;
    text-decoration: none;
    font-family: monospace;
-   color: #000000;
    transition: color 0.2s, border-color 0.2s;
 }
 

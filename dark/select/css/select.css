@@ -11,8 +11,8 @@ body {
 
 select {
    width: 100%;
-   border: none;
    outline: none;
+   color: #ffffff;
    padding: 10.4px;
    cursor: pointer;
    font-size: 1rem;
@@ -21,10 +21,9 @@ select {
    box-sizing: border-box;
    font-family: monospace;
    -webkit-appearance: none;
-   transition: background-color 0.2s;
-   color: #ffffff;
    background-color: var(--second);
    border: 1px solid var(--fourth);
+   transition: background-color 0.2s;
 }
 
 select:hover {

@@ -16,10 +16,10 @@ body {
    font-style: italic;
    box-sizing: border-box;
    font-family: monospace;
+   background-color: var(--second);
    border-left: 10px solid #cccccc;
    quotes: "\201C""\201D""\2018""\2019";
    box-shadow: var(--component-box-shadow);
-   background-color: var(--second);
 }
 
 .quote::before {

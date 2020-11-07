@@ -1,0 +1,25 @@
+/* validation style */
+
+/* make elemen p disappear, when user not type any characters */
+.input-form__message {
+   height: 0;
+   opacity: 0;
+   color: #ff4500;
+   font-size: 16px;
+   line-height: 21px;
+   text-align: center;
+   transition: all 0.2s;
+   font-family: monospace;
+}
+
+/* when user input is invalid, add class invalid */
+.input-form__input--invalid + .input-form__message {
+   opacity: 1;
+   height: auto;
+   color: #ff4500;
+   margin-top: 10px;
+   font-size: 16.5px;
+   line-height: 21px;
+   text-align: center;
+   font-family: monospace;
+}

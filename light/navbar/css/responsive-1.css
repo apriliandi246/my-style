@@ -17,8 +17,8 @@
       flex-direction: column;
       transform: translateX(100%);
       justify-content: space-evenly;
-      box-shadow: var(--component-box-shadow);
       background-color: var(--second);
+      box-shadow: var(--component-box-shadow);
    }
 
    .toggle-menu {

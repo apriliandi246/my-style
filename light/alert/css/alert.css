@@ -13,8 +13,8 @@ body {
 .alert {
    width: 100%;
    display: flex;
+   padding: 8.1px;
    color: #ffffff;
-   padding: 8.3px;
    font-weight: bolder;
    margin-bottom: 55px;
    align-items: center;
@@ -27,6 +27,7 @@ body {
 .alert__message {
    font-size: 1rem;
    letter-spacing: 0.5px;
+   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
 }
 
 .alert__close-button {
@@ -47,5 +48,31 @@ body {
 
    .alert {
       padding: 8px;
+   }
+}
+
+@media screen and (min-width: 760px) {
+   .alert {
+      padding: 7px;
+   }
+
+   .alert__message {
+      font-size: 0.8rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .alert {
+      padding: 6px;
+   }
+}
+
+@media screen and (min-width: 1260px) {
+   .alert {
+      padding: 7px;
+   }
+
+   .alert__message {
+      font-size: 0.8rem;
    }
 }

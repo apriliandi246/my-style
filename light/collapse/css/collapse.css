@@ -14,15 +14,15 @@ body {
    border: none;
    outline: none;
    padding: 13px;
+   color: #000000;
    cursor: pointer;
    font-size: 1rem;
    text-align: left;
    font-family: monospace;
    box-sizing: border-box;
-   transition: background-color 0.2s;
-   color: #000000;
-   box-shadow: var(--component-box-shadow);
    background-color: var(--second);
+   transition: background-color 0.2s;
+   box-shadow: var(--component-box-shadow);
 }
 
 .collapse__icon {
@@ -33,18 +33,16 @@ body {
 .collapse__content {
    padding: 18px;
    display: none;
+   color: #000000;
    font-size: 1rem;
    overflow: hidden;
    line-height: 25px;
    letter-spacing: 1px;
    box-sizing: border-box;
    font-family: monospace;
-   color: #000000;
-   box-shadow: var(--component-box-shadow);
+   border: 1px solid var(--third);
    background-color: var(--second);
-   border-left: 1px solid var(--third);
-   border-right: 1px solid var(--third);
-   border-bottom: 1px solid var(--third);
+   box-shadow: var(--component-box-shadow);
 }
 
 .collapse__button--active,

@@ -9,6 +9,7 @@ body {
    outline: none;
    padding: 10px;
    display: block;
+   color: #000000;
    cursor: pointer;
    font-size: 18px;
    margin-top: 45px;
@@ -16,10 +17,9 @@ body {
    margin-bottom: 10px;
    font-family: monospace;
    box-sizing: border-box;
-   transition: background-color 0.2s;
-   color: #000000;
-   box-shadow: var(--component-box-shadow);
    background-color: var(--second);
+   transition: background-color 0.2s;
+   box-shadow: var(--component-box-shadow);
 }
 
 .modal-trigger-button:hover {
@@ -78,9 +78,9 @@ body {
    margin-right: 18px;
    font-family: monospace;
    box-sizing: border-box;
+   background-color: var(--second);
    transition: background-color 0.2s;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--second);
 }
 
 .modal__cancel-button:hover,

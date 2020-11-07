@@ -13,7 +13,8 @@ body {
 .alert {
    width: 100%;
    display: flex;
-   padding: 8.3px;
+   padding: 8.1px;
+   color: #ffffff;
    font-weight: bolder;
    margin-bottom: 55px;
    align-items: center;
@@ -21,7 +22,6 @@ body {
    font-family: monospace;
    background-color: #ff4500;
    justify-content: space-between;
-   color: #ffffff;
 }
 
 .alert__message {
@@ -40,12 +40,28 @@ body {
    color: #38444d;
 }
 
-@media screen and (min-width: 1260px) {
-   .alert__message {
-      font-size: 0.9rem;
+@media screen and (min-width: 760px) {
+   .alert {
+      padding: 7px;
    }
 
+   .alert__message {
+      font-size: 0.8rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
    .alert {
-      padding: 8px;
+      padding: 6px;
+   }
+}
+
+@media screen and (min-width: 1260px) {
+   .alert {
+      padding: 7px;
+   }
+
+   .alert__message {
+      font-size: 0.8rem;
    }
 }
