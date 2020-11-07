@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .container {

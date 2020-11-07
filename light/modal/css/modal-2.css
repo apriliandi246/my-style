@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .modal-trigger-button {
@@ -17,13 +17,13 @@ body {
    font-family: monospace;
    box-sizing: border-box;
    transition: background-color 0.2s;
-   color: var(--component-font-color);
+   color: #000000;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
+   background-color: var(--second);
 }
 
 .modal-trigger-button:hover {
-   background-color: var(--component-hover-color);
+   background-color: var(--third);
 }
 
 .modal {
@@ -48,7 +48,7 @@ body {
    font-family: monospace;
    animation-duration: 0.4s;
    animation-name: animatetop;
-   background-color: var(--component-bg-color);
+   background-color: var(--second);
 }
 
 .modal__head {
@@ -80,12 +80,12 @@ body {
    box-sizing: border-box;
    transition: background-color 0.2s;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
+   background-color: var(--second);
 }
 
 .modal__cancel-button:hover,
 .modal__submit-button:hover {
-   background-color: var(--component-hover-color);
+   background-color: var(--third);
 }
 
 @keyframes animatetop {

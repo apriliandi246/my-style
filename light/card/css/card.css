@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .card {
@@ -40,7 +40,7 @@ body {
    text-decoration: none;
    transition: color 0.2s;
    font-family: monospace;
-   color: var(--component-font-color);
+   color: #000000;
 }
 
 .card__image {

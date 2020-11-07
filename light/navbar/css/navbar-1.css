@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .navbar {
@@ -14,13 +14,13 @@ body {
    align-items: center;
    justify-content: space-between;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
+   background-color: var(--second);
 }
 
 .navbar__brand {
    font-size: 1.3rem;
    font-family: monospace;
-   color: var(--component-font-color);
+   color: #000000;
 }
 
 .navbar__items {
@@ -34,7 +34,7 @@ body {
    letter-spacing: 1px;
    text-decoration: none;
    font-family: monospace;
-   color: var(--component-font-color);
+   color: #000000;
    transition: color 0.2s, border-color 0.2s;
 }
 
@@ -70,7 +70,7 @@ body {
    display: block;
    border-radius: 3px;
    transition: all 0.3s;
-   background-color: var(--component-font-color);
+   background-color: #000000;
 }
 
 .toggle-menu__block:nth-child(2) {
@@ -82,7 +82,7 @@ body {
 }
 
 .toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(2) {
-   background-color: var(--component-font-color);
+   background-color: #000000;
    transform: rotate(45deg) translate(1px, -1px);
 }
 
@@ -92,6 +92,6 @@ body {
 }
 
 .toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(4) {
-   background-color: var(--component-font-color);
+   background-color: #000000;
    transform: rotate(-45deg) translate(-1px, 1px);
 }

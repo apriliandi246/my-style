@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .container {
@@ -20,9 +20,9 @@ body {
    font-family: monospace;
    box-sizing: border-box;
    transition: background-color 0.2s;
-   color: var(--component-font-color);
+   color: #000000;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
+   background-color: var(--second);
 }
 
 .collapse__icon {
@@ -39,17 +39,17 @@ body {
    letter-spacing: 1px;
    box-sizing: border-box;
    font-family: monospace;
-   color: var(--component-font-color);
+   color: #000000;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
-   border-left: 1px solid var(--component-hover-color);
-   border-right: 1px solid var(--component-hover-color);
-   border-bottom: 1px solid var(--component-hover-color);
+   background-color: var(--second);
+   border-left: 1px solid var(--third);
+   border-right: 1px solid var(--third);
+   border-bottom: 1px solid var(--third);
 }
 
 .collapse__button--active,
 .collapse__button:hover {
-   background-color: var(--component-hover-color);
+   background-color: var(--third);
 }
 
 @media screen and (min-width: 900px) {

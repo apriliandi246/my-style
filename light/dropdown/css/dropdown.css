@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .container {
@@ -20,9 +20,9 @@ body {
    font-family: monospace;
    box-sizing: border-box;
    transition: background-color 0.2s;
-   color: var(--component-font-color);
+   color: #000000;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
+   background-color: var(--second);
 }
 
 .dropdown__content {
@@ -33,7 +33,7 @@ body {
    position: absolute;
    font-family: monospace;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
+   background-color: var(--second);
 }
 
 .dropdown__item {
@@ -46,16 +46,16 @@ body {
    letter-spacing: 0.4px;
    font-family: monospace;
    transition: background-color 0.1s;
-   color: var(--component-font-color);
+   color: #000000;
 }
 
 .dropdown__button--active,
 .dropdown__button:hover {
-   background-color: var(--component-hover-color);
+   background-color: var(--third);
 }
 
 .dropdown__item:hover {
-   background-color: var(--component-hover-color);
+   background-color: var(--third);
 }
 
 @media screen and (min-width: 900px) {

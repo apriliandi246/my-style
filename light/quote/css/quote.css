@@ -1,7 +1,7 @@
 @import "../../color-variables/style.css";
 
 body {
-   background-color: var(--body-bg-color);
+   background-color: var(--first);
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
    border-left: 10px solid #cccccc;
    quotes: "\201C""\201D""\2018""\2019";
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-bg-color);
+   background-color: var(--second);
 }
 
 .quote::before {

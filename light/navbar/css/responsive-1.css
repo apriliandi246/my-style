@@ -18,7 +18,7 @@
       transform: translateX(100%);
       justify-content: space-evenly;
       box-shadow: var(--component-box-shadow);
-      background-color: var(--component-bg-color);
+      background-color: var(--second);
    }
 
    .toggle-menu {

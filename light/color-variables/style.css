@@ -1,11 +1,7 @@
 :root {
-   --body-bg-color: #f5f5f5;
-   --component-bg-color: #fafafa;
+   --first: #f5f5f5;
+   --second: #fafafa;
+   --third: #f7efef;
    --component-font-color: #000000;
-   --component-hover-color: #f7efef;
-   --component-border-color: #38444d;
-   --second-component-bg-color: #192734;
    --component-box-shadow: 0 0 1px 1px #0000001a;
-   --component-third-box-shadow: 0 0 1px 1px #404a4d33;
-   --component-second-box-shadow: 0 0 1.2px 1.2px #0000001a;
 }
