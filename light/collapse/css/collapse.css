@@ -18,9 +18,11 @@ body {
    cursor: pointer;
    font-size: 1rem;
    text-align: left;
+   letter-spacing: 0.5px;
    font-family: monospace;
    box-sizing: border-box;
    background-color: var(--second);
+   font-family: var(--font-family);
    transition: background-color 0.2s;
    box-shadow: var(--component-box-shadow);
 }
@@ -36,12 +38,12 @@ body {
    color: #000000;
    font-size: 1rem;
    overflow: hidden;
-   line-height: 25px;
-   letter-spacing: 1px;
+   line-height: 23px;
+   letter-spacing: 0.8px;
    box-sizing: border-box;
-   font-family: monospace;
    border: 1px solid var(--third);
    background-color: var(--second);
+   font-family: var(--font-family);
    box-shadow: var(--component-box-shadow);
 }
 
@@ -50,14 +52,22 @@ body {
    background-color: var(--third);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 760px) {
    .collapse__button {
-      padding: 12px;
       font-size: 0.9rem;
-      letter-spacing: 0.5px;
    }
 
    .collapse__content {
       font-size: 0.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .collapse__button {
+      font-size: calc(0.9rem - 1px);
+   }
+
+   .collapse__content {
+      font-size: calc(0.9rem - 1px);
    }
 }

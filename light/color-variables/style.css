@@ -4,4 +4,7 @@
    --third: #f7efef;
    --component-font-color: #000000;
    --component-box-shadow: 0 0 1px 1px #0000001a;
+   --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+      Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
 }

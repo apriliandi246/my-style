@@ -10,13 +10,13 @@ body {
 }
 
 .quote {
-   padding: 16px;
+   padding: 17px;
    font-size: 1rem;
-   line-height: 26px;
-   font-style: italic;
+   line-height: 24px;
+   letter-spacing: 1px;
    box-sizing: border-box;
-   font-family: monospace;
    background-color: var(--second);
+   font-family: var(--font-family);
    border-left: 10px solid #cccccc;
    quotes: "\201C""\201D""\2018""\2019";
    box-shadow: var(--component-box-shadow);
@@ -24,21 +24,22 @@ body {
 
 .quote::before {
    color: #ccc;
+   font-size: 3rem;
    line-height: 7px;
-   margin-right: 8px;
-   font-size: 3.4rem;
+   margin-right: 10px;
    content: open-quote;
    vertical-align: -0.4em;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 760px) {
    .quote {
-      font-size: 0.9rem;
+      line-height: 27px;
+      font-size: calc(0.9rem + 1px);
    }
 }
 
 @media screen and (min-width: 1200px) {
    .quote {
-      line-height: 28px;
+      font-size: 0.9rem;
    }
 }

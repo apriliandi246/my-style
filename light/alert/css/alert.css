@@ -26,53 +26,32 @@ body {
 
 .alert__message {
    font-size: 1rem;
-   letter-spacing: 0.5px;
+   letter-spacing: 0.9px;
+   font-family: var(--font-family);
    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
 }
 
 .alert__close-button {
-   padding: 3px;
+   padding: 2px;
    cursor: pointer;
    font-size: 1.3rem;
+   font-weight: bold;
    transition: color 0.2s;
+   font-family: monospace;
 }
 
 .alert__close-button:hover {
    color: #38444d;
 }
 
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 760px) {
    .alert__message {
       font-size: 0.9rem;
-   }
-
-   .alert {
-      padding: 8px;
-   }
-}
-
-@media screen and (min-width: 760px) {
-   .alert {
-      padding: 7px;
-   }
-
-   .alert__message {
-      font-size: 0.8rem;
    }
 }
 
 @media screen and (min-width: 1200px) {
-   .alert {
-      padding: 6px;
-   }
-}
-
-@media screen and (min-width: 1260px) {
-   .alert {
-      padding: 7px;
-   }
-
    .alert__message {
-      font-size: 0.8rem;
+      font-size: calc(0.9rem - 1px);
    }
 }

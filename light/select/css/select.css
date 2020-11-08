@@ -14,13 +14,14 @@ select {
    border: none;
    outline: none;
    color: #000000;
-   padding: 10.4px;
+   padding: 11px;
    cursor: pointer;
    font-size: 1rem;
    -moz-appearance: none;
+   letter-spacing: 1.2px;
    box-sizing: border-box;
-   font-family: monospace;
    -webkit-appearance: none;
+   font-family: var(--font-family);
    background-color: var(--second);
    transition: background-color 0.2s;
    box-shadow: var(--component-box-shadow);
@@ -30,8 +31,14 @@ select:hover {
    background-color: var(--third);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 760px) {
    select {
       font-size: 0.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   select {
+      font-size: calc(0.9rem + 1px);
    }
 }

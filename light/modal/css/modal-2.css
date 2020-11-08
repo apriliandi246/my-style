@@ -49,6 +49,7 @@ body {
    animation-duration: 0.4s;
    animation-name: animatetop;
    background-color: var(--second);
+   font-family: var(--font-family);
 }
 
 .modal__head {
@@ -60,7 +61,8 @@ body {
 .modal__content {
    padding: 12px;
    font-size: 1rem;
-   line-height: 25px;
+   line-height: 23px;
+   letter-spacing: 0.8px;
 }
 
 .modal__footer {
@@ -74,11 +76,12 @@ body {
    padding: 10px;
    color: #000000;
    cursor: pointer;
-   font-size: 0.9rem;
+   font-size: 1rem;
    margin-right: 18px;
-   font-family: monospace;
+   letter-spacing: 1.2px;
    box-sizing: border-box;
    background-color: var(--second);
+   font-family: var(--font-family);
    transition: background-color 0.2s;
    box-shadow: var(--component-box-shadow);
 }
@@ -97,5 +100,21 @@ body {
    to {
       top: 0;
       opacity: 1;
+   }
+}
+
+@media screen and (min-width: 760px) {
+   .modal__content,
+   .modal__cancel-button,
+   .modal__submit-button {
+      font-size: 0.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .modal__content,
+   .modal__cancel-button,
+   .modal__submit-button {
+      font-size: calc(0.9rem - 1px);
    }
 }
