@@ -10,35 +10,36 @@ body {
 }
 
 .quote {
-   padding: 18px;
+   padding: 17px;
    color: #ffffff;
    font-size: 1rem;
-   line-height: 26px;
-   font-style: italic;
+   line-height: 24px;
+   letter-spacing: 1px;
    box-sizing: border-box;
-   font-family: monospace;
    background-color: var(--first);
    border: 1px solid var(--fourth);
+   font-family: var(--font-family);
    quotes: "\201C""\201D""\2018""\2019";
    border-left: 15px solid var(--fourth);
 }
 
 .quote::before {
    line-height: 7px;
-   font-size: 3.4rem;
-   margin-right: 8px;
+   font-size: 3rem;
+   margin-right: 10px;
    content: open-quote;
    vertical-align: -0.4em;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 760px) {
    .quote {
-      font-size: 0.9rem;
+      line-height: 27px;
+      font-size: calc(0.9rem + 1px);
    }
 }
 
 @media screen and (min-width: 1200px) {
    .quote {
-      line-height: 28px;
+      font-size: 0.9rem;
    }
 }

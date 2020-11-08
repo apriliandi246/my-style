@@ -16,56 +16,56 @@ form {
    color: #ffffff;
    font-size: 1rem;
    letter-spacing: 1px;
-   font-family: monospace;
+   font-family: var(--font-family);
 }
 
 .input-form__input {
    width: 100%;
    outline: none;
+   padding: 11px;
    display: block;
    color: #ffffff;
-   font-size: 17px;
-   padding: 10.4px;
+   font-size: 1rem;
    margin-top: 15px;
-   letter-spacing: 1px;
-   font-family: monospace;
+   letter-spacing: 1.2px;
    box-sizing: border-box;
    background-color: var(--second);
    border: 1px solid var(--fourth);
+   font-family: var(--font-family);
    transition: background-color 0.2s;
 }
 
 .button-form {
    width: 100%;
+   padding: 10px;
    outline: none;
    color: #ffffff;
    cursor: pointer;
-   padding: 10.5px;
-   font-size: 0.9rem;
-   letter-spacing: 1px;
+   font-size: 1rem;
+   letter-spacing: 1.2px;
    margin: 45px 0 10px 0;
-   font-family: monospace;
    box-sizing: border-box;
    background-color: var(--second);
    border: 1px solid var(--fourth);
+   font-family: var(--font-family);
    transition: color 0.2s, background-color 0.2s;
 }
 
 .redirect-button-form {
    width: 100%;
-   padding: 12px;
+   padding: 11px;
    outline: none;
    display: block;
    color: #ffffff;
+   font-size: 1rem;
    margin-top: 16px;
-   font-size: 0.9rem;
    text-align: center;
-   letter-spacing: 1px;
+   letter-spacing: 1.2px;
    text-decoration: none;
-   font-family: monospace;
    box-sizing: border-box;
    background-color: var(--second);
    border: 1px solid var(--fourth);
+   font-family: var(--font-family);
    transition: color 0.2s, background-color 0.2s;
 }
 
@@ -86,4 +86,22 @@ form {
 .button-form:focus,
 .redirect-button-form:focus {
    background-color: var(--fourth);
+}
+
+@media screen and (min-width: 760px) {
+   .input-form__label,
+   .input-form__input,
+   .button-form,
+   .redirect-button-form {
+      font-size: 0.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .input-form__label,
+   .input-form__input,
+   .button-form,
+   .redirect-button-form {
+      font-size: calc(0.9rem + 1px);
+   }
 }

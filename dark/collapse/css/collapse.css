@@ -17,10 +17,11 @@ body {
    cursor: pointer;
    font-size: 1rem;
    text-align: left;
-   font-family: monospace;
+   letter-spacing: 0.5px;
    box-sizing: border-box;
    background-color: var(--second);
    border: 1px solid var(--fourth);
+   font-family: var(--font-family);
    transition: background-color 0.2s;
 }
 
@@ -29,16 +30,17 @@ body {
 }
 
 .collapse__content {
-   padding: 18px;
+   padding: 17px;
    display: none;
    color: #ffffff;
    font-size: 1rem;
-   line-height: 25px;
-   letter-spacing: 1px;
+   line-height: 23px;
+   letter-spacing: 0.8px;
    box-sizing: border-box;
    font-family: monospace;
    border: 1px solid var(--fourth);
    background-color: var(--second);
+   font-family: var(--font-family);
 }
 
 .collapse__button--active,
@@ -46,14 +48,22 @@ body {
    background-color: var(--fourth);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 760px) {
    .collapse__button {
-      padding: 12px;
       font-size: 0.9rem;
-      letter-spacing: 0.5px;
    }
 
    .collapse__content {
       font-size: 0.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .collapse__button {
+      font-size: calc(0.9rem - 1px);
+   }
+
+   .collapse__content {
+      font-size: calc(0.9rem - 1px);
    }
 }

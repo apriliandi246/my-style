@@ -36,7 +36,8 @@ body {
    letter-spacing: 1px;
    text-decoration: none;
    margin: 17px 0 0 18px;
-   font-family: monospace;
+   font-family: var(--font-family);
+   transition: padding-bottom 0.1s;
 }
 
 .card__image {
@@ -55,7 +56,7 @@ body {
    white-space: pre-line;
    box-sizing: border-box;
    margin: -15px 0 17px 0;
-   font-family: sans-serif;
+   font-family: var(--font-family);
 }
 
 .card__footer {
@@ -68,16 +69,34 @@ body {
 }
 
 .card__username:hover {
-   color: #8a2be2;
-   border-bottom: 1px solid #8a2be2;
+   padding-bottom: 4px;
+   border-bottom: 2px solid #ffffff;
 }
 
-@media screen and (min-width: 1196px) {
+@media screen and (min-width: 760px) {
+   .card__username {
+      font-size: 1rem;
+   }
+
+   .card__description {
+      font-size: 0.9rem;
+   }
+
+   .card__footer {
+      font-size: 0.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
    .card__username {
       font-size: 0.9rem;
    }
 
    .card__description {
-      font-size: 0.9rem;
+      font-size: calc(0.9rem - 1px + 0.5px);
+   }
+
+   .card__footer {
+      font-size: 0.8rem;
    }
 }

@@ -49,7 +49,7 @@
    }
 
    .navbar__link {
-      font-size: 0.9rem;
+      font-size: calc(0.9rem + 1px);
    }
 }
 
