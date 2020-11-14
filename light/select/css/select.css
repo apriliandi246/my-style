@@ -1,4 +1,4 @@
-@import "../../color-variables/style.css";
+@import "../../style-variable/variable.css";
 
 body {
    background-color: var(--first);
