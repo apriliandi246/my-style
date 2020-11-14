@@ -39,6 +39,6 @@ select:hover {
 
 @media screen and (min-width: 1200px) {
    select {
-      font-size: calc(0.9rem + 1px);
+      font-size: calc(0.9rem - 1px);
    }
 }
