@@ -1,7 +1,5 @@
-@import "../../color-variables/style.css";
-
 body {
-   background-color: var(--first);
+   background-color: #15202b;
 }
 
 .container {

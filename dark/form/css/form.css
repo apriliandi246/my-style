@@ -1,4 +1,4 @@
-@import "../../color-variables/style.css";
+@import "../../style-variables/variables.css";
 
 body {
    background-color: var(--first);
@@ -76,6 +76,10 @@ form {
 .input-form__input::placeholder {
    letter-spacing: 1px;
    font-family: monospace;
+}
+
+.button-form:disabled {
+   pointer-events: none;
 }
 
 .button-form:hover,
