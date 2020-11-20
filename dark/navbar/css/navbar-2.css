@@ -54,8 +54,8 @@ body {
 }
 
 .navbar__link:hover {
-   padding-bottom: 21px;
-   border-bottom: 2px solid #ffffff;
+   padding-bottom: 22px;
+   border-bottom: 3px solid #ffffff;
 }
 
 .navbar__slash-icon {

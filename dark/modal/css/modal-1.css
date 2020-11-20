@@ -27,8 +27,7 @@ body {
    height: 100%;
    display: none;
    position: fixed;
-   box-sizing: border-box;
-   background-color: #00000066;
+   background-color: #0e020266;
 }
 
 .modal__body {
@@ -36,10 +35,10 @@ body {
    padding: 10px;
    color: #ffffff;
    margin: 40% auto;
-   border-radius: 4px;
+   border-radius: 2px;
    font-family: var(--font-family);
    background-color: var(--second);
-   border: 1px solid var(--fourth);
+   border: 3px solid var(--fourth);
 }
 
 .modal__head {
@@ -66,6 +65,7 @@ body {
    color: #ffffff;
    cursor: pointer;
    font-size: 1rem;
+   border-radius: 2px;
    margin-right: 18px;
    letter-spacing: 1.2px;
    box-sizing: border-box;

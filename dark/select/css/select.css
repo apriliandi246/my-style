@@ -4,10 +4,12 @@ body {
    background-color: var(--first);
 }
 
+/* for centering element */
 .container {
    width: 500px;
    margin: 40px auto;
 }
+/* for centering element */
 
 select {
    width: 100%;
@@ -16,13 +18,14 @@ select {
    color: #ffffff;
    cursor: pointer;
    font-size: 1rem;
+   border-radius: 2px;
    letter-spacing: 1.2px;
    -moz-appearance: none;
    box-sizing: border-box;
    -webkit-appearance: none;
    font-family: var(--font-family);
    background-color: var(--second);
-   border: 1px solid var(--fourth);
+   border: 2px solid var(--fourth);
    transition: background-color 0.2s;
 }
 

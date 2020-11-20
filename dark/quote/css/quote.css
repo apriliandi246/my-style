@@ -14,10 +14,12 @@ body {
    color: #ffffff;
    font-size: 1rem;
    line-height: 24px;
+   border-radius: 2px;
+   font-style: italic;
    letter-spacing: 1px;
    box-sizing: border-box;
    background-color: var(--first);
-   border: 1px solid var(--fourth);
+   border: 2px solid var(--fourth);
    font-family: var(--font-family);
    quotes: "\201C""\201D""\2018""\2019";
    border-left: 15px solid var(--fourth);
