@@ -4,16 +4,19 @@ body {
    background-color: var(--first);
 }
 
+/* for centering element */
 .card {
    margin: 50px auto;
 }
+/* for centering element */
 
 .card {
    width: 600px;
    color: #000000;
+   border-radius: 2px;
    box-sizing: border-box;
    background-color: #f9f9f9;
-   box-shadow: var(--component-box-shadow);
+   box-shadow: 0 0 2px 2px #0000001a;
 }
 
 .card__head {

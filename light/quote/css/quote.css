@@ -13,6 +13,8 @@ body {
    padding: 17px;
    font-size: 1rem;
    line-height: 24px;
+   border-radius: 2px;
+   font-style: italic;
    letter-spacing: 1px;
    box-sizing: border-box;
    background-color: var(--second);

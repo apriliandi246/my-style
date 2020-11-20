@@ -4,10 +4,12 @@ body {
    background-color: var(--first);
 }
 
+/* for centering element */
 .container {
    width: 200px;
    margin: 10px auto;
 }
+/* for centering element */
 
 .dropdown__button {
    border: none;
@@ -31,9 +33,10 @@ body {
    display: none;
    font-size: 18px;
    position: absolute;
+   border-radius: 2px;
    font-family: monospace;
-   box-shadow: var(--component-box-shadow);
    background-color: var(--second);
+   box-shadow: var(--component-box-shadow);
 }
 
 .dropdown__item {

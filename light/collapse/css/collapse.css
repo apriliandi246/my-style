@@ -4,10 +4,12 @@ body {
    background-color: var(--first);
 }
 
+/* for centering element */
 .container {
    width: 600px;
    margin: 50px auto;
 }
+/* for centering element */
 
 .collapse__button {
    width: 100%;
