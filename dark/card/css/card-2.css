@@ -1,0 +1,98 @@
+@import "../../css-variable/variable.css";
+
+body {
+   background-color: var(--first);
+}
+
+/* for centering element */
+.card {
+   margin: 50px auto;
+}
+/* for centering element */
+
+.card {
+   width: 600px;
+   border-radius: 2px;
+   box-sizing: border-box;
+   border: 3px solid #082c36;
+   background-color: var(--first);
+}
+
+.card__head {
+   padding: 15px;
+   margin: 3px 0 4px 0;
+}
+
+.card__profile-photo {
+   float: left;
+   width: 50px;
+   height: 50px;
+   border-radius: 100%;
+   border: 3px solid var(--fourth);
+}
+
+.card__username {
+   float: left;
+   color: #ffffff;
+   font-size: 1rem;
+   text-align: center;
+   letter-spacing: 1px;
+   text-decoration: none;
+   margin: 17.4px 0 0 17px;
+   font-family: var(--font-family);
+   transition: padding-bottom 0.1s;
+}
+
+.card__description {
+   padding: 15px;
+   color: #ffffff;
+   font-size: 1rem;
+   margin-top: 15px;
+   line-height: 25px;
+   letter-spacing: 0.5px;
+   white-space: pre-line;
+   box-sizing: border-box;
+   font-family: var(--font-family);
+}
+
+.card__footer {
+   float: right;
+   padding: 15px;
+   color: #ffffff;
+   font-size: 0.9rem;
+   letter-spacing: 1px;
+   font-family: monospace;
+}
+
+.card__username:hover {
+   padding-bottom: 6px;
+   border-bottom: 2px solid #ffffff;
+}
+
+@media screen and (min-width: 760px) {
+   .card__username {
+      font-size: 1rem;
+   }
+
+   .card__description {
+      font-size: 0.9rem;
+   }
+
+   .card__footer {
+      font-size: 0.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .card__username {
+      font-size: 0.9rem;
+   }
+
+   .card__description {
+      font-size: calc(0.9rem - 1px + 0.5px);
+   }
+
+   .card__footer {
+      font-size: 0.8rem;
+   }
+}

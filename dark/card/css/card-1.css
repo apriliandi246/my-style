@@ -28,7 +28,7 @@ body {
    width: 50px;
    height: 50px;
    border-radius: 100%;
-   border: 2px solid var(--fourth);
+   border: 3px solid var(--fourth);
 }
 
 .card__username {
@@ -72,7 +72,7 @@ body {
 }
 
 .card__username:hover {
-   padding-bottom: 4px;
+   padding-bottom: 6px;
    border-bottom: 2px solid #ffffff;
 }
 
