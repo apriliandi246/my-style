@@ -1,0 +1,97 @@
+@import "../../style-variable/variable.css";
+
+body {
+   background-color: var(--first);
+}
+
+/* for centering element */
+.card {
+   margin: 50px auto;
+}
+/* for centering element */
+
+.card {
+   width: 600px;
+   color: #000000;
+   border-radius: 2px;
+   box-sizing: border-box;
+   background-color: #f9f9f9;
+   box-shadow: 0 0 2px 2px #0000001a;
+}
+
+.card__head {
+   padding: 17px;
+   margin: 3px 0 4px 0;
+}
+
+.card__profile-photo {
+   float: left;
+   width: 50px;
+   height: 50px;
+   border-radius: 100%;
+   box-shadow: 0 0 3px 3px #0000001a;
+}
+
+.card__username {
+   float: left;
+   color: #000000;
+   font-size: 1rem;
+   text-align: center;
+   letter-spacing: 1px;
+   text-decoration: none;
+   margin: 16px 0 0 20px;
+   font-family: var(--font-family);
+   transition: padding-bottom 0.2s, transform 0.2s;
+}
+
+.card__description {
+   padding: 17px;
+   font-size: 1rem;
+   margin-top: 15px;
+   line-height: 23px;
+   white-space: pre-line;
+   box-sizing: border-box;
+   font-family: var(--font-family);
+}
+
+.card__date {
+   float: right;
+   padding: 17px;
+   font-size: 0.9rem;
+   letter-spacing: 1px;
+   font-family: monospace;
+}
+
+.card__username:hover {
+   padding-bottom: 6px;
+   transform: translateY(-4px);
+   border-bottom: 3px solid #000000;
+}
+
+@media screen and (min-width: 760px) {
+   .card__username {
+      font-size: 1rem;
+   }
+
+   .card__description {
+      font-size: 0.9rem;
+   }
+
+   .card__date {
+      font-size: 0.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .card__username {
+      font-size: 0.9rem;
+   }
+
+   .card__description {
+      font-size: calc(0.9rem - 1px + 0.5px);
+   }
+
+   .card__date {
+      font-size: 0.8rem;
+   }
+}

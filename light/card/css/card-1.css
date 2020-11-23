@@ -20,7 +20,7 @@ body {
 }
 
 .card__head {
-   padding: 15px;
+   padding: 17px;
    margin-top: 3px;
    margin-bottom: 4px;
 }
@@ -30,20 +30,19 @@ body {
    width: 50px;
    height: 50px;
    border-radius: 100%;
-   box-shadow: var(--component-box-shadow);
+   box-shadow: 0 0 3px 3px #0000001a;
 }
 
 .card__username {
    float: left;
    color: #000000;
    font-size: 1rem;
-   margin-top: 15px;
-   margin-left: 18px;
    text-align: center;
    letter-spacing: 1px;
    text-decoration: none;
+   margin: 13px 0 0 19px;
    font-family: var(--font-family);
-   transition: padding-bottom 0.1s;
+   transition: padding-bottom 0.2s, transform 0.2s;
 }
 
 .card__image {
@@ -64,7 +63,7 @@ body {
    font-family: var(--font-family);
 }
 
-.card__footer {
+.card__date {
    float: right;
    padding: 15px;
    font-size: 0.9rem;
@@ -73,8 +72,9 @@ body {
 }
 
 .card__username:hover {
-   padding-bottom: 4px;
-   border-bottom: 2px solid #000000;
+   padding-bottom: 6px;
+   transform: translateY(-4px);
+   border-bottom: 3px solid #000000;
 }
 
 @media screen and (min-width: 760px) {
@@ -86,7 +86,7 @@ body {
       font-size: 0.9rem;
    }
 
-   .card__footer {
+   .card__date {
       font-size: 0.9rem;
    }
 }
@@ -100,7 +100,7 @@ body {
       font-size: calc(0.9rem - 1px + 0.5px);
    }
 
-   .card__footer {
+   .card__date {
       font-size: 0.8rem;
    }
 }
