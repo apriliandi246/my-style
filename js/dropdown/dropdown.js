@@ -1,11 +1,14 @@
 const dropdownButton = document.querySelector(".dropdown__button");
 const dropdownContent = document.querySelector(".dropdown__content");
 
-dropdownButton.addEventListener("click", function () {
+dropdownButton.addEventListener("click", () => {
    dropdownButton.classList.toggle("dropdown__button--active");
-   dropdownContent.style.display === "block"
-      ? setDisplayValue("none")
-      : setDisplayValue("block");
+
+   if (dropdownContent.style.display === "block") {
+      setDisplayValue("none");
+   } else {
+      setDisplayValue("block");
+   }
 });
 
 function setDisplayValue(value) {

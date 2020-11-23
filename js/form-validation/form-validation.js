@@ -12,7 +12,7 @@ const patterns = {
 
 // check all of inputs
 inputs.forEach((input) => {
-   input.addEventListener("input", function (event) {
+   input.addEventListener("input", (event) => {
       addClass(event.target, patterns[event.target.attributes.name.value]);
       checkPasswordInput();
       validate();
