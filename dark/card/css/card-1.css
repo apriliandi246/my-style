@@ -19,7 +19,7 @@ body {
 }
 
 .card__head {
-   padding: 15px;
+   padding: 17px;
    margin: 3px 0 4px 0;
 }
 
@@ -40,7 +40,7 @@ body {
    text-decoration: none;
    margin: 17px 0 0 18px;
    font-family: var(--font-family);
-   transition: padding-bottom 0.1s;
+   transition: padding-bottom 0.2s, transform 0.2s;
 }
 
 .card__image {
@@ -72,8 +72,9 @@ body {
 }
 
 .card__username:hover {
-   padding-bottom: 6px;
-   border-bottom: 2px solid #ffffff;
+   padding-bottom: 7px;
+   transform: translateY(-4px);
+   border-bottom: 3px solid #ffffff;
 }
 
 @media screen and (min-width: 760px) {

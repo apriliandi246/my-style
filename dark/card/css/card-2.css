@@ -40,7 +40,7 @@ body {
    text-decoration: none;
    margin: 17.4px 0 0 17px;
    font-family: var(--font-family);
-   transition: padding-bottom 0.1s;
+   transition: padding-bottom 0.2s, transform 0.2s;
 }
 
 .card__description {
@@ -65,8 +65,9 @@ body {
 }
 
 .card__username:hover {
-   padding-bottom: 6px;
-   border-bottom: 2px solid #ffffff;
+   padding-bottom: 7px;
+   transform: translateY(-4px);
+   border-bottom: 3px solid #ffffff;
 }
 
 @media screen and (min-width: 760px) {

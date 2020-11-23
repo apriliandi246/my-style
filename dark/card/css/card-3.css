@@ -12,41 +12,43 @@ body {
 
 .card {
    width: 600px;
-   padding: 22px;
+   padding: 17px;
+   color: #ffffff;
    border-radius: 2px;
    box-sizing: border-box;
    border: 3px solid #082c36;
+   transition: transform 0.2s;
    background-color: var(--first);
 }
 
 .card__description {
-   color: #ffffff;
    font-size: 1rem;
    line-height: 25px;
-   margin-bottom: 25px;
+   margin: 10px 0 25px 0;
    letter-spacing: 0.5px;
    box-sizing: border-box;
    font-family: var(--font-family);
 }
 
 /* .card__description {
-   color: #ffffff;
    font-size: 1rem;
    line-height: 25px;
-   margin-top: -20px;
-   margin-bottom: 25px;
    letter-spacing: 0.5px;
-   box-sizing: border-box;
    white-space: pre-line;
+   box-sizing: border-box;
+   margin: -14px 0 25px 0;
    font-family: var(--font-family);
 } */
 
 .card__footer {
    float: right;
-   color: #ffffff;
    font-size: 0.9rem;
    letter-spacing: 1px;
    font-family: monospace;
+}
+
+.card:hover {
+   transform: translateY(-4px);
 }
 
 @media screen and (min-width: 760px) {
