@@ -38,7 +38,6 @@ function checkPasswordInput() {
       if (confirmPassword.value !== password.value) {
          confirmPassword.classList.add("input-form__input--invalid");
          confirmPassword.classList.remove("valid");
-
          setStatusButton(true, "default");
       } else {
          confirmPassword.classList.add("valid");
