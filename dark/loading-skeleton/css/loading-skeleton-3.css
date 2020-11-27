@@ -12,7 +12,7 @@ body {
 
 .card {
    width: 600px;
-   padding: 25px;
+   padding: 23px;
    border-radius: 2px;
    box-sizing: border-box;
    border: 3px solid #082c36;
@@ -46,14 +46,17 @@ body {
 
 @keyframes loading {
    0% {
+      transform: scale(1);
       background-color: rgba(90, 109, 129, 0.2);
    }
 
    50% {
+      transform: scale(1.01);
       background-color: rgba(90, 109, 129, 0.4);
    }
 
    100% {
+      transform: scale(1);
       background-color: rgba(90, 109, 129, 0.2);
    }
 }
