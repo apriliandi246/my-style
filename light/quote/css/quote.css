@@ -1,4 +1,4 @@
-@import "../../style-variable/variable.css";
+@import "../../css-variable/variable.css";
 
 body {
    background-color: var(--first);
@@ -13,7 +13,7 @@ body {
    padding: 17px;
    font-size: 1rem;
    line-height: 24px;
-   border-radius: 2px;
+   border-radius: 3px;
    font-style: italic;
    letter-spacing: 1px;
    box-sizing: border-box;

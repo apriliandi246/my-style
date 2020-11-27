@@ -1,4 +1,4 @@
-@import "../../style-variable/variable.css";
+@import "../../css-variable/variable.css";
 
 body {
    background-color: var(--first);
@@ -38,7 +38,7 @@ body {
    padding: 10px;
    color: #000000;
    margin: 40% auto;
-   border-radius: 2px;
+   border-radius: 3px;
    font-family: monospace;
    background-color: var(--second);
    font-family: var(--font-family);
