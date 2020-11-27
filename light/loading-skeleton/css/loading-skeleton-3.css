@@ -24,8 +24,7 @@ body {
    height: 170px;
    border-radius: 2px;
    margin-bottom: 25px;
-   background-color: black;
-   animation: loading 0.9s infinite ease-in-out;
+   animation: loading 1s infinite ease-in-out;
 }
 
 .card__medium-block {
@@ -33,7 +32,7 @@ body {
    height: 25px;
    margin-top: 17px;
    border-radius: 2px;
-   animation: loading 0.9s infinite ease-in-out;
+   animation: loading 1s infinite ease-in-out;
 }
 
 .card__footer-block {
@@ -42,8 +41,7 @@ body {
    float: right;
    margin-top: 25px;
    border-radius: 2px;
-   background-color: black;
-   animation: loading 0.9s infinite ease-in-out;
+   animation: loading 1s infinite ease-in-out;
 }
 
 @keyframes loading {

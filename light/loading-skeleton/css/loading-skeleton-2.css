@@ -28,8 +28,7 @@ body {
    width: 50px;
    height: 50px;
    border-radius: 100%;
-   background-color: black;
-   animation: loading 0.9s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite;
 }
 
 .card__head-block {
@@ -37,8 +36,7 @@ body {
    height: 20px;
    margin-left: 20px;
    border-radius: 2px;
-   background-color: black;
-   animation: loading 0.9s infinite ease-in-out;
+   animation: loading 1s infinite ease-in-out;
 }
 
 .card__large-block {
@@ -46,8 +44,7 @@ body {
    height: 170px;
    margin-top: 20px;
    border-radius: 2px;
-   background-color: black;
-   animation: loading 0.9s infinite ease-in-out;
+   animation: loading 1s infinite ease-in-out;
 }
 
 .card__footer-block {
@@ -56,8 +53,7 @@ body {
    float: right;
    margin-top: 30px;
    border-radius: 2px;
-   background-color: black;
-   animation: loading 0.9s infinite ease-in-out;
+   animation: loading 1s infinite ease-in-out;
 }
 
 @keyframes loading {
