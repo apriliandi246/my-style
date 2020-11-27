@@ -46,7 +46,7 @@ body {
    letter-spacing: 1.2px;
    text-decoration: none;
    font-family: monospace;
-   transition: color 0.2s, border-color 0.2s;
+   transition: padding-bottom 0.2s;
 }
 
 .navbar__link:hover {
