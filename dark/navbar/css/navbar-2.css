@@ -51,6 +51,7 @@ body {
    text-decoration: none;
    transition: color 0.3s;
    font-family: var(--font-family);
+   transition: padding-bottom 0.2s;
 }
 
 .navbar__link:hover {

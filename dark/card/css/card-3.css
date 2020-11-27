@@ -48,7 +48,7 @@ body {
 }
 
 .card:hover {
-   transform: translateY(-4px);
+   transform: scale(1.01);
 }
 
 @media screen and (min-width: 760px) {

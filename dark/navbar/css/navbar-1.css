@@ -36,8 +36,8 @@ body {
    font-weight: 550;
    letter-spacing: 1.3px;
    text-decoration: none;
-   transition: color 0.2s;
    font-family: var(--font-family);
+   transition: padding-bottom 0.2s;
 }
 
 .navbar__link:hover {
