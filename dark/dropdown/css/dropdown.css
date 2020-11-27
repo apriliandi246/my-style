@@ -31,8 +31,8 @@ body {
    display: none;
    position: absolute;
    border-radius: 2px;
-   background-color: var(--second);
-   border: 2px solid var(--fourth);
+   background-color: #192734;
+   border: 3px solid var(--fourth);
 }
 
 .dropdown__item {
