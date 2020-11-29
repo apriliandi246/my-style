@@ -29,7 +29,7 @@ body {
    width: 50px;
    height: 50px;
    border-radius: 100%;
-   animation: loading 1s infinite ease-in-out;
+   animation: loading 1s ease-in-out infinite;
 }
 
 .card__head-block {
@@ -37,7 +37,7 @@ body {
    height: 20px;
    margin-left: 20px;
    border-radius: 3px;
-   animation: loading 1s infinite ease-in-out;
+   animation: loading 1s ease-in-out infinite;
 }
 
 .card__large-block {
@@ -46,7 +46,7 @@ body {
    margin-top: 20px;
    border-radius: 3px;
    margin-bottom: 30px;
-   animation: loading 1s infinite ease-in-out;
+   animation: loading 1s ease-in-out infinite;
 }
 
 .card__medium-block {
@@ -54,7 +54,7 @@ body {
    height: 25px;
    margin-top: 18px;
    border-radius: 3px;
-   animation: loading 1s infinite ease-in-out;
+   animation: loading 1s ease-in-out infinite;
 }
 
 .card__footer-block {
@@ -63,7 +63,7 @@ body {
    float: right;
    margin-top: 20px;
    border-radius: 3px;
-   animation: loading 1s infinite ease-in-out;
+   animation: loading 1s ease-in-out infinite;
 }
 
 @keyframes loading {
