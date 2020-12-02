@@ -18,11 +18,14 @@ body {
    font-style: italic;
    letter-spacing: 1px;
    box-sizing: border-box;
-   background-color: #192734;
-   border: 2px solid var(--fourth);
    font-family: var(--font-family);
    quotes: "\201C""\201D""\2018""\2019";
    border-left: 15px solid var(--fourth);
+   background: linear-gradient(
+      360deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(48, 30, 60, 1) 0%
+   );
 }
 
 .quote::before {

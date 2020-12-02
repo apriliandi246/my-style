@@ -37,8 +37,11 @@ body {
    margin: 40% auto;
    border-radius: 3px;
    font-family: var(--font-family);
-   background-color: var(--second);
-   border: 3px solid var(--fourth);
+   background: linear-gradient(
+      360deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(48, 30, 60, 1) 0%
+   );
 }
 
 .modal__head {
