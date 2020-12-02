@@ -45,10 +45,9 @@ body {
    position: relative;
    border-radius: 3px;
    font-family: monospace;
-   animation-duration: 0.4s;
-   animation-name: animatetop;
    background-color: var(--second);
    font-family: var(--font-family);
+   animation: modalAnimation 0.3s ease-out;
 }
 
 .modal__head {
@@ -91,10 +90,10 @@ body {
    background-color: var(--third);
 }
 
-@keyframes animatetop {
+@keyframes modalAnimation {
    from {
-      top: -300px;
       opacity: 0;
+      top: -300px;
    }
 
    to {
