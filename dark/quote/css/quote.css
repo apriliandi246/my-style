@@ -19,6 +19,7 @@ body {
    letter-spacing: 1px;
    box-sizing: border-box;
    font-family: var(--font-family);
+   border: 2px solid var(--fourth);
    quotes: "\201C""\201D""\2018""\2019";
    border-left: 15px solid var(--fourth);
    background: linear-gradient(

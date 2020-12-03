@@ -32,11 +32,13 @@ body {
 
 .modal__body {
    width: 88%;
-   padding: 10px;
+   padding: 11px;
    color: #ffffff;
    margin: 40% auto;
    border-radius: 3px;
+   box-sizing: border-box;
    font-family: var(--font-family);
+   border: 3px solid var(--fourth);
    background: linear-gradient(
       360deg,
       rgba(2, 0, 36, 1) 0%,

@@ -35,11 +35,11 @@ body {
 
 .modal__body {
    width: 88%;
-   padding: 10px;
+   padding: 11px;
    color: #000000;
    margin: 40% auto;
    border-radius: 3px;
-   font-family: monospace;
+   box-sizing: border-box;
    background-color: var(--second);
    font-family: var(--font-family);
 }

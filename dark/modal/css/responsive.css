@@ -113,14 +113,14 @@
 
 @media screen and (min-width: 1850px) {
    .modal__body {
-      width: 33%;
+      width: 34%;
       margin: 12% auto;
    }
 }
 
 @media screen and (min-width: 1900px) {
    .modal__body {
-      width: 31%;
+      width: 32%;
       margin: 12% auto;
    }
 }
