@@ -1,4 +1,9 @@
 document.querySelector(".collapses").addEventListener("click", (event) => {
+   toggleCollapse(event);
+   return () => event.target.removeEventListener("click", toggleCollapse);
+});
+
+function toggleCollapse(event) {
    if (event.target.classList[0] !== "collapse__button") return;
 
    let collapseButton = event.target;
@@ -14,4 +19,4 @@ document.querySelector(".collapses").addEventListener("click", (event) => {
       buttonIcon.innerHTML = "&#9660;";
       collapseContent.style.display = "block";
    }
-});
+}

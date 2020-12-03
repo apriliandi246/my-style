@@ -1,11 +1,20 @@
-document
-   .querySelector(".modal-trigger-button")
-   .addEventListener("click", () => {
-      document.querySelector(".modal").style.display = "block";
-   });
+const modalTrigger = document.querySelector(".modal-trigger-button");
+const hideModal = document.querySelector(".modal__cancel-button");
 
-document
-   .querySelector(".modal__cancel-button")
-   .addEventListener("click", () => {
-      document.querySelector(".modal").style.display = "none";
-   });
+modalTrigger.addEventListener("click", () => {
+   document.querySelector(".modal").style.display = "block";
+
+   return () =>
+      modalTrigger.removeEventListener("click", () => {
+         document.querySelector(".modal").style.display = "block";
+      });
+});
+
+hideModal.addEventListener("click", () => {
+   document.querySelector(".modal").style.display = "none";
+
+   return () =>
+      hideModal.removeEventListener("click", () => {
+         document.querySelector(".modal").style.display = "none";
+      });
+});

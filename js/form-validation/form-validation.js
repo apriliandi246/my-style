@@ -16,6 +16,16 @@ inputs.forEach((input) => {
       addClass(event.target, patterns[event.target.attributes.name.value]);
       checkPasswordInput();
       validate();
+
+      return () =>
+         input.removeEventListener("input", (event) => {
+            addClass(
+               event.target,
+               patterns[event.target.attributes.name.value]
+            );
+            checkPasswordInput();
+            validate();
+         });
    });
 });
 
