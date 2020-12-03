@@ -11,6 +11,10 @@ body {
 }
 /* for centering element */
 
+.collapses {
+   border: 2px solid var(--fourth);
+}
+
 .collapse__button {
    width: 100%;
    padding: 13px;
@@ -19,9 +23,11 @@ body {
    font-size: 1rem;
    text-align: left;
    font-weight: 500;
+   margin-bottom: -1px;
    letter-spacing: 0.5px;
    box-sizing: border-box;
    font-family: var(--font-family);
+   border-bottom: 2px solid var(--fourth);
    background: linear-gradient(
       360deg,
       rgba(2, 0, 36, 1) 0%,
@@ -42,11 +48,20 @@ body {
    letter-spacing: 0.8px;
    box-sizing: border-box;
    font-family: var(--font-family);
+   border-bottom: 2px solid var(--fourth);
    background: linear-gradient(
       360deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(48, 30, 60, 1) 0%
    );
+}
+
+.collapse:nth-last-child(1) .collapse__button {
+   border-bottom: none;
+}
+
+.collapse:nth-last-child(1) .collapse__content {
+   border-bottom: none;
 }
 
 .collapse__button--active,
