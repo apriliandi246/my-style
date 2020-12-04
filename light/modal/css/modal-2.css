@@ -39,11 +39,10 @@ body {
 
 .modal__body {
    width: 88%;
-   padding: 11px;
+   padding: 20px;
    color: #000000;
    margin: 40% auto;
    position: relative;
-   border-radius: 3px;
    box-sizing: border-box;
    background-color: var(--second);
    font-family: var(--font-family);
@@ -51,20 +50,16 @@ body {
 }
 
 .modal__head {
-   padding: 12px;
    font-size: 25px;
    font-weight: bold;
 }
 
 .modal__content {
-   padding: 12px;
    font-size: 1rem;
+   margin-top: 20px;
    line-height: 23px;
+   margin-bottom: 20px;
    letter-spacing: 0.8px;
-}
-
-.modal__footer {
-   padding: 12px;
 }
 
 .modal__cancel-button,

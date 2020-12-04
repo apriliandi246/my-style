@@ -31,14 +31,16 @@ body {
 }
 
 .modal__body {
-   width: 88%;
-   padding: 11px;
+   width: 100%;
+   padding: 20px;
    color: #ffffff;
    margin: 40% auto;
-   border-radius: 3px;
+   border-left: none;
+   border-right: none;
    box-sizing: border-box;
    font-family: var(--font-family);
-   border: 3px solid var(--fourth);
+   border-top: 3px solid var(--fourth);
+   border-bottom: 3px solid var(--fourth);
    background: linear-gradient(
       360deg,
       rgba(2, 0, 36, 1) 0%,
@@ -47,20 +49,16 @@ body {
 }
 
 .modal__head {
-   padding: 12px;
    font-size: 1.5rem;
    font-weight: bold;
 }
 
 .modal__content {
-   padding: 12px;
    font-size: 1rem;
+   margin-top: 20px;
    line-height: 23px;
+   margin-bottom: 20px;
    letter-spacing: 0.8px;
-}
-
-.modal__footer {
-   padding: 12px;
 }
 
 .modal__cancel-button,
@@ -92,20 +90,4 @@ body {
 .modal__cancel-button:focus,
 .modal__submit-button:focus {
    background-color: var(--fourth);
-}
-
-@media screen and (min-width: 760px) {
-   .modal__content,
-   .modal__cancel-button,
-   .modal__submit-button {
-      font-size: 0.9rem;
-   }
-}
-
-@media screen and (min-width: 1200px) {
-   .modal__content,
-   .modal__cancel-button,
-   .modal__submit-button {
-      font-size: calc(0.9rem - 1px);
-   }
 }

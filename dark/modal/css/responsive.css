@@ -4,6 +4,14 @@
    }
 }
 
+@media screen and (min-width: 650px) {
+   .modal__body {
+      width: 92%;
+      border-radius: 3px;
+      border: 3px solid var(--fourth);
+   }
+}
+
 @media screen and (min-width: 700px) {
    .modal__body {
       width: 84%;
@@ -17,6 +25,12 @@
    }
 
    .modal__content {
+      font-size: 0.9rem;
+   }
+
+   .modal__content,
+   .modal__cancel-button,
+   .modal__submit-button {
       font-size: 0.9rem;
    }
 }
@@ -69,6 +83,12 @@
    .modal__content {
       font-size: 0.9rem;
       line-height: 28px;
+   }
+
+   .modal__content,
+   .modal__cancel-button,
+   .modal__submit-button {
+      font-size: calc(0.9rem - 1px);
    }
 }
 
