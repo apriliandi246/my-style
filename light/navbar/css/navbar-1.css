@@ -19,7 +19,7 @@ body {
 
 .navbar__brand {
    color: #000000;
-   font-size: 1.3rem;
+   font-size: 1.4rem;
    font-weight: bold;
    font-family: var(--font-family);
 }
@@ -127,18 +127,19 @@ body {
       z-index: 1;
       width: 40%;
       height: 100vh;
+      z-index: 9999;
       position: absolute;
       align-items: center;
-      transition: all 0.3s;
       flex-direction: column;
-      transform: translateX(100%);
+      transform: translateX(40%);
       justify-content: space-evenly;
       background-color: var(--second);
       box-shadow: var(--component-box-shadow);
+      transition: opacity 0.3s, transform 0.3s;
    }
 
    .toggle-menu {
-      z-index: 2;
+      z-index: 9999;
       display: flex;
    }
 
