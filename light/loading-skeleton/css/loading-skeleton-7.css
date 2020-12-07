@@ -1,0 +1,82 @@
+@import "../../css-variable/variable.css";
+
+body {
+   background-color: var(--first);
+}
+
+/* for centering element */
+.card {
+   margin: 50px auto;
+}
+/* for centering element */
+
+.card {
+   width: 600px;
+   padding: 23px;
+   border-radius: 3px;
+   box-sizing: border-box;
+   background-color: #f9f9f9;
+   box-shadow: 0 0 2px 2px #0000001a;
+}
+
+.card__large-block {
+   width: 100%;
+   height: 200px;
+   border-radius: 3px;
+   margin-bottom: 25px;
+   background-size: 300px;
+   background-color: #cccccc;
+   background-repeat: no-repeat;
+   animation: loading 1s ease infinite;
+   background-image: linear-gradient(
+      90deg,
+      #cccccc,
+      rgba(255, 255, 255, 0.6),
+      #cccccc
+   );
+}
+
+.card__medium-block {
+   width: 100%;
+   height: 25px;
+   margin-top: 17px;
+   border-radius: 3px;
+   background-size: 300px;
+   background-color: #cccccc;
+   background-repeat: no-repeat;
+   animation: loading 1s ease infinite;
+   background-image: linear-gradient(
+      90deg,
+      #cccccc,
+      rgba(255, 255, 255, 0.6),
+      #cccccc
+   );
+}
+
+.card__footer-block {
+   width: 150px;
+   height: 25px;
+   float: right;
+   margin-top: 20px;
+   border-radius: 3px;
+   background-size: 300px;
+   background-color: #cccccc;
+   background-repeat: no-repeat;
+   animation: loading 1s ease infinite;
+   background-image: linear-gradient(
+      90deg,
+      #cccccc,
+      rgba(255, 255, 255, 0.6),
+      #cccccc
+   );
+}
+
+@keyframes loading {
+   0% {
+      background-position: -500px;
+   }
+
+   100% {
+      background-position: calc(500px + 100%);
+   }
+}
