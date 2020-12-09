@@ -1,7 +1,9 @@
-document.querySelector(".collapses").addEventListener("click", (event) => {
-   toggleCollapse(event);
-   return () => event.target.removeEventListener("click", toggleCollapse);
-});
+import listener from "../utils/listener.js";
+
+// For more than one collapse component
+const collapses = document.querySelector(".collapses");
+
+listener(collapses, "click", toggleCollapse);
 
 function toggleCollapse(event) {
    if (event.target.classList[0] !== "collapse__button") return;

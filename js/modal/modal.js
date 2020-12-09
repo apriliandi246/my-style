@@ -1,20 +1,15 @@
+import listener from "../utils/listener.js";
+
 const modalTrigger = document.querySelector(".modal-trigger-button");
-const hideModal = document.querySelector(".modal__cancel-button");
+const modalBtn = document.querySelector(".modal__cancel-button");
 
-modalTrigger.addEventListener("click", () => {
-   document.querySelector(".modal").style.display = "block";
+listener(modalTrigger, "click", showModal);
+listener(modalBtn, "click", hideModal);
 
-   return () =>
-      modalTrigger.removeEventListener("click", () => {
-         document.querySelector(".modal").style.display = "block";
-      });
-});
-
-hideModal.addEventListener("click", () => {
+function hideModal() {
    document.querySelector(".modal").style.display = "none";
+}
 
-   return () =>
-      hideModal.removeEventListener("click", () => {
-         document.querySelector(".modal").style.display = "none";
-      });
-});
+function showModal() {
+   document.querySelector(".modal").style.display = "block";
+}

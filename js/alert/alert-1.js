@@ -1,25 +1,18 @@
+import listener from "../utils/listener.js";
+
 // ! For one alert
+const closeIcon = document.querySelector(".alert__close-button");
 
 // remove from DOM
-const closeIconDom = document.querySelector(".alert__close-button");
+listener(closeIcon, "click", removeAlert);
 
-closeIconDom.addEventListener("click", (event) => {
+function removeAlert(event) {
    event.target.parentElement.remove();
-
-   return () =>
-      closeIconDom.removeEventListener("click", (event) => {
-         event.target.parentElement.remove();
-      });
-});
+}
 
 // just change the display style
-const closeIconStyle = document.querySelector(".alert__close-button");
+listener(closeIcon, "click", changeDisplayValue);
 
-closeIconStyle.addEventListener("click", (event) => {
+function changeDisplayValue(event) {
    event.target.parentElement.style.display = "none";
-
-   return () =>
-      closeIconStyle.removeEventListener("click", (event) => {
-         event.target.parentElement.style.display = "none";
-      });
-});
+}

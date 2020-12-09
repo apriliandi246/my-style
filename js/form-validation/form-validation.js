@@ -1,3 +1,5 @@
+import listener from "../utils/listener.js";
+
 const button = document.querySelector(".button-form");
 const inputs = document.querySelectorAll(".input-form__input");
 const [username, email, password, confirmPassword] = inputs;
@@ -12,22 +14,15 @@ const patterns = {
 
 // check all of inputs
 inputs.forEach((input) => {
-   input.addEventListener("input", (event) => {
-      addClass(event.target, patterns[event.target.attributes.name.value]);
-      checkPasswordInput();
-      validate();
-
-      return () =>
-         input.removeEventListener("input", (event) => {
-            addClass(
-               event.target,
-               patterns[event.target.attributes.name.value]
-            );
-            checkPasswordInput();
-            validate();
-         });
-   });
+   listener(input, "input", typingInput);
 });
+
+// event for user typing input
+function typingInput(event) {
+   addClass(event.target, patterns[event.target.attributes.name.value]);
+   checkPasswordInput();
+   validate();
+}
 
 // add valid class or invalid class in input
 function addClass(input, regex) {

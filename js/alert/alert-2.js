@@ -1,28 +1,22 @@
-// ! For more than one alert
+import listener from "../utils/listener.js";
 
+// ! For more than one alert
 const closeButton = document.querySelectorAll(".alert__close-button");
 
 // remove from DOM
 for (let index = 0; index < closeButton.length; index++) {
-   listen(closeButton[index], "click", "dom");
+   listener(closeButton[index], "click", removeAlert);
+}
+
+function removeAlert(event) {
+   event.target.parentElement.remove();
 }
 
 // just change the display style
 for (let index = 0; index < closeButton.length; index++) {
-   listen(closeButton[index], "click", "style");
+   listener(closeButton[index], "click", changeDisplayValue);
 }
 
-function listen(node, event, type) {
-   node.addEventListener(event, () => {
-      type === "dom"
-         ? node.parentElement.remove()
-         : (node.parentElement.style.display = "none");
-
-      return () =>
-         node.removeEventListener("click", () => {
-            type === "dom"
-               ? node.parentElement.remove()
-               : (node.parentElement.style.display = "none");
-         });
-   });
+function changeDisplayValue(event) {
+   event.target.parentElement.style.display = "none";
 }

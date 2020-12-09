@@ -1,12 +1,9 @@
+import listener from "../utils/listener.js";
+
 const toggleMenu = document.querySelector(".toggle-menu");
 
-toggleMenu.addEventListener("click", () => {
-   document.querySelector(".navbar__items").classList.toggle("navbar--slide");
+listener(toggleMenu, "click", navbarToggle);
 
-   return () =>
-      toggleMenu.removeEventListener("click", () => {
-         document
-            .querySelector(".navbar__items")
-            .classList.toggle("navbar--slide");
-      });
-});
+function navbarToggle() {
+   document.querySelector(".navbar__items").classList.toggle("navbar--slide");
+}
