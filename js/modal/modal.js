@@ -1,10 +1,7 @@
 import listener from "../utils/listener.js";
 
-const modalTrigger = document.querySelector(".modal-trigger-button");
-const modalBtn = document.querySelector(".modal__cancel-button");
-
-listener(modalTrigger, "click", showModal);
-listener(modalBtn, "click", hideModal);
+listener(document.querySelector(".modal-trigger-button"), "click", showModal);
+listener(document.querySelector(".modal__cancel-button"), "click", hideModal);
 
 function hideModal() {
    document.querySelector(".modal").style.display = "none";

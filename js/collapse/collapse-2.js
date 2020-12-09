@@ -1,9 +1,8 @@
 import listener from "../utils/listener.js";
 
 // For more than one collapse component
-const collapses = document.querySelector(".collapses");
 
-listener(collapses, "click", toggleCollapse);
+listener(document.querySelector(".collapses"), "click", toggleCollapse);
 
 function toggleCollapse(event) {
    if (event.target.classList[0] !== "collapse__button") return;

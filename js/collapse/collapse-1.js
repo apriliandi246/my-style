@@ -1,9 +1,8 @@
 import listener from "../utils/listener.js";
 
 // For one collapse component
-const collapseButton = document.querySelector(".collapse__button");
 
-listener(collapseButton, "click", collapseToggle);
+listener(document.querySelector(".collapse__button"), "click", collapseToggle);
 
 function collapseToggle(event) {
    const collapseContent = event.target.nextElementSibling;

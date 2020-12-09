@@ -1,11 +1,11 @@
 import listener from "../utils/listener.js";
 
 // ! For more than one alert
-const closeButton = document.querySelectorAll(".alert__close-button");
+const closeButtons = document.querySelectorAll(".alert__close-button");
 
 // remove from DOM
-for (let index = 0; index < closeButton.length; index++) {
-   listener(closeButton[index], "click", removeAlert);
+for (let index = 0; index < closeButtons.length; index++) {
+   listener(closeButtons[index], "click", removeAlert);
 }
 
 function removeAlert(event) {
@@ -13,8 +13,8 @@ function removeAlert(event) {
 }
 
 // just change the display style
-for (let index = 0; index < closeButton.length; index++) {
-   listener(closeButton[index], "click", changeDisplayValue);
+for (let index = 0; index < closeButtons.length; index++) {
+   listener(closeButtons[index], "click", changeDisplayValue);
 }
 
 function changeDisplayValue(event) {
