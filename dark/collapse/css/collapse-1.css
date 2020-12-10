@@ -11,7 +11,7 @@ body {
 }
 /* for centering element */
 
-.collapse__button {
+.collapse__head {
    width: 100%;
    padding: 13px;
    color: #ffffff;
@@ -41,6 +41,7 @@ body {
    color: #ffffff;
    font-size: 1rem;
    line-height: 23px;
+   word-wrap: break-word;
    letter-spacing: 0.8px;
    box-sizing: border-box;
    font-family: var(--font-family);
@@ -52,13 +53,13 @@ body {
    );
 }
 
-.collapse__button--active,
-.collapse__button:hover {
+.collapse__head--active,
+.collapse__head:hover {
    background: var(--fourth);
 }
 
 @media screen and (min-width: 760px) {
-   .collapse__button {
+   .collapse__head {
       font-size: 0.9rem;
    }
 
@@ -68,7 +69,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-   .collapse__button {
+   .collapse__head {
       font-size: calc(0.9rem - 1px);
    }
 

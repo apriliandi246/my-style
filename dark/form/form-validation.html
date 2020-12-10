@@ -22,10 +22,10 @@
                <label for="username" class="input-form__label">Username</label>
                <input
                   type="text"
-                  class="input-form__input"
                   id="username"
-                  placeholder="username"
                   name="username"
+                  placeholder="username"
+                  class="input-form__input"
                />
                <p class="input-form__message">
                   username must be and contain 5 - 12 characters and no
@@ -36,11 +36,11 @@
             <div class="input-form">
                <label for="email" class="input-form__label">Email</label>
                <input
-                  type="text"
-                  class="input-form__input"
                   id="email"
-                  placeholder="email"
+                  type="text"
                   name="email"
+                  placeholder="email"
+                  class="input-form__input"
                />
                <p class="input-form__message">
                   email must be a valid address, e.g. me@mydomain.com
@@ -50,11 +50,11 @@
             <div class="input-form">
                <label for="password" class="input-form__label">Password</label>
                <input
-                  type="password"
-                  class="input-form__input"
                   id="password"
-                  placeholder="password"
                   name="password"
+                  type="password"
+                  placeholder="password"
+                  class="input-form__input"
                />
                <p class="input-form__message">
                   password must alphanumeric (@, _ and - are also allowed) and
@@ -67,12 +67,12 @@
                   >Password Confirm</label
                >
                <input
-                  type="password"
-                  class="input-form__input"
-                  id="confirm-password"
-                  placeholder="password confirm"
-                  name="confirmPassword"
                   disabled
+                  type="password"
+                  id="confirm-password"
+                  name="confirmPassword"
+                  class="input-form__input"
+                  placeholder="password confirm"
                />
                <p class="input-form__message">
                   must be same with the first password
@@ -80,6 +80,7 @@
             </div>
 
             <button type="submit" class="button-form" disabled>Register</button>
+            <hr class="line-space-button" />
             <a href="#" class="redirect-button-form">Login</a>
          </form>
       </div>

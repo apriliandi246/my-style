@@ -71,6 +71,10 @@ form {
    transition: color 0.2s, background-color 0.2s;
 }
 
+.line-space-button {
+   border: 1px solid var(--fourth);
+}
+
 .input-form__input:focus {
    background-color: var(--first);
 }

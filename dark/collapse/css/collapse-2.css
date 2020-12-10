@@ -15,7 +15,7 @@ body {
    border: 2px solid var(--fourth);
 }
 
-.collapse__button {
+.collapse__head {
    width: 100%;
    padding: 13px;
    color: #ffffff;
@@ -45,6 +45,7 @@ body {
    color: #ffffff;
    font-size: 1rem;
    line-height: 23px;
+   word-wrap: break-word;
    letter-spacing: 0.8px;
    box-sizing: border-box;
    font-family: var(--font-family);
@@ -56,7 +57,7 @@ body {
    );
 }
 
-.collapse:nth-last-child(1) .collapse__button {
+.collapse:nth-last-child(1) .collapse__head {
    border-bottom: none;
 }
 
@@ -64,8 +65,8 @@ body {
    border-bottom: none;
 }
 
-.collapse__button--active,
-.collapse__button:hover {
+.collapse__head--active,
+.collapse__head:hover {
    background: var(--fourth);
 }
 
