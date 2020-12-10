@@ -1,6 +1,6 @@
-import listener from "../utils/listener.js";
+// ! For one alert component
 
-// ! For one alert
+import listener from "../utils/listener.js";
 
 // remove from DOM
 listener(document.querySelector(".alert__close-button"), "click", removeAlert);

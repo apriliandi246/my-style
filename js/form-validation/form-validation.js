@@ -14,11 +14,11 @@ const patterns = {
 
 // check all of inputs
 inputs.forEach((input) => {
-   listener(input, "input", typingInput);
+   listener(input, "input", checkingInputValue);
 });
 
 // event for user typing input
-function typingInput(event) {
+function checkingInputValue(event) {
    addClass(event.target, patterns[event.target.attributes.name.value]);
    checkPasswordInput();
    validate();

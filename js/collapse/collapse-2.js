@@ -5,19 +5,19 @@ import listener from "../utils/listener.js";
 listener(document.querySelector(".collapses"), "click", toggleCollapse);
 
 function toggleCollapse(event) {
-   if (event.target.classList[0] !== "collapse__button") return;
+   if (event.target.classList[0] !== "collapse__head") return;
 
    let collapseButton = event.target;
    let buttonIcon = collapseButton.firstElementChild;
    let collapseContent = event.target.nextElementSibling;
 
-   collapseButton.classList.toggle("collapse__button--active");
+   collapseButton.classList.toggle("collapse__head--active");
 
    if (collapseContent.style.display === "block") {
-      buttonIcon.innerHTML = "&#9650;";
+      buttonIcon.textContent = "▲";
       collapseContent.style.display = "none";
    } else {
-      buttonIcon.innerHTML = "&#9660;";
+      buttonIcon.textContent = "▼";
       collapseContent.style.display = "block";
    }
 }

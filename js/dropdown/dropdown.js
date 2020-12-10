@@ -1,8 +1,8 @@
 import listener from "../utils/listener.js";
 
-listener(document.querySelector(".dropdown__button"), "click", dropdownToggle);
+listener(document.querySelector(".dropdown__button"), "click", toggleContent);
 
-function dropdownToggle(event) {
+function toggleContent(event) {
    const dropdownContent = document.querySelector(".dropdown__content");
    event.target.classList.toggle("dropdown__button--active");
 
