@@ -1,4 +1,4 @@
-import listener from "../utils/listener.js";
+import { listener } from "../utils/utils.js";
 
 listener(document.querySelector(".toggle-menu"), "click", toggleMenu);
 

@@ -1,6 +1,6 @@
 // ! For more than one alert component
 
-import listener from "../utils/listener.js";
+import { listener } from "../utils/utils.js";
 
 const closeIcons = document.querySelectorAll(".alert__close-button");
 
