@@ -21,23 +21,26 @@ body {
    box-shadow: 0 0 2px 2px #0000001a;
 }
 
+.card__description {
+   font-size: 1rem;
+   line-height: 23px;
+   white-space: pre-line;
+   word-wrap: break-word;
+   box-sizing: border-box;
+   margin: -14px 0 25px 0;
+   font-family: var(--font-family);
+}
+
+/* Another Option */
 /* .card__description {
    font-size: 1rem;
    line-height: 23px;
    letter-spacing: 0.5px;
    margin: 10px 0 25px 0;
+   word-wrap: break-word;
    box-sizing: border-box;
    font-family: var(--font-family);
 } */
-
-.card__description {
-   font-size: 1rem;
-   line-height: 23px;
-   white-space: pre-line;
-   box-sizing: border-box;
-   margin: -14px 0 25px 0;
-   font-family: var(--font-family);
-}
 
 .card__date {
    float: right;

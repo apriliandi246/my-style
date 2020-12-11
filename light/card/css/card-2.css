@@ -50,6 +50,7 @@ body {
    margin-top: 15px;
    line-height: 23px;
    white-space: pre-line;
+   word-wrap: break-word;
    box-sizing: border-box;
    font-family: var(--font-family);
 }

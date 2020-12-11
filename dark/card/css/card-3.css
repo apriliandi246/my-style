@@ -30,15 +30,18 @@ body {
    line-height: 25px;
    margin: 10px 0 25px 0;
    letter-spacing: 0.5px;
+   word-wrap: break-word;
    box-sizing: border-box;
    font-family: var(--font-family);
 }
 
+/* Another Option */
 /* .card__description {
    font-size: 1rem;
    line-height: 25px;
    letter-spacing: 0.5px;
    white-space: pre-line;
+   word-wrap: break-word;
    box-sizing: border-box;
    margin: -14px 0 25px 0;
    font-family: var(--font-family);

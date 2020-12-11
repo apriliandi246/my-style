@@ -19,7 +19,7 @@ body {
    width: 20px;
    height: 20px;
    border-radius: 100%;
-   background-color: #fad7d7;
+   background-color: #e5e2e2;
    animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite
       alternate;
 }
@@ -57,7 +57,7 @@ body {
    width: 20px;
    height: 20px;
    border-radius: 100%;
-   background-color: #fad7d7;
+   background-color: #e5e2e2;
    animation: bouncer 0.5s ease-in-out infinite alternate;
 }
 

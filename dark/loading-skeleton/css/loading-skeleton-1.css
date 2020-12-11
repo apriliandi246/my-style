@@ -31,7 +31,7 @@ body {
    width: 50px;
    height: 50px;
    border-radius: 100%;
-   animation: loading 1s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite alternate;
 }
 
 .card__head-block {
@@ -39,7 +39,7 @@ body {
    height: 20px;
    margin-left: 20px;
    border-radius: 4px;
-   animation: loading 1s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite alternate;
 }
 
 .card__large-block {
@@ -48,7 +48,7 @@ body {
    margin-top: 20px;
    border-radius: 4px;
    margin-bottom: 30px;
-   animation: loading 1s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite alternate;
 }
 
 .card__medium-block {
@@ -56,7 +56,7 @@ body {
    height: 25px;
    margin-top: 18px;
    border-radius: 4px;
-   animation: loading 1s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite alternate;
 }
 
 .card__footer-block {
@@ -65,7 +65,7 @@ body {
    float: right;
    margin-top: 20px;
    border-radius: 4px;
-   animation: loading 1s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite alternate;
 }
 
 @keyframes loading {

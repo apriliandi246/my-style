@@ -59,6 +59,7 @@ body {
    margin-top: -15px;
    margin-bottom: 17px;
    white-space: pre-line;
+   word-wrap: break-word;
    box-sizing: border-box;
    font-family: var(--font-family);
 }

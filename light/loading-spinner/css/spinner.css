@@ -16,7 +16,7 @@ body {
    border: 6px solid #cec6c5;
    border-top-color: #011a1a;
    box-shadow: 0 0 0.4px 0.4px #0000001a;
-   animation: spinner 0.9s linear infinite;
+   animation: spinner 0.8s linear infinite;
 }
 
 /* Spinner 2 */

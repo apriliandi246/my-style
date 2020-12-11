@@ -16,6 +16,7 @@ body {
    border-radius: 3px;
    font-style: italic;
    letter-spacing: 1px;
+   word-wrap: break-word;
    box-sizing: border-box;
    background-color: var(--second);
    font-family: var(--font-family);

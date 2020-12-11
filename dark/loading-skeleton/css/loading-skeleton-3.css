@@ -27,7 +27,7 @@ body {
    height: 200px;
    border-radius: 4px;
    margin-bottom: 25px;
-   animation: loading 1s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite alternate;
 }
 
 .card__medium-block {
@@ -35,7 +35,7 @@ body {
    height: 25px;
    margin-top: 17px;
    border-radius: 4px;
-   animation: loading 1s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite alternate;
 }
 
 .card__footer-block {
@@ -44,7 +44,7 @@ body {
    float: right;
    margin-top: 20px;
    border-radius: 4px;
-   animation: loading 1s ease-in-out infinite;
+   animation: loading 1s ease-in-out infinite alternate;
 }
 
 @keyframes loading {

@@ -51,6 +51,7 @@ body {
 .modal__head {
    font-size: 1.5rem;
    font-weight: bold;
+   word-wrap: break-word;
 }
 
 .modal__content {
@@ -59,6 +60,7 @@ body {
    line-height: 23px;
    margin-bottom: 20px;
    letter-spacing: 0.8px;
+   word-wrap: break-word;
 }
 
 .modal__cancel-button,

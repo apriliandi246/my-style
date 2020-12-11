@@ -42,7 +42,7 @@ body {
    text-align: center;
    letter-spacing: 1px;
    text-decoration: none;
-   margin: 17.4px 0 0 17px;
+   margin: 18px 0 0 17px;
    font-family: var(--font-family);
    transition: padding-bottom 0.2s, transform 0.2s;
 }
@@ -55,6 +55,7 @@ body {
    line-height: 25px;
    letter-spacing: 0.5px;
    white-space: pre-line;
+   word-wrap: break-word;
    box-sizing: border-box;
    font-family: var(--font-family);
 }
