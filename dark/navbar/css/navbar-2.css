@@ -14,9 +14,9 @@ body {
    position: fixed;
    align-items: center;
    padding: 0 55px 0 55px;
-   background-color: #192734;
+   background-color: var(--first);
    justify-content: space-between;
-   border-bottom: 3px solid var(--fourth);
+   border-bottom: 2px solid var(--fourth);
 }
 
 .navbar__brand {

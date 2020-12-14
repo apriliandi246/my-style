@@ -8,13 +8,13 @@ body {
    top: 0;
    left: 0;
    right: 0;
-   height: 66px;
+   height: 64px;
    display: flex;
    position: fixed;
    align-items: center;
-   background-color: #192734;
+   background-color: var(--first);
    justify-content: space-between;
-   border-bottom: 3px solid var(--fourth);
+   border-bottom: 2px solid var(--fourth);
 }
 
 .navbar__brand {

@@ -22,13 +22,9 @@ body {
    margin-bottom: -1px;
    letter-spacing: 0.5px;
    box-sizing: border-box;
+   background: var(--sixth);
    font-family: var(--font-family);
    border: 2px solid var(--fourth);
-   background: linear-gradient(
-      360deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(48, 30, 60, 1) 0%
-   );
 }
 
 .collapse__icon {

@@ -16,13 +16,9 @@ body {
    color: #ffffff;
    border-radius: 3px;
    box-sizing: border-box;
+   background: var(--sixth);
    transition: transform 0.2s;
    border: 2px solid var(--fourth);
-   background: linear-gradient(
-      360deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(48, 30, 60, 1) 0%
-   );
 }
 
 .card__description {

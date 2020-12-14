@@ -37,15 +37,11 @@ body {
    margin: 40% auto;
    position: relative;
    box-sizing: border-box;
+   background: var(--sixth);
    font-family: var(--font-family);
    border-top: 3px solid var(--fourth);
    border-bottom: 3px solid var(--fourth);
    animation: modalAnimation 0.3s ease-out;
-   background: linear-gradient(
-      360deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(48, 30, 60, 1) 0%
-   );
 }
 
 .modal__head {

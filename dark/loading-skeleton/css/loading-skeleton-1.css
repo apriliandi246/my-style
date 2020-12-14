@@ -15,11 +15,7 @@ body {
    padding: 23px;
    border-radius: 4px;
    box-sizing: border-box;
-   background: linear-gradient(
-      360deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(48, 30, 60, 1) 0%
-   );
+   background: var(--sixth);
 }
 
 .card__head {

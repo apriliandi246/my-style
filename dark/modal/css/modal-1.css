@@ -38,14 +38,10 @@ body {
    border-left: none;
    border-right: none;
    box-sizing: border-box;
+   background: var(--sixth);
    font-family: var(--font-family);
    border-top: 3px solid var(--fourth);
    border-bottom: 3px solid var(--fourth);
-   background: linear-gradient(
-      360deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(48, 30, 60, 1) 0%
-   );
 }
 
 .modal__head {
