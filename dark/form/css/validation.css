@@ -5,9 +5,7 @@
    height: 0;
    opacity: 0;
    color: #ff4500;
-   font-size: 16px;
-   line-height: 21px;
-   text-align: center;
+   text-align: right;
    transition: all 0.2s;
    font-family: monospace;
 }
@@ -15,11 +13,23 @@
 /* when user input is invalid, add class invalid */
 .input-form__input--invalid + .input-form__message {
    opacity: 1;
-   height: auto;
    color: #ff4500;
-   margin-top: 10px;
-   font-size: 16.5px;
-   line-height: 21px;
-   text-align: center;
+   text-align: right;
+   margin-top: 15px;
+   margin-bottom: 23px;
+   letter-spacing: 0.8px;
    font-family: monospace;
+   font-size: calc(1rem - 1px);
+}
+
+@media screen and (min-width: 760px) {
+   .input-form__input--invalid + .input-form__message {
+      font-size: calc(1rem - 2.3px);
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .input-form__input--invalid + .input-form__message {
+      font-size: calc(1rem - 3.3px);
+   }
 }
