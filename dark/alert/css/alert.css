@@ -27,9 +27,8 @@ body {
 }
 
 .alert__message {
-   font-size: 1rem;
    letter-spacing: 0.7px;
-   font-family: var(--font-family);
+   font: bold 1rem var(--font-family);
 }
 
 .alert__close-button {

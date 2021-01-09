@@ -14,9 +14,8 @@ form {
 
 .input-form__label {
    color: #ffffff;
-   font-size: 1rem;
    letter-spacing: 1px;
-   font-family: var(--font-family);
+   font: 1rem var(--font-family);
 }
 
 .input-form__input {
@@ -25,14 +24,13 @@ form {
    padding: 11px;
    display: block;
    color: #ffffff;
-   font-size: 1rem;
    margin-top: 15px;
    border-radius: 2px;
    letter-spacing: 1.2px;
    box-sizing: border-box;
+   font: 1rem var(--font-family);
    background-color: var(--second);
    border: 2px solid var(--fourth);
-   font-family: var(--font-family);
    transition: background-color 0.2s;
 }
 
@@ -42,14 +40,13 @@ form {
    outline: none;
    color: #ffffff;
    cursor: pointer;
-   font-size: 1rem;
    margin-top: 34px;
    border-radius: 2px;
    letter-spacing: 1.2px;
    box-sizing: border-box;
+   font: 1rem var(--font-family);
    background-color: var(--second);
    border: 2px solid var(--fourth);
-   font-family: var(--font-family);
    transition: color 0.2s, background-color 0.2s;
 }
 
@@ -59,14 +56,13 @@ form {
    outline: none;
    display: block;
    color: #ffffff;
-   font-size: 1rem;
    text-align: center;
    letter-spacing: 1.2px;
    text-decoration: none;
    box-sizing: border-box;
+   font: 1rem var(--font-family);
    background-color: var(--second);
    border: 2px solid var(--fourth);
-   font-family: var(--font-family);
    transition: color 0.2s, background-color 0.2s;
 }
 
@@ -99,18 +95,18 @@ form {
 }
 
 @media screen and (min-width: 760px) {
+   .button-form,
    .input-form__label,
    .input-form__input,
-   .button-form,
    .redirect-button-form {
       font-size: 0.9rem;
    }
 }
 
 @media screen and (min-width: 1200px) {
+   .button-form,
    .input-form__label,
    .input-form__input,
-   .button-form,
    .redirect-button-form {
       font-size: calc(0.9rem + 1px);
    }

@@ -20,7 +20,7 @@ body {
 
 .card__head {
    padding: 15px;
-   margin: 3px 0 4px 0;
+   margin-block: 4px;
 }
 
 .card__profile-photo {
@@ -34,35 +34,32 @@ body {
 .card__username {
    float: left;
    color: #ffffff;
-   font-size: 1rem;
+   margin-top: 15px;
+   margin-left: 17px;
    text-align: center;
    letter-spacing: 1px;
    text-decoration: none;
-   margin: 18px 0 0 17px;
-   font-family: var(--font-family);
+   font: 1rem var(--font-family);
    transition: padding-bottom 0.2s, transform 0.2s;
 }
 
 .card__description {
    padding: 15px;
    color: #ffffff;
-   font-size: 1rem;
-   margin-top: 15px;
-   line-height: 25px;
+   margin-top: 13px;
    letter-spacing: 0.5px;
    white-space: pre-line;
    word-wrap: break-word;
    box-sizing: border-box;
-   font-family: var(--font-family);
+   font: 1rem/24px var(--font-family);
 }
 
 .card__footer {
    float: right;
    padding: 15px;
    color: #ffffff;
-   font-size: 0.9rem;
    letter-spacing: 1px;
-   font-family: monospace;
+   font: 0.9rem monospace;
 }
 
 .card__username:hover {

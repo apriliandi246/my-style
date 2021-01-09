@@ -10,9 +10,8 @@ body {
    display: block;
    color: #ffffff;
    cursor: pointer;
-   font-size: 18px;
    margin: 60px auto;
-   font-family: monospace;
+   font: 18px monospace;
    box-sizing: border-box;
    background-color: var(--second);
    border: 1px solid var(--fourth);
@@ -46,7 +45,7 @@ body {
 
 .modal__head {
    font-size: 1.5rem;
-   font-weight: bolder;
+   font-weight: bold;
    word-wrap: break-word;
 }
 

@@ -16,14 +16,12 @@ body {
    padding: 13px;
    color: #ffffff;
    cursor: pointer;
-   font-size: 1rem;
    text-align: left;
-   font-weight: 500;
    margin-bottom: -1px;
    letter-spacing: 0.5px;
    box-sizing: border-box;
    background: var(--sixth);
-   font-family: var(--font-family);
+   font: 1rem var(--font-family);
    border: 2px solid var(--fourth);
 }
 
@@ -35,18 +33,16 @@ body {
    padding: 17px;
    display: none;
    color: #ffffff;
-   font-size: 1rem;
-   line-height: 23px;
    word-wrap: break-word;
    letter-spacing: 0.8px;
    box-sizing: border-box;
-   font-family: var(--font-family);
    border: 2px solid var(--fourth);
    background: linear-gradient(
       360deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(48, 30, 60, 1) 0%
    );
+   font: 1rem/24px var(--font-family);
 }
 
 .collapse__head--active,

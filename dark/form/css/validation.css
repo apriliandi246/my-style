@@ -14,12 +14,11 @@
 .input-form__input--invalid + .input-form__message {
    opacity: 1;
    color: #ff4500;
-   text-align: right;
    margin-top: 15px;
+   text-align: right;
    margin-bottom: 23px;
    letter-spacing: 0.8px;
-   font-family: monospace;
-   font-size: calc(1rem - 1px);
+   font: calc(1rem - 1px) monospace;
 }
 
 @media screen and (min-width: 760px) {
