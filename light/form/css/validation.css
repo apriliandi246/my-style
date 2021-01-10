@@ -19,8 +19,7 @@
    margin-top: 15px;
    text-align: right;
    letter-spacing: 0.8px;
-   font-family: monospace;
-   font-size: calc(1rem - 1px);
+   font: calc(1rem - 1px) monospace;
    text-shadow: 0.6px 0.4px #0000001a;
 }
 

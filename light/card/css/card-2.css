@@ -29,38 +29,34 @@ body {
    width: 50px;
    height: 50px;
    border-radius: 100%;
-   box-shadow: 0 0 3px 3px #0000001a;
+   box-shadow: 0 0 2px 2px #0000001a;
 }
 
 .card__username {
    float: left;
    color: #000000;
-   font-size: 1rem;
    text-align: center;
    letter-spacing: 1px;
    text-decoration: none;
    margin: 16px 0 0 20px;
-   font-family: var(--font-family);
+   font: 1rem var(--font-family);
    transition: padding-bottom 0.2s, transform 0.2s;
 }
 
 .card__description {
    padding: 17px;
-   font-size: 1rem;
    margin-top: 15px;
-   line-height: 23px;
    white-space: pre-line;
    word-wrap: break-word;
    box-sizing: border-box;
-   font-family: var(--font-family);
+   font: 1rem/24px var(--font-family);
 }
 
 .card__date {
    float: right;
    padding: 17px;
-   font-size: 0.9rem;
    letter-spacing: 1px;
-   font-family: monospace;
+   font: 0.9rem monospace;
 }
 
 .card__username:hover {

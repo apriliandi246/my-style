@@ -18,13 +18,11 @@ body {
    padding: 13px;
    color: #000000;
    cursor: pointer;
-   font-size: 1rem;
    text-align: left;
    letter-spacing: 0.5px;
-   font-family: monospace;
    box-sizing: border-box;
+   font: 1rem var(--font-family);
    background-color: var(--second);
-   font-family: var(--font-family);
    transition: background-color 0.1s;
    box-shadow: var(--component-box-shadow);
 }
@@ -38,15 +36,13 @@ body {
    padding: 18px;
    display: none;
    color: #000000;
-   font-size: 1rem;
-   line-height: 23px;
    margin-top: 1.6px;
    word-wrap: break-word;
    letter-spacing: 0.8px;
    box-sizing: border-box;
    border: 1px solid var(--third);
    background-color: var(--second);
-   font-family: var(--font-family);
+   font: 1rem/24px var(--font-family);
    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 

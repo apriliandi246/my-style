@@ -28,9 +28,8 @@ body {
 }
 
 .alert__message {
-   font-size: 1rem;
    letter-spacing: 0.9px;
-   font-family: var(--font-family);
+   font: 1rem var(--font-family);
    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
 }
 
