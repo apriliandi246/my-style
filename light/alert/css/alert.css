@@ -29,7 +29,7 @@ body {
 
 .alert__message {
    letter-spacing: 0.9px;
-   font: 1rem var(--font-family);
+   font: bold 1rem var(--font-family);
    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
 }
 
