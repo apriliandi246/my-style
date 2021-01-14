@@ -8,3 +8,12 @@ export function self(fn) {
       if (event.target === this) fn.call(this, event);
    };
 }
+
+// alert component
+export function removeAlert(event) {
+   event.target.parentElement.remove();
+}
+
+export function changeDisplayValue(event) {
+   event.target.parentElement.style.display = "none";
+}

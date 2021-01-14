@@ -3,10 +3,13 @@ import { listener } from "../utils/utils.js";
 listener(document.querySelector(".dropdown__button"), "click", toggleContent);
 
 function toggleContent(event) {
-   const dropdownContent = document.querySelector(".dropdown__content");
+   const dropdownContent = event.target.nextElementSibling;
+
    event.target.classList.toggle("dropdown__button--active");
 
-   dropdownContent.style.display === "block"
-      ? (dropdownContent.style.display = "none")
-      : (dropdownContent.style.display = "block");
+   if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+   } else {
+      dropdownContent.style.display = "block";
+   }
 }

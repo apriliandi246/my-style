@@ -7,17 +7,16 @@ listener(document.querySelector(".collapses"), "click", toggleCollapse);
 function toggleCollapse(event) {
    if (event.target.classList[0] !== "collapse__head") return;
 
-   let collapseButton = event.target;
-   let buttonIcon = collapseButton.firstElementChild;
+   let icon = event.target.firstElementChild;
    let collapseContent = event.target.nextElementSibling;
 
-   collapseButton.classList.toggle("collapse__head--active");
+   event.target.classList.toggle("collapse__head--active");
 
    if (collapseContent.style.display === "block") {
-      buttonIcon.textContent = "▲";
       collapseContent.style.display = "none";
+      icon.textContent = "▲";
    } else {
-      buttonIcon.textContent = "▼";
       collapseContent.style.display = "block";
+      icon.textContent = "▼";
    }
 }
