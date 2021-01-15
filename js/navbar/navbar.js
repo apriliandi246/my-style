@@ -1,9 +1,4 @@
-import { listener } from "../utils/utils.js";
+import { listener } from "../utils/dom.js";
+import { toggleMenu } from "../utils/component.js";
 
 listener(document.querySelector(".toggle-menu"), "click", toggleMenu);
-
-function toggleMenu(event) {
-   event.target.parentElement.previousElementSibling.classList.toggle(
-      "navbar--slide"
-   );
-}

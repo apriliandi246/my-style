@@ -1,4 +1,4 @@
-import { listener } from "../utils/utils.js";
+import { listener } from "../utils/dom.js";
 
 const button = document.querySelector(".button-form");
 const inputs = document.querySelectorAll(".input-form__input");

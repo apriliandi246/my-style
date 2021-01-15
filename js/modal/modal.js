@@ -1,13 +1,6 @@
-import { listener, self } from "../utils/utils.js";
+import { listener, self } from "../utils/component.js";
+import { showModal, hideModal } from "../utils/component.js";
 
+listener(document.querySelector(".modal"), "click", self(hideModal));
 listener(document.querySelector(".modal-trigger-button"), "click", showModal);
 listener(document.querySelector(".modal__cancel-button"), "click", hideModal);
-listener(document.querySelector(".modal"), "click", self(hideModal));
-
-function hideModal() {
-   document.querySelector(".modal").style.display = "none";
-}
-
-function showModal() {
-   document.querySelector(".modal").style.display = "block";
-}

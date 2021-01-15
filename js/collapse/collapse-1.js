@@ -1,6 +1,6 @@
 // For one collapse component
 
-import { listener, self } from "../utils/utils.js";
+import { listener, self } from "../utils//dom.js";
 
 listener(
    document.querySelector(".collapse__head"),

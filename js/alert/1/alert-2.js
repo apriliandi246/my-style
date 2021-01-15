@@ -1,8 +1,5 @@
-import {
-   listener,
-   removeAlert,
-   changeDisplayValue,
-} from "../../utils/utils.js";
+import { listener } from "../../utils/dom.js";
+import { changeDisplayValue } from "../../utils/component.js";
 
 listener(
    document.querySelector(".alert__close-button"),
