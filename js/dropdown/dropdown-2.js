@@ -1,5 +1,5 @@
-import { listener } from "../utils/utils.js";
-import { toggleContent } from "../utils/dom.js";
+import { listener } from "../utils/dom.js";
+import { toggleContent } from "../utils/component.js";
 
 document
    .querySelectorAll(".dropdown__button")

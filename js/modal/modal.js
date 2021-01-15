@@ -1,4 +1,4 @@
-import { listener, self } from "../utils/component.js";
+import { listener, self } from "../utils/dom.js";
 import { showModal, hideModal } from "../utils/component.js";
 
 listener(document.querySelector(".modal"), "click", self(hideModal));

@@ -1,4 +1,6 @@
-import { listener, removeAlert } from "../../utils/utils.js";
+import { listener } from "../../utils/dom.js";
+import { removeAlert } from "../../utils/component.js";
 
-const closeIcons = document.querySelectorAll(".alert__close-button");
-closeIcons.forEach((icon) => listener(icon, "click", removeAlert));
+document
+   .querySelectorAll(".alert__close-button")
+   .forEach((icon) => listener(icon, "click", removeAlert));

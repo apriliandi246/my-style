@@ -1,4 +1,6 @@
-import { listener, changeDisplayValue } from "../../utils/utils.js";
+import { listener } from "../../utils/dom.js";
+import { changeDisplayValue } from "../../utils/component.js";
 
-const closeIcons = document.querySelectorAll(".alert__close-button");
-closeIcons.forEach((icon) => listener(icon, "click", changeDisplayValue));
+document
+   .querySelectorAll(".alert__close-button")
+   .forEach((icon) => listener(icon, "click", changeDisplayValue));

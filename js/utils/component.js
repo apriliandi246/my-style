@@ -35,3 +35,36 @@ export function toggleMenu(event) {
       "navbar--slide"
    );
 }
+
+// collapse component
+export function toogleCollapse(event) {
+   const icon = event.target.firstElementChild;
+   const collapseContent = event.target.nextElementSibling;
+
+   event.target.classList.toggle("collapse__head--active");
+
+   if (collapseContent.style.display === "block") {
+      collapseContent.style.display = "none";
+      icon.textContent = "▲";
+   } else {
+      collapseContent.style.display = "block";
+      icon.textContent = "▼";
+   }
+}
+
+export function toggleCollapses(event) {
+   if (event.target.classList[0] !== "collapse__head") return;
+
+   let icon = event.target.firstElementChild;
+   let collapseContent = event.target.nextElementSibling;
+
+   event.target.classList.toggle("collapse__head--active");
+
+   if (collapseContent.style.display === "block") {
+      collapseContent.style.display = "none";
+      icon.textContent = "▲";
+   } else {
+      collapseContent.style.display = "block";
+      icon.textContent = "▼";
+   }
+}
