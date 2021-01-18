@@ -37,28 +37,25 @@ export function toggleMenu(event) {
 }
 
 // collapse component
-export function toogleCollapse(event) {
-   const icon = event.target.firstElementChild;
-   const collapseContent = event.target.nextElementSibling;
-
-   event.target.classList.toggle("collapse__head--active");
-
-   if (collapseContent.style.display === "block") {
-      collapseContent.style.display = "none";
-      icon.textContent = "▲";
-   } else {
-      collapseContent.style.display = "block";
-      icon.textContent = "▼";
-   }
-}
-
 export function toggleCollapses(event) {
-   if (event.target.classList[0] !== "collapse__head") return;
+   if (
+      event.target.classList[0] !== "collapse__head" &&
+      event.target.classList[0] !== "collapse__icon"
+   ) {
+      return;
+   }
 
-   let icon = event.target.firstElementChild;
-   let collapseContent = event.target.nextElementSibling;
+   let icon, collapseContent;
 
-   event.target.classList.toggle("collapse__head--active");
+   if (event.target.classList[0] === "collapse__head") {
+      icon = event.target.firstElementChild;
+      collapseContent = event.target.nextElementSibling;
+      event.target.classList.toggle("collapse__head--active");
+   } else {
+      icon = event.target;
+      collapseContent = event.target.parentElement.nextElementSibling;
+      event.target.parentElement.classList.toggle("collapse__head--active");
+   }
 
    if (collapseContent.style.display === "block") {
       collapseContent.style.display = "none";
