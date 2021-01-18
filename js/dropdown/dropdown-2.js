@@ -1,6 +1,8 @@
 import { listener } from "../utils/dom.js";
 import { toggleContent } from "../utils/component.js";
 
-document
-   .querySelectorAll(".dropdown__button")
-   .forEach((dropdown) => listener(dropdown, "click", toggleContent));
+const dropdown = document.getElementsByClassName("dropdown__button");
+
+for (let index = 0; index < dropdown.length; index++) {
+   listener(dropdown[index], "click", toggleContent);
+}

@@ -13,9 +13,7 @@ const patterns = {
 };
 
 // check all of inputs
-inputs.forEach((input) => {
-   listener(input, "input", checkingInputValue);
-});
+inputs.forEach((input) => listener(input, "input", checkingInputValue));
 
 // event for user typing input
 function checkingInputValue(event) {

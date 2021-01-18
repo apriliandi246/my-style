@@ -3,14 +3,13 @@ export function removeAlert(event) {
    event.target.parentElement.remove();
 }
 
-export function changeDisplayValue(event) {
+export function hideAlert(event) {
    event.target.parentElement.style.display = "none";
 }
 
 // dropdown component
 export function toggleContent(event) {
    const dropdownContent = event.target.nextElementSibling;
-
    event.target.classList.toggle("dropdown__button--active");
 
    if (dropdownContent.style.display === "block") {
@@ -51,7 +50,9 @@ export function toggleCollapses(event) {
       icon = event.target.firstElementChild;
       collapseContent = event.target.nextElementSibling;
       event.target.classList.toggle("collapse__head--active");
-   } else {
+   }
+
+   if (event.target.classList[0] === "collapse__icon") {
       icon = event.target;
       collapseContent = event.target.parentElement.nextElementSibling;
       event.target.parentElement.classList.toggle("collapse__head--active");

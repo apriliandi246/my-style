@@ -1,6 +1,8 @@
 import { listener } from "../../utils/dom.js";
 import { removeAlert } from "../../utils/component.js";
 
-document
-   .querySelectorAll(".alert__close-button")
-   .forEach((icon) => listener(icon, "click", removeAlert));
+const alert = document.getElementsByClassName("alert__close-button");
+
+for (let index = 0; index < alert.length; index++) {
+   listener(alert[index], "click", removeAlert);
+}
