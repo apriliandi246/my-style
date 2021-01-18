@@ -52,14 +52,17 @@ body {
 .modal__content {
    font-size: 1rem;
    margin-top: 20px;
-   line-height: 23px;
+   line-height: 24px;
    margin-bottom: 20px;
    letter-spacing: 0.8px;
    word-wrap: break-word;
 }
 
-.modal__cancel-button,
-.modal__submit-button {
+.modal__footer {
+   text-align: right;
+}
+
+.modal__close-button {
    outline: none;
    padding: 10px;
    color: #ffffff;
@@ -79,13 +82,11 @@ body {
    background-color: var(--third);
 }
 
-.modal__cancel-button:hover,
-.modal__submit-button:hover {
+.modal__close-button:hover {
    background-color: var(--first);
 }
 
-.modal__cancel-button:focus,
-.modal__submit-button:focus {
+.modal__close-button:focus {
    background-color: var(--fourth);
 }
 

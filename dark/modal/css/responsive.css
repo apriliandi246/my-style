@@ -29,8 +29,7 @@
    }
 
    .modal__content,
-   .modal__cancel-button,
-   .modal__submit-button {
+   .modal__close-button {
       font-size: 0.9rem;
    }
 }
@@ -82,12 +81,10 @@
 
    .modal__content {
       font-size: 0.9rem;
-      line-height: 28px;
    }
 
    .modal__content,
-   .modal__cancel-button,
-   .modal__submit-button {
+   .modal__close-button {
       font-size: calc(0.9rem - 1px);
    }
 }
