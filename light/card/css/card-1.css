@@ -65,8 +65,9 @@ body {
 .card__date {
    float: right;
    padding: 15px;
+   font-weight: bold;
    letter-spacing: 1px;
-   font-family: 0.9rem monospace;
+   font: 0.9rem monospace;
 }
 
 .card__username:hover {
