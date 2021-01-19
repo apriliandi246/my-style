@@ -1,8 +1,8 @@
 import { listener } from "../../utils/dom.js";
 import { removeAlert } from "../../utils/component.js";
 
-const alert = document.getElementsByClassName("alert__close-button");
+const alertComponents = document.getElementsByClassName("alert__close-button");
 
-for (let index = 0; index < alert.length; index++) {
-   listener(alert[index], "click", removeAlert);
+for (let index = 0; index < alertComponents.length; index++) {
+   listener(alertComponents[index], "click", removeAlert);
 }

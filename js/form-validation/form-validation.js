@@ -1,7 +1,7 @@
 import { listener } from "../utils/dom.js";
 
-const button = document.querySelector(".button-form");
-const inputs = document.querySelectorAll(".input-form__input");
+const button = document.getElementById("button-form");
+const inputs = document.getElementsByClassName("input-form__input");
 const [username, email, password, confirmPassword] = inputs;
 
 // regex patterns
@@ -13,7 +13,9 @@ const patterns = {
 };
 
 // check all of inputs
-inputs.forEach((input) => listener(input, "input", checkingInputValue));
+for (let index = 0; index < inputs.length; index++) {
+   listener(inputs[index], "input", checkingInputValue);
+}
 
 // event for user typing input
 function checkingInputValue(event) {

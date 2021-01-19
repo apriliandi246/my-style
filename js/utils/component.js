@@ -36,7 +36,7 @@ export function toggleMenu(event) {
 }
 
 // collapse component
-export function toggleCollapses(event) {
+export function toggleCollapse(event) {
    if (
       event.target.classList[0] !== "collapse__head" &&
       event.target.classList[0] !== "collapse__icon"
