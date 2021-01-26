@@ -1,16 +1,16 @@
 // alert component
-export function removeAlert(event) {
-   event.target.parentElement.remove();
+export function removeAlert() {
+   this.parentElement.remove();
 }
 
-export function hideAlert(event) {
-   event.target.parentElement.style.display = "none";
+export function hideAlert() {
+   this.parentElement.style.display = "none";
 }
 
 // dropdown component
-export function toggleContent(event) {
-   const dropdownContent = event.target.nextElementSibling;
-   event.target.classList.toggle("dropdown__button--active");
+export function toggleContent() {
+   const dropdownContent = this.nextElementSibling;
+   this.classList.toggle("dropdown__button--active");
 
    if (dropdownContent.style.display === "block") {
       dropdownContent.style.display = "none";
@@ -29,10 +29,8 @@ export function showModal() {
 }
 
 // navbar component
-export function toggleMenu(event) {
-   event.target.parentElement.previousElementSibling.classList.toggle(
-      "navbar--slide"
-   );
+export function toggleMenu() {
+   this.parentElement.childNodes[3].classList.toggle("navbar--slide");
 }
 
 // collapse component
