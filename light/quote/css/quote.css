@@ -17,8 +17,8 @@ body {
    box-sizing: border-box;
    background-color: var(--second);
    border-left: 10px solid #cccccc;
+   box-shadow: 0 0 1px 1px #0000001a;
    quotes: "\201C""\201D""\2018""\2019";
-   box-shadow: var(--component-box-shadow);
    font: italic 1rem/24px var(--font-family);
 }
 

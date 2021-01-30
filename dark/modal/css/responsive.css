@@ -24,10 +24,6 @@
       font-size: 1.3rem;
    }
 
-   .modal__content {
-      font-size: 0.9rem;
-   }
-
    .modal__content,
    .modal__close-button {
       font-size: 0.9rem;
@@ -77,10 +73,6 @@
 
    .modal__head {
       font-size: 1.3rem;
-   }
-
-   .modal__content {
-      font-size: 0.9rem;
    }
 
    .modal__content,
