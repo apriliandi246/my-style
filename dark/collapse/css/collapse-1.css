@@ -37,12 +37,12 @@ body {
    letter-spacing: 0.8px;
    box-sizing: border-box;
    border: 2px solid var(--fourth);
+   font: 1rem/24px var(--font-family);
    background: linear-gradient(
       360deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(48, 30, 60, 1) 0%
    );
-   font: 1rem/24px var(--font-family);
 }
 
 .collapse__head--active,
