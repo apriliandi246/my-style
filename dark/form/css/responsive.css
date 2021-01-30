@@ -16,6 +16,12 @@
       width: 52%;
    }
 
+   .button-form,
+   .input-form__label,
+   .redirect-button-form {
+      font-size: 0.9rem;
+   }
+
    .input-form__input {
       font-size: 17px;
    }
@@ -30,6 +36,14 @@
 @media screen and (min-width: 1080px) {
    .container {
       width: 37%;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .button-form,
+   .input-form__label,
+   .redirect-button-form {
+      font-size: calc(0.8rem + 1px);
    }
 }
 

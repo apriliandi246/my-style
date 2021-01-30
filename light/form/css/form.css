@@ -21,7 +21,7 @@ form {
 .input-form__input {
    width: 100%;
    border: none;
-   padding: 11px;
+   padding: 10px;
    outline: none;
    display: block;
    color: #000000;
@@ -55,7 +55,7 @@ form {
    width: 100%;
    border: none;
    outline: none;
-   padding: 11px;
+   padding: 10px;
    display: block;
    color: #000000;
    margin-top: 16px;
@@ -90,25 +90,4 @@ form {
 .button-form:hover,
 .redirect-button-form:hover {
    background-color: var(--first);
-}
-
-@media screen and (min-width: 760px) {
-   .input-form__label,
-   .input-form__input,
-   .button-form,
-   .redirect-button-form {
-      font-size: 0.9rem;
-   }
-}
-
-@media screen and (min-width: 1200px) {
-   .input-form__label,
-   .button-form,
-   .redirect-button-form {
-      font-size: calc(0.9rem + 1px);
-   }
-
-   .input-form__input {
-      font-size: calc(0.9rem - 1px);
-   }
 }

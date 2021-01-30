@@ -21,12 +21,11 @@ form {
 .input-form__input {
    width: 100%;
    outline: none;
-   padding: 11px;
+   padding: 10px;
    display: block;
    color: #ffffff;
    margin-top: 15px;
    border-radius: 2px;
-   letter-spacing: 1.2px;
    box-sizing: border-box;
    font: 1rem var(--font-family);
    background-color: var(--second);
@@ -42,7 +41,7 @@ form {
    cursor: pointer;
    margin-top: 34px;
    border-radius: 2px;
-   letter-spacing: 1.2px;
+   letter-spacing: 1px;
    box-sizing: border-box;
    font: 1rem var(--font-family);
    background-color: var(--second);
@@ -52,12 +51,12 @@ form {
 
 .redirect-button-form {
    width: 100%;
-   padding: 11px;
+   padding: 10px;
    outline: none;
    display: block;
    color: #ffffff;
    text-align: center;
-   letter-spacing: 1.2px;
+   letter-spacing: 1px;
    text-decoration: none;
    box-sizing: border-box;
    font: 1rem var(--font-family);
@@ -92,22 +91,4 @@ form {
 .button-form:focus,
 .redirect-button-form:focus {
    background-color: var(--fourth);
-}
-
-@media screen and (min-width: 760px) {
-   .button-form,
-   .input-form__label,
-   .input-form__input,
-   .redirect-button-form {
-      font-size: 0.9rem;
-   }
-}
-
-@media screen and (min-width: 1200px) {
-   .button-form,
-   .input-form__label,
-   .input-form__input,
-   .redirect-button-form {
-      font-size: calc(0.9rem + 1px);
-   }
 }
