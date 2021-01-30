@@ -1,39 +1,3 @@
-// alert component
-export function removeAlert() {
-   this.parentElement.remove();
-}
-
-export function hideAlert() {
-   this.parentElement.style.display = "none";
-}
-
-// dropdown component
-export function toggleContent() {
-   const dropdownContent = this.nextElementSibling;
-   this.classList.toggle("dropdown__button--active");
-
-   if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-   } else {
-      dropdownContent.style.display = "block";
-   }
-}
-
-// modal component
-export function hideModal() {
-   document.querySelector(".modal").style.display = "none";
-}
-
-export function showModal() {
-   document.querySelector(".modal").style.display = "block";
-}
-
-// navbar component
-export function toggleMenu() {
-   this.parentElement.childNodes[3].classList.toggle("navbar--slide");
-}
-
-// collapse component
 export function toggleCollapse(event) {
    if (
       event.target.classList[0] !== "collapse__head" &&
