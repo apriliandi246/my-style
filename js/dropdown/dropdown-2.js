@@ -1,5 +1,5 @@
 import { listener } from "../utils/dom.js";
-import { toggleContent } from "../utils/component.js";
+import { toggleContent } from "../utils/dropdown.js";
 
 const dropdown = document.getElementsByClassName("dropdown__button");
 
