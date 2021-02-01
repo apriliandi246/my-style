@@ -1,0 +1,105 @@
+@import "../../css-variable/variable.css";
+
+body {
+   background-color: var(--first);
+}
+
+.modal-trigger-button {
+   outline: none;
+   padding: 10px;
+   display: block;
+   color: #ffffff;
+   cursor: pointer;
+   margin: 60px auto;
+   font: 18px monospace;
+   box-sizing: border-box;
+   background-color: var(--second);
+   border: 1px solid var(--fourth);
+   transition: background-color 0.2s;
+}
+
+.modal {
+   top: 0;
+   left: 0;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   display: none;
+   position: fixed;
+   backdrop-filter: blur(6px);
+   animation: modalAnimation 0.2s;
+   background-color: rgba(4, 17, 26, 0.8);
+}
+
+.modal__body {
+   width: 100%;
+   padding: 20px;
+   color: #ffffff;
+   margin: 40% auto;
+   position: relative;
+   box-sizing: border-box;
+   background-color: var(--first);
+   animation: modalAnimation 0.2s;
+   font-family: var(--font-family);
+   border: 3px solid var(--fourth);
+   box-shadow: 9px 9px 1px 1px var(--fourth);
+}
+
+.modal__head {
+   font-size: 1.5rem;
+   font-weight: bold;
+   word-wrap: break-word;
+}
+
+.modal__content {
+   font-size: 1rem;
+   margin-top: 20px;
+   line-height: 24px;
+   margin-bottom: 20px;
+   letter-spacing: 0.8px;
+   word-wrap: break-word;
+}
+
+.modal__footer {
+   text-align: right;
+}
+
+.modal__close-button {
+   outline: none;
+   padding: 10px;
+   color: #ffffff;
+   cursor: pointer;
+   font-size: 1rem;
+   border-radius: 2px;
+   margin-right: 18px;
+   letter-spacing: 1.2px;
+   box-sizing: border-box;
+   background-color: var(--second);
+   border: 2px solid var(--fourth);
+   font-family: var(--font-family);
+   transition: background-color 0.2s;
+}
+
+.modal-trigger-button:hover {
+   background-color: var(--third);
+}
+
+.modal__close-button:hover {
+   background-color: var(--first);
+}
+
+.modal__close-button:focus {
+   background-color: var(--fourth);
+}
+
+@keyframes modalAnimation {
+   from {
+      opacity: 0;
+      transform: scale(1.2);
+   }
+
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}

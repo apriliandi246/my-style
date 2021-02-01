@@ -1,0 +1,105 @@
+@import "../../css-variable/variable.css";
+
+body {
+   background-color: var(--first);
+}
+
+.modal-trigger-button {
+   border: none;
+   outline: none;
+   padding: 10px;
+   display: block;
+   color: #000000;
+   cursor: pointer;
+   font-size: 18px;
+   margin-top: 45px;
+   margin: 60px auto;
+   margin-bottom: 10px;
+   font-family: monospace;
+   box-sizing: border-box;
+   background-color: var(--second);
+   transition: background-color 0.2s;
+   box-shadow: var(--component-box-shadow);
+}
+
+.modal-trigger-button:hover {
+   background-color: var(--third);
+}
+
+.modal {
+   top: 0;
+   left: 0;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   display: none;
+   position: fixed;
+   backdrop-filter: blur(8px);
+   animation: modalAnimation 0.2s;
+   background-color: rgba(216, 202, 202, 0.6);
+}
+
+.modal__body {
+   width: 100%;
+   padding: 20px;
+   color: #000000;
+   margin: 40% auto;
+   position: relative;
+   box-sizing: border-box;
+   border: 3px solid #b8bec5;
+   background-color: #ffffff;
+   animation: modalAnimation 0.2s;
+   font-family: var(--font-family);
+   box-shadow: 9px 9px 1px 1px #b8bec5;
+}
+
+.modal__head {
+   font-size: 25px;
+   font-weight: bold;
+   word-wrap: break-word;
+}
+
+.modal__content {
+   font-size: 1rem;
+   margin-top: 20px;
+   line-height: 23px;
+   margin-bottom: 20px;
+   letter-spacing: 0.8px;
+   word-wrap: break-word;
+}
+
+.modal__footer {
+   text-align: right;
+}
+
+.modal__close-button {
+   border: none;
+   outline: none;
+   padding: 10px;
+   color: #000000;
+   cursor: pointer;
+   margin-right: 18px;
+   border-radius: 2px;
+   letter-spacing: 1px;
+   box-sizing: border-box;
+   font: 1rem var(--font-family);
+   background-color: var(--second);
+   transition: background-color 0.2s;
+   box-shadow: var(--component-box-shadow);
+}
+
+.modal__close-button:hover {
+   background-color: var(--third);
+}
+
+@keyframes modalAnimation {
+   from {
+      opacity: 0;
+      transform: scale(1.2);
+   }
+
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}
