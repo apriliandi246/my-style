@@ -17,12 +17,15 @@ body {
    color: #ffffff;
    cursor: pointer;
    text-align: left;
+   border-radius: 4px;
    margin-bottom: -1px;
    letter-spacing: 0.5px;
    box-sizing: border-box;
-   background: var(--sixth);
    font: 1rem var(--font-family);
+   background-color: var(--first);
    border: 2px solid var(--fourth);
+   transition: background-color 0.1s;
+   box-shadow: 6px 6px 1px 1px var(--fourth);
 }
 
 .collapse__icon {
@@ -33,21 +36,20 @@ body {
    padding: 17px;
    display: none;
    color: #ffffff;
+   margin-top: 30px;
+   border-radius: 4px;
    word-wrap: break-word;
    letter-spacing: 0.8px;
    box-sizing: border-box;
+   background-color: var(--first);
    border: 2px solid var(--fourth);
    font: 1rem/24px var(--font-family);
-   background: linear-gradient(
-      360deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(48, 30, 60, 1) 0%
-   );
+   box-shadow: 9px 9px 1px 1px var(--fourth);
 }
 
-.collapse__head--active,
-.collapse__head:hover {
-   background: var(--fourth);
+.collapse__head:hover,
+.collapse__head--active {
+   background-color: var(--second);
 }
 
 @media screen and (min-width: 760px) {

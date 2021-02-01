@@ -81,7 +81,8 @@ body {
       flex-direction: column;
       transform: translateY(40%);
       justify-content: space-evenly;
-      background-color: var(--fifth);
+      background-color: var(--first);
+      border: 8px solid var(--fourth);
       transition: opacity 0.3s, transform 0.3s;
    }
 

@@ -30,9 +30,10 @@ body {
    width: 160px;
    display: none;
    position: absolute;
-   border-radius: 2px;
-   background: var(--sixth);
-   border: 2px solid var(--fourth);
+   border-radius: 4px;
+   background-color: var(--first);
+   border: 3px solid var(--fourth);
+   box-shadow: 7px 7px 1px 1px var(--fourth);
 }
 
 .dropdown__item {
@@ -52,8 +53,8 @@ body {
    background-color: var(--fourth);
 }
 
-.dropdown__button--active,
-.dropdown__button:hover {
+.dropdown__button:hover,
+.dropdown__button--active {
    background-color: var(--fourth);
 }
 

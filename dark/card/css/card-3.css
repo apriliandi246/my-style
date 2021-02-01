@@ -14,11 +14,11 @@ body {
    width: 600px;
    padding: 17px;
    color: #ffffff;
-   border-radius: 3px;
+   border-radius: 4px;
    box-sizing: border-box;
-   background: var(--sixth);
-   transition: transform 0.2s;
-   border: 2px solid var(--fourth);
+   background-color: var(--first);
+   border: 3px solid var(--fourth);
+   box-shadow: 9px 9px 1px 1px var(--fourth);
 }
 
 .card__description {
@@ -45,10 +45,6 @@ body {
    float: right;
    letter-spacing: 1px;
    font: 0.9rem monospace;
-}
-
-.card:hover {
-   transform: scale(1.01);
 }
 
 @media screen and (min-width: 760px) {

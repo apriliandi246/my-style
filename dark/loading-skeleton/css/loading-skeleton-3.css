@@ -15,7 +15,9 @@ body {
    padding: 23px;
    border-radius: 3px;
    box-sizing: border-box;
-   background: var(--sixth);
+   background-color: var(--first);
+   border: 4px solid var(--fourth);
+   box-shadow: 9px 9px 1px 1px var(--fourth);
 }
 
 .card__large-block {

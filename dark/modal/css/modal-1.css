@@ -26,7 +26,7 @@ body {
    height: 100%;
    display: none;
    position: fixed;
-   background-color: #0e020266;
+   background-color: rgba(4, 17, 26, 0.4);
 }
 
 .modal__body {
@@ -37,10 +37,10 @@ body {
    border-left: none;
    border-right: none;
    box-sizing: border-box;
-   background: var(--sixth);
+   background-color: var(--first);
    font-family: var(--font-family);
-   border-top: 3px solid var(--fourth);
-   border-bottom: 3px solid var(--fourth);
+   border: 3px solid var(--fourth);
+   box-shadow: 9px 9px 1px 1px var(--fourth);
 }
 
 .modal__head {

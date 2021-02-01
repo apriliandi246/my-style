@@ -15,7 +15,7 @@ body {
    align-items: center;
    background-color: var(--first);
    justify-content: space-between;
-   border-bottom: 2px solid var(--fourth);
+   border-bottom: 3px solid var(--fourth);
 }
 
 .navbar__brand {
@@ -76,7 +76,8 @@ body {
       flex-direction: column;
       transform: translateX(40%);
       justify-content: space-evenly;
-      background-color: var(--fifth);
+      background-color: var(--first);
+      border-left: 3px solid var(--fourth);
       transition: opacity 0.3s, transform 0.3s;
    }
 

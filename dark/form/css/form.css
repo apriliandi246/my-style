@@ -25,12 +25,13 @@ form {
    display: block;
    color: #ffffff;
    margin-top: 15px;
-   border-radius: 2px;
+   border-radius: 4px;
    box-sizing: border-box;
    font: 1rem var(--font-family);
-   background-color: var(--second);
+   background-color: var(--first);
    border: 2px solid var(--fourth);
    transition: background-color 0.2s;
+   box-shadow: 5px 5px 1px 1px var(--fourth);
 }
 
 .button-form {
@@ -39,14 +40,15 @@ form {
    outline: none;
    color: #ffffff;
    cursor: pointer;
-   margin-top: 34px;
-   border-radius: 2px;
+   margin-top: 40px;
+   border-radius: 4px;
    letter-spacing: 1px;
    box-sizing: border-box;
    font: 1rem var(--font-family);
-   background-color: var(--second);
+   background-color: var(--first);
    border: 2px solid var(--fourth);
-   transition: color 0.2s, background-color 0.2s;
+   transition: background-color 0.2s;
+   box-shadow: 5px 5px 1px 1px var(--fourth);
 }
 
 .redirect-button-form {
@@ -56,22 +58,26 @@ form {
    display: block;
    color: #ffffff;
    text-align: center;
+   border-radius: 4px;
    letter-spacing: 1px;
    text-decoration: none;
    box-sizing: border-box;
    font: 1rem var(--font-family);
-   background-color: var(--second);
+   background-color: var(--first);
    border: 2px solid var(--fourth);
-   transition: color 0.2s, background-color 0.2s;
+   transition: background-color 0.2s;
+   box-shadow: 5px 5px 1px 1px var(--fourth);
 }
 
 .line-space-button {
-   margin-block: 22px;
+   margin-top: 23px;
+   margin-bottom: 17px;
+   border-radius: 10px;
    border: 1px solid var(--fourth);
 }
 
 .input-form__input:focus {
-   background-color: var(--first);
+   background-color: var(--second);
 }
 
 .input-form__input::placeholder {
@@ -85,10 +91,10 @@ form {
 
 .button-form:hover,
 .redirect-button-form:hover {
-   background-color: var(--first);
+   background-color: var(--second);
 }
 
 .button-form:focus,
 .redirect-button-form:focus {
-   background-color: var(--fourth);
+   background-color: var(--second);
 }

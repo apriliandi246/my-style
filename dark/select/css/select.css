@@ -17,19 +17,20 @@ select {
    padding: 11px;
    color: #ffffff;
    cursor: pointer;
-   border-radius: 2px;
+   border-radius: 4px;
    letter-spacing: 1.2px;
    -moz-appearance: none;
    box-sizing: border-box;
    -webkit-appearance: none;
    font: 1rem var(--font-family);
-   background-color: var(--second);
+   background-color: var(--first);
    border: 2px solid var(--fourth);
    transition: background-color 0.2s;
+   box-shadow: 6px 6px 1px 1px var(--fourth);
 }
 
 select:hover {
-   background-color: var(--fourth);
+   background-color: var(--second);
 }
 
 @media screen and (min-width: 760px) {
