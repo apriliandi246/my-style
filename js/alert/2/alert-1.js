@@ -1,5 +1,5 @@
 import { listener } from "../../utils/dom.js";
-import { removeAlert } from "../../utils/component.js";
+import { removeAlert } from "../../utils/alert.js";
 
 const alertComponents = document.getElementsByClassName("alert__close-button");
 
