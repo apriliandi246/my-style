@@ -19,12 +19,14 @@ body {
    color: #000000;
    cursor: pointer;
    text-align: left;
+   border-radius: 4px;
    letter-spacing: 0.5px;
    box-sizing: border-box;
+   background-color: #ffffff;
+   border: 2px solid #b8bec5;
    font: 1rem var(--font-family);
-   background-color: var(--second);
    transition: background-color 0.1s;
-   box-shadow: var(--component-box-shadow);
+   box-shadow: 6px 6px 1px 1px #b8bec5;
 }
 
 .collapse__icon {
@@ -36,14 +38,15 @@ body {
    padding: 18px;
    display: none;
    color: #000000;
-   margin-top: 1.6px;
+   margin-top: 30px;
+   border-radius: 4px;
    word-wrap: break-word;
    letter-spacing: 0.8px;
    box-sizing: border-box;
-   border: 1px solid var(--third);
-   background-color: var(--second);
+   background-color: #ffffff;
+   border: 3px solid #b8bec5;
    font: 1rem/24px var(--font-family);
-   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+   box-shadow: 9px 9px 1px 1px #b8bec5;
 }
 
 .collapse__head--active,

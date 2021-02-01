@@ -13,8 +13,8 @@ body {
    display: flex;
    position: fixed;
    align-items: center;
+   background-color: #ffffff;
    justify-content: space-between;
-   background-color: var(--second);
    box-shadow: var(--component-box-shadow);
 }
 
@@ -75,11 +75,11 @@ body {
       position: absolute;
       align-items: center;
       flex-direction: column;
+      background-color: #ffffff;
       transform: translateX(40%);
       justify-content: space-evenly;
-      background-color: var(--second);
       box-shadow: var(--component-box-shadow);
-      transition: opacity 0.3s, transform 0.3s;
+      transition: opacity 0.2s, transform 0.2s ease-in-out;
    }
 
    .toggle-menu {

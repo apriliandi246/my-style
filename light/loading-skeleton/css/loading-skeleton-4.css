@@ -15,8 +15,9 @@ body {
    padding: 23px;
    border-radius: 3px;
    box-sizing: border-box;
-   background-color: #f9f9f9;
-   box-shadow: 0 0 2px 2px #0000001a;
+   background-color: #ffffff;
+   border: 3px solid #b8bec5;
+   box-shadow: 12px 12px 1px 1px #b8bec5;
 }
 
 .card__large-block {
@@ -38,16 +39,16 @@ body {
 @keyframes loading {
    0% {
       transform: scale(1);
-      background-color: rgba(165, 165, 165, 0.2);
+      background-color: rgba(165, 165, 165, 0.3);
    }
 
    50% {
       transform: scale(1.01);
-      background-color: rgba(165, 165, 165, 0.5);
+      background-color: rgba(165, 165, 165, 0.6);
    }
 
    100% {
       transform: scale(1);
-      background-color: rgba(165, 165, 165, 0.2);
+      background-color: rgba(165, 165, 165, 0.3);
    }
 }

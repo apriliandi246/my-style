@@ -31,9 +31,10 @@ body {
    width: 160px;
    display: none;
    position: absolute;
-   border-radius: 2px;
-   background-color: var(--second);
-   box-shadow: var(--component-box-shadow);
+   border-radius: 4px;
+   background-color: #ffffff;
+   border: 3px solid #b8bec5;
+   box-shadow: 7px 7px 1px 1px #b8bec5;
 }
 
 .dropdown__item {

@@ -14,23 +14,13 @@ body {
    width: 600px;
    padding: 17px;
    color: #000000;
-   border-radius: 3px;
+   border-radius: 4px;
    box-sizing: border-box;
    background-color: #f9f9f9;
-   transition: transform 0.2s;
-   box-shadow: 0 0 2px 2px #0000001a;
+   border: 3px solid #b8bec5;
+   box-shadow: 9px 9px 1px 1px #b8bec5;
 }
 
-/* .card__description {
-   margin-top: -14px;
-   margin-bottom: 25px;
-   white-space: pre-line;
-   word-wrap: break-word;
-   box-sizing: border-box;
-   font: 1rem/24px var(--font-family);
-} */
-
-/* Another Option */
 .card__description {
    margin-top: 10px;
    margin-bottom: 25px;
@@ -40,15 +30,21 @@ body {
    font: 1rem/24px var(--font-family);
 }
 
+/* Another Option */
+/* .card__description {
+   margin-top: -14px;
+   margin-bottom: 25px;
+   white-space: pre-line;
+   word-wrap: break-word;
+   box-sizing: border-box;
+   font: 1rem/24px var(--font-family);
+} */
+
 .card__date {
    float: right;
    font-weight: bold;
    letter-spacing: 1px;
    font: 0.9rem monospace;
-}
-
-.card:hover {
-   transform: scale(1.01);
 }
 
 @media screen and (min-width: 760px) {

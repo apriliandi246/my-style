@@ -15,9 +15,9 @@ body {
    position: fixed;
    align-items: center;
    padding: 0 55px 0 55px;
+   background-color: #ffffff;
    justify-content: space-between;
    box-shadow: var(--component-box-shadow);
-   background-color: var(--component-box-shadow);
 }
 
 .navbar__brand {
@@ -74,10 +74,10 @@ body {
       position: absolute;
       align-items: center;
       flex-direction: column;
-      background-color: #f5f2f2;
+      background-color: #ffffff;
       transform: translateY(40%);
       justify-content: space-evenly;
-      transition: opacity 0.3s, transform 0.3s;
+      transition: opacity 0.2s, transform 0.2s ease-in-out;
    }
 
    .navbar__link {

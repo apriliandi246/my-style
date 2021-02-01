@@ -30,7 +30,7 @@ body {
    height: 100%;
    display: none;
    position: fixed;
-   background-color: #0000008c;
+   background-color: rgba(216, 202, 202, 0.549);
 }
 
 .modal__body {
@@ -39,8 +39,10 @@ body {
    color: #000000;
    margin: 40% auto;
    box-sizing: border-box;
-   background-color: var(--second);
+   border: 3px solid #b8bec5;
+   background-color: #ffffff;
    font-family: var(--font-family);
+   box-shadow: 9px 9px 1px 1px #b8bec5;
 }
 
 .modal__head {

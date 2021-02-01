@@ -18,15 +18,16 @@ select {
    padding: 11px;
    color: #000000;
    cursor: pointer;
-   border-radius: 2px;
+   border-radius: 4px;
    -moz-appearance: none;
    letter-spacing: 1.2px;
    box-sizing: border-box;
    -webkit-appearance: none;
+   background-color: #ffffff;
+   border: 2px solid #b8bec5;
    font: 1rem var(--font-family);
-   background-color: var(--second);
    transition: background-color 0.2s;
-   box-shadow: var(--component-box-shadow);
+   box-shadow: 5px 5px 1px 1px #b8bec5;
 }
 
 select:hover {
