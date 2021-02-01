@@ -26,7 +26,8 @@ body {
    height: 100%;
    display: none;
    position: fixed;
-   background-color: rgba(4, 17, 26, 0.4);
+   backdrop-filter: blur(6px);
+   background-color: rgba(4, 17, 26, 0.8);
 }
 
 .modal__body {

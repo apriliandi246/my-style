@@ -30,7 +30,8 @@ body {
    height: 100%;
    display: none;
    position: fixed;
-   background-color: rgba(216, 202, 202, 0.549);
+   backdrop-filter: blur(8px);
+   background-color: rgba(216, 202, 202, 0.6);
 }
 
 .modal__body {
