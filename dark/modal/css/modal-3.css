@@ -32,10 +32,10 @@ body {
 }
 
 .modal__body {
-   width: 100%;
+   width: 90%;
    padding: 20px;
    color: #ffffff;
-   margin: 40% auto;
+   margin: 50% auto;
    position: relative;
    box-sizing: border-box;
    background-color: var(--first);
