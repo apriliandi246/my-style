@@ -25,7 +25,7 @@ body {
    font: 1rem var(--font-family);
    background-color: var(--first);
    border: 2px solid var(--fourth);
-   transition: background-color 0.1s;
+   transition: background-color 0.2s;
    box-shadow: 6px 6px 1px 1px var(--fourth);
 }
 

@@ -29,13 +29,12 @@ body {
    border: 2px solid #b8bec5;
    background-color: #ffffff;
    font: 1rem var(--font-family);
-   transition: background-color 0.1s;
+   transition: background-color 0.2s;
    box-shadow: 6px 6px 1px 1px #b8bec5;
 }
 
 .collapse__icon {
    float: right;
-   font-weight: bolder;
 }
 
 .collapse__content {
@@ -52,8 +51,8 @@ body {
    box-shadow: 9px 9px 1px 1px #b8bec5;
 }
 
-.collapse__head--active,
-.collapse__head:hover {
+.collapse__head:hover,
+.collapse__head--active {
    background-color: var(--third);
 }
 

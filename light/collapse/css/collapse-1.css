@@ -25,13 +25,12 @@ body {
    background-color: #ffffff;
    border: 2px solid #b8bec5;
    font: 1rem var(--font-family);
-   transition: background-color 0.1s;
+   transition: background-color 0.2s;
    box-shadow: 6px 6px 1px 1px #b8bec5;
 }
 
 .collapse__icon {
    float: right;
-   font-weight: bolder;
 }
 
 .collapse__content {
@@ -46,6 +45,10 @@ body {
    border: 3px solid #b8bec5;
    font: 1rem/24px var(--font-family);
    box-shadow: 9px 9px 1px 1px #b8bec5;
+}
+
+.collapse--active {
+   display: block;
 }
 
 .collapse__head--active,
