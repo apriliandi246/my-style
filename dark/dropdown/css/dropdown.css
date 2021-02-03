@@ -33,6 +33,7 @@ body {
    border-radius: 4px;
    background-color: var(--first);
    border: 3px solid var(--seventh);
+   animation: dropdownAnimation 0.2s;
    box-shadow: 7px 7px 1px 1px var(--seventh);
 }
 
@@ -66,5 +67,17 @@ body {
 @media screen and (min-width: 1200px) {
    .dropdown__item {
       font-size: calc(0.9rem - 1px);
+   }
+}
+
+@keyframes dropdownAnimation {
+   from {
+      opacity: 0;
+      transform: scale(1.2);
+   }
+
+   to {
+      opacity: 1;
+      transform: scale(1);
    }
 }
