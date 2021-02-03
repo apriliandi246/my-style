@@ -23,9 +23,9 @@ body {
    box-sizing: border-box;
    font: 1rem var(--font-family);
    background-color: var(--first);
-   border: 2px solid var(--fourth);
+   border: 2px solid var(--seventh);
    transition: background-color 0.1s;
-   box-shadow: 6px 6px 1px 1px var(--fourth);
+   box-shadow: 6px 6px 1px 1px var(--seventh);
 }
 
 .collapse__icon {
@@ -42,9 +42,9 @@ body {
    letter-spacing: 0.8px;
    box-sizing: border-box;
    background-color: var(--first);
-   border: 2px solid var(--fourth);
+   border: 2px solid var(--seventh);
    font: 1rem/24px var(--font-family);
-   box-shadow: 9px 9px 1px 1px var(--fourth);
+   box-shadow: 9px 9px 1px 1px var(--seventh);
 }
 
 .collapse__head:hover,

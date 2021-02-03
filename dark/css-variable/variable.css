@@ -3,12 +3,13 @@
    --second: #192734;
    --third: #38444d;
    --fourth: #273742;
+   --fifth: #192734;
    --sixth: linear-gradient(
       360deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(48, 30, 60, 1) 0%
    );
-   --fifth: #192734;
+   --seventh: #2a3e4b;
 
    --font-family: Ubuntu;
    --component-box-shadow: 0 0 4px 4px #404a4d33;

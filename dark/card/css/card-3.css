@@ -17,8 +17,8 @@ body {
    border-radius: 4px;
    box-sizing: border-box;
    background-color: var(--first);
-   border: 3px solid var(--fourth);
-   box-shadow: 9px 9px 1px 1px var(--fourth);
+   border: 3px solid var(--seventh);
+   box-shadow: 9px 9px 1px 1px var(--seventh);
 }
 
 .card__description {

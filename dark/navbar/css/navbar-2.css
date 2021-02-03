@@ -17,7 +17,7 @@ body {
    padding: 0 55px 0 55px;
    background-color: var(--first);
    justify-content: space-between;
-   border-bottom: 2px solid var(--fourth);
+   border-bottom: 2px solid var(--seventh);
 }
 
 .navbar__brand {
@@ -46,18 +46,15 @@ body {
 
 .navbar__link {
    color: #ffffff;
-   font-size: 1.1rem;
-   font-weight: 550;
    letter-spacing: 1.2px;
    text-decoration: none;
-   transition: color 0.3s;
-   font-family: var(--font-family);
-   transition: padding-bottom 0.2s;
+   transition: color 0.2s;
+   font: 500 1rem var(--font-family);
 }
 
-.navbar__link:hover {
-   padding-bottom: 22px;
-   border-bottom: 3px solid #ffffff;
+.navbar__link:hover,
+.navbar__link:focus {
+   color: #8a2be2;
 }
 
 .navbar__slash-icon {
@@ -82,14 +79,8 @@ body {
       transform: translateY(40%);
       justify-content: space-evenly;
       background-color: var(--first);
-      border: 8px solid var(--fourth);
+      border: 8px solid var(--seventh);
       transition: opacity 0.3s, transform 0.3s;
-   }
-
-   .navbar__link {
-      padding-bottom: 5px;
-      transition: padding-bottom 0.2s;
-      border-bottom: 2px solid #ffffff;
    }
 
    .toggle-menu {

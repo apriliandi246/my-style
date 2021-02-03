@@ -11,8 +11,7 @@ body {
    height: 100px;
    position: absolute;
    align-items: center;
-   margin: -30px 0 0 -30px;
-   justify-content: space-around;
+   justify-content: space-between;
 }
 
 .bouncer-1 .ball {
@@ -49,8 +48,7 @@ body {
    height: 100px;
    position: absolute;
    align-items: center;
-   margin: -30px 0 0 -30px;
-   justify-content: space-around;
+   justify-content: space-between;
 }
 
 .bouncer-2 .ball {

@@ -24,9 +24,9 @@ select {
    -webkit-appearance: none;
    font: 1rem var(--font-family);
    background-color: var(--first);
-   border: 2px solid var(--fourth);
+   border: 2px solid var(--seventh);
    transition: background-color 0.2s;
-   box-shadow: 6px 6px 1px 1px var(--fourth);
+   box-shadow: 6px 6px 1px 1px var(--seventh);
 }
 
 select:hover {

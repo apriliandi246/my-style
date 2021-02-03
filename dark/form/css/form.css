@@ -29,9 +29,9 @@ form {
    box-sizing: border-box;
    font: 1rem var(--font-family);
    background-color: var(--first);
-   border: 2px solid var(--fourth);
+   border: 2px solid var(--seventh);
    transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px var(--fourth);
+   box-shadow: 5px 5px 1px 1px var(--seventh);
 }
 
 .button-form {
@@ -46,9 +46,9 @@ form {
    box-sizing: border-box;
    font: 1rem var(--font-family);
    background-color: var(--first);
-   border: 2px solid var(--fourth);
+   border: 2px solid var(--seventh);
    transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px var(--fourth);
+   box-shadow: 5px 5px 1px 1px var(--seventh);
 }
 
 .redirect-button-form {
@@ -64,16 +64,16 @@ form {
    box-sizing: border-box;
    font: 1rem var(--font-family);
    background-color: var(--first);
-   border: 2px solid var(--fourth);
+   border: 2px solid var(--seventh);
    transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px var(--fourth);
+   box-shadow: 5px 5px 1px 1px var(--seventh);
 }
 
 .line-space-button {
    margin-top: 23px;
    margin-bottom: 17px;
    border-radius: 10px;
-   border: 1px solid var(--fourth);
+   border: 1px solid var(--seventh);
 }
 
 .input-form__input:focus {

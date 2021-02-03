@@ -15,8 +15,8 @@ body {
    border-radius: 4px;
    box-sizing: border-box;
    background-color: var(--first);
-   border: 3px solid var(--fourth);
-   box-shadow: 9px 9px 1px 1px var(--fourth);
+   border: 3px solid var(--seventh);
+   box-shadow: 9px 9px 1px 1px var(--seventh);
 }
 
 .card__head {
@@ -40,8 +40,8 @@ body {
    text-align: center;
    letter-spacing: 1px;
    text-decoration: none;
+   transition: color 0.2s;
    font: 1rem var(--font-family);
-   transition: padding-bottom 0.2s, transform 0.2s;
 }
 
 .card__description {
@@ -63,10 +63,10 @@ body {
    font: 0.9rem monospace;
 }
 
-.card__username:hover {
-   padding-bottom: 7px;
-   transform: translateY(-4px);
-   border-bottom: 3px solid #ffffff;
+.card__username:hover,
+.card__username:focus {
+   color: #8a2be2;
+   text-decoration: underline;
 }
 
 @media screen and (min-width: 760px) {
