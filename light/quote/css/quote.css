@@ -12,7 +12,7 @@ body {
 .quote {
    padding: 17px;
    border-radius: 4px;
-   letter-spacing: 1px;
+   letter-spacing: 1.2px;
    word-wrap: break-word;
    box-sizing: border-box;
    background-color: #ffffff;

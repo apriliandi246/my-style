@@ -71,10 +71,10 @@ body {
    font: 0.9rem monospace;
 }
 
-.card__username:hover {
-   padding-bottom: 6px;
-   transform: translateY(-4px);
-   border-bottom: 3px solid #000000;
+.card__username:hover,
+.card__username:focus {
+   color: #0000ff;
+   text-decoration: underline;
 }
 
 @media screen and (min-width: 760px) {

@@ -40,6 +40,11 @@ body {
    font-size: 1.3rem;
    font-weight: bold;
    font-family: monospace;
+   transition: transform 0.2s;
+}
+
+.alert__close-button:hover {
+   transform: scale(1.2);
 }
 
 @media screen and (min-width: 760px) {

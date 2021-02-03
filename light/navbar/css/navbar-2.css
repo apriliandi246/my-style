@@ -31,7 +31,7 @@ body {
 }
 
 .navbar__brand:hover {
-   box-shadow: 0 0 4px 4px #404a4d33;
+   box-shadow: 0 0 4px 4px rgba(64, 74, 77, 0.2);
 }
 
 .navbar__items {
@@ -44,13 +44,12 @@ body {
    color: #000000;
    letter-spacing: 1px;
    text-decoration: none;
-   font: 1rem var(--font-family);
-   transition: padding-bottom 0.2s;
+   transition: color 0.2s;
+   font: 500 1rem var(--font-family);
 }
 
 .navbar__link:hover {
-   padding-bottom: 22px;
-   border-bottom: 3px solid black;
+   color: #0000ff;
 }
 
 .navbar__slash-icon {
@@ -78,12 +77,6 @@ body {
       transform: translateY(40%);
       justify-content: space-evenly;
       transition: opacity 0.2s, transform 0.2s ease-in-out;
-   }
-
-   .navbar__link {
-      padding-bottom: 5px;
-      transition: padding-bottom 0.2s;
-      border-bottom: 2px solid #000000;
    }
 
    .toggle-menu {

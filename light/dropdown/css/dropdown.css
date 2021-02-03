@@ -38,7 +38,6 @@ body {
 }
 
 .dropdown__item {
-   float: none;
    display: block;
    color: #000000;
    text-align: left;
