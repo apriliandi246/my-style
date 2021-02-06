@@ -52,7 +52,7 @@ body {
    border: 3px solid #b8bec5;
    background-color: #ffffff;
    font-family: var(--font-family);
-   box-shadow: 9px 9px 1px 1px #b8bec5;
+   box-shadow: 10px 10px 1px 1px #b8bec5;
    animation: modalAnimation 0.3s ease-out;
 }
 
