@@ -49,7 +49,7 @@ body {
    font-family: var(--font-family);
    border: 3px solid var(--seventh);
    animation: modalAnimation 0.3s ease-out;
-   box-shadow: 9px 9px 1px 1px var(--seventh);
+   box-shadow: 10px 10px 1px 1px var(--seventh);
 }
 
 .modal__head {
