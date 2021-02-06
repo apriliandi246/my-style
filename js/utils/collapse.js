@@ -21,10 +21,10 @@ export function toggleCollapse(event) {
    }
 
    if (collapseContent.style.display === "block") {
-      icon.textContent = "▲";
+      icon.textContent = "+";
       collapseContent.style.display = "none";
    } else {
-      icon.textContent = "▼";
+      icon.textContent = "-";
       collapseContent.style.display = "block";
    }
 }
@@ -55,16 +55,16 @@ export function collAccordion(event) {
    }
 
    if (collapseContent.style.display === "block") {
-      icon.textContent = "▲";
+      icon.textContent = "+";
       collapseContent.style.display = "none";
    } else {
-      icon.textContent = "▼";
+      icon.textContent = "-";
       collapseContent.style.display = "block";
    }
 
    for (let index = 0; index < childs.length; index++) {
       if (childs[index].firstElementChild.getAttribute("id") !== currentColl) {
-         childs[index].firstElementChild.firstElementChild.textContent = "▲";
+         childs[index].firstElementChild.firstElementChild.textContent = "+";
          childs[index].firstElementChild.nextElementSibling.style.display =
             "none";
          childs[index].firstElementChild.classList.remove(
