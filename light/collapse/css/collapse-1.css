@@ -15,22 +15,27 @@ body {
    width: 100%;
    border: none;
    outline: none;
-   padding: 13px;
+   display: flex;
    color: #000000;
    cursor: pointer;
    text-align: left;
    border-radius: 4px;
+   padding-block: 9px;
+   align-items: center;
+   padding-inline: 10px;
    letter-spacing: 0.5px;
    box-sizing: border-box;
    background-color: #ffffff;
    border: 2px solid #b8bec5;
    font: 1rem var(--font-family);
+   justify-content: space-between;
    transition: background-color 0.2s;
    box-shadow: 6px 6px 1px 1px #b8bec5;
 }
 
 .collapse__icon {
-   float: right;
+   font-weight: 500;
+   font-size: 1.1rem;
 }
 
 .collapse__content {
