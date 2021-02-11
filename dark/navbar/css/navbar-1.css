@@ -1,4 +1,3 @@
-@import "../css/toggle.css";
 @import "../../css-variable/variable.css";
 
 body {
@@ -42,6 +41,57 @@ body {
    color: #8a2be2;
 }
 
+.toggle-menu {
+   height: 20px;
+   display: none;
+   position: relative;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.toggle-menu__trigger {
+   top: -7px;
+   opacity: 0;
+   z-index: 2;
+   left: -10px;
+   width: 40px;
+   height: 27px;
+   cursor: pointer;
+   position: absolute;
+}
+
+.toggle-menu__block {
+   width: 28px;
+   height: 3px;
+   display: block;
+   border-radius: 3px;
+   transition: all 0.3s;
+   background-color: #ffffff;
+}
+
+.toggle-menu__block:nth-child(2) {
+   transform-origin: 0 0;
+}
+
+.toggle-menu__block:nth-child(4) {
+   transform-origin: 0 100%;
+}
+
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(2) {
+   background-color: #ffffff;
+   transform: rotate(45deg) translate(1px, -1px);
+}
+
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(3) {
+   opacity: 0;
+   transform: scale(0);
+}
+
+.toggle-menu__trigger:checked ~ .toggle-menu__block:nth-child(4) {
+   background-color: #ffffff;
+   transform: rotate(-45deg) translate(-1px, 1px);
+}
+
 @media screen and (max-width: 560px) {
    .navbar__items {
       padding: 45px;
@@ -78,7 +128,7 @@ body {
       justify-content: space-evenly;
       background-color: var(--first);
       border-left: 3px solid var(--seventh);
-      transition: opacity 0.3s, transform 0.3s;
+      transition: opacity 0.2s, transform 0.2s ease-out;
    }
 
    .toggle-menu {
