@@ -132,3 +132,25 @@ table {
 .cf:after {
    clear: both;
 }
+
+html {
+   font-size: 16px;
+}
+
+@media screen and (min-width: 760px) {
+   html {
+      font-size: 18px;
+   }
+}
+
+@media screen and (min-width: 800px) {
+   html {
+      font-size: 19px;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   html {
+      font-size: 20px;
+   }
+}
