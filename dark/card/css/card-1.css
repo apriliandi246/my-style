@@ -40,7 +40,6 @@ body {
    text-align: center;
    letter-spacing: 1px;
    text-decoration: none;
-   transition: color 0.2s;
    font: 1rem var(--font-family);
 }
 

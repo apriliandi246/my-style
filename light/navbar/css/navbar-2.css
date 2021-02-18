@@ -43,12 +43,12 @@ body {
    color: #000000;
    letter-spacing: 1px;
    text-decoration: none;
-   transition: color 0.2s;
    font: 500 1rem var(--font-family);
 }
 
 .navbar__link:hover {
    color: #0000ff;
+   text-decoration: underline;
 }
 
 .navbar__slash-icon {

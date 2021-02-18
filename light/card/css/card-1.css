@@ -43,7 +43,6 @@ body {
    letter-spacing: 1px;
    text-decoration: none;
    font: 1rem var(--font-family);
-   transition: padding-bottom 0.2s, transform 0.2s;
 }
 
 .card__image {

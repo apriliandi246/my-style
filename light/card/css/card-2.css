@@ -41,7 +41,6 @@ body {
    text-decoration: none;
    margin: 16px 0 0 20px;
    font: 1rem var(--font-family);
-   transition: padding-bottom 0.2s, transform 0.2s;
 }
 
 .card__description {
