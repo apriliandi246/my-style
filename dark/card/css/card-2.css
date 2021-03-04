@@ -26,8 +26,6 @@ body {
 
 .card__profile-photo {
    float: left;
-   width: 50px;
-   height: 50px;
    border-radius: 100%;
    border: 3px solid #20444e;
 }
@@ -46,7 +44,7 @@ body {
 .card__description {
    padding: 15px;
    color: #ffffff;
-   margin-top: 13px;
+   margin-top: 15px;
    letter-spacing: 0.5px;
    white-space: pre-line;
    word-wrap: break-word;
