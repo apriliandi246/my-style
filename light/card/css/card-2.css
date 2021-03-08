@@ -22,28 +22,27 @@ body {
 
 .card__head {
    padding: 17px;
-   margin: 3px 0 4px 0;
+   display: flex;
+   align-items: center;
 }
 
 .card__profile-photo {
-   float: left;
    border-radius: 100%;
    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.102);
 }
 
 .card__username {
-   float: left;
    color: #000000;
+   margin-left: 20px;
    text-align: center;
    letter-spacing: 1px;
    text-decoration: none;
-   margin: 16px 0 0 20px;
    font: 1rem var(--font-family);
 }
 
 .card__description {
    padding: 17px;
-   margin-top: 10px;
+   margin-top: -40px;
    white-space: pre-line;
    word-wrap: break-word;
    box-sizing: border-box;

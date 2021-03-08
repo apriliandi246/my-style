@@ -21,9 +21,9 @@ body {
 }
 
 .card__head {
-   padding: 17px;
-   margin-top: 3px;
-   margin-bottom: 4px;
+   padding: 18px;
+   display: flex;
+   align-items: center;
 }
 
 .card__profile-photo {
@@ -33,10 +33,8 @@ body {
 }
 
 .card__username {
-   float: left;
    color: #000000;
-   margin-top: 13px;
-   margin-left: 19px;
+   margin-left: 17px;
    text-align: center;
    letter-spacing: 1px;
    text-decoration: none;
@@ -46,7 +44,7 @@ body {
 .card__image {
    width: 100%;
    height: 100%;
-   margin-top: 15px;
+   margin-top: -1px;
    text-align: center;
 }
 
