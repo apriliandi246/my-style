@@ -1,102 +1,102 @@
 @import "../../css-variable/variable.css";
 
 body {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 form {
-   width: 100%;
+	width: 100%;
 }
 
 .input-form {
-   margin-top: 32px;
+	margin-top: 32px;
 }
 
 .input-form__label {
-   color: #000000;
-   letter-spacing: 1px;
-   font: 1rem var(--font-family);
+	color: #000000;
+	letter-spacing: 1px;
+	font: 1rem var(--font-family);
 }
 
 .input-form__input {
-   width: 100%;
-   border: none;
-   padding: 10px;
-   outline: none;
-   display: block;
-   color: #000000;
-   margin-top: 15px;
-   border-radius: 4px;
-   box-sizing: border-box;
-   border: 2px solid #b8bec5;
-   background-color: #ffffff;
-   font: 1rem var(--font-family);
-   transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px #b8bec5;
+	width: 100%;
+	border: none;
+	padding: 10px;
+	outline: none;
+	display: block;
+	color: #000000;
+	margin-top: 15px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	border: 2px solid #b8bec5;
+	background-color: #ffffff;
+	font: 1rem var(--font-family);
+	transition: background-color 0.2s;
+	box-shadow: 5px 5px 1px 1px #b8bec5;
 }
 
 .button-form {
-   width: 100%;
-   border: none;
-   outline: none;
-   padding: 10px;
-   color: #000000;
-   cursor: pointer;
-   margin-top: 40px;
-   border-radius: 4px;
-   letter-spacing: 1px;
-   box-sizing: border-box;
-   border: 2px solid #b8bec5;
-   background-color: #ffffff;
-   font: 1rem var(--font-family);
-   transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px #b8bec5;
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 10px;
+	color: #000000;
+	cursor: pointer;
+	margin-top: 40px;
+	border-radius: 4px;
+	letter-spacing: 1px;
+	box-sizing: border-box;
+	border: 2px solid #b8bec5;
+	background-color: #ffffff;
+	font: 1rem var(--font-family);
+	transition: background-color 0.2s;
+	box-shadow: 5px 5px 1px 1px #b8bec5;
 }
 
 .redirect-button-form {
-   width: 100%;
-   border: none;
-   outline: none;
-   padding: 10px;
-   display: block;
-   color: #000000;
-   text-align: center;
-   border-radius: 4px;
-   letter-spacing: 1px;
-   text-decoration: none;
-   box-sizing: border-box;
-   border: 2px solid #b8bec5;
-   background-color: #ffffff;
-   font: 1rem var(--font-family);
-   transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px #b8bec5;
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 10px;
+	display: block;
+	color: #000000;
+	text-align: center;
+	border-radius: 4px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	box-sizing: border-box;
+	border: 2px solid #b8bec5;
+	background-color: #ffffff;
+	font: 1rem var(--font-family);
+	transition: background-color 0.2s;
+	box-shadow: 5px 5px 1px 1px #b8bec5;
 }
 
 .line-space-button {
-   margin-top: 23px;
-   margin-bottom: 17px;
-   border-radius: 10px;
-   border: 1px solid #b8bec5;
+	margin-top: 23px;
+	margin-bottom: 17px;
+	border-radius: 10px;
+	border: 1px solid #b8bec5;
 }
 
 .input-form__input:focus {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 .input-form__input::placeholder {
-   font-family: monospace;
+	font-family: monospace;
 }
 
 .button-form:disabled {
-   pointer-events: none;
+	pointer-events: none;
 }
 
 .button-form:hover,
 .redirect-button-form:hover {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 .button-form:focus,
 .redirect-button-form:focus {
-   background-color: var(--first);
+	background-color: var(--first);
 }

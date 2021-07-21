@@ -1,79 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="../../css-reset/css-reset.css" />
-      <link rel="stylesheet" href="./css/form.css" />
-      <link rel="stylesheet" href="./css/validation.css" />
-      <link rel="stylesheet" href="./css/responsive.css" />
-      <script
-         type="module"
-         src="../../js/form-validation/form-validation.js"
-      ></script>
-      <title>form validation</title>
-   </head>
 
-   <body>
-      <div class="container">
-         <form spellcheck="false" autocomplete="off">
-            <div class="input-form">
-               <label for="username" class="input-form__label">Username</label>
-               <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  placeholder="username"
-                  class="input-form__input"
-               />
-               <p class="input-form__message">username is require</p>
-            </div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../css-reset/css-reset.css" />
+	<link rel="stylesheet" href="./css/form.css" />
+	<link rel="stylesheet" href="./css/validation.css" />
+	<link rel="stylesheet" href="./css/responsive.css" />
+	<script
+		type="module"
+		src="../../js/form-validation/form-validation.js"></script>
+	<title>form validation</title>
+</head>
 
-            <div class="input-form">
-               <label for="email" class="input-form__label">Email</label>
-               <input
-                  id="email"
-                  type="text"
-                  name="email"
-                  placeholder="email"
-                  class="input-form__input"
-               />
-               <p class="input-form__message">email is require</p>
-            </div>
+<body>
+	<div class="container">
+		<form spellcheck="false" autocomplete="off">
+			<div class="input-form">
+				<label for="username" class="input-form__label">Username</label>
+				<input
+					type="text"
+					id="username"
+					name="username"
+					placeholder="username"
+					class="input-form__input" />
+				<p class="input-form__message">username is require</p>
+			</div>
 
-            <div class="input-form">
-               <label for="password" class="input-form__label">Password</label>
-               <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="password"
-                  class="input-form__input"
-               />
-               <p class="input-form__message">password is require</p>
-            </div>
+			<div class="input-form">
+				<label for="email" class="input-form__label">Email</label>
+				<input
+					id="email"
+					type="text"
+					name="email"
+					placeholder="email"
+					class="input-form__input" />
+				<p class="input-form__message">email is require</p>
+			</div>
 
-            <div class="input-form">
-               <label for="confirm-password" class="input-form__label"
-                  >Password Confirm</label
-               >
-               <input
-                  disabled
-                  type="password"
-                  id="confirm-password"
-                  name="confirmPassword"
-                  class="input-form__input"
-                  placeholder="password confirm"
-               />
-               <p class="input-form__message">confirm your password</p>
-            </div>
+			<div class="input-form">
+				<label for="password" class="input-form__label">Password</label>
+				<input
+					id="password"
+					name="password"
+					type="password"
+					placeholder="password"
+					class="input-form__input" />
+				<p class="input-form__message">password is require</p>
+			</div>
 
-            <button type="submit" class="button-form" id="button-form" disabled>
-               Register
-            </button>
-            <hr class="line-space-button" />
-            <a href="#" class="redirect-button-form">Login</a>
-         </form>
-      </div>
-   </body>
+			<div class="input-form">
+				<label for="confirm-password" class="input-form__label">Password Confirm</label>
+				<input
+					disabled
+					type="password"
+					id="confirm-password"
+					name="confirmPassword"
+					class="input-form__input"
+					placeholder="password confirm" />
+				<p class="input-form__message">confirm your password</p>
+			</div>
+
+			<button type="submit" class="button-form" id="button-form" disabled>
+				Register
+			</button>
+			<hr class="line-space-button" />
+			<a href="#" class="redirect-button-form">Login</a>
+		</form>
+	</div>
+</body>
+
 </html>

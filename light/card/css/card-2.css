@@ -1,92 +1,92 @@
 @import "../../css-variable/variable.css";
 
 body {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 /* for centering element */
 .card {
-   margin: 50px auto;
+	margin: 50px auto;
 }
 /* for centering element */
 
 .card {
-   width: 600px;
-   color: #000000;
-   border-radius: 4px;
-   box-sizing: border-box;
-   background-color: #ffffff;
-   border: 3px solid #b8bec5;
-   box-shadow: 12px 12px 1px 1px #b8bec5;
+	width: 600px;
+	color: #000000;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	border: 3px solid #b8bec5;
+	box-shadow: 12px 12px 1px 1px #b8bec5;
 }
 
 .card__head {
-   padding: 17px;
-   display: flex;
-   align-items: center;
+	padding: 17px;
+	display: flex;
+	align-items: center;
 }
 
 .card__profile-photo {
-   border-radius: 100%;
-   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.102);
+	border-radius: 100%;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.102);
 }
 
 .card__username {
-   color: #000000;
-   margin-left: 20px;
-   text-align: center;
-   letter-spacing: 1px;
-   text-decoration: none;
-   font: 1rem var(--font-family);
+	color: #000000;
+	margin-left: 20px;
+	text-align: center;
+	letter-spacing: 1px;
+	text-decoration: none;
+	font: 1rem var(--font-family);
 }
 
 .card__description {
-   padding: 17px;
-   margin-top: -40px;
-   white-space: pre-line;
-   word-wrap: break-word;
-   box-sizing: border-box;
-   font: 1rem/24px var(--font-family);
+	padding: 17px;
+	margin-top: -40px;
+	white-space: pre-line;
+	word-wrap: break-word;
+	box-sizing: border-box;
+	font: 1rem/24px var(--font-family);
 }
 
 .card__date {
-   float: right;
-   padding: 17px;
-   font-weight: bold;
-   letter-spacing: 1px;
-   font: 0.9rem monospace;
+	float: right;
+	padding: 17px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font: 0.9rem monospace;
 }
 
 .card__username:hover,
 .card__username:focus {
-   color: #0000ff;
-   text-decoration: underline;
+	color: #0000ff;
+	text-decoration: underline;
 }
 
 @media screen and (min-width: 760px) {
-   .card__username {
-      font-size: 1rem;
-   }
+	.card__username {
+		font-size: 1rem;
+	}
 
-   .card__description {
-      font-size: 0.9rem;
-   }
+	.card__description {
+		font-size: 0.9rem;
+	}
 
-   .card__date {
-      font-size: 0.9rem;
-   }
+	.card__date {
+		font-size: 0.9rem;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-   .card__username {
-      font-size: 0.9rem;
-   }
+	.card__username {
+		font-size: 0.9rem;
+	}
 
-   .card__description {
-      font-size: calc(0.9rem - 1px + 0.5px);
-   }
+	.card__description {
+		font-size: calc(0.9rem - 1px + 0.5px);
+	}
 
-   .card__date {
-      font-size: 0.8rem;
-   }
+	.card__date {
+		font-size: 0.8rem;
+	}
 }

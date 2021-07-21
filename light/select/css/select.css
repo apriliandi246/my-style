@@ -1,47 +1,47 @@
 @import "../../css-variable/variable.css";
 
 body {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 /* for centering element */
 .container {
-   width: 500px;
-   margin: 40px auto;
+	width: 500px;
+	margin: 40px auto;
 }
 /* for centering element */
 
 select {
-   width: 100%;
-   border: none;
-   outline: none;
-   padding: 11px;
-   color: #000000;
-   cursor: pointer;
-   border-radius: 4px;
-   -moz-appearance: none;
-   letter-spacing: 1.2px;
-   box-sizing: border-box;
-   -webkit-appearance: none;
-   background-color: #ffffff;
-   border: 2px solid #b8bec5;
-   font: 1rem var(--font-family);
-   transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px #b8bec5;
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 11px;
+	color: #000000;
+	cursor: pointer;
+	border-radius: 4px;
+	-moz-appearance: none;
+	letter-spacing: 1.2px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	background-color: #ffffff;
+	border: 2px solid #b8bec5;
+	font: 1rem var(--font-family);
+	transition: background-color 0.2s;
+	box-shadow: 5px 5px 1px 1px #b8bec5;
 }
 
 select:hover {
-   background-color: var(--third);
+	background-color: var(--third);
 }
 
 @media screen and (min-width: 760px) {
-   select {
-      font-size: 0.9rem;
-   }
+	select {
+		font-size: 0.9rem;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-   select {
-      font-size: calc(0.9rem - 1px);
-   }
+	select {
+		font-size: calc(0.9rem - 1px);
+	}
 }

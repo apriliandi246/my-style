@@ -1,33 +1,33 @@
 @import "../../css-variable/variable.css";
 
 body {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 /* for centering element */
 .card {
-   margin: 50px auto;
+	margin: 50px auto;
 }
 /* for centering element */
 
 .card {
-   width: 600px;
-   padding: 17px;
-   color: #ffffff;
-   border-radius: 4px;
-   box-sizing: border-box;
-   background-color: var(--first);
-   border: 3px solid var(--seventh);
-   box-shadow: 11px 11px 1px 1px var(--seventh);
+	width: 600px;
+	padding: 17px;
+	color: #ffffff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: var(--first);
+	border: 3px solid var(--seventh);
+	box-shadow: 11px 11px 1px 1px var(--seventh);
 }
 
 .card__description {
-   margin-top: 10px;
-   margin-bottom: 25px;
-   letter-spacing: 0.5px;
-   word-wrap: break-word;
-   box-sizing: border-box;
-   font: 1rem/24px var(--font-family);
+	margin-top: 10px;
+	margin-bottom: 25px;
+	letter-spacing: 0.5px;
+	word-wrap: break-word;
+	box-sizing: border-box;
+	font: 1rem/24px var(--font-family);
 }
 
 /* Another Option */
@@ -42,27 +42,27 @@ body {
 } */
 
 .card__footer {
-   float: right;
-   letter-spacing: 1px;
-   font: 0.9rem monospace;
+	float: right;
+	letter-spacing: 1px;
+	font: 0.9rem monospace;
 }
 
 @media screen and (min-width: 760px) {
-   .card__description {
-      font-size: 0.9rem;
-   }
+	.card__description {
+		font-size: 0.9rem;
+	}
 
-   .card__footer {
-      font-size: 0.9rem;
-   }
+	.card__footer {
+		font-size: 0.9rem;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-   .card__description {
-      font-size: calc(0.9rem - 1px + 0.5px);
-   }
+	.card__description {
+		font-size: calc(0.9rem - 1px + 0.5px);
+	}
 
-   .card__footer {
-      font-size: 0.8rem;
-   }
+	.card__footer {
+		font-size: 0.8rem;
+	}
 }

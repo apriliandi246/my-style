@@ -1,7 +1,7 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 a,
 abbr,
@@ -84,10 +84,10 @@ u,
 ul,
 var,
 video {
-   border: 0;
-   font: inherit;
-   font-size: 100%;
-   vertical-align: baseline;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
 }
 article,
 aside,
@@ -100,57 +100,57 @@ hgroup,
 menu,
 nav,
 section {
-   display: block;
+	display: block;
 }
 body {
-   line-height: 1;
+	line-height: 1;
 }
 ol,
 ul {
-   list-style: none;
+	list-style: none;
 }
 blockquote,
 q {
-   quotes: none;
+	quotes: none;
 }
 blockquote:after,
 blockquote:before,
 q:after,
 q:before {
-   content: "";
-   content: none;
+	content: "";
+	content: none;
 }
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 .cf:after,
 .cf:before {
-   content: " ";
-   display: table;
+	content: " ";
+	display: table;
 }
 .cf:after {
-   clear: both;
+	clear: both;
 }
 
 html {
-   font-size: 16px;
+	font-size: 16px;
 }
 
 @media screen and (min-width: 760px) {
-   html {
-      font-size: 18px;
-   }
+	html {
+		font-size: 18px;
+	}
 }
 
 @media screen and (min-width: 800px) {
-   html {
-      font-size: 19px;
-   }
+	html {
+		font-size: 19px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-   html {
-      font-size: 20px;
-   }
+	html {
+		font-size: 20px;
+	}
 }

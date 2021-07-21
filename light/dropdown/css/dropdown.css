@@ -1,83 +1,83 @@
 @import "../../css-variable/variable.css";
 
 body {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 /* for centering element */
 .container {
-   width: 200px;
-   margin: 10px auto;
+	width: 200px;
+	margin: 10px auto;
 }
 /* for centering element */
 
 .dropdown__button {
-   border: none;
-   outline: none;
-   padding: 10px;
-   color: #000000;
-   cursor: pointer;
-   margin-top: 45px;
-   margin-bottom: 16px;
-   box-sizing: border-box;
-   font: 1rem var(--font-family);
-   background-color: var(--second);
-   transition: background-color 0.2s;
-   box-shadow: var(--component-box-shadow);
+	border: none;
+	outline: none;
+	padding: 10px;
+	color: #000000;
+	cursor: pointer;
+	margin-top: 45px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+	font: 1rem var(--font-family);
+	background-color: var(--second);
+	transition: background-color 0.2s;
+	box-shadow: var(--component-box-shadow);
 }
 
 .dropdown__content {
-   z-index: 1;
-   width: 160px;
-   display: none;
-   position: absolute;
-   border-radius: 4px;
-   background-color: #ffffff;
-   border: 3px solid #b8bec5;
-   animation: dropdownAnimation 0.2s;
-   box-shadow: 7px 7px 1px 1px #b8bec5;
+	z-index: 1;
+	width: 160px;
+	display: none;
+	position: absolute;
+	border-radius: 4px;
+	background-color: #ffffff;
+	border: 3px solid #b8bec5;
+	animation: dropdownAnimation 0.2s;
+	box-shadow: 7px 7px 1px 1px #b8bec5;
 }
 
 .dropdown__item {
-   display: block;
-   color: #000000;
-   text-align: left;
-   padding: 12px 16px;
-   text-decoration: none;
-   letter-spacing: 0.5px;
-   font: 1rem var(--font-family);
-   transition: background-color 0.1s;
+	display: block;
+	color: #000000;
+	text-align: left;
+	padding: 12px 16px;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	font: 1rem var(--font-family);
+	transition: background-color 0.1s;
 }
 
 .dropdown__button--active,
 .dropdown__button:hover {
-   background-color: var(--third);
+	background-color: var(--third);
 }
 
 .dropdown__item:hover {
-   background-color: var(--third);
+	background-color: var(--third);
 }
 
 @media screen and (min-width: 760px) {
-   .dropdown__item {
-      font-size: 0.9rem;
-   }
+	.dropdown__item {
+		font-size: 0.9rem;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-   .dropdown__item {
-      font-size: calc(0.9rem - 1px);
-   }
+	.dropdown__item {
+		font-size: calc(0.9rem - 1px);
+	}
 }
 
 @keyframes dropdownAnimation {
-   from {
-      opacity: 0;
-      transform: scale(1.2);
-   }
+	from {
+		opacity: 0;
+		transform: scale(1.2);
+	}
 
-   to {
-      opacity: 1;
-      transform: scale(1);
-   }
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
 }

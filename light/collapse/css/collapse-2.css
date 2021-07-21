@@ -1,82 +1,82 @@
 @import "../../css-variable/variable.css";
 
 body {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 /* for centering element */
 .container {
-   width: 600px;
-   margin: 50px auto;
+	width: 600px;
+	margin: 50px auto;
 }
 /* for centering element */
 
 .collapse {
-   margin-bottom: 35px;
+	margin-bottom: 35px;
 }
 
 .collapse__head {
-   width: 100%;
-   border: none;
-   outline: none;
-   display: flex;
-   color: #000000;
-   cursor: pointer;
-   text-align: left;
-   padding-block: 9px;
-   border-radius: 4px;
-   align-items: center;
-   padding-inline: 10px;
-   letter-spacing: 0.5px;
-   box-sizing: border-box;
-   border: 2px solid #b8bec5;
-   background-color: #ffffff;
-   font: 1rem var(--font-family);
-   justify-content: space-between;
-   transition: background-color 0.2s;
-   box-shadow: 6px 6px 1px 1px #b8bec5;
+	width: 100%;
+	border: none;
+	outline: none;
+	display: flex;
+	color: #000000;
+	cursor: pointer;
+	text-align: left;
+	padding-block: 9px;
+	border-radius: 4px;
+	align-items: center;
+	padding-inline: 10px;
+	letter-spacing: 0.5px;
+	box-sizing: border-box;
+	border: 2px solid #b8bec5;
+	background-color: #ffffff;
+	font: 1rem var(--font-family);
+	justify-content: space-between;
+	transition: background-color 0.2s;
+	box-shadow: 6px 6px 1px 1px #b8bec5;
 }
 
 .collapse__icon {
-   font-weight: 500;
-   font-size: 1.1rem;
+	font-weight: 500;
+	font-size: 1.1rem;
 }
 
 .collapse__content {
-   padding: 18px;
-   display: none;
-   margin-top: 25px;
-   border-radius: 4px;
-   word-wrap: break-word;
-   letter-spacing: 0.8px;
-   box-sizing: border-box;
-   border: 3px solid #b8bec5;
-   background-color: #ffffff;
-   font: 1rem/24px var(--font-family);
-   box-shadow: 9px 9px 1px 1px #b8bec5;
+	padding: 18px;
+	display: none;
+	margin-top: 25px;
+	border-radius: 4px;
+	word-wrap: break-word;
+	letter-spacing: 0.8px;
+	box-sizing: border-box;
+	border: 3px solid #b8bec5;
+	background-color: #ffffff;
+	font: 1rem/24px var(--font-family);
+	box-shadow: 9px 9px 1px 1px #b8bec5;
 }
 
 .collapse__head:hover,
 .collapse__head--active {
-   background-color: var(--third);
+	background-color: var(--third);
 }
 
 @media screen and (min-width: 760px) {
-   .collapse__head {
-      font-size: 0.9rem;
-   }
+	.collapse__head {
+		font-size: 0.9rem;
+	}
 
-   .collapse__content {
-      font-size: 0.9rem;
-   }
+	.collapse__content {
+		font-size: 0.9rem;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-   .collapse__head {
-      font-size: calc(0.9rem - 1px);
-   }
+	.collapse__head {
+		font-size: calc(0.9rem - 1px);
+	}
 
-   .collapse__content {
-      font-size: calc(0.9rem - 1px);
-   }
+	.collapse__content {
+		font-size: calc(0.9rem - 1px);
+	}
 }

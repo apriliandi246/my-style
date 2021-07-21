@@ -2,43 +2,43 @@
 
 /* make elemen p disappear, when user not type any characters */
 .input-form__message {
-   display: none;
-   color: #ff0000;
-   text-align: right;
-   font-family: monospace;
-   text-shadow: 0.4px 0.4px #0000001a;
+	display: none;
+	color: #ff0000;
+	text-align: right;
+	font-family: monospace;
+	text-shadow: 0.4px 0.4px #0000001a;
 }
 
 /* when user input is invalid, add class invalid */
 .input-form__input--invalid + .input-form__message {
-   display: block;
-   color: #ff0000;
-   margin-top: 17px;
-   text-align: right;
-   letter-spacing: 0.8px;
-   font: calc(1rem - 1px) monospace;
-   text-shadow: 0.6px 0.4px #0000001a;
-   animation: validationAnimation 0.3s;
+	display: block;
+	color: #ff0000;
+	margin-top: 17px;
+	text-align: right;
+	letter-spacing: 0.8px;
+	font: calc(1rem - 1px) monospace;
+	text-shadow: 0.6px 0.4px #0000001a;
+	animation: validationAnimation 0.3s;
 }
 
 @media screen and (min-width: 760px) {
-   .input-form__input--invalid + .input-form__message {
-      font-size: calc(1rem - 2.3px);
-   }
+	.input-form__input--invalid + .input-form__message {
+		font-size: calc(1rem - 2.3px);
+	}
 }
 
 @media screen and (min-width: 1200px) {
-   .input-form__input--invalid + .input-form__message {
-      font-size: calc(1rem - 3.3px);
-   }
+	.input-form__input--invalid + .input-form__message {
+		font-size: calc(1rem - 3.3px);
+	}
 }
 
 @keyframes validationAnimation {
-   from {
-      opacity: 0;
-   }
+	from {
+		opacity: 0;
+	}
 
-   to {
-      opacity: 1;
-   }
+	to {
+		opacity: 1;
+	}
 }

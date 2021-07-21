@@ -1,100 +1,100 @@
 @import "../../css-variable/variable.css";
 
 body {
-   background-color: var(--first);
+	background-color: var(--first);
 }
 
 form {
-   width: 100%;
+	width: 100%;
 }
 
 .input-form {
-   margin-top: 32px;
+	margin-top: 32px;
 }
 
 .input-form__label {
-   color: #ffffff;
-   letter-spacing: 1px;
-   font: 1rem var(--font-family);
+	color: #ffffff;
+	letter-spacing: 1px;
+	font: 1rem var(--font-family);
 }
 
 .input-form__input {
-   width: 100%;
-   outline: none;
-   padding: 10px;
-   display: block;
-   color: #ffffff;
-   margin-top: 15px;
-   border-radius: 4px;
-   box-sizing: border-box;
-   font: 1rem var(--font-family);
-   background-color: var(--first);
-   border: 2px solid var(--seventh);
-   transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px var(--seventh);
+	width: 100%;
+	outline: none;
+	padding: 10px;
+	display: block;
+	color: #ffffff;
+	margin-top: 15px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font: 1rem var(--font-family);
+	background-color: var(--first);
+	border: 2px solid var(--seventh);
+	transition: background-color 0.2s;
+	box-shadow: 5px 5px 1px 1px var(--seventh);
 }
 
 .button-form {
-   width: 100%;
-   padding: 10px;
-   outline: none;
-   color: #ffffff;
-   cursor: pointer;
-   margin-top: 40px;
-   border-radius: 4px;
-   letter-spacing: 1px;
-   box-sizing: border-box;
-   font: 1rem var(--font-family);
-   background-color: var(--first);
-   border: 2px solid var(--seventh);
-   transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px var(--seventh);
+	width: 100%;
+	padding: 10px;
+	outline: none;
+	color: #ffffff;
+	cursor: pointer;
+	margin-top: 40px;
+	border-radius: 4px;
+	letter-spacing: 1px;
+	box-sizing: border-box;
+	font: 1rem var(--font-family);
+	background-color: var(--first);
+	border: 2px solid var(--seventh);
+	transition: background-color 0.2s;
+	box-shadow: 5px 5px 1px 1px var(--seventh);
 }
 
 .redirect-button-form {
-   width: 100%;
-   padding: 10px;
-   outline: none;
-   display: block;
-   color: #ffffff;
-   text-align: center;
-   border-radius: 4px;
-   letter-spacing: 1px;
-   text-decoration: none;
-   box-sizing: border-box;
-   font: 1rem var(--font-family);
-   background-color: var(--first);
-   border: 2px solid var(--seventh);
-   transition: background-color 0.2s;
-   box-shadow: 5px 5px 1px 1px var(--seventh);
+	width: 100%;
+	padding: 10px;
+	outline: none;
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 4px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	box-sizing: border-box;
+	font: 1rem var(--font-family);
+	background-color: var(--first);
+	border: 2px solid var(--seventh);
+	transition: background-color 0.2s;
+	box-shadow: 5px 5px 1px 1px var(--seventh);
 }
 
 .line-space-button {
-   margin-top: 23px;
-   margin-bottom: 17px;
-   border-radius: 10px;
-   border: 1px solid var(--seventh);
+	margin-top: 23px;
+	margin-bottom: 17px;
+	border-radius: 10px;
+	border: 1px solid var(--seventh);
 }
 
 .input-form__input:focus {
-   background-color: var(--second);
+	background-color: var(--second);
 }
 
 .input-form__input::placeholder {
-   letter-spacing: 1px;
-   font-family: monospace;
+	letter-spacing: 1px;
+	font-family: monospace;
 }
 
 .button-form:disabled {
-   pointer-events: none;
+	pointer-events: none;
 }
 
 .button-form:hover,
 .redirect-button-form:hover {
-   background-color: var(--second);
+	background-color: var(--second);
 }
 
 .button-form:focus,
 .redirect-button-form:focus {
-   background-color: var(--second);
+	background-color: var(--second);
 }

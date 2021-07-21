@@ -1,7 +1,7 @@
 export function removeAlert() {
-   this.parentElement.remove();
+	this.parentElement.remove();
 }
 
 export function hideAlert() {
-   this.parentElement.style.display = "none";
+	this.parentElement.style.display = "none";
 }
