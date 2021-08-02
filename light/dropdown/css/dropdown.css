@@ -1,25 +1,21 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
 
-/* for centering element */
-.container {
-	width: 200px;
-	margin: 10px auto;
+.dropdown {
+	position: relative;
 }
-/* for centering element */
 
 .dropdown__button {
+	color: #000;
 	border: none;
 	outline: none;
 	padding: 10px;
-	color: #000000;
 	cursor: pointer;
-	margin-top: 45px;
 	margin-bottom: 16px;
-	box-sizing: border-box;
 	font: 1rem var(--font-family);
 	background-color: var(--second);
 	transition: background-color 0.2s;
@@ -27,20 +23,23 @@ body {
 }
 
 .dropdown__content {
-	z-index: 1;
+	top: 0;
+	left: 0;
 	width: 160px;
+	z-index: 9999;
 	display: none;
+	margin-top: 66px;
 	position: absolute;
 	border-radius: 4px;
-	background-color: #ffffff;
+	background-color: #fff;
 	border: 3px solid #b8bec5;
 	animation: dropdownAnimation 0.2s;
 	box-shadow: 7px 7px 1px 1px #b8bec5;
 }
 
 .dropdown__item {
+	color: #000;
 	display: block;
-	color: #000000;
 	text-align: left;
 	padding: 12px 16px;
 	text-decoration: none;

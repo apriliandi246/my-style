@@ -1,34 +1,32 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
 
-/* for centering element */
-.container {
-	width: 200px;
-	margin: 10px auto;
+.dropdown {
+	position: relative;
 }
-/* for centering element */
 
 .dropdown__button {
+	color: #fff;
 	outline: none;
 	padding: 10px;
-	color: #ffffff;
 	cursor: pointer;
-	margin-top: 45px;
-	margin-bottom: 16px;
 	font: 1rem monospace;
-	box-sizing: border-box;
 	background-color: var(--second);
 	border: 1px solid var(--fourth);
 	transition: background-color 0.2s;
 }
 
 .dropdown__content {
-	z-index: 1;
+	top: 0;
+	left: 0;
 	width: 160px;
+	z-index: 9999;
 	display: none;
+	margin-top: 66px;
 	position: absolute;
 	border-radius: 4px;
 	background-color: var(--first);
@@ -38,8 +36,8 @@ body {
 }
 
 .dropdown__item {
+	color: #fff;
 	display: block;
-	color: #ffffff;
 	text-align: left;
 	padding: 12px 15px;
 	letter-spacing: 0.4px;

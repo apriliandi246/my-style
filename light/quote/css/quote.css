@@ -1,21 +1,17 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
 
-.container {
-	width: 900px;
-	margin: 50px auto;
-}
-
 .quote {
+	width: 100%;
 	padding: 17px;
 	border-radius: 4px;
 	letter-spacing: 1.2px;
 	word-wrap: break-word;
-	box-sizing: border-box;
-	background-color: #ffffff;
+	background-color: #fff;
 	border: 3px solid #b8bec5;
 	box-shadow: 9px 9px 1px 1px #b8bec5;
 	quotes: "\201C""\201D""\2018""\2019";
@@ -23,7 +19,7 @@ body {
 }
 
 .quote::before {
-	color: #cccccc;
+	color: #ccc;
 	font-size: 3rem;
 	line-height: 7px;
 	margin-right: 10px;

@@ -1,6 +1,6 @@
 // For more than one collapse component
 
 import { listener } from "../utils/dom.js";
-import { toggleCollapse } from "../utils/collapse.js";
+import { collAccordion } from "../utils/collapse.js";
 
-listener(document.getElementById("collapses"), "click", toggleCollapse);
+listener(document.getElementById("collapses"), "click", collAccordion);

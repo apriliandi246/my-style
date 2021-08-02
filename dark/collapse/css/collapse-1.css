@@ -1,29 +1,28 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
 
-/* for centering element */
-.container {
-	width: 600px;
-	margin: 50px auto;
+.collapse {
+	width: 100%;
 }
-/* for centering element */
+
+.collapse-arrow-top {
+	display: none;
+}
 
 .collapse__head {
-	width: 100%;
 	display: flex;
-	color: #ffffff;
+	padding: 14px;
+	color: #fff;
 	cursor: pointer;
 	text-align: left;
-	padding-block: 9px;
 	border-radius: 4px;
 	margin-bottom: -1px;
 	align-items: center;
-	padding-inline: 10px;
 	letter-spacing: 0.5px;
-	box-sizing: border-box;
 	font: 1rem var(--font-family);
 	background-color: var(--first);
 	justify-content: space-between;
@@ -32,20 +31,14 @@ body {
 	box-shadow: 6px 6px 1px 1px var(--seventh);
 }
 
-.collapse__icon {
-	font-weight: 500;
-	font-size: 1.1rem;
-}
-
 .collapse__content {
 	padding: 17px;
 	display: none;
-	color: #ffffff;
+	color: #fff;
 	margin-top: 22px;
 	border-radius: 4px;
 	word-wrap: break-word;
 	letter-spacing: 0.8px;
-	box-sizing: border-box;
 	background-color: var(--first);
 	border: 2px solid var(--seventh);
 	font: 1rem/24px var(--font-family);

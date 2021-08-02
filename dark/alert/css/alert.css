@@ -1,26 +1,18 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
 
-/* for centering element */
-.container {
-	width: 550px;
-	margin: 50px auto;
-	text-align: center;
-}
-/* for centering element */
-
 .alert {
 	width: 100%;
+	color: #fff;
 	display: flex;
-	padding: 8.1px;
-	color: #ffffff;
+	padding: 14px;
 	border-radius: 3px;
 	margin-bottom: 55px;
 	align-items: center;
-	box-sizing: border-box;
 	background: var(--first);
 	justify-content: space-between;
 	border: 2px solid var(--eighth);
@@ -34,17 +26,7 @@ body {
 }
 
 .alert__close-button {
-	padding: 2px;
 	cursor: pointer;
-	font-size: 1.3rem;
-	font-weight: bold;
-	color: var(--eighth);
-	font-family: monospace;
-	transition: transform 0.2s;
-}
-
-.alert__close-button:hover {
-	transform: scale(1.2);
 }
 
 @media screen and (min-width: 760px) {

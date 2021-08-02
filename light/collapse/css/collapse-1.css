@@ -1,41 +1,35 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
 
-/* for centering element */
-.container {
-	width: 600px;
-	margin: 50px auto;
+.collapse {
+	width: 100%;
 }
-/* for centering element */
+
+.collapse-arrow-top {
+	display: none;
+}
 
 .collapse__head {
-	width: 100%;
+	color: #000;
 	border: none;
 	outline: none;
 	display: flex;
-	color: #000000;
+	padding: 14px;
 	cursor: pointer;
 	text-align: left;
 	border-radius: 4px;
-	padding-block: 9px;
 	align-items: center;
-	padding-inline: 10px;
 	letter-spacing: 0.5px;
-	box-sizing: border-box;
-	background-color: #ffffff;
+	background-color: #fff;
 	border: 2px solid #b8bec5;
 	font: 1rem var(--font-family);
 	justify-content: space-between;
 	transition: background-color 0.2s;
 	box-shadow: 6px 6px 1px 1px #b8bec5;
-}
-
-.collapse__icon {
-	font-weight: 500;
-	font-size: 1.1rem;
 }
 
 .collapse__content {
@@ -45,8 +39,7 @@ body {
 	border-radius: 4px;
 	word-wrap: break-word;
 	letter-spacing: 0.8px;
-	box-sizing: border-box;
-	background-color: #ffffff;
+	background-color: #fff;
 	border: 3px solid #b8bec5;
 	font: 1rem/24px var(--font-family);
 	box-shadow: 9px 9px 1px 1px #b8bec5;

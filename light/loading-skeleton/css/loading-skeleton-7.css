@@ -1,21 +1,15 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
-
-/* for centering element */
-.card {
-	margin: 50px auto;
-}
-/* for centering element */
 
 .card {
 	width: 600px;
 	padding: 23px;
 	border-radius: 3px;
-	box-sizing: border-box;
-	background-color: #ffffff;
+	background-color: #fff;
 	border: 3px solid #b8bec5;
 	box-shadow: 12px 12px 1px 1px #b8bec5;
 }
@@ -26,14 +20,14 @@ body {
 	border-radius: 3px;
 	margin-bottom: 25px;
 	background-size: 300px;
-	background-color: #cccccc;
+	background-color: #ccc;
 	background-repeat: no-repeat;
 	animation: loading 1s ease infinite;
 	background-image: linear-gradient(
 		90deg,
-		#cccccc,
+		#ccc,
 		rgba(255, 255, 255, 0.6),
-		#cccccc
+		#ccc
 	);
 }
 
@@ -43,14 +37,14 @@ body {
 	margin-top: 17px;
 	border-radius: 3px;
 	background-size: 300px;
-	background-color: #cccccc;
+	background-color: #ccc;
 	background-repeat: no-repeat;
 	animation: loading 1s ease infinite;
 	background-image: linear-gradient(
 		90deg,
-		#cccccc,
+		#ccc,
 		rgba(255, 255, 255, 0.6),
-		#cccccc
+		#ccc
 	);
 }
 
@@ -61,14 +55,14 @@ body {
 	margin-top: 20px;
 	border-radius: 3px;
 	background-size: 300px;
-	background-color: #cccccc;
+	background-color: #ccc;
 	background-repeat: no-repeat;
 	animation: loading 1s ease infinite;
 	background-image: linear-gradient(
 		90deg,
-		#cccccc,
+		#ccc,
 		rgba(255, 255, 255, 0.6),
-		#cccccc
+		#ccc
 	);
 }
 

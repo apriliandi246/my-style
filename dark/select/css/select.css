@@ -1,27 +1,24 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
 
-/* for centering element */
-.container {
-	width: 500px;
-	margin: 40px auto;
+.select {
+	position: relative;
 }
-/* for centering element */
 
-select {
+.select__comp {
 	width: 100%;
 	outline: none;
-	padding: 11px;
-	color: #ffffff;
+	color: #fff;
 	cursor: pointer;
 	border-radius: 4px;
 	letter-spacing: 1.2px;
 	-moz-appearance: none;
-	box-sizing: border-box;
 	-webkit-appearance: none;
+	padding: 11px 44px 11px 12px;
 	font: 1rem var(--font-family);
 	background-color: var(--first);
 	border: 2px solid var(--seventh);
@@ -29,18 +26,26 @@ select {
 	box-shadow: 6px 6px 1px 1px var(--seventh);
 }
 
-select:hover {
+.select__comp:hover {
 	background-color: var(--second);
 }
 
+.select__icon {
+	top: 0;
+	right: 0;
+	margin-top: 14.8px;
+	margin-right: 12px;
+	position: absolute;
+}
+
 @media screen and (min-width: 760px) {
-	select {
+	.select__comp {
 		font-size: 0.9rem;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-	select {
+	.select__comp {
 		font-size: calc(0.9rem - 1px);
 	}
 }

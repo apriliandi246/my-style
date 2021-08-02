@@ -13,23 +13,22 @@ form {
 }
 
 .input-form__label {
-	color: #000000;
+	color: #000;
 	letter-spacing: 1px;
 	font: 1rem var(--font-family);
 }
 
 .input-form__input {
 	width: 100%;
+	color: #000;
 	border: none;
 	padding: 10px;
 	outline: none;
 	display: block;
-	color: #000000;
 	margin-top: 15px;
 	border-radius: 4px;
-	box-sizing: border-box;
+	background-color: #fff;
 	border: 2px solid #b8bec5;
-	background-color: #ffffff;
 	font: 1rem var(--font-family);
 	transition: background-color 0.2s;
 	box-shadow: 5px 5px 1px 1px #b8bec5;
@@ -37,17 +36,16 @@ form {
 
 .button-form {
 	width: 100%;
+	color: #000;
 	border: none;
 	outline: none;
 	padding: 10px;
-	color: #000000;
 	cursor: pointer;
 	margin-top: 40px;
 	border-radius: 4px;
 	letter-spacing: 1px;
-	box-sizing: border-box;
+	background-color: #fff;
 	border: 2px solid #b8bec5;
-	background-color: #ffffff;
 	font: 1rem var(--font-family);
 	transition: background-color 0.2s;
 	box-shadow: 5px 5px 1px 1px #b8bec5;
@@ -55,18 +53,17 @@ form {
 
 .redirect-button-form {
 	width: 100%;
+	color: #000;
 	border: none;
 	outline: none;
 	padding: 10px;
 	display: block;
-	color: #000000;
 	text-align: center;
 	border-radius: 4px;
 	letter-spacing: 1px;
 	text-decoration: none;
-	box-sizing: border-box;
+	background-color: #fff;
 	border: 2px solid #b8bec5;
-	background-color: #ffffff;
 	font: 1rem var(--font-family);
 	transition: background-color 0.2s;
 	box-shadow: 5px 5px 1px 1px #b8bec5;

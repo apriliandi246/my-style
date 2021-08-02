@@ -1,19 +1,13 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 40px;
 	background-color: var(--first);
 }
-
-/* for centering element */
-.card {
-	margin: 50px auto;
-}
-/* for centering element */
 
 .card {
 	width: 600px;
 	border-radius: 4px;
-	box-sizing: border-box;
 	background-color: var(--first);
 	border: 3px solid var(--seventh);
 	box-shadow: 11px 11px 1px 1px var(--seventh);
@@ -22,7 +16,8 @@ body {
 .card__head {
 	padding: 17px;
 	display: flex;
-	margin-block: 4px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	align-items: center;
 }
 
@@ -32,7 +27,7 @@ body {
 }
 
 .card__username {
-	color: #ffffff;
+	color: #fff;
 	margin-left: 17px;
 	text-align: center;
 	letter-spacing: 1px;
@@ -42,19 +37,18 @@ body {
 
 .card__description {
 	padding: 15px;
-	color: #ffffff;
+	color: #fff;
 	margin-top: -40px;
 	letter-spacing: 0.5px;
 	white-space: pre-line;
 	word-wrap: break-word;
-	box-sizing: border-box;
 	font: 1rem/24px var(--font-family);
 }
 
 .card__footer {
+	color: #fff;
 	float: right;
 	padding: 15px;
-	color: #ffffff;
 	letter-spacing: 1px;
 	font: 0.9rem monospace;
 }

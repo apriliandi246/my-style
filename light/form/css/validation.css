@@ -6,7 +6,7 @@
 	color: #ff0000;
 	text-align: right;
 	font-family: monospace;
-	text-shadow: 0.4px 0.4px #0000001a;
+	text-shadow: 0.4px 0.4px rgba(0, 0, 0, 0.102);
 }
 
 /* when user input is invalid, add class invalid */
@@ -17,8 +17,8 @@
 	text-align: right;
 	letter-spacing: 0.8px;
 	font: calc(1rem - 1px) monospace;
-	text-shadow: 0.6px 0.4px #0000001a;
 	animation: validationAnimation 0.3s;
+	text-shadow: 0.6px 0.4px rgba(0, 0, 0, 0.102);
 }
 
 @media screen and (min-width: 760px) {

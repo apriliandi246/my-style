@@ -13,7 +13,7 @@ form {
 }
 
 .input-form__label {
-	color: #ffffff;
+	color: #fff;
 	letter-spacing: 1px;
 	font: 1rem var(--font-family);
 }
@@ -23,10 +23,9 @@ form {
 	outline: none;
 	padding: 10px;
 	display: block;
-	color: #ffffff;
+	color: #fff;
 	margin-top: 15px;
 	border-radius: 4px;
-	box-sizing: border-box;
 	font: 1rem var(--font-family);
 	background-color: var(--first);
 	border: 2px solid var(--seventh);
@@ -38,12 +37,11 @@ form {
 	width: 100%;
 	padding: 10px;
 	outline: none;
-	color: #ffffff;
+	color: #fff;
 	cursor: pointer;
 	margin-top: 40px;
 	border-radius: 4px;
 	letter-spacing: 1px;
-	box-sizing: border-box;
 	font: 1rem var(--font-family);
 	background-color: var(--first);
 	border: 2px solid var(--seventh);
@@ -56,12 +54,11 @@ form {
 	padding: 10px;
 	outline: none;
 	display: block;
-	color: #ffffff;
+	color: #fff;
 	text-align: center;
 	border-radius: 4px;
 	letter-spacing: 1px;
 	text-decoration: none;
-	box-sizing: border-box;
 	font: 1rem var(--font-family);
 	background-color: var(--first);
 	border: 2px solid var(--seventh);
