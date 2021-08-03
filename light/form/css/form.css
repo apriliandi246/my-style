@@ -1,24 +1,25 @@
 @import "../../css-variable/variable.css";
 
 body {
+	padding: 100px;
 	background-color: var(--first);
 }
 
-form {
+.form {
 	width: 100%;
 }
 
-.input-form {
+.form__wrapper {
 	margin-top: 32px;
 }
 
-.input-form__label {
+.form__label {
 	color: #000;
 	letter-spacing: 1px;
 	font: 1rem var(--font-family);
 }
 
-.input-form__input {
+.form__input {
 	width: 100%;
 	color: #000;
 	border: none;
@@ -34,7 +35,7 @@ form {
 	box-shadow: 5px 5px 1px 1px #b8bec5;
 }
 
-.button-form {
+.form__btn {
 	width: 100%;
 	color: #000;
 	border: none;
@@ -51,7 +52,7 @@ form {
 	box-shadow: 5px 5px 1px 1px #b8bec5;
 }
 
-.redirect-button-form {
+.form__redirect {
 	width: 100%;
 	color: #000;
 	border: none;
@@ -69,31 +70,31 @@ form {
 	box-shadow: 5px 5px 1px 1px #b8bec5;
 }
 
-.line-space-button {
+.form__input:focus {
+	background-color: var(--first);
+}
+
+.form__input::placeholder {
+	font-family: monospace;
+}
+
+.form__btn:disabled {
+	pointer-events: none;
+}
+
+.form__btn:hover,
+.form__redirect:hover {
+	background-color: var(--first);
+}
+
+.form__btn:focus,
+.form__redirect:focus {
+	background-color: var(--first);
+}
+
+.form__line {
 	margin-top: 23px;
 	margin-bottom: 17px;
 	border-radius: 10px;
 	border: 1px solid #b8bec5;
-}
-
-.input-form__input:focus {
-	background-color: var(--first);
-}
-
-.input-form__input::placeholder {
-	font-family: monospace;
-}
-
-.button-form:disabled {
-	pointer-events: none;
-}
-
-.button-form:hover,
-.redirect-button-form:hover {
-	background-color: var(--first);
-}
-
-.button-form:focus,
-.redirect-button-form:focus {
-	background-color: var(--first);
 }

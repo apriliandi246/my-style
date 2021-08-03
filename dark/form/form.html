@@ -6,54 +6,55 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="../../css-reset/css-reset.css" />
 	<link rel="stylesheet" href="./css/form.css" />
-	<link rel="stylesheet" href="./css/responsive.css" />
 	<title>form</title>
 </head>
 
 <body>
-	<div class="container">
-		<form spellcheck="false" autocomplete="off">
-			<div class="input-form">
-				<label for="username" class="input-form__label">Username</label>
-				<input
-					type="text"
-					id="username"
-					placeholder="username"
-					class="input-form__input" />
-			</div>
+	<form class="form" spellcheck="false" autocomplete="off">
+		<div class="form__wrapper">
+			<label for="username" class="form__label">Username</label>
 
-			<div class="input-form">
-				<label for="email" class="input-form__label">Email</label>
-				<input
-					id="email"
-					type="text"
-					placeholder="email"
-					class="input-form__input" />
-			</div>
+			<input
+				type="text"
+				id="username"
+				class="form__input"
+				placeholder="username" />
+		</div>
 
-			<div class="input-form">
-				<label for="password" class="input-form__label">Password</label>
-				<input
-					id="password"
-					type="password"
-					placeholder="password"
-					class="input-form__input" />
-			</div>
+		<div class="form__wrapper">
+			<label for="email" class="form__label">Email</label>
 
-			<div class="input-form">
-				<label for="confirm-password" class="input-form__label">Password Confirm</label>
-				<input
-					type="password"
-					id="confirm-password"
-					class="input-form__input"
-					placeholder="password confirm" />
-			</div>
+			<input
+				id="email"
+				type="text"
+				placeholder="email"
+				class="form__input" />
+		</div>
 
-			<button type="submit" class="button-form">Register</button>
-			<hr class="line-space-button" />
-			<a href="#" class="redirect-button-form">Login</a>
-		</form>
-	</div>
+		<div class="form__wrapper">
+			<label for="password" class="form__label">Password</label>
+
+			<input
+				id="password"
+				type="password"
+				class="form__input"
+				placeholder="password" />
+		</div>
+
+		<div class="form__wrapper">
+			<label for="confirm-password" class="form__label">Confirm Password</label>
+
+			<input
+				type="password"
+				class="form__input"
+				id="confirm-password"
+				placeholder="password confirm" />
+		</div>
+
+		<button type="submit" class="form__btn">Register</button>
+		<hr class="form__line" />
+		<a href="#" class="form__redirect">Login</a>
+	</form>
 </body>
 
 </html>

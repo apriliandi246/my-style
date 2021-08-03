@@ -1,7 +1,7 @@
 import { listener } from "../utils/dom.js";
 
-const button = document.getElementById("button-form");
-const inputs = document.getElementsByClassName("input-form__input");
+const button = document.getElementById("form__btn");
+const inputs = document.getElementsByClassName("form__input");
 const [username, email, password, confirmPassword] = inputs;
 
 // regex patterns
