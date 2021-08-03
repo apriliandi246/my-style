@@ -21,10 +21,10 @@ body {
 
 .form__input {
 	width: 100%;
+	color: #fff;
 	outline: none;
 	padding: 10px;
 	display: block;
-	color: #fff;
 	margin-top: 15px;
 	border-radius: 4px;
 	font: 1rem var(--font-family);
@@ -36,9 +36,9 @@ body {
 
 .form__btn {
 	width: 100%;
+	color: #fff;
 	padding: 10px;
 	outline: none;
-	color: #fff;
 	cursor: pointer;
 	margin-top: 40px;
 	border-radius: 4px;
@@ -52,10 +52,10 @@ body {
 
 .form__redirect {
 	width: 100%;
+	color: #fff;
 	padding: 10px;
 	outline: none;
 	display: block;
-	color: #fff;
 	text-align: center;
 	border-radius: 4px;
 	letter-spacing: 1px;
@@ -69,11 +69,6 @@ body {
 
 .form__input:focus {
 	background-color: var(--second);
-}
-
-.form__input::placeholder {
-	letter-spacing: 1px;
-	font-family: monospace;
 }
 
 .form__btn:disabled {

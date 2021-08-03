@@ -74,10 +74,6 @@ body {
 	background-color: var(--first);
 }
 
-.form__input::placeholder {
-	font-family: monospace;
-}
-
 .form__btn:disabled {
 	pointer-events: none;
 }
