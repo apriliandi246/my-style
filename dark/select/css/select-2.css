@@ -1,0 +1,74 @@
+@import url(../../../css-variables/variable.css);
+
+body {
+	padding: 80px;
+	background-color: var(--black);
+}
+
+.select {
+	position: relative;
+}
+
+.select__comp {
+	width: 100%;
+	outline: none;
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 5px;
+	color: var(--white);
+	-moz-appearance: none;
+	transition: border 0.2s;
+	-webkit-appearance: none;
+	font-family: var(--font);
+	padding: 13px 52px 13px 16px;
+	background-color: transparent;
+	border: 1px solid var(--dark-700);
+}
+
+.select__comp option {
+	color: var(--black);
+	font-family: var(--font);
+}
+
+.select__icon {
+	top: 0;
+	right: 0;
+	margin-right: 14px;
+	position: absolute;
+	stroke: var(--dark-700);
+	transition: stroke 0.2s;
+}
+
+.top-icon {
+	margin-top: 5px;
+}
+
+.bottom-icon {
+	margin-top: 17px;
+}
+
+.select__comp:disabled {
+	cursor: not-allowed;
+	background-color: var(--dark-disabled-color);
+}
+
+.select__comp:disabled:hover {
+	border: 1px solid var(--dark-700);
+}
+
+.select__comp:hover,
+.select__comp:focus {
+	border: 1px solid var(--dark-300);
+}
+
+.select__comp:hover ~ .select__icon {
+	stroke: var(--dark-300);
+}
+
+.select__comp:focus ~ .select__icon {
+	stroke: var(--dark-300);
+}
+
+.select__comp:disabled:hover ~ .select__icon {
+	stroke: var(--dark-700);
+}

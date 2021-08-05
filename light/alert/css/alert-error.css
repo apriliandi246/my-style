@@ -1,0 +1,36 @@
+@import "../../../css-variables/variable.css";
+
+body {
+	padding: 80px;
+	background-color: var(--white);
+}
+
+.alert {
+	display: flex;
+	padding: 10px 16px;
+	border-radius: 5px;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--error-100);
+	border: 1px solid var(--error-200);
+}
+
+.alert__status {
+	color: var(--error-400);
+	font: 700 16px var(--font);
+}
+
+.alert__desc {
+	color: var(--error-400);
+	font: 400 14px var(--font);
+}
+
+.alert__close-icon {
+	cursor: pointer;
+	transition: fill 0.2s;
+	fill: var(--error-300);
+}
+
+.alert__close-icon:hover {
+	fill: var(--error-400);
+}
