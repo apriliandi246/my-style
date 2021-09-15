@@ -1,0 +1,73 @@
+body {
+	padding: 80px;
+	background-color: #ffffff;
+}
+
+/* ----------------------------------------- */
+
+.input {
+	width: 100%;
+	position: relative;
+}
+
+.input__label {
+	margin-left: 2px;
+	margin-bottom: 8px;
+	display: inline-block;
+	color: var(--neutral-900);
+	font: 400 16px var(--application-ui-font);
+}
+
+.label__input-disabled {
+	color: var(--neutral-500);
+}
+
+.input__comp {
+	width: 100%;
+	transition: border 100ms;
+	color: var(--neutral-900);
+	padding: 9px 16px 9px 50px;
+	border: 1px solid var(--neutral-300);
+	font: 400 16px var(--application-ui-font);
+	box-shadow: inset 1px 1px 1px rgb(0 0 0 / 8%);
+}
+
+.input__comp:not(:placeholder-shown) {
+	border: 1px solid var(--neutral-600);
+}
+
+.input__comp:not(:placeholder-shown) ~ .input__icon {
+	stroke: var(--neutral-600);
+}
+
+.input__icon {
+	top: 0;
+	left: 0;
+	margin-top: 45px;
+	margin-left: 15px;
+	position: absolute;
+	stroke: var(--neutral-300);
+	transition: stroke 0.2s;
+}
+
+.input__comp:disabled {
+	box-shadow: none;
+	background-color: var(--neutral-50);
+}
+
+.input__comp::placeholder {
+	color: var(--neutral-400);
+}
+
+.input__comp:focus {
+	box-shadow: none;
+	border: 1px solid var(--neutral-600);
+}
+
+.input__comp:focus ~ .input__icon {
+	stroke: var(--neutral-600);
+}
+
+.input__comp:disabled ~ .input__icon {
+	pointer-events: none;
+}

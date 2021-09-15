@@ -1,0 +1,261 @@
+/* 
+	🚀 CSS variables 
+	👉 Contains all of my CSS variables
+*/
+
+:root {
+	/* 
+		✔ Icons 
+		👉 For icons, I'm using Heroicons (🔗 https://heroicons.com/).
+		👉 For alternative, I'm using Feathericons (🔗 https://feathericons.com).
+	*/
+
+	/* Font weight */
+	--thin: 100;
+	--extra-light: 200;
+	--light: 300;
+	--normal: 400;
+	--medium: 500;
+	--semi-bold: 600;
+	--bold: 700;
+
+	/* Font family */
+	--article-font: "Merriweather", serif;
+	--application-ui-font: "Poppins", sans-serif;
+
+	/* Font Size */
+	--text-12x: 12px;
+	--text-14x: 14px;
+	--text-16x: 16px;
+	--text-18x: 18px;
+	--text-20x: 20px;
+	--text-24x: 24px;
+	--text-30x: 30px;
+	--text-36x: 36px;
+	--text-48x: 48px;
+	--text-60x: 60px;
+	--text-72x: 72px;
+
+	/* Heading (for article) */
+	--h1-font-size: 45px;
+	--h1-line-height: 55px;
+
+	--h2-font-size: 32px;
+	--h2-line-height: 38px;
+
+	--h3-font-size: 28px;
+	--h3-line-height: 34px;
+
+	--h4-font-size: 23px;
+	--h4-line-height: 28px;
+
+	--h5-font-size: 20px;
+	--h5-line-height: 25px;
+
+	--h6-font-size: 18px;
+	--h6-line-height: 22px;
+
+	/* 
+		✔ Primary colors (cyan) 
+		👉 These are the splashes of color that should appear the most in your UI, 
+				and are the ones that determine the overall "look" of the site. Use these 
+				for things like primary actions, links, navigation items, icons, accent 
+				borders, or text you want to emphasize.
+	*/
+	--primary-50: #e0fcff;
+	--primary-100: #bef8fd;
+	--primary-200: #87eaf2;
+	--primary-300: #54d1db;
+	--primary-400: #38bec9;
+	--primary-500: #2cb1bc;
+	--primary-600: #14919b;
+	--primary-700: #0e7c86;
+	--primary-800: #0a6c74;
+	--primary-900: #044e54;
+
+	/* 
+		✔ Neutral colors (blue grey)
+		👉 These are used for backgrounds, text colors, and form the majority of your UI.
+	*/
+	--neutral-25: #fcfcfd;
+	--neutral-50: #f0f4f8;
+	--neutral-100: #d9e2ec;
+	--neutral-200: #bcccdc;
+	--neutral-300: #9fb3c8;
+	--neutral-400: #829ab1;
+	--neutral-500: #627d98;
+	--neutral-600: #486581;
+	--neutral-700: #334e68;
+	--neutral-800: #243b53;
+	--neutral-900: #102a43;
+
+	/*  
+		✔ Supporting, variant, and semantic colors (indigo, pink, red, yellow, and green).
+		👉 These are the colors that comminicate purpose, like message for success, error, warnings, highlight something like new feature, and etc.
+		👉 Indigo for informational.
+		👉 Green for success.
+		👉 Yellow for warning.
+		👉 Red for error.
+		👉 Pink for highlight something that is important, like new features.
+	*/
+	--indigo-50: #e0e8f9;
+	--indigo-100: #bed0f7;
+	--indigo-200: #98aeeb;
+	--indigo-300: #7b93db;
+	--indigo-400: #647acb;
+	--indigo-500: #4c63b6;
+	--indigo-600: #4055a8;
+	--indigo-700: #35469c;
+	--indigo-800: #2d3a8c;
+	--indigo-900: #19216c;
+
+	--pink-50: #ffe0f0;
+	--pink-100: #fab8d9;
+	--pink-200: #f191c1;
+	--pink-300: #e668a7;
+	--pink-400: #da4a91;
+	--pink-500: #c42d78;
+	--pink-600: #ad2167;
+	--pink-700: #9b1b5a;
+	--pink-800: #781244;
+	--pink-900: #5c0b33;
+
+	--red-50: #ffeeee;
+	--red-100: #facdcd;
+	--red-200: #f29b9b;
+	--red-300: #e66a6a;
+	--red-400: #d64545;
+	--red-500: #ba2525;
+	--red-600: #a61b1b;
+	--red-700: #911111;
+	--red-800: #780a0a;
+	--red-900: #610404;
+
+	--yellow-50: #fffaeb;
+	--yellow-100: #fcefc7;
+	--yellow-200: #f8e3a3;
+	--yellow-300: #f9da8b;
+	--yellow-400: #f7d070;
+	--yellow-500: #e9b949;
+	--yellow-600: #c99a2e;
+	--yellow-700: #a27c1a;
+	--yellow-800: #7c5e10;
+	--yellow-900: #513c06;
+
+	--green-50: #e3f9e5;
+	--green-100: #c1eac5;
+	--green-200: #a3d9a5;
+	--green-300: #7bc47f;
+	--green-400: #57ae5b;
+	--green-500: #3f9142;
+	--green-600: #2f8132;
+	--green-700: #207227;
+	--green-800: #0e5814;
+	--green-900: #05400a;
+
+	/* Space */
+	--space-2px: 2px;
+	--space-4x: 4px;
+	--space-8x: 8px;
+	--space-12x: 12px;
+	--space-16x: 16px;
+	--space-24x: 24px;
+	--space-32x: 32px;
+	--space-48x: 48px;
+	--space-64x: 64px;
+	--space-96x: 96px;
+	--space-128x: 128px;
+	--space-192x: 192px;
+	--space-256x: 256px;
+	--space-384x: 384px;
+	--space-512x: 512px;
+	--space-640x: 640px;
+	--space-768x: 768px;
+}
+
+/* 
+	🚀 CSS Reset 
+	👉 Just simple CSS reset for this project
+*/
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var(--bold);
+}
+
+input:disabled,
+select:disabled,
+button:disabled,
+textarea:disabled {
+	cursor: not-allowed;
+}
+
+::-ms-reveal {
+	display: none;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+ol li::marker {
+	font-weight: bold;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+		"Liberation Mono", "Courier New", monospace;
+}
+
+img,
+video {
+	height: auto;
+	max-width: 100%;
+}
+
+textarea {
+	resize: vertical;
+}
+
+button {
+	cursor: pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	outline: none;
+	border-radius: 5px;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block;
+}

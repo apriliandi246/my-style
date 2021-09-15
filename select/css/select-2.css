@@ -1,0 +1,62 @@
+body {
+	padding: 80px;
+	background-color: var(--grey-25);
+}
+
+/* ----------------------------------------- */
+
+.select {
+	position: relative;
+}
+
+.select__comp {
+	width: 100%;
+	cursor: pointer;
+	-moz-appearance: none;
+	color: var(--grey-900);
+	transition: border 0.2s;
+	-webkit-appearance: none;
+	font: 400 16px var(--application-ui-font);
+	padding: 13px 50px 13px 16px;
+	background-color: transparent;
+	border: 1px solid var(--grey-200);
+}
+
+.select__comp option {
+	font-family: var(--application-ui-font);
+}
+
+.select__icon {
+	top: 0;
+	right: 0;
+	margin-right: 14px;
+	position: absolute;
+	stroke: var(--grey-400);
+	transition: stroke 0.2s;
+}
+
+.top-icon {
+	margin-top: 5px;
+}
+
+.bottom-icon {
+	margin-top: 17px;
+}
+
+.select__comp:disabled:hover {
+	border: 1px solid var(--grey-200);
+}
+
+.select__comp:hover,
+.select__comp:focus {
+	border: 1px solid var(--grey-600);
+}
+
+.select__comp:focus ~ .select__icon,
+.select__comp:hover ~ .select__icon {
+	stroke: var(--grey-600);
+}
+
+.select__comp:disabled:hover ~ .select__icon {
+	stroke: var(--grey-400);
+}
