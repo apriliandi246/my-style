@@ -1,5 +1,3 @@
-@import "../../css-variable/variable.css";
-
 body {
 	padding: 40px;
 	background-color: var(--first);

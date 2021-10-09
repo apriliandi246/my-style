@@ -1,5 +1,3 @@
-@import "../../css-variable/variable.css";
-
 body {
 	padding: 40px;
 	background-color: var(--first);
@@ -23,10 +21,10 @@ body {
 	letter-spacing: 0.5px;
 	background-color: #fff;
 	border: 2px solid #b8bec5;
-	font: 1rem var(--font-family);
 	justify-content: space-between;
 	transition: background-color 0.2s;
 	box-shadow: 6px 6px 1px 1px #b8bec5;
+	font: 1rem var(--application-ui-font);
 }
 
 .collapse__content {
@@ -38,8 +36,8 @@ body {
 	letter-spacing: 0.8px;
 	background-color: #fff;
 	border: 3px solid #b8bec5;
-	font: 1rem/24px var(--font-family);
 	box-shadow: 9px 9px 1px 1px #b8bec5;
+	font: 1rem/24px var(--application-ui-font);
 }
 
 .collapse__head:hover,
