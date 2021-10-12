@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Error Alert</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		/* ---------------------------- */
+
+		.error-alert {
+			display: flex;
+			padding: 11px 14px;
+			border-radius: 4px;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--error-300);
+		}
+
+		.error-alert__main {
+			display: flex;
+			align-items: center;
+		}
+
+		.error-alert__icon {
+			margin-right: 14px;
+		}
+
+		.error-alert__message {
+			color: #000;
+		}
+
+		.error-alert__close {
+			border: none;
+			outline: none;
+			padding: 2px;
+			border-radius: 100%;
+			background-color: transparent;
+			transition: background-color 100ms;
+		}
+
+		.error-alert__close:hover {
+			background-color: var(--error-400);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="error-alert" id="error-alert">
+		<div class="error-alert__main">
+			<svg
+				width="24"
+				height="24"
+				fill="none"
+				stroke="#000"
+				stroke-width="2"
+				viewBox="0 0 24 24"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="error-alert__icon"
+				xmlns="http://www.w3.org/2000/svg">
+				<circle cx="12" cy="12" r="10"></circle>
+				<line x1="15" y1="9" x2="9" y2="15"></line>
+				<line x1="9" y1="9" x2="15" y2="15"></line>
+			</svg>
+
+			<span class="error-alert__message">Error Alert Message</span>
+		</div>
+
+		<button class="error-alert__close" id="error-btn-close">
+			<svg
+				width="24"
+				height="24"
+				fill="none"
+				stroke="#000"
+				stroke-width="2"
+				viewBox="0 0 24 24"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				xmlns="http://www.w3.org/2000/svg">
+				<line x1="18" y1="6" x2="6" y2="18"></line>
+				<line x1="6" y1="6" x2="18" y2="18"></line>
+			</svg>
+		</button>
+	</div>
+
+	<script>
+		const errorAlert = document.getElementById("error-alert");
+		const closeAlertBtn = document.getElementById("error-btn-close");
+
+		function listener(node, event, handler) {
+			node.addEventListener(event, handler);
+			return () => node.removeEventListener(event, handler);
+		}
+
+		listener(closeAlertBtn, "click", () => errorAlert.remove());
+	</script>
+</body>
+
+</html>

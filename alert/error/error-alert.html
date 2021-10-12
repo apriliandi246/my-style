@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Error Alert</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		/* ---------------------------- */
+
+		.error-alert {
+			display: flex;
+			padding: 12px 14px;
+			border-radius: 4px;
+			align-items: center;
+			background-color: var(--error-300);
+		}
+
+		.error-alert__icon {
+			margin-right: 14px;
+		}
+
+		.error-alert__message {
+			color: #000;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="error-alert">
+		<svg
+			width="24"
+			height="24"
+			fill="none"
+			stroke="#000"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="error-alert__icon"
+			xmlns="http://www.w3.org/2000/svg">
+			<circle cx="12" cy="12" r="10"></circle>
+			<line x1="15" y1="9" x2="9" y2="15"></line>
+			<line x1="9" y1="9" x2="15" y2="15"></line>
+		</svg>
+
+		<span class="error-alert__message">Error Alert Message</span>
+	</div>
+</body>
+
+</html>

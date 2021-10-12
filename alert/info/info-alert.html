@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Info Alert</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		/* ---------------------------- */
+
+		.info-alert {
+			display: flex;
+			padding: 12px 14px;
+			border-radius: 4px;
+			align-items: center;
+			background-color: var(--info-300);
+		}
+
+		.info-alert__icon {
+			margin-right: 14px;
+		}
+
+		.info-alert__message {
+			color: var(--neutral-900);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="info-alert">
+		<svg
+			width="24"
+			height="24"
+			fill="none"
+			stroke="#111827"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="info-alert__icon"
+			xmlns="http://www.w3.org/2000/svg">
+			<circle cx="12" cy="12" r="10"></circle>
+			<line x1="12" y1="16" x2="12" y2="12"></line>
+			<line x1="12" y1="8" x2="12.01" y2="8"></line>
+		</svg>
+
+		<span class="info-alert__message">Info Alert Message</span>
+	</div>
+</body>
+
+</html>
