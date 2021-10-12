@@ -1,42 +1,9 @@
-/* 
-	🚀 CSS variables 
-	👉 Contains all of my CSS variables
-*/
-
 :root {
-	/* 
-		✔ Icons 
-		👉 For icons, I'm using Heroicons (🔗 https://heroicons.com/).
-		👉 For alternative, I'm using Feathericons (🔗 https://feathericons.com).
-	*/
+	/* Font Family */
+	--font-family: "Poppins", sans-serif;
+	--title-article-font: "Merriweather", serif;
 
-	/* Font weight */
-	--thin: 100;
-	--extra-light: 200;
-	--light: 300;
-	--normal: 400;
-	--medium: 500;
-	--semi-bold: 600;
-	--bold: 700;
-
-	/* Font family */
-	--article-font: "Merriweather", serif;
-	--application-ui-font: "Poppins", sans-serif;
-
-	/* Font Size */
-	--text-12x: 12px;
-	--text-14x: 14px;
-	--text-16x: 16px;
-	--text-18x: 18px;
-	--text-20x: 20px;
-	--text-24x: 24px;
-	--text-30x: 30px;
-	--text-36x: 36px;
-	--text-48x: 48px;
-	--text-60x: 60px;
-	--text-72x: 72px;
-
-	/* Heading (for article) */
+	/* Heading */
 	--h1-font-size: 45px;
 	--h1-line-height: 55px;
 
@@ -55,144 +22,201 @@
 	--h6-font-size: 18px;
 	--h6-line-height: 22px;
 
-	/* 
-		✔ Primary colors (cyan) 
-		👉 These are the splashes of color that should appear the most in your UI, 
-				and are the ones that determine the overall "look" of the site. Use these 
-				for things like primary actions, links, navigation items, icons, accent 
-				borders, or text you want to emphasize.
-	*/
-	--primary-50: #e0fcff;
-	--primary-100: #bef8fd;
-	--primary-200: #87eaf2;
-	--primary-300: #54d1db;
-	--primary-400: #38bec9;
-	--primary-500: #2cb1bc;
-	--primary-600: #14919b;
-	--primary-700: #0e7c86;
-	--primary-800: #0a6c74;
-	--primary-900: #044e54;
+	/* Font Size */
+	--text-12x: 12px;
+	--text-14x: 14px;
+	--text-16x: 16px;
+	--text-18x: 18px;
+	--text-20x: 20px;
+	--text-24x: 24px;
+	--text-30x: 30px;
+	--text-36x: 36px;
+	--text-48x: 48px;
+	--text-60x: 60px;
+	--text-72x: 72px;
 
-	/* 
-		✔ Neutral colors (blue grey)
-		👉 These are used for backgrounds, text colors, and form the majority of your UI.
-	*/
-	--neutral-25: #fcfcfd;
-	--neutral-50: #f0f4f8;
-	--neutral-100: #d9e2ec;
-	--neutral-200: #bcccdc;
-	--neutral-300: #9fb3c8;
-	--neutral-400: #829ab1;
-	--neutral-500: #627d98;
-	--neutral-600: #486581;
-	--neutral-700: #334e68;
-	--neutral-800: #243b53;
-	--neutral-900: #102a43;
-
-	/*  
-		✔ Supporting, variant, and semantic colors (indigo, pink, red, yellow, and green).
-		👉 These are the colors that comminicate purpose, like message for success, error, warnings, highlight something like new feature, and etc.
-		👉 Indigo for informational.
-		👉 Green for success.
-		👉 Yellow for warning.
-		👉 Red for error.
-		👉 Pink for highlight something that is important, like new features.
-	*/
-	--indigo-50: #e0e8f9;
-	--indigo-100: #bed0f7;
-	--indigo-200: #98aeeb;
-	--indigo-300: #7b93db;
-	--indigo-400: #647acb;
-	--indigo-500: #4c63b6;
-	--indigo-600: #4055a8;
-	--indigo-700: #35469c;
-	--indigo-800: #2d3a8c;
-	--indigo-900: #19216c;
-
-	--pink-50: #ffe0f0;
-	--pink-100: #fab8d9;
-	--pink-200: #f191c1;
-	--pink-300: #e668a7;
-	--pink-400: #da4a91;
-	--pink-500: #c42d78;
-	--pink-600: #ad2167;
-	--pink-700: #9b1b5a;
-	--pink-800: #781244;
-	--pink-900: #5c0b33;
-
-	--red-50: #ffeeee;
-	--red-100: #facdcd;
-	--red-200: #f29b9b;
-	--red-300: #e66a6a;
-	--red-400: #d64545;
-	--red-500: #ba2525;
-	--red-600: #a61b1b;
-	--red-700: #911111;
-	--red-800: #780a0a;
-	--red-900: #610404;
-
-	--yellow-50: #fffaeb;
-	--yellow-100: #fcefc7;
-	--yellow-200: #f8e3a3;
-	--yellow-300: #f9da8b;
-	--yellow-400: #f7d070;
-	--yellow-500: #e9b949;
-	--yellow-600: #c99a2e;
-	--yellow-700: #a27c1a;
-	--yellow-800: #7c5e10;
-	--yellow-900: #513c06;
-
-	--green-50: #e3f9e5;
-	--green-100: #c1eac5;
-	--green-200: #a3d9a5;
-	--green-300: #7bc47f;
-	--green-400: #57ae5b;
-	--green-500: #3f9142;
-	--green-600: #2f8132;
-	--green-700: #207227;
-	--green-800: #0e5814;
-	--green-900: #05400a;
-
-	/* Space */
-	--space-2px: 2px;
+	/* Spaces */
+	--space-0x: 0px;
 	--space-4x: 4px;
-	--space-8x: 8px;
+	--space-9x: 8px;
 	--space-12x: 12px;
 	--space-16x: 16px;
+	--space-20x: 20px;
 	--space-24x: 24px;
+	--space-28x: 28px;
 	--space-32x: 32px;
+	--space-40x: 40px;
 	--space-48x: 48px;
+	--space-56x: 56px;
 	--space-64x: 64px;
+	--space-72x: 72px;
+	--space-80x: 80px;
+	--space-88x: 88px;
 	--space-96x: 96px;
+	--space-104x: 104px;
+	--space-112x: 112px;
+	--space-120x: 120px;
 	--space-128x: 128px;
-	--space-192x: 192px;
-	--space-256x: 256px;
-	--space-384x: 384px;
-	--space-512x: 512px;
-	--space-640x: 640px;
-	--space-768x: 768px;
+	--space-136x: 136px;
+	--space-144x: 144px;
+	--space-152x: 152px;
+
+	/*
+		🚀 Primary Colors
+		👉 A primary color is the color displayed most frequently across your app's screens and components.
+		👉 Your primary color can be used to make a color theme for your app, including dark and light primary color variants.
+	*/
+	--primary-50: #eaebec;
+	--primary-100: #d6d7d9;
+	--primary-200: #c2c3c6;
+	--primary-300: #aeb0b4;
+	--primary-400: #9a9ca1;
+	--primary-500: #86888e;
+	--primary-600: #72757c;
+	--primary-700: #5e6169;
+	--primary-800: #4a4d56;
+	--primary-900: #363a44;
+
+	/*
+		🚀 Secondary Colors
+		👉 A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of your UI.
+		👉 Secondary colors are best for:
+			👀 Floating action buttons
+			👀 Selection controls, like sliders and switches
+			👀 Highlighting selected text
+			👀 Progress bars
+			👀 Links and headlines
+	*/
+	--secondary-50: #effcf6;
+	--secondary-100: #c6f7e2;
+	--secondary-200: #8eedc7;
+	--secondary-300: #65d6ad;
+	--secondary-400: #3ebd93;
+	--secondary-500: #27ab83;
+	--secondary-600: #199473;
+	--secondary-700: #147d64;
+	--secondary-800: #0c6b58;
+	--secondary-900: #014d40;
+
+	/*
+		🚀 Neutral Colors
+		👉 These are the colors you will use the most and will make up the majority of your UI. Use them for most of your text, backgrounds, and borders, as well as for things like secondary buttons and links.
+	*/
+	--neutral-50: #f9fafb;
+	--neutral-100: #f3f4f6;
+	--neutral-200: #e5e7eb;
+	--neutral-300: #d1d5db;
+	--neutral-400: #9ca3af;
+	--neutral-500: #6b7280;
+	--neutral-600: #4b5563;
+	--neutral-700: #374151;
+	--neutral-800: #1f2937;
+	--neutral-900: #111827;
+
+	/*
+		🚀 Supporting, semantic, and variant colors
+		👉 These are the colors that comminicate purpose, like message for success, error, warnings, highlight something like new feature, and etc.
+	*/
+
+	/* For information */
+	--info-50: #e3f8ff;
+	--info-100: #b3ecff;
+	--info-200: #81defd;
+	--info-300: #5ed0fa;
+	--info-400: #40c3f7;
+	--info-500: #2bb0ed;
+	--info-600: #1992d4;
+	--info-700: #127fbf;
+	--info-800: #0b69a3;
+	--info-900: #035388;
+
+	/* For success, safe, and right */
+	--success-50: #e3f9e5;
+	--success-100: #c1f2c7;
+	--success-200: #91e697;
+	--success-300: #51ca58;
+	--success-400: #31b237;
+	--success-500: #18981d;
+	--success-600: #0f8613;
+	--success-700: #0e7817;
+	--success-800: #07600e;
+	--success-900: #014807;
+
+	/* For warning, alert, and caution */
+	--warning-50: #fffbea;
+	--warning-100: #fff3c4;
+	--warning-200: #fce588;
+	--warning-300: #fadb5f;
+	--warning-400: #f7c948;
+	--warning-500: #f0b429;
+	--warning-600: #de911d;
+	--warning-700: #cb6e17;
+	--warning-800: #b44d12;
+	--warning-900: #8d2b0b;
+
+	/* For error, danger, and wrong */
+	--error-50: #ffe3e3;
+	--error-100: #ffbdbd;
+	--error-200: #ffbdbd;
+	--error-300: #f86a6a;
+	--error-400: #ef4e4e;
+	--error-500: #e12d39;
+	--error-600: #cf1124;
+	--error-700: #ab091e;
+	--error-800: #8a041a;
+	--error-900: #610316;
 }
 
-/* 
-	🚀 CSS Reset 
-	👉 Just simple CSS reset for this project
-*/
-
 *,
-::before,
-::after {
+::after,
+::before {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+* {
+	font-family: var(--font-family);
+}
+
+body {
+	background-color: var(--primary-50);
+}
+
+h1 {
+	font-weight: var(--bold);
+	font-size: var(--h1-font-size);
+	line-height: var(--h1-line-height);
+}
+
+h2 {
+	font-weight: var(--bold);
+	font-size: var(--h2-font-size);
+	line-height: var(--h2-line-height);
+}
+
+h3 {
+	font-weight: var(--bold);
+	font-size: var(--h3-font-size);
+	line-height: var(--h3-line-height);
+}
+
+h4 {
+	font-weight: var(--bold);
+	font-size: var(--h4-font-size);
+	line-height: var(--h4-line-height);
+}
+
+h5 {
+	font-weight: var(--bold);
+	font-size: var(--h5-font-size);
+	line-height: var(--h5-line-height);
+}
+
 h6 {
 	font-weight: var(--bold);
+	font-size: var(--h6-font-size);
+	line-height: var(--h6-line-height);
 }
 
 input:disabled,
@@ -202,16 +226,22 @@ textarea:disabled {
 	cursor: not-allowed;
 }
 
-::-ms-reveal {
-	display: none;
+input,
+button,
+select,
+option,
+textarea {
+	font-family: var(--font-family);
 }
 
 ul {
 	list-style: disc;
+	font-family: var(--font-family);
 }
 
 ol {
 	list-style: decimal;
+	font-family: var(--font-family);
 }
 
 ol li::marker {
@@ -219,8 +249,8 @@ ol li::marker {
 }
 
 pre,
-code,
 kbd,
+code,
 samp {
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
 		"Liberation Mono", "Courier New", monospace;
@@ -240,22 +270,31 @@ button {
 	cursor: pointer;
 }
 
-button,
 input,
-optgroup,
+button,
 select,
+optgroup,
 textarea {
 	outline: none;
-	border-radius: 5px;
+	border-radius: 4px;
+	font-family: var(--font-family);
 }
 
 img,
 svg,
 video,
-canvas,
 audio,
-iframe,
 embed,
+iframe,
+canvas,
 object {
 	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+::-ms-reveal {
+	display: none;
 }
