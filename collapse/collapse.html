@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Collapse</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		/* ---------------------------- */
+
+		.collapse__head {
+			display: flex;
+			cursor: pointer;
+			border-radius: 4px;
+			padding: 15px 16px;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--neutral-50);
+			border: 1px solid var(--neutral-300);
+		}
+
+		.collapse__message {
+			display: none;
+			padding: 16px;
+			margin-top: 18px;
+			line-height: 27px;
+			border-radius: 4px;
+			margin-bottom: 10px;
+			background-color: var(--neutral-50);
+			border: 1px solid var(--neutral-300);
+		}
+
+		.collapse__up-icon {
+			display: none;
+		}
+
+		.collapse__icons {
+			display: flex;
+			margin-left: 16px;
+			align-items: center;
+		}
+
+		.collapse-active {
+			border: 1px solid var(--primary-800);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="collapse">
+		<div class="collapse__head" id="collapse">
+			<p class="collapse__head-message">What is HTML ????</p>
+
+			<div class="collapse__icons">
+				<svg
+					width="25"
+					height="25"
+					fill="none"
+					stroke="#363a44"
+					viewBox="0 0 24 24"
+					stroke-linejoin="round"
+					class="collapse__down-icon"
+					xmlns="http://www.w3.org/2000/svg"
+					stroke-width="2" stroke-linecap="round">
+					<polyline points="6 9 12 15 18 9"></polyline>
+				</svg>
+
+				<svg
+					width="25"
+					height="25"
+					fill="none"
+					stroke-width="2"
+					stroke="#363a44"
+					viewBox="0 0 24 24"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="collapse__up-icon"
+					xmlns="http://www.w3.org/2000/svg">
+					<polyline points="18 15 12 9 6 15"></polyline>
+				</svg>
+			</div>
+		</div>
+
+		<p class="collapse__message">
+			HTML (Hypertext Markup Language) is the code that is used to structure a web page and its content. For example,
+			content
+			could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the
+			title
+			suggests, this article will give you a basic understanding of HTML and its functions.</p>
+	</div>
+
+	<br>
+
+	<div class="collapse">
+		<div class="collapse__head" id="collapse-2">
+			<p class="collapse__head-message">What is CSS ????</p>
+
+			<div class="collapse__icons">
+				<svg
+					width="25"
+					height="25"
+					fill="none"
+					stroke="#363a44"
+					viewBox="0 0 24 24"
+					stroke-linejoin="round"
+					class="collapse__down-icon"
+					xmlns="http://www.w3.org/2000/svg"
+					stroke-width="2" stroke-linecap="round">
+					<polyline points="6 9 12 15 18 9"></polyline>
+				</svg>
+
+				<svg
+					width="25"
+					height="25"
+					fill="none"
+					stroke-width="2"
+					stroke="#363a44"
+					viewBox="0 0 24 24"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="collapse__up-icon"
+					xmlns="http://www.w3.org/2000/svg">
+					<polyline points="18 15 12 9 6 15"></polyline>
+				</svg>
+			</div>
+		</div>
+
+		<p class="collapse__message">
+			CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood?
+			This
+			article explains what CSS is, with a simple syntax example, and also covers some key terms about the language.
+		</p>
+	</div>
+
+	<br>
+
+	<div class="collapse">
+		<div class="collapse__head" id="collapse-3">
+			<p class="collapse__head-message">
+				What is Javascript ????
+			</p>
+
+			<div class="collapse__icons">
+				<svg
+					width="25"
+					height="25"
+					fill="none"
+					stroke="#363a44"
+					viewBox="0 0 24 24"
+					stroke-linejoin="round"
+					class="collapse__down-icon"
+					xmlns="http://www.w3.org/2000/svg"
+					stroke-width="2" stroke-linecap="round">
+					<polyline points="6 9 12 15 18 9"></polyline>
+				</svg>
+
+				<svg
+					width="25"
+					height="25"
+					fill="none"
+					stroke-width="2"
+					stroke="#363a44"
+					viewBox="0 0 24 24"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="collapse__up-icon"
+					xmlns="http://www.w3.org/2000/svg">
+					<polyline points="18 15 12 9 6 15"></polyline>
+				</svg>
+			</div>
+		</div>
+
+		<p class="collapse__message">
+			JavaScript is a scripting or programming language that allows you to implement complex features on web pages —
+			every
+			time a web page does more than just sit there and display static information for you to look at — displaying
+			timely
+			content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that
+			JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of
+			which
+			(HTML and CSS) we have covered in much more detail in other parts of the Learning Area.
+		</p>
+	</div>
+
+	<script>
+		const collapse_1 = document.getElementById("collapse");
+		listener(collapse_1, "click", () => toggleCollapse(collapse_1));
+
+		const collapse_2 = document.getElementById("collapse-2");
+		listener(collapse_2, "click", () => toggleCollapse(collapse_2));
+
+		const collapse_3 = document.getElementById("collapse-3");
+		listener(collapse_3, "click", () => toggleCollapse(collapse_3));
+
+		function toggleCollapse(collapse) {
+			const collapseMessage = collapse.nextElementSibling;
+			const collapseIcons = collapse.querySelector(".collapse__icons");
+			const displayValue = collapseMessage.style.display;
+
+			if (displayValue === "" || displayValue === "none") {
+				collapseMessage.style.display = "block";
+				collapse.classList.add("collapse-active");
+				collapseIcons.firstElementChild.style.display = "none";
+				collapseIcons.lastElementChild.style.display = "inline-block";
+			} else {
+				collapseMessage.style.display = "none";
+				collapse.classList.remove("collapse-active");
+				collapseIcons.lastElementChild.style.display = "none";
+				collapseIcons.firstElementChild.style.display = "inline-block";
+			}
+		}
+
+		function listener(node, event, handler) {
+			node.addEventListener(event, handler);
+			return () => node.removeEventListener(event, handler);
+		}
+	</script>
+</body>
+
+</html>
