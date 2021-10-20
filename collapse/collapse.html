@@ -31,6 +31,10 @@
 			border: 1px solid var(--neutral-300);
 		}
 
+		.collapse__head:active {
+			border: 1px solid var(--primary-800);
+		}
+
 		.collapse__message {
 			display: none;
 			padding: 16px;
@@ -42,14 +46,14 @@
 			border: 1px solid var(--neutral-300);
 		}
 
-		.collapse__up-icon {
-			display: none;
-		}
-
 		.collapse__icons {
 			display: flex;
 			margin-left: 16px;
 			align-items: center;
+		}
+
+		.collapse__icons:last-child {
+			display: none;
 		}
 
 		.collapse-active {
@@ -65,8 +69,8 @@
 
 			<div class="collapse__icons">
 				<svg
-					width="25"
-					height="25"
+					width="24"
+					height="24"
 					fill="none"
 					stroke="#363a44"
 					viewBox="0 0 24 24"
@@ -78,8 +82,8 @@
 				</svg>
 
 				<svg
-					width="25"
-					height="25"
+					width="24"
+					height="24"
 					fill="none"
 					stroke-width="2"
 					stroke="#363a44"
@@ -109,8 +113,8 @@
 
 			<div class="collapse__icons">
 				<svg
-					width="25"
-					height="25"
+					width="24"
+					height="24"
 					fill="none"
 					stroke="#363a44"
 					viewBox="0 0 24 24"
@@ -122,8 +126,8 @@
 				</svg>
 
 				<svg
-					width="25"
-					height="25"
+					width="24"
+					height="24"
 					fill="none"
 					stroke-width="2"
 					stroke="#363a44"
@@ -154,8 +158,8 @@
 
 			<div class="collapse__icons">
 				<svg
-					width="25"
-					height="25"
+					width="24"
+					height="24"
 					fill="none"
 					stroke="#363a44"
 					viewBox="0 0 24 24"
@@ -167,8 +171,8 @@
 				</svg>
 
 				<svg
-					width="25"
-					height="25"
+					width="24"
+					height="24"
 					fill="none"
 					stroke-width="2"
 					stroke="#363a44"
@@ -206,20 +210,13 @@
 
 		function toggleCollapse(collapse) {
 			const collapseMessage = collapse.nextElementSibling;
-			const collapseIcons = collapse.querySelector(".collapse__icons");
 			const displayValue = collapseMessage.style.display;
+			const collapseIcons = collapse.querySelector(".collapse__icons");
 
-			if (displayValue === "" || displayValue === "none") {
-				collapseMessage.style.display = "block";
-				collapse.classList.add("collapse-active");
-				collapseIcons.firstElementChild.style.display = "none";
-				collapseIcons.lastElementChild.style.display = "inline-block";
-			} else {
-				collapseMessage.style.display = "none";
-				collapse.classList.remove("collapse-active");
-				collapseIcons.lastElementChild.style.display = "none";
-				collapseIcons.firstElementChild.style.display = "inline-block";
-			}
+			collapse.classList.toggle("collapse-active");
+			collapseMessage.style.display = displayValue === "block" ? "none" : "block";
+			collapseIcons.lastElementChild.style.display = displayValue === "block" ? "none" : "inline-block";
+			collapseIcons.firstElementChild.style.display = displayValue === "block" ? "inline-block" : "none";
 		}
 
 		function listener(node, event, handler) {
