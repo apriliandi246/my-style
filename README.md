@@ -19,7 +19,7 @@ Just default `CSS` style/UI component for almost my personal projetcs _(for now)
 ### 📝 BEM methodology
 
 For naming convention, I'm using `BEM`.
-Detail : [BEM](https://en.bem.info/)
+[Click here](https://en.bem.info/) for more detail.
 
 <h3 align="center">. . .</h3>
 
