@@ -26,16 +26,8 @@ Detail : [BEM](https://en.bem.info/)
 ### Components
 
 - [x] Alert
-- [x] Card
+- [x] Code
 - [x] Collapse
 - [x] Dropdown
-- [x] Form
-- [x] Hamburger Menu
-- [x] Loading Skeleton
-- [x] Loading Spinner
-- [x] Modal
-- [x] Navbar
-- [x] Quote
-- [x] Select
 
 <h3 align="right">(⌐■_■)</h3>
