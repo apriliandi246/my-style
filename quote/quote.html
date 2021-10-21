@@ -4,25 +4,52 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../css-global/global.css" />
-	<link rel="stylesheet" href="./css/quote.css" />
-	<title>quote</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Quote</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		/* ---------------------------- */
+
+		.quote {
+			padding: 14px;
+			line-height: 27px;
+			font-style: italic;
+			border-radius: 4px;
+			color: var(--primary-900);
+			background-color: var(--neutral-50);
+			border: 1px solid var(--neutral-300);
+			border-left: 7px solid var(--secondary-500);
+		}
+
+		.quote::before {
+			font-size: 55px;
+			line-height: 7px;
+			margin-right: 12px;
+			content: open-quote;
+			vertical-align: -21px;
+			color: var(--primary-900);
+		}
+	</style>
 </head>
 
 <body>
-	<div class="container">
-		<blockquote class="quote">
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
-			molestias ipsam fugit facere culpa cumque minima, dolorem, pariatur
-			quibusdam accusantium rerum commodi dolorum tenetur accusamus unde
-			numquam optio velit nam hic? Eveniet, a! Vero repudiandae, dolor,
-			autem expedita inventore ipsa veritatis eum dignissimos nesciunt,
-			ipsam qui dolorem nobis porro molestias.
-		</blockquote>
-	</div>
+	<blockquote class="quote">
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
+		molestias ipsam fugit facere culpa cumque minima, dolorem, pariatur
+		quibusdam accusantium rerum commodi dolorum tenetur accusamus unde
+		numquam optio velit nam hic? Eveniet, a! Vero repudiandae, dolor,
+		autem expedita inventore ipsa veritatis eum dignissimos nesciunt,
+		ipsam qui dolorem nobis porro molestias.
+	</blockquote>
 </body>
 
 </html>
