@@ -11,7 +11,7 @@
 		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="../../css-global/global.css" />
-	<title>Bouncer-1</title>
+	<title>Bouncer-2</title>
 
 	<style>
 		body {
@@ -20,7 +20,7 @@
 
 		/* ---------------------------- */
 
-		.bouncer-2 {
+		.bouncer {
 			width: 110px;
 			display: flex;
 			height: 100px;
@@ -29,27 +29,27 @@
 			justify-content: space-around;
 		}
 
-		.bouncer-2>.ball {
+		.bouncer-ball {
 			width: 20px;
 			height: 20px;
 			border-radius: 100%;
-			background-color: #343a40;
+			background-color: var(--primary-900);
 			animation: bouncer 0.5s ease-in-out infinite alternate;
 		}
 
-		.bouncer-2>.ball:nth-child(2) {
+		.bouncer-ball:nth-child(2) {
 			animation-delay: 0.1s;
 		}
 
-		.bouncer-2>.ball:nth-child(3) {
+		.bouncer-ball:nth-child(3) {
 			animation-delay: 0.2s;
 		}
 
-		.bouncer-2>.ball:nth-child(3) {
+		.bouncer-ball:nth-child(3) {
 			animation-delay: 0.3s;
 		}
 
-		.bouncer-2>.ball:nth-child(4) {
+		.bouncer-ball:nth-child(4) {
 			animation-delay: 0.4s;
 		}
 
@@ -66,11 +66,11 @@
 </head>
 
 <body>
-	<div class="bouncer-2">
-		<div class="ball"></div>
-		<div class="ball"></div>
-		<div class="ball"></div>
-		<div class="ball"></div>
+	<div class="bouncer">
+		<div class="bouncer-ball"></div>
+		<div class="bouncer-ball"></div>
+		<div class="bouncer-ball"></div>
+		<div class="bouncer-ball"></div>
 	</div>
 </body>
 

@@ -30,6 +30,7 @@ For naming convention, I'm using `BEM`.
 - [x] Collapse
 - [x] Dropdown
 - [x] Input
+- [x] Loading
 - [x] Textarea
 - [x] Quote
 

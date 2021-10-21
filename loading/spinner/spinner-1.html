@@ -11,7 +11,7 @@
 		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="../../css-global/global.css" />
-	<title>Spinner-1</title>
+	<title>Spinner 1</title>
 
 	<style>
 		body {
@@ -20,16 +20,15 @@
 
 		/* ---------------------------- */
 
-		.spinner-1 {
+		.spinner {
 			width: 50px;
 			content: "";
 			height: 50px;
 			position: absolute;
 			border-radius: 100%;
-			border: 6px solid #cec6c5;
-			border-top-color: #343a40;
+			border: 6px solid var(--primary-200);
+			border-top-color: var(--primary-900);
 			animation: spinner 0.8s linear infinite;
-			box-shadow: 0 0 0.4px 0.4px rgba(0, 0, 0, 0.102);
 		}
 
 		@keyframes spinner {
@@ -45,7 +44,7 @@
 </head>
 
 <body>
-	<div class="spinner-1"></div>
+	<div class="spinner"></div>
 </body>
 
 </html>
