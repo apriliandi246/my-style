@@ -11,7 +11,7 @@
 		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="../../css-global/global.css" />
-	<title>Secondary Alert</title>
+	<title>Secondary alert</title>
 
 	<style>
 		body {
@@ -69,14 +69,11 @@
 		</button>
 	</div>
 
-	<script>
+	<script type="module">
+		import { listener } from "../../js/utils/dom.js";
+
 		const secondaryAlert = document.getElementById("secondary-alert");
 		const closeAlertBtn = document.getElementById("secondary-btn-close");
-
-		function listener(node, event, handler) {
-			node.addEventListener(event, handler);
-			return () => node.removeEventListener(event, handler);
-		}
 
 		listener(closeAlertBtn, "click", () => secondaryAlert.remove());
 	</script>

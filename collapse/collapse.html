@@ -52,7 +52,7 @@
 			align-items: center;
 		}
 
-		.collapse__icons:last-child {
+		.collapse__icons>svg:last-child {
 			display: none;
 		}
 
@@ -75,7 +75,6 @@
 					stroke="#363a44"
 					viewBox="0 0 24 24"
 					stroke-linejoin="round"
-					class="collapse__down-icon"
 					xmlns="http://www.w3.org/2000/svg"
 					stroke-width="2" stroke-linecap="round">
 					<polyline points="6 9 12 15 18 9"></polyline>
@@ -90,7 +89,6 @@
 					viewBox="0 0 24 24"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="collapse__up-icon"
 					xmlns="http://www.w3.org/2000/svg">
 					<polyline points="18 15 12 9 6 15"></polyline>
 				</svg>
@@ -119,7 +117,6 @@
 					stroke="#363a44"
 					viewBox="0 0 24 24"
 					stroke-linejoin="round"
-					class="collapse__down-icon"
 					xmlns="http://www.w3.org/2000/svg"
 					stroke-width="2" stroke-linecap="round">
 					<polyline points="6 9 12 15 18 9"></polyline>
@@ -134,7 +131,6 @@
 					viewBox="0 0 24 24"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="collapse__up-icon"
 					xmlns="http://www.w3.org/2000/svg">
 					<polyline points="18 15 12 9 6 15"></polyline>
 				</svg>
@@ -164,7 +160,6 @@
 					stroke="#363a44"
 					viewBox="0 0 24 24"
 					stroke-linejoin="round"
-					class="collapse__down-icon"
 					xmlns="http://www.w3.org/2000/svg"
 					stroke-width="2" stroke-linecap="round">
 					<polyline points="6 9 12 15 18 9"></polyline>
@@ -179,7 +174,6 @@
 					viewBox="0 0 24 24"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="collapse__up-icon"
 					xmlns="http://www.w3.org/2000/svg">
 					<polyline points="18 15 12 9 6 15"></polyline>
 				</svg>
@@ -198,7 +192,9 @@
 		</p>
 	</div>
 
-	<script>
+	<script type="module">
+		import { listener } from "../../js/utils/dom.js";
+
 		const collapse_1 = document.getElementById("collapse");
 		listener(collapse_1, "click", () => toggleCollapse(collapse_1));
 
@@ -217,11 +213,6 @@
 			collapseMessage.style.display = displayValue === "block" ? "none" : "block";
 			collapseIcons.lastElementChild.style.display = displayValue === "block" ? "none" : "inline-block";
 			collapseIcons.firstElementChild.style.display = displayValue === "block" ? "inline-block" : "none";
-		}
-
-		function listener(node, event, handler) {
-			node.addEventListener(event, handler);
-			return () => node.removeEventListener(event, handler);
 		}
 	</script>
 </body>

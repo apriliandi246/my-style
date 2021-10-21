@@ -11,7 +11,7 @@
 		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="../../css-global/global.css" />
-	<title>Info Alert</title>
+	<title>Info alert</title>
 
 	<style>
 		body {
@@ -95,14 +95,11 @@
 		</button>
 	</div>
 
-	<script>
+	<script type="module">
+		import { listener } from "../../js/utils/dom.js";
+
 		const infoAlert = document.getElementById("info-alert");
 		const closeAlertBtn = document.getElementById("info-btn-close");
-
-		function listener(node, event, handler) {
-			node.addEventListener(event, handler);
-			return () => node.removeEventListener(event, handler);
-		}
 
 		listener(closeAlertBtn, "click", () => infoAlert.remove());
 	</script>

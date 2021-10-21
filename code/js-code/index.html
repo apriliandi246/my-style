@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="../../css-global/global.css" />
-	<title>Javascript Code</title>
+	<title>Javascript code</title>
 
 	<style>
 		body {
@@ -82,7 +82,9 @@ function listener(node, event, handler) {
 listener(btnCodeCopy, "click", getCopyOfCode);</code><button class="code-copy" id="code-copy">Copy</button>
 	</pre>
 
-	<script>
+	<script type="module">
+		import { listener } from "../../js/utils/dom.js";
+
 		const btnCodeCopy = document.getElementById("code-copy");
 		const blockOfCode = document.getElementById("code-block");
 
@@ -93,11 +95,6 @@ listener(btnCodeCopy, "click", getCopyOfCode);</code><button class="code-copy" i
 			setTimeout(() => {
 				btnCodeCopy.textContent = "Copy";
 			}, 700);
-		}
-
-		function listener(node, event, handler) {
-			node.addEventListener(event, handler);
-			return () => node.removeEventListener(event, handler);
 		}
 
 		listener(btnCodeCopy, "click", () => getCopyOfCode(blockOfCode.textContent));
