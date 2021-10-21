@@ -29,5 +29,6 @@ For naming convention, I'm using `BEM`.
 - [x] Code
 - [x] Collapse
 - [x] Dropdown
+- [x] Input
 
 <h3 align="right">(⌐■_■)</h3>
