@@ -30,5 +30,6 @@ For naming convention, I'm using `BEM`.
 - [x] Collapse
 - [x] Dropdown
 - [x] Input
+- [x] Textarea
 
 <h3 align="right">(⌐■_■)</h3>
