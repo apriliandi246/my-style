@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Radio input</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		/* ---------------------------- */
+
+		.radio-wrapper {
+			position: relative;
+			display: inline-block;
+		}
+
+		.radio-input__comp {
+			width: 20px;
+			z-index: 99;
+			height: 20px;
+			cursor: pointer;
+			appearance: none;
+			position: relative;
+			-ms-progress-appearance: none;
+		}
+
+		.radio-input__comp::after {
+			width: 100%;
+			content: "";
+			height: 100%;
+			position: absolute;
+			border-radius: 100%;
+			background-color: var(--neutral-50);
+			border: 1px solid var(--primary-900);
+		}
+
+		.radio-active-element {
+			top: 0;
+			opacity: 0;
+			width: 12px;
+			height: 12px;
+			margin-top: 4px;
+			cursor: pointer;
+			margin-left: 4.1px;
+			position: absolute;
+			border-radius: 100%;
+			background-color: var(--primary-900);
+		}
+
+		.radio-visible {
+			opacity: 1;
+			z-index: 999;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="radio-wrapper">
+		<input type="radio" class="radio-input__comp radio-input" name="gender" />
+		<div class="radio-active-element"></div>
+	</div>
+
+	<br><br>
+
+	<div class="radio-wrapper">
+		<input type="radio" class="radio-input__comp radio-input" name="gender" />
+		<div class="radio-active-element"></div>
+	</div>
+
+	<br><br>
+
+	<div class="radio-wrapper">
+		<input type="radio" class="radio-input__comp radio-input" name="gender" />
+		<div class="radio-active-element"></div>
+	</div>
+
+	<script>
+		let currentRadioActive;
+		const radioInputs = document.getElementsByClassName("radio-input");
+
+		for (let index = 0; index < radioInputs.length; index++) {
+			listener(radioInputs.item(index), "click", toggleRadioActive)
+		}
+
+		function toggleRadioActive(event) {
+			if (!currentRadioActive) {
+				currentRadioActive = event.target.nextElementSibling;
+				currentRadioActive.classList.add("radio-visible");
+			} else {
+				const currentRadioInput = event.target.nextElementSibling;
+
+				currentRadioActive.classList.remove("radio-visible");
+				currentRadioInput.classList.add("radio-visible");
+				currentRadioActive = currentRadioInput;
+			}
+		}
+
+		function listener(node, event, handler) {
+			node.addEventListener(event, handler);
+			return () => node.removeEventListener(event, handler);
+		}
+	</script>
+</body>
+
+</html>
