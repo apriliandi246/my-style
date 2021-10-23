@@ -33,5 +33,6 @@ For naming convention, I'm using `BEM`.
 - [x] Loading
 - [x] Textarea
 - [x] Quote
+- [x] Skeleton
 
 <h3 align="right">(⌐■_■)</h3>
