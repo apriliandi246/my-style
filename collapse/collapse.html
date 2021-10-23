@@ -247,6 +247,7 @@
 		class Collapse {
 			constructor() {
 				this.currentCollapseMsg = "";
+				this.currentCollaseIcons = "";
 				this.collapseComponents = document.getElementsByClassName("collapse__head");
 
 				this.addEventListener();
@@ -265,23 +266,26 @@
 
 				collapse.classList.toggle("collapse-active");
 				collapseMessage.style.display = currentDisplayValue === "block" ? "none" : "block";
-				collapseIcons.lastElementChild.style.display = currentDisplayValue === "block" ? "none" : "inline-block";
 				collapseIcons.firstElementChild.style.display = currentDisplayValue === "block" ? "inline-block" : "none";
+				collapseIcons.lastElementChild.style.display = currentDisplayValue === "block" ? "none" : "inline-block";
 
 				this.hidePreviousCollapse(collapseMessage);
+				this.currentCollaseIcons = collapseIcons;
 			}
 
-			hidePreviousCollapse(currentCollapseMsg) {
-				if (this.currentCollapseMsg.isSameNode(currentCollapseMsg)) {
+			hidePreviousCollapse(collapseMsg) {
+				if (this.currentCollapseMsg === collapseMsg) {
 					this.currentCollapseMsg = "";
 				}
 
 				if (!this.currentCollapseMsg) {
-					this.currentCollapseMsg = currentCollapseMsg;
+					this.currentCollapseMsg = collapseMsg;
 				} else {
 					this.currentCollapseMsg.previousElementSibling.classList.remove("collapse-active");
+					this.currentCollaseIcons.firstElementChild.style = "inline-block";
+					this.currentCollaseIcons.lastElementChild.style = "none";
 					this.currentCollapseMsg.style.display = "none";
-					this.currentCollapseMsg = currentCollapseMsg;
+					this.currentCollapseMsg = collapseMsg;
 				}
 			}
 		}
