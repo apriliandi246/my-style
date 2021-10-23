@@ -80,31 +80,40 @@
 		<div class="radio-active-element"></div>
 	</div>
 
-	<script>
-		let currentRadioActive;
-		const radioInputs = document.getElementsByClassName("radio-input");
+	<script type="module">
+		"use strict";
 
-		for (let index = 0; index < radioInputs.length; index++) {
-			listener(radioInputs.item(index), "click", toggleRadioActive)
-		}
+		import { listener } from "../../js/utils/dom.js";
 
-		function toggleRadioActive(event) {
-			if (!currentRadioActive) {
-				currentRadioActive = event.target.nextElementSibling;
-				currentRadioActive.classList.add("radio-visible");
-			} else {
-				const currentRadioInput = event.target.nextElementSibling;
+		class RadioInput {
+			constructor() {
+				this.currentRadioActive = "";
+				this.radioInputs = document.getElementsByClassName("radio-input");
 
-				currentRadioActive.classList.remove("radio-visible");
-				currentRadioInput.classList.add("radio-visible");
-				currentRadioActive = currentRadioInput;
+				this.addEventListener();
+			}
+
+			addEventListener() {
+				for (let index = 0; index < this.radioInputs.length; index++) {
+					listener(this.radioInputs.item(index), "click", (event) => this.toggleActiveRadio(event));
+				}
+			}
+
+			toggleActiveRadio(event) {
+				if (!this.currentRadioActive) {
+					this.currentRadioActive = event.target.nextElementSibling;
+					this.currentRadioActive.classList.add("radio-visible");
+				} else {
+					const currentRadioInput = event.target.nextElementSibling;
+
+					this.currentRadioActive.classList.remove("radio-visible");
+					currentRadioInput.classList.add("radio-visible");
+					this.currentRadioActive = currentRadioInput;
+				}
 			}
 		}
 
-		function listener(node, event, handler) {
-			node.addEventListener(event, handler);
-			return () => node.removeEventListener(event, handler);
-		}
+		new RadioInput();
 	</script>
 </body>
 
