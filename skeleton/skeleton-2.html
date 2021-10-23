@@ -5,20 +5,71 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../css-global/global.css" />
-	<link rel="stylesheet" href="./css/skeleton-2.css">
-	<title>Skeleton 1</title>
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Skeleton 2</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		/* ----------------------------------------- */
+
+		.circle {
+			width: 50px;
+			height: 50px;
+			border-radius: 100%;
+			background-size: 300px;
+			background-color: #f9fafb;
+			background-repeat: no-repeat;
+			animation: skeleton 1s ease infinite;
+			background-image: linear-gradient(100deg, #f9fafb, rgba(229, 231, 235, 0.9), #f9fafb);
+		}
+
+		.block {
+			width: 250px;
+			height: 40px;
+			border-radius: 5px;
+			background-size: 300px;
+			background-color: #f9fafb;
+			background-repeat: no-repeat;
+			animation: skeleton 1s ease infinite;
+			background-image: linear-gradient(100deg, #f9fafb, rgba(229, 231, 235, 0.9), #f9fafb);
+		}
+
+		.large-block {
+			width: 500px;
+			height: 250px;
+			border-radius: 5px;
+			background-size: 300px;
+			background-color: #f9fafb;
+			background-repeat: no-repeat;
+			animation: skeleton 1s ease infinite;
+			background-image: linear-gradient(90deg, #f9fafb, rgba(229, 231, 235, 0.9), #f9fafb);
+		}
+
+		@keyframes skeleton {
+			0% {
+				background-position: -500px;
+			}
+
+			100% {
+				background-position: calc(400px + 100%);
+			}
+		}
+	</style>
 </head>
 
 <body>
-	<div class="circle-skeleton"></div>
+	<div class="circle"></div>
 
 	<br><br>
 
-	<div class="block-skeleton"></div>
+	<div class="block"></div>
+
+	<br><br>
+
+	<div class="large-block"></div>
 </body>
 
 </html>
