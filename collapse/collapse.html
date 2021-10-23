@@ -246,7 +246,7 @@
 
 		class Collapse {
 			constructor() {
-				this.currentCollapse = "";
+				this.currentCollapseMsg = "";
 				this.collapseComponents = document.getElementsByClassName("collapse__head");
 
 				this.addEventListener();
@@ -272,16 +272,16 @@
 			}
 
 			hidePreviousCollapse(currentCollapseMsg) {
-				if (this.currentCollapse === currentCollapseMsg) {
-					this.currentCollapse = "";
+				if (this.currentCollapseMsg.isSameNode(currentCollapseMsg)) {
+					this.currentCollapseMsg = "";
 				}
 
-				if (!this.currentCollapse) {
-					this.currentCollapse = currentCollapseMsg;
+				if (!this.currentCollapseMsg) {
+					this.currentCollapseMsg = currentCollapseMsg;
 				} else {
-					this.currentCollapse.previousElementSibling.classList.remove("collapse-active");
-					this.currentCollapse.style.display = "none";
-					this.currentCollapse = currentCollapseMsg;
+					this.currentCollapseMsg.previousElementSibling.classList.remove("collapse-active");
+					this.currentCollapseMsg.style.display = "none";
+					this.currentCollapseMsg = currentCollapseMsg;
 				}
 			}
 		}
