@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>CSS code 2</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		.code-container {
+			overflow-x: auto;
+			border-radius: 4px;
+			padding-left: 24px;
+			padding-right: 24px;
+			position: relative;
+			background-color: var(--primary-900);
+		}
+
+		.code-container::-webkit-scrollbar {
+			background-color: var(--primary-800);
+		}
+
+		.code-container::-webkit-scrollbar-thumb {
+			background-color: var(--primary-600);
+		}
+
+		.code-block {
+			letter-spacing: 0.2px;
+			color: var(--info-50);
+			font: 500 17px/25px monospace;
+		}
+
+		.code-copy {
+			top: 0;
+			right: 0;
+			border: none;
+			padding: 7px;
+			font-size: 17px;
+			margin-top: 10px;
+			font-weight: 600;
+			position: absolute;
+			margin-right: 16px;
+			letter-spacing: 0.6px;
+			color: var(--neutral-50);
+			transition: background-color 100ms;
+			background-color: var(--secondary-800);
+		}
+
+		.code-copy:hover {
+			background-color: var(--primary-700);
+		}
+	</style>
+</head>
+
+<body>
+	<pre class="code-container">
+	<code class="code-block">
+.component_1 {
+  white-space: pre-line;
+  display: block;
+  resize: none;
+  font-family: monospace;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #38444d;
+  font-size: 18px;
+  outline: none;
+  transition: background-color 0.2s;
+  box-sizing: border-box;
+  background-color: #253341;
+  margin-top: 17px;
+  color: #f5f5f5;
+}</code><button class="code-copy" id="code-copy">Copy</button>
+	</pre>
+
+	<br><br>
+
+	<pre class="code-container">
+	<code class="code-block">
+.component_2 {
+  width: 57px;
+  height: 57px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 6px solid #0678fb;
+  border-top-color: transparent;
+  animation: spinner 0.7s linear infinite;
+}</code><button class="code-copy" id="code-copy">Copy</button>
+		</pre>
+
+	<script type="module">
+		"use strict";
+
+		import { listener } from "../../js/utils/dom.js";
+
+		class CodeBlock {
+			constructor() {
+				this.codeBlocks = document.getElementsByClassName("code-block");
+
+				this.addEventListener();
+			}
+
+			addEventListener() {
+				for (let index = 0; index < this.codeBlocks.length; index++) {
+					const blockOfCode = this.codeBlocks[index].textContent;
+					const buttonCopy = this.codeBlocks[index].nextElementSibling;
+
+					listener(buttonCopy, "click", () => this.copyBlockOfCode(buttonCopy, blockOfCode));
+				}
+			}
+
+			async copyBlockOfCode(buttonCopy, blockOfCode) {
+				let copiedDelay;
+
+				await navigator.clipboard.writeText(blockOfCode);
+				buttonCopy.textContent = "Copied";
+
+				copiedDelay = setTimeout(() => {
+					buttonCopy.textContent = "Copy";
+					clearTimeout(copiedDelay);
+				}, 700);
+			}
+		}
+
+		new CodeBlock();
+	</script>
+</body>
+
+</html>

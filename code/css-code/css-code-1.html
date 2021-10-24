@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="../../css-global/global.css" />
-	<title>CSS code</title>
+	<title>CSS code 1</title>
 
 	<style>
 		body {
@@ -80,21 +80,36 @@
 	</pre>
 
 	<script type="module">
+		"use strict";
+
 		import { listener } from "../../js/utils/dom.js";
 
-		const btnCodeCopy = document.getElementById("code-copy");
-		const blockOfCode = document.getElementById("code-block");
+		class CodeBlock {
+			constructor() {
+				this.codeBlock = document.getElementById("code-block");
+				this.buttonCopy = this.codeBlock.nextElementSibling;
 
-		async function getCopyOfCode(code) {
-			await navigator.clipboard.writeText(code);
-			btnCodeCopy.textContent = "Copied";
+				this.addEventListener();
+			}
 
-			setTimeout(() => {
-				btnCodeCopy.textContent = "Copy";
-			}, 700);
+			addEventListener() {
+				listener(this.buttonCopy, "click", this.copyBlockOfCode);
+			}
+
+			copyBlockOfCode = async () => {
+				let copiedDelay;
+
+				await navigator.clipboard.writeText(this.codeBlock.textContent);
+				this.buttonCopy.textContent = "Copied";
+
+				setTimeout(() => {
+					this.buttonCopy.textContent = "Copy";
+					clearTimeout(copiedDelay);
+				}, 700);
+			}
 		}
 
-		listener(btnCodeCopy, "click", () => getCopyOfCode(blockOfCode.textContent));
+		new CodeBlock();
 	</script>
 </body>
 
