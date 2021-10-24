@@ -100,10 +100,10 @@
 	<script type="module">
 		import { listener } from "../../js/utils/dom.js";
 
-		const errorAlert = document.getElementById("error-alert");
 		const closeAlertBtn = document.getElementById("error-btn-close");
+		const alert = closeAlertBtn.parentElement;
 
-		listener(closeAlertBtn, "click", () => errorAlert.remove());
+		listener(closeAlertBtn, "click", () => alert.remove());
 	</script>
 </body>
 

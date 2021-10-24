@@ -98,10 +98,10 @@
 	<script type="module">
 		import { listener } from "../../js/utils/dom.js";
 
-		const infoAlert = document.getElementById("info-alert");
 		const closeAlertBtn = document.getElementById("info-btn-close");
+		const alert = closeAlertBtn.parentElement;
 
-		listener(closeAlertBtn, "click", () => infoAlert.remove());
+		listener(closeAlertBtn, "click", () => alert.remove());
 	</script>
 </body>
 

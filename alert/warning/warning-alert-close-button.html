@@ -102,10 +102,10 @@
 	<script type="module">
 		import { listener } from "../../js/utils/dom.js";
 
-		const warningAlert = document.getElementById("warning-alert");
 		const closeAlertBtn = document.getElementById("warning-btn-close");
+		const alert = closeAlertBtn.parentElement;
 
-		listener(closeAlertBtn, "click", () => warningAlert.remove());
+		listener(closeAlertBtn, "click", () => alert.remove());
 	</script>
 </body>
 

@@ -72,10 +72,10 @@
 	<script type="module">
 		import { listener } from "../../js/utils/dom.js";
 
-		const secondaryAlert = document.getElementById("secondary-alert");
 		const closeAlertBtn = document.getElementById("secondary-btn-close");
+		const alert = closeAlertBtn.parentElement;
 
-		listener(closeAlertBtn, "click", () => secondaryAlert.remove());
+		listener(closeAlertBtn, "click", () => alert.remove());
 	</script>
 </body>
 
