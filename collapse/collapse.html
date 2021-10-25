@@ -21,7 +21,9 @@
 		/* ---------------------------- */
 
 		.collapse__head {
+			width: 100%;
 			display: flex;
+			font-size: 16px;
 			cursor: pointer;
 			border-radius: 4px;
 			padding: 15px 16px;
@@ -31,7 +33,7 @@
 			border: 1px solid var(--neutral-300);
 		}
 
-		.collapse__head:active {
+		.collapse__head:focus {
 			border: 1px solid var(--primary-800);
 		}
 
@@ -55,17 +57,13 @@
 		.collapse__icons>svg:last-child {
 			display: none;
 		}
-
-		.collapse-active {
-			border: 1px solid var(--primary-800);
-		}
 	</style>
 </head>
 
 <body>
 	<div class="collapse">
-		<div class="collapse__head">
-			<p class="collapse__head-message">What is HTML ????</p>
+		<button class="collapse__head">
+			What is HTML ????
 
 			<div class="collapse__icons">
 				<svg
@@ -93,7 +91,7 @@
 					<polyline points="18 15 12 9 6 15"></polyline>
 				</svg>
 			</div>
-		</div>
+		</button>
 
 		<p class="collapse__message">
 			HTML (Hypertext Markup Language) is the code that is used to structure a web page and its content. For example,
@@ -106,8 +104,8 @@
 	<br>
 
 	<div class="collapse">
-		<div class="collapse__head">
-			<p class="collapse__head-message">What is CSS ????</p>
+		<button class="collapse__head">
+			What is CSS ????
 
 			<div class="collapse__icons">
 				<svg
@@ -135,7 +133,7 @@
 					<polyline points="18 15 12 9 6 15"></polyline>
 				</svg>
 			</div>
-		</div>
+		</button>
 
 		<p class="collapse__message">
 			CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood?
@@ -147,10 +145,8 @@
 	<br>
 
 	<div class="collapse">
-		<div class="collapse__head">
-			<p class="collapse__head-message">
-				What is Javascript ????
-			</p>
+		<button class="collapse__head">
+			What is Javascript ????
 
 			<div class="collapse__icons">
 				<svg
@@ -178,7 +174,7 @@
 					<polyline points="18 15 12 9 6 15"></polyline>
 				</svg>
 			</div>
-		</div>
+		</button>
 
 		<p class="collapse__message">
 			JavaScript is a scripting or programming language that allows you to implement complex features on web pages —
@@ -195,10 +191,8 @@
 	<br>
 
 	<div class="collapse">
-		<div class="collapse__head">
-			<p class="collapse__head-message">
-				What is Svelte ????
-			</p>
+		<button class="collapse__head">
+			What is Svelte ????
 
 			<div class="collapse__icons">
 				<svg
@@ -226,7 +220,7 @@
 					<polyline points="18 15 12 9 6 15"></polyline>
 				</svg>
 			</div>
-		</div>
+		</button>
 
 		<p class="collapse__message">
 			Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do
@@ -254,7 +248,9 @@
 			}
 
 			addEventListener() {
-				for (let index = 0; index < this.collapseComponents.length; index++) {
+				const collapseElements = this.collapseComponents.length;
+
+				for (let index = 0; index < collapseElements; index++) {
 					listener(this.collapseComponents[index], "click", () => this.toggleCollapse(this.collapseComponents[index]));
 				}
 			}
@@ -264,10 +260,9 @@
 				const currentDisplayValue = collapseMessage.style.display;
 				const collapseIcons = collapse.querySelector(".collapse__icons");
 
-				collapse.classList.toggle("collapse-active");
-				collapseMessage.style.display = currentDisplayValue === "block" ? "none" : "block";
 				collapseIcons.firstElementChild.style.display = currentDisplayValue === "block" ? "inline-block" : "none";
 				collapseIcons.lastElementChild.style.display = currentDisplayValue === "block" ? "none" : "inline-block";
+				collapseMessage.style.display = currentDisplayValue === "block" ? "none" : "block";
 
 				this.hidePreviousCollapse(collapseMessage);
 				this.currentCollaseIcons = collapseIcons;
@@ -282,8 +277,8 @@
 					this.currentCollapseMsg = collapseMsg;
 				} else {
 					this.currentCollapseMsg.previousElementSibling.classList.remove("collapse-active");
-					this.currentCollaseIcons.firstElementChild.style = "inline-block";
-					this.currentCollaseIcons.lastElementChild.style = "none";
+					this.currentCollaseIcons.firstElementChild.style.display = "inline-block";
+					this.currentCollaseIcons.lastElementChild.style.display = "none";
 					this.currentCollapseMsg.style.display = "none";
 					this.currentCollapseMsg = collapseMsg;
 				}

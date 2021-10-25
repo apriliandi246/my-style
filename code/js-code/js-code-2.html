@@ -52,9 +52,13 @@
 			background-color: var(--secondary-800);
 		}
 
-
 		.code-copy:hover {
 			background-color: var(--secondary-700);
+		}
+
+		.code-copy:focus {
+			outline-offset: -1px;
+			outline: 2px solid var(--neutral-50);
 		}
 	</style>
 </head>
@@ -114,7 +118,9 @@ listener(btnCodeCopy, "click", getCopyOfCode);</code><button class="code-copy" i
 			}
 
 			addEventListener() {
-				for (let index = 0; index < this.codeBlocks.length; index++) {
+				const codeBlockElements = this.codeBlocks.length;
+
+				for (let index = 0; index < codeBlockElements; index++) {
 					const blockOfCode = this.codeBlocks[index].textContent;
 					const buttonCopy = this.codeBlocks[index].nextElementSibling;
 

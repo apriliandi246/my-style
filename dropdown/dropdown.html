@@ -40,11 +40,6 @@
 			pointer-events: none;
 		}
 
-		.collapse__head:active,
-		.dropdown__button:focus {
-			border: 1px solid var(--primary-800);
-		}
-
 		.dropdown__items {
 			top: 0;
 			display: none;
@@ -66,16 +61,18 @@
 			padding: 10px 80px 10px 13px;
 		}
 
-		.dropdown__items:focus {
-			border: 1px solid var(--primary-800);
-		}
-
 		.dropdown__item:hover {
 			background-color: var(--neutral-200);
 		}
 
 		.dropdown__item:last-child {
 			margin-bottom: 0;
+		}
+
+		.dropdown__item:focus,
+		.dropdown__button:focus {
+			outline-offset: -1px;
+			outline: 2px solid var(--primary-900);
 		}
 	</style>
 </head>
@@ -130,9 +127,9 @@
 			}
 
 			clickOutside = (event) => {
-				const dropdownParentEl = this.dropdown.parentElement;
+				const dropdownParentElement = this.dropdown.parentElement;
 
-				if (!dropdownParentEl.contains(event.target)) {
+				if (!dropdownParentElement.contains(event.target)) {
 					this.dropdownMenus.style.display = "none";
 				}
 			}
