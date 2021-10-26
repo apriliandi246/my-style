@@ -20,12 +20,12 @@
 
 		/* ---------------------------- */
 
-		.collapse__head {
+		.collapse__button {
 			width: 100%;
 			display: flex;
 			font-size: 16px;
 			cursor: pointer;
-			border-radius: 4px;
+			border-radius: 0;
 			padding: 15px 16px;
 			align-items: center;
 			justify-content: space-between;
@@ -33,17 +33,17 @@
 			border: 1px solid var(--neutral-300);
 		}
 
-		.collapse__head:focus {
-			border: 1px solid var(--primary-800);
+		.collapse__button::after {
+			color: #000;
+			font-size: 18px;
+			content: "\002B";
 		}
 
 		.collapse__message {
 			display: none;
 			padding: 16px;
-			margin-top: 18px;
 			line-height: 27px;
 			border-radius: 4px;
-			margin-bottom: 10px;
 			background-color: var(--neutral-50);
 			border: 1px solid var(--neutral-300);
 		}
@@ -57,40 +57,23 @@
 		.collapse__icons>svg:last-child {
 			display: none;
 		}
+
+		.collapse-active::after {
+			content: "\2212";
+		}
+
+		.collapse-active,
+		.collapse__button:focus {
+			outline-offset: -1px;
+			outline: 2px solid var(--primary-900);
+		}
 	</style>
 </head>
 
 <body>
 	<div class="collapse">
-		<button class="collapse__head">
+		<button class="collapse__button">
 			What is HTML ????
-
-			<div class="collapse__icons">
-				<svg
-					width="24"
-					height="24"
-					fill="none"
-					stroke="#363a44"
-					viewBox="0 0 24 24"
-					stroke-linejoin="round"
-					xmlns="http://www.w3.org/2000/svg"
-					stroke-width="2" stroke-linecap="round">
-					<polyline points="6 9 12 15 18 9"></polyline>
-				</svg>
-
-				<svg
-					width="24"
-					height="24"
-					fill="none"
-					stroke-width="2"
-					stroke="#363a44"
-					viewBox="0 0 24 24"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					xmlns="http://www.w3.org/2000/svg">
-					<polyline points="18 15 12 9 6 15"></polyline>
-				</svg>
-			</div>
 		</button>
 
 		<p class="collapse__message">
@@ -101,38 +84,9 @@
 			suggests, this article will give you a basic understanding of HTML and its functions.</p>
 	</div>
 
-	<br>
-
 	<div class="collapse">
-		<button class="collapse__head">
+		<button class="collapse__button">
 			What is CSS ????
-
-			<div class="collapse__icons">
-				<svg
-					width="24"
-					height="24"
-					fill="none"
-					stroke="#363a44"
-					viewBox="0 0 24 24"
-					stroke-linejoin="round"
-					xmlns="http://www.w3.org/2000/svg"
-					stroke-width="2" stroke-linecap="round">
-					<polyline points="6 9 12 15 18 9"></polyline>
-				</svg>
-
-				<svg
-					width="24"
-					height="24"
-					fill="none"
-					stroke-width="2"
-					stroke="#363a44"
-					viewBox="0 0 24 24"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					xmlns="http://www.w3.org/2000/svg">
-					<polyline points="18 15 12 9 6 15"></polyline>
-				</svg>
-			</div>
 		</button>
 
 		<p class="collapse__message">
@@ -142,38 +96,9 @@
 		</p>
 	</div>
 
-	<br>
-
 	<div class="collapse">
-		<button class="collapse__head">
+		<button class="collapse__button">
 			What is Javascript ????
-
-			<div class="collapse__icons">
-				<svg
-					width="24"
-					height="24"
-					fill="none"
-					stroke="#363a44"
-					viewBox="0 0 24 24"
-					stroke-linejoin="round"
-					xmlns="http://www.w3.org/2000/svg"
-					stroke-width="2" stroke-linecap="round">
-					<polyline points="6 9 12 15 18 9"></polyline>
-				</svg>
-
-				<svg
-					width="24"
-					height="24"
-					fill="none"
-					stroke-width="2"
-					stroke="#363a44"
-					viewBox="0 0 24 24"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					xmlns="http://www.w3.org/2000/svg">
-					<polyline points="18 15 12 9 6 15"></polyline>
-				</svg>
-			</div>
 		</button>
 
 		<p class="collapse__message">
@@ -188,38 +113,9 @@
 		</p>
 	</div>
 
-	<br>
-
 	<div class="collapse">
-		<button class="collapse__head">
+		<button class="collapse__button">
 			What is Svelte ????
-
-			<div class="collapse__icons">
-				<svg
-					width="24"
-					height="24"
-					fill="none"
-					stroke="#363a44"
-					viewBox="0 0 24 24"
-					stroke-linejoin="round"
-					xmlns="http://www.w3.org/2000/svg"
-					stroke-width="2" stroke-linecap="round">
-					<polyline points="6 9 12 15 18 9"></polyline>
-				</svg>
-
-				<svg
-					width="24"
-					height="24"
-					fill="none"
-					stroke-width="2"
-					stroke="#363a44"
-					viewBox="0 0 24 24"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					xmlns="http://www.w3.org/2000/svg">
-					<polyline points="18 15 12 9 6 15"></polyline>
-				</svg>
-			</div>
 		</button>
 
 		<p class="collapse__message">
@@ -241,8 +137,7 @@
 		class Collapse {
 			constructor() {
 				this.currentCollapseMsg = "";
-				this.currentCollaseIcons = "";
-				this.collapseComponents = document.getElementsByClassName("collapse__head");
+				this.collapseComponents = document.getElementsByClassName("collapse__button");
 
 				this.addEventListener();
 			}
@@ -258,10 +153,8 @@
 			toggleCollapse(collapse) {
 				const collapseMessage = collapse.nextElementSibling;
 				const currentDisplayValue = collapseMessage.style.display;
-				const collapseIcons = collapse.querySelector(".collapse__icons");
 
-				collapseIcons.firstElementChild.style.display = currentDisplayValue === "block" ? "inline-block" : "none";
-				collapseIcons.lastElementChild.style.display = currentDisplayValue === "block" ? "none" : "inline-block";
+				collapse.classList.toggle("collapse-active");
 				collapseMessage.style.display = currentDisplayValue === "block" ? "none" : "block";
 
 				this.hidePreviousCollapse(collapseMessage);
@@ -277,8 +170,6 @@
 					this.currentCollapseMsg = collapseMsg;
 				} else {
 					this.currentCollapseMsg.previousElementSibling.classList.remove("collapse-active");
-					this.currentCollaseIcons.firstElementChild.style.display = "inline-block";
-					this.currentCollaseIcons.lastElementChild.style.display = "none";
 					this.currentCollapseMsg.style.display = "none";
 					this.currentCollapseMsg = collapseMsg;
 				}
