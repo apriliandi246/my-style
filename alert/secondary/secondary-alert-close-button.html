@@ -41,6 +41,11 @@
 			transition: background-color 100ms;
 		}
 
+		.secondary-alert__close:focus {
+			outline-offset: -1px;
+			outline: 2px solid #000;
+		}
+
 		.secondary-alert__close:hover {
 			background-color: var(--secondary-400);
 		}
@@ -48,7 +53,7 @@
 </head>
 
 <body>
-	<div class="secondary-alert" id="secondary-alert">
+	<div class="secondary-alert" id="alert">
 		<span class="secondary-alert__message">Secondary Alert Message</span>
 
 		<button class="secondary-alert__close" id="secondary-btn-close">
@@ -69,12 +74,28 @@
 	</div>
 
 	<script type="module">
+		"use strict";
+
 		import { listener } from "../../js/utils/dom.js";
 
-		const closeAlertBtn = document.getElementById("secondary-btn-close");
-		const alert = closeAlertBtn.parentElement;
+		class Alert {
+			constructor() {
+				this.alert = document.getElementById("alert");
+				this.closeAlertButton = this.alert.lastElementChild;
 
-		listener(closeAlertBtn, "click", () => alert.remove());
+				this.addEventListener();
+			}
+
+			addEventListener() {
+				listener(this.closeAlertButton, "click", this.hideAlert);
+			}
+
+			hideAlert = () => {
+				this.alert.remove();
+			}
+		}
+
+		new Alert();
 	</script>
 </body>
 

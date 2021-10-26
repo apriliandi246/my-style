@@ -50,6 +50,11 @@
 			transition: background-color 100ms;
 		}
 
+		.error-alert__close:focus {
+			outline-offset: -1px;
+			outline: 2px solid #000;
+		}
+
 		.error-alert__close:hover {
 			background-color: var(--error-400);
 		}
@@ -57,7 +62,7 @@
 </head>
 
 <body>
-	<div class="error-alert" id="error-alert">
+	<div class="error-alert" id="alert">
 		<div class="error-alert__main">
 			<svg
 				width="24"
@@ -96,12 +101,28 @@
 	</div>
 
 	<script type="module">
+		"use strict";
+
 		import { listener } from "../../js/utils/dom.js";
 
-		const closeAlertBtn = document.getElementById("error-btn-close");
-		const alert = closeAlertBtn.parentElement;
+		class Alert {
+			constructor() {
+				this.alert = document.getElementById("alert");
+				this.closeAlertButton = this.alert.lastElementChild;
 
-		listener(closeAlertBtn, "click", () => alert.remove());
+				this.addEventListener();
+			}
+
+			addEventListener() {
+				listener(this.closeAlertButton, "click", this.hideAlert);
+			}
+
+			hideAlert = () => {
+				this.alert.remove();
+			}
+		}
+
+		new Alert();
 	</script>
 </body>
 
