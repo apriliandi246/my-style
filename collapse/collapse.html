@@ -39,6 +39,10 @@
 			content: "\002B";
 		}
 
+		.collapse__button:disabled::after {
+			color: #ababab;
+		}
+
 		.collapse__message {
 			display: none;
 			padding: 16px;
@@ -46,16 +50,6 @@
 			border-radius: 4px;
 			background-color: var(--neutral-50);
 			border: 1px solid var(--neutral-300);
-		}
-
-		.collapse__icons {
-			display: flex;
-			margin-left: 16px;
-			align-items: center;
-		}
-
-		.collapse__icons>svg:last-child {
-			display: none;
 		}
 
 		.collapse-active::after {

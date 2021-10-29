@@ -234,6 +234,14 @@ textarea {
 	font-family: var(--font-family);
 }
 
+input:disabled,
+button:disabled,
+select:disabled,
+textarea:disabled {
+	color: #ababab;
+	background-color: #eee;
+}
+
 ul {
 	list-style: disc;
 	font-family: var(--font-family);
