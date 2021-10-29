@@ -68,7 +68,8 @@
 </head>
 
 <body>
-	<pre class="code-container">
+	<div class="code-container">
+		<pre>
 <code class="code-block">
 const btnCodeCopy = document.getElementById("code-copy");
 const blockOfCode = document.getElementById("code-block");
@@ -87,12 +88,15 @@ function listener(node, event, handler) {
   return () => node.removeEventListener(event, handler);
 }
 
-listener(btnCodeCopy, "click", getCopyOfCode);</code><button class="code-copy" id="code-copy">Copy</button>
+listener(btnCodeCopy, "click", getCopyOfCode);</code>
 	</pre>
+		<button class="code-copy" id="code-copy">Copy</button>
+	</div>
 
 	<br><br>
 
-	<pre class="code-container">
+	<div class="code-container">
+		<pre>
 	<code class="code-block">
 const btnCodeCopy = document.getElementById("code-copy");
 const blockOfCode = document.getElementById("code-block");
@@ -106,8 +110,10 @@ function listener(node, event, handler) {
   return () => node.removeEventListener(event, handler);
 }
 
-listener(btnCodeCopy, "click", getCopyOfCode);</code><button class="code-copy" id="code-copy">Copy</button>
+listener(btnCodeCopy, "click", getCopyOfCode);</code>
 	</pre>
+		<button class="code-copy" id="code-copy">Copy</button>
+	</div>
 
 	<script type="module">
 		"use strict";
@@ -126,7 +132,7 @@ listener(btnCodeCopy, "click", getCopyOfCode);</code><button class="code-copy" i
 
 				for (let index = 0; index < codeBlockElements; index++) {
 					const blockOfCode = this.codeBlocks[index].textContent;
-					const buttonCopy = this.codeBlocks[index].nextElementSibling;
+					const buttonCopy = this.codeBlocks[index].parentElement.nextElementSibling;
 
 					listener(buttonCopy, "click", () => this.copyBlockOfCode(buttonCopy, blockOfCode));
 				}

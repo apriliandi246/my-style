@@ -68,7 +68,8 @@
 </head>
 
 <body>
-	<pre class="code-container">
+	<div class="code-container">
+		<pre>
 <code class="code-block" id="code-block">
 const btnCodeCopy = document.getElementById("code-copy");
 const blockOfCode = document.getElementById("code-block");
@@ -87,8 +88,10 @@ function listener(node, event, handler) {
   return () => node.removeEventListener(event, handler);
 }
 
-listener(btnCodeCopy, "click", getCopyOfCode);</code><button class="code-copy" id="code-copy">Copy</button>
+listener(btnCodeCopy, "click", getCopyOfCode);</code>
 	</pre>
+		<button class="code-copy" id="code-copy">Copy</button>
+	</div>
 
 	<script type="module">
 		"use strict";
@@ -98,7 +101,7 @@ listener(btnCodeCopy, "click", getCopyOfCode);</code><button class="code-copy" i
 		class CodeBlock {
 			constructor() {
 				this.codeBlock = document.getElementById("code-block");
-				this.buttonCopy = this.codeBlock.nextElementSibling;
+				this.buttonCopy = document.getElementById("code-copy");
 
 				this.addEventListener();
 			}

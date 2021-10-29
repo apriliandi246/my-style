@@ -68,7 +68,8 @@
 </head>
 
 <body>
-	<pre class="code-container">
+	<div class="code-container">
+		<pre>
 	<code class="code-block">
 .component_1 {
   white-space: pre-line;
@@ -85,12 +86,15 @@
   background-color: #253341;
   margin-top: 17px;
   color: #f5f5f5;
-}</code><button class="code-copy" id="code-copy">Copy</button>
+}</code>
 	</pre>
+		<button class="code-copy" id="code-copy">Copy</button>
+	</div>
 
 	<br><br>
 
-	<pre class="code-container">
+	<div class="code-container">
+		<pre>
 	<code class="code-block">
 .component_2 {
   width: 57px;
@@ -100,8 +104,10 @@
   border: 6px solid #0678fb;
   border-top-color: transparent;
   animation: spinner 0.7s linear infinite;
-}</code><button class="code-copy" id="code-copy">Copy</button>
+}</code>
 		</pre>
+		<button class="code-copy" id="code-copy">Copy</button>
+	</div>
 
 	<script type="module">
 		"use strict";
@@ -120,7 +126,7 @@
 
 				for (let index = 0; index < codeBlockElements; index++) {
 					const blockOfCode = this.codeBlocks[index].textContent;
-					const buttonCopy = this.codeBlocks[index].nextElementSibling;
+					const buttonCopy = this.codeBlocks[index].parentElement.nextElementSibling;
 
 					listener(buttonCopy, "click", () => this.copyBlockOfCode(buttonCopy, blockOfCode));
 				}
