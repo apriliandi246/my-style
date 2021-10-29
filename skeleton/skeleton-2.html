@@ -20,11 +20,9 @@
 			height: 50px;
 			border-radius: 100%;
 			background-size: 300px;
-			background-color: #f9fafb;
 			background-repeat: no-repeat;
-			animation: skeleton 1s ease infinite;
+			background-color: var(--neutral-100);
 			border: 1px solid var(--neutral-300);
-			background-image: linear-gradient(100deg, #f9fafb, rgba(229, 231, 235, 0.9), #f9fafb);
 		}
 
 		.block {
@@ -32,11 +30,9 @@
 			height: 40px;
 			border-radius: 5px;
 			background-size: 300px;
-			background-color: #f9fafb;
 			background-repeat: no-repeat;
-			animation: skeleton 1s ease infinite;
+			background-color: var(--neutral-100);
 			border: 1px solid var(--neutral-300);
-			background-image: linear-gradient(100deg, #f9fafb, rgba(229, 231, 235, 0.9), #f9fafb);
 		}
 
 		.large-block {
@@ -44,11 +40,14 @@
 			height: 250px;
 			border-radius: 5px;
 			background-size: 300px;
-			background-color: #f9fafb;
 			background-repeat: no-repeat;
-			animation: skeleton 1s ease infinite;
+			background-color: var(--neutral-100);
 			border: 1px solid var(--neutral-300);
-			background-image: linear-gradient(90deg, #f9fafb, rgba(229, 231, 235, 0.9), #f9fafb);
+		}
+
+		.skeleton-animation {
+			animation: skeleton 900ms ease infinite;
+			background-image: linear-gradient(100deg, #f9fafb, rgba(229, 231, 235, 0.9), #f9fafb);
 		}
 
 		@keyframes skeleton {
@@ -64,15 +63,15 @@
 </head>
 
 <body>
-	<div class="circle"></div>
+	<div class="circle skeleton-animation"></div>
 
 	<br><br>
 
-	<div class="block"></div>
+	<div class="block skeleton-animation"></div>
 
 	<br><br>
 
-	<div class="large-block"></div>
+	<div class="large-block skeleton-animation"></div>
 </body>
 
 </html>
