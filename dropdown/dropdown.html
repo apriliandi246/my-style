@@ -51,8 +51,6 @@
 			margin-top: 55px;
 			position: absolute;
 			border-radius: 4px;
-			flex-direction: column;
-			justify-content: center;
 			background-color: var(--neutral-50);
 			border: 1px solid var(--neutral-300);
 		}
@@ -143,7 +141,7 @@
 
 			toggleDropdown = () => {
 				const displayValue = this.dropdownMenus.style.display;
-				this.dropdownMenus.style.display = displayValue === "flex" ? "none" : "flex";
+				this.dropdownMenus.style.display = displayValue === "block" ? "none" : "block";
 			}
 
 			clickOutside = (event) => {
