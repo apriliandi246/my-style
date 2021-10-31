@@ -61,6 +61,10 @@
 			outline-offset: -1px;
 			outline: 2px solid var(--primary-900);
 		}
+
+		.collapse-message-active {
+			display: block;
+		}
 	</style>
 </head>
 
@@ -130,7 +134,7 @@
 
 		class Collapse {
 			constructor() {
-				this.currentCollapseMsg = "";
+				this.previousCollapseMsg = "";
 				this.collapseComponents = document.getElementsByClassName("collapse__button");
 
 				this.addEventListener();
@@ -146,26 +150,22 @@
 
 			toggleCollapse(collapse) {
 				const collapseMessage = collapse.nextElementSibling;
-				const currentDisplayValue = collapseMessage.style.display;
 
 				collapse.classList.toggle("collapse-active");
-				collapseMessage.style.display = currentDisplayValue === "block" ? "none" : "block";
+				collapseMessage.classList.toggle("collapse-message-active");
 
 				this.hidePreviousCollapse(collapseMessage);
-				this.currentCollaseIcons = collapseIcons;
 			}
 
 			hidePreviousCollapse(collapseMsg) {
-				if (this.currentCollapseMsg === collapseMsg) {
-					this.currentCollapseMsg = "";
-				}
+				if (this.previousCollapseMsg === collapseMsg) this.previousCollapseMsg = "";
 
-				if (!this.currentCollapseMsg) {
-					this.currentCollapseMsg = collapseMsg;
+				if (!this.previousCollapseMsg) {
+					this.previousCollapseMsg = collapseMsg;
 				} else {
-					this.currentCollapseMsg.previousElementSibling.classList.remove("collapse-active");
-					this.currentCollapseMsg.style.display = "none";
-					this.currentCollapseMsg = collapseMsg;
+					this.previousCollapseMsg.previousElementSibling.classList.remove("collapse-active");
+					this.previousCollapseMsg.classList.remove("collapse-message-active");
+					this.previousCollapseMsg = collapseMsg;
 				}
 			}
 		}
