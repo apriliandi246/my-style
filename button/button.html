@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Button</title>
+
+	<style>
+		body {
+			padding: 100px;
+		}
+
+		/* ---------------------------- */
+
+		.button {
+			display: flex;
+			padding: 8px 14px;
+			align-items: center;
+			color: var(--primary-900);
+			font-size: var(--text-16x);
+			background-color: var(--neutral-50);
+			border: 1px solid var(--neutral-300);
+		}
+
+		.button:focus {
+			outline-offset: -1px;
+			outline: 2px solid var(--primary-900);
+		}
+	</style>
+</head>
+
+<body>
+	<button class="button">Click me</button>
+</body>
+
+</html>
