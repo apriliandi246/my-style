@@ -26,13 +26,16 @@ For naming convention, I'm using `BEM`.
 ### Components
 
 - [x] Alert
+- [x] Button
 - [x] Code
 - [x] Collapse
 - [x] Dropdown
 - [x] Input
 - [x] Loading
-- [x] Textarea
+- [x] Modal
 - [x] Quote
+- [x] Select
 - [x] Skeleton
+- [x] Textarea
 
 <h3 align="right">(⌐■_■)</h3>
