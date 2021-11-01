@@ -27,12 +27,14 @@
 			cursor: pointer;
 			appearance: none;
 			position: relative;
-			-ms-progress-appearance: none;
+			border-radius: 100%;
+			-moz-appearance: none;
+			-webkit-appearance: none;
 		}
 
 		.radio-input:focus {
-			outline-offset: 5px;
-			border-radius: 100%;
+			outline-offset: 4px;
+			outline: 2px solid var(--primary-900);
 		}
 
 		.radio-input::after {
@@ -92,7 +94,7 @@
 
 		class RadioInput {
 			constructor() {
-				this.currentRadioActive = "";
+				this.previousRadioInput = "";
 				this.radioInputs = document.getElementsByClassName("radio-input");
 
 				this.addEventListener();
@@ -105,15 +107,15 @@
 			}
 
 			toggleActiveRadio(event) {
-				if (!this.currentRadioActive) {
-					this.currentRadioActive = event.target.nextElementSibling;
-					this.currentRadioActive.classList.add("radio-visible");
+				if (!this.previousRadioInput) {
+					this.previousRadioInput = event.target.nextElementSibling;
+					this.previousRadioInput.classList.add("radio-visible");
 				} else {
 					const currentRadioInput = event.target.nextElementSibling;
 
-					this.currentRadioActive.classList.remove("radio-visible");
+					this.previousRadioInput.classList.remove("radio-visible");
 					currentRadioInput.classList.add("radio-visible");
-					this.currentRadioActive = currentRadioInput;
+					this.previousRadioInput = currentRadioInput;
 				}
 			}
 		}
