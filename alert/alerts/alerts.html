@@ -160,12 +160,11 @@
 
 				for (let index = 0; index < totalAlertElements; index++) {
 					const currentHideButton = this.alerts[index].lastElementChild;
-					listener(currentHideButton, "click", this.hideAlert);
-				}
-			}
 
-			hideAlert = (event) => {
-				event.target.parentElement.remove();
+					listener(currentHideButton, "click", (event) => {
+						event.target.parentElement.remove();
+					});
+				}
 			}
 		}
 

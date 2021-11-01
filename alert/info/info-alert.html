@@ -28,18 +28,22 @@
 			background-color: var(--info-300);
 		}
 
-		.info-alert__icon {
-			margin-right: 14px;
+		.info-alert__message {
+			order: 2;
+			color: var(--neutral-900);
 		}
 
-		.info-alert__message {
-			color: var(--neutral-900);
+		.info-alert__icon {
+			order: 1;
+			margin-right: 14px;
 		}
 	</style>
 </head>
 
 <body>
 	<div class="info-alert">
+		<p class="info-alert__message">Info Alert Message</p>
+
 		<svg
 			width="24"
 			height="24"
@@ -55,8 +59,6 @@
 			<line x1="12" y1="16" x2="12" y2="12"></line>
 			<line x1="12" y1="8" x2="12.01" y2="8"></line>
 		</svg>
-
-		<p class="info-alert__message">Info Alert Message</p>
 	</div>
 </body>
 

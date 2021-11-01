@@ -28,18 +28,22 @@
 			background-color: var(--success-300);
 		}
 
-		.success-alert__icon {
-			margin-right: 14px;
+		.success-alert__message {
+			order: 2;
+			color: var(--neutral-900);
 		}
 
-		.success-alert__message {
-			color: var(--neutral-900);
+		.success-alert__icon {
+			order: 1;
+			margin-right: 14px;
 		}
 	</style>
 </head>
 
 <body>
 	<div class="success-alert">
+		<p class="success-alert__message">Success Alert Message</p>
+
 		<svg
 			width="24"
 			height="24"
@@ -54,8 +58,6 @@
 			<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
 			<polyline points="22 4 12 14.01 9 11.01"></polyline>
 		</svg>
-
-		<p class="success-alert__message">Success Alert Message</p>
 	</div>
 </body>
 

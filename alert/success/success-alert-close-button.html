@@ -34,12 +34,14 @@
 			align-items: center;
 		}
 
-		.success-alert__icon {
-			margin-right: 14px;
+		.success-alert__message {
+			order: 2;
+			color: var(--neutral-900);
 		}
 
-		.success-alert__message {
-			color: var(--neutral-900);
+		.success-alert__icon {
+			order: 1;
+			margin-right: 14px;
 		}
 
 		.success-alert__close {
@@ -64,6 +66,8 @@
 <body>
 	<div class="success-alert" id="alert">
 		<div class="success-alert__main">
+			<p class="success-alert__message">Success Alert Message</p>
+
 			<svg
 				width="24"
 				height="24"
@@ -78,8 +82,6 @@
 				<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
 				<polyline points="22 4 12 14.01 9 11.01"></polyline>
 			</svg>
-
-			<p class="success-alert__message">Success Alert Message</p>
 		</div>
 
 		<button class="success-alert__close" id="success-btn-close">
@@ -113,11 +115,9 @@
 			}
 
 			addEventListener() {
-				listener(this.closeAlertButton, "click", this.hideAlert);
-			}
-
-			hideAlert = () => {
-				this.alert.remove();
+				listener(this.closeAlertButton, "click", () => {
+					this.alert.remove();
+				});
 			}
 		}
 

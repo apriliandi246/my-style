@@ -34,12 +34,14 @@
 			align-items: center;
 		}
 
-		.error-alert__icon {
-			margin-right: 14px;
+		.error-alert__message {
+			order: 2;
+			color: #000;
 		}
 
-		.error-alert__message {
-			color: #000;
+		.error-alert__icon {
+			order: 1;
+			margin-right: 14px;
 		}
 
 		.error-alert__close {
@@ -64,6 +66,8 @@
 <body>
 	<div class="error-alert" id="alert">
 		<div class="error-alert__main">
+			<p class="error-alert__message">Error Alert Message</p>
+
 			<svg
 				width="24"
 				height="24"
@@ -79,8 +83,6 @@
 				<line x1="15" y1="9" x2="9" y2="15"></line>
 				<line x1="9" y1="9" x2="15" y2="15"></line>
 			</svg>
-
-			<p class="error-alert__message">Error Alert Message</p>
 		</div>
 
 		<button class="error-alert__close" id="error-btn-close">
@@ -114,11 +116,9 @@
 			}
 
 			addEventListener() {
-				listener(this.closeAlertButton, "click", this.hideAlert);
-			}
-
-			hideAlert = () => {
-				this.alert.remove();
+				listener(this.closeAlertButton, "click", () => {
+					this.alert.remove();
+				});
 			}
 		}
 

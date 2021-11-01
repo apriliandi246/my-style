@@ -34,12 +34,14 @@
 			align-items: center;
 		}
 
-		.warning-alert__icon {
-			margin-right: 14px;
+		.warning-alert__message {
+			order: 2;
+			color: var(--neutral-900);
 		}
 
-		.warning-alert__message {
-			color: var(--neutral-900);
+		.warning-alert__icon {
+			order: 1;
+			margin-right: 14px;
 		}
 
 		.warning-alert__close {
@@ -64,6 +66,8 @@
 <body>
 	<div class="warning-alert" id="alert">
 		<div class="warning-alert__main">
+			<p class="warning-alert__message">Warning Alert Message</p>
+
 			<svg
 				width="24"
 				height="24"
@@ -80,8 +84,6 @@
 				<path
 					d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
 			</svg>
-
-			<p class="warning-alert__message">Warning Alert Message</p>
 		</div>
 
 		<button class="warning-alert__close" id="warning-btn-close">
@@ -116,11 +118,9 @@
 			}
 
 			addEventListener() {
-				listener(this.closeAlertButton, "click", this.hideAlert);
-			}
-
-			hideAlert = () => {
-				this.alert.remove();
+				listener(this.closeAlertButton, "click", () => {
+					this.alert.remove();
+				});
 			}
 		}
 
