@@ -20,41 +20,40 @@
 
 		/* ---------------------------- */
 
-		.modal-area {
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 9999;
+		.modal {
+			top: 25%;
+			left: 25%;
+			z-index: 3;
+			width: 50%;
+			padding: 20px;
 			display: none;
 			position: fixed;
-			background-color: rgba(0, 0, 0, 0.5);
-		}
-
-		.modal {
-			width: 500px;
-			padding: 20px;
+			margin-left: auto;
 			border-radius: 4px;
+			margin-right: auto;
 			background-color: var(--neutral-50);
 		}
 
-		.modal-container {
-			width: 100vw;
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		.modal-overlay {
+			top: 0;
+			left: 0;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			display: none;
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0.5);
 		}
 
 		.active-modal {
 			display: block;
 		}
 
-		.modal-body-animation {
+		.modal-animation {
 			animation: modal 240ms;
 		}
 
-		.modal-wrapper-animation {
+		.modal-overlay-animation {
 			animation: modalWrapper 230ms;
 		}
 
@@ -83,20 +82,18 @@
 <body>
 	<button id="show-modal-btn">Show Modal</button>
 
-	<div id="modal-area" class="modal-area modal-wrapper-animation">
-		<div id="modal-container" class="modal-container">
-			<div class="modal modal-body-animation">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur corrupti voluptatum magnam ratione autem
-					commodi esse eaque officiis nihil ut mollitia illo laboriosam, perspiciatis exercitationem nostrum!
-					Exercitationem, facere odio quos fugit, eveniet quibusdam earum facilis atque dolores repellat nam voluptas
-					iure? Sit, magnam! Ut id non at in quo natus est aspernatur ullam nobis soluta, doloremque repellendus
-					asperiores consequuntur molestiae reiciendis! Quaerat eaque ducimus voluptate illo itaque, dolores quasi
-					doloremque, necessitatibus, deleniti quia suscipit voluptatibus laudantium unde libero! Suscipit placeat et
-					aperiam cum quisquam ratione eveniet, tenetur qui dolores. Eveniet alias aliquid, reiciendis quisquam vero
-					consectetur culpa blanditiis eius sed!.</p>
-			</div>
-		</div>
+	<div id="modal" class="modal modal-animation">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur corrupti voluptatum magnam ratione autem
+			commodi esse eaque officiis nihil ut mollitia illo laboriosam, perspiciatis exercitationem nostrum!
+			Exercitationem, facere odio quos fugit, eveniet quibusdam earum facilis atque dolores repellat nam voluptas
+			iure? Sit, magnam! Ut id non at in quo natus est aspernatur ullam nobis soluta, doloremque repellendus
+			asperiores consequuntur molestiae reiciendis! Quaerat eaque ducimus voluptate illo itaque, dolores quasi
+			doloremque, necessitatibus, deleniti quia suscipit voluptatibus laudantium unde libero! Suscipit placeat et
+			aperiam cum quisquam ratione eveniet, tenetur qui dolores. Eveniet alias aliquid, reiciendis quisquam vero
+			consectetur culpa blanditiis eius sed!.</p>
 	</div>
+
+	<div id="modal-overlay" class="modal-overlay modal-overlay-animation"></div>
 
 	<script type="module">
 		"use strict";
@@ -105,26 +102,32 @@
 
 		class Modal {
 			constructor() {
-				this.modalArea = document.getElementById("modal-area");
-				this.modalContainer = document.getElementById("modal-container");
+				this.modal = document.getElementById("modal");
+				this.modalOverlay = document.getElementById("modal-overlay");
 				this.modalTriggerButton = document.getElementById("show-modal-btn");
 
 				this.addEventListener();
 			}
 
 			addEventListener() {
+				listener(this.modal, "keydown", this.escapePress);
+				listener(this.modalOverlay, "click", this.toggleModal);
 				listener(this.modalTriggerButton, "click", this.toggleModal);
-				listener(this.modalContainer, "click", self(this.toggleModal));
-				listener(document, "keydown", this.escapePress);
 			}
 
 			toggleModal = () => {
-				this.modalArea.classList.toggle("active-modal");
+				this.modal.classList.toggle("active-modal");
+				this.modalOverlay.classList.toggle("active-modal");
 			}
 
 			escapePress = (event) => {
-				const modalStatus = this.modalArea.classList.contains("active-modal");
-				if (event.key === "Escape" && modalStatus) this.toggleModal();
+				if (event.keyCode === 27) {
+					const modalStatus = this.modalOverlay.classList.contains("active-modal");
+
+					if (modalStatus) {
+						this.toggleModal();
+					}
+				}
 			}
 		}
 
