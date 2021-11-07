@@ -52,7 +52,7 @@
 			position: absolute;
 			border-radius: 4px;
 			background-color: var(--neutral-50);
-			border: 1px solid var(--neutral-300);
+			border: 2px solid var(--neutral-300);
 		}
 
 		.dropdown__item {
@@ -132,16 +132,19 @@
 
 		class Dropdown {
 			constructor() {
-				this.dropdown = document.getElementById("dropdown");
-				this.dropdownMenus = this.dropdown.nextElementSibling;
+				this.dropdownButton = document.getElementById("dropdown");
+				this.dropdownMenus = this.dropdownButton.nextElementSibling;
+
+				this.dropdownMenusStatus = "";
 
 				this.addEventListener();
 			}
 
 			addEventListener() {
-				listener(this.dropdown, "click", this.toggleDropdownMenus);
-				listener(document, "keydown", this.escapePress);
-				listener(document, "click", this.clickOutside);
+				listener(document.body, "click", this.clickOutside);
+				listener(this.dropdownMenus, "keydown", this.handleEscape);
+				listener(this.dropdownButton, "keydown", this.handleEscape);
+				listener(this.dropdownButton, "click", this.toggleDropdownMenus);
 			}
 
 			toggleDropdownMenus = () => {
@@ -152,14 +155,20 @@
 				const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdow-active");
 
 				if (dropdownMenusStatus) {
-					const dropdownParentElement = this.dropdown.parentElement;
-					if (!dropdownParentElement.contains(event.target)) this.toggleDropdownMenus();
+					const dropdownParentElement = this.dropdownButton.parentElement;
+
+					if (!dropdownParentElement.contains(event.target)) {
+						this.toggleDropdownMenus();
+					}
 				}
 			}
 
-			escapePress = (event) => {
+			handleEscape = (event) => {
 				const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdow-active");
-				if (event.key === "Escape" && dropdownMenusStatus) this.toggleDropdownMenus();
+
+				if (event.keyCode === 27 && dropdownMenusStatus) {
+					this.toggleDropdownMenus();
+				}
 			}
 		}
 
