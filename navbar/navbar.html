@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../../css-global/global.css" />
+	<title>Navbar</title>
+
+	<style>
+		.navbar {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			padding: 18px 12px 18px 18px;
+			justify-content: space-between;
+			background-color: var(--neutral-50);
+		}
+
+		.navbar__brand {
+			font-size: 30px;
+			font-weight: 600;
+			color: var(--neutral-700);
+		}
+
+		.navbar__btn-menu {
+			border: 0;
+			padding: 6px;
+			background-color: transparent;
+		}
+
+		.navbar__menus {
+			width: 100%;
+			display: none;
+			margin-top: 10px;
+		}
+
+		.navbar__menu-item {
+			display: block;
+			font-size: 18px;
+			margin-bottom: 12px;
+			color: var(--neutral-700);
+		}
+
+		.navbar__menu-item:last-child {
+			margin-bottom: 0;
+		}
+
+		.navbar__menu-item:hover {
+			color: var(--info-900);
+		}
+
+		.navbar__menus--collapse {
+			display: block;
+		}
+
+		.navbar__btn-menu:focus {
+			outline-offset: -1px;
+			outline: 2px solid var(--primary-900);
+		}
+
+		@media screen and (min-width: 670px) {
+			.navbar {
+				display: flex;
+				flex-wrap: nowrap;
+				padding-right: 24px;
+				padding-right: 24px;
+				justify-content: space-between;
+			}
+
+			.navbar__btn-menu {
+				display: none;
+			}
+
+			.navbar__menus {
+				margin-top: 0;
+				display: block;
+				width: inherit;
+			}
+
+			.navbar__menu-item {
+				display: inline;
+				margin-right: 34px;
+			}
+
+			.navbar__menu-item:last-child {
+				margin-right: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar">
+		<a href="#" class="navbar__brand">Navbar</a>
+
+		<button class="navbar__btn-menu" id="navbar-btn-menus">
+			<svg
+				width="28"
+				height="28"
+				fill="none"
+				stroke-width="2"
+				stroke="#111827"
+				viewBox="0 0 24 24"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				xmlns="http://www.w3.org/2000/svg">
+				<line x1="3" y1="12" x2="21" y2="12"></line>
+				<line x1="3" y1="6" x2="21" y2="6"></line>
+				<line x1="3" y1="18" x2="21" y2="18"></line>
+			</svg>
+		</button>
+
+		<div class="navbar__menus" id="navbar-menus">
+			<a href="#" class="navbar__menu-item">Home</a>
+			<a href="#" class="navbar__menu-item">About</a>
+			<a href="#" class="navbar__menu-item">Features</a>
+			<a href="#" class="navbar__menu-item">Pricing</a>
+			<a href="#" class="navbar__menu-item">Career</a>
+		</div>
+	</nav>
+
+	<br><br><br><br>
+	<br><br><br><br>
+
+	<script type="module">
+		"use strict";
+
+		import { listener } from "../../js/utils/dom.js";
+
+		class Navbar {
+			constructor() {
+				this.navbarBtnMenus = document.getElementById("navbar-btn-menus");
+				this.navbarMenus = this.navbarBtnMenus.nextElementSibling;
+				this.navbar = this.navbarBtnMenus.parentElement;
+
+				this.addEventListener();
+			}
+
+			addEventListener() {
+				listener(this.navbarBtnMenus, "click", this.toggleNavbarMenus);
+				listener(document.body, "click", this.clickOutside);
+			}
+
+			toggleNavbarMenus = () => {
+				this.navbarMenus.classList.toggle("navbar__menus--collapse");
+			}
+
+			clickOutside = (event) => {
+				const isContainNabarElements = this.navbar.contains(event.target);
+
+				if (!isContainNabarElements) {
+					this.navbarMenus.classList.remove("navbar__menus--collapse");
+				}
+			}
+		}
+
+		new Navbar();
+	</script>
+</body>
+
+</html>
