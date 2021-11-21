@@ -87,9 +87,11 @@
 			}
 
 			addEventListener() {
-				listener(this.closeAlertButton, "click", () => {
-					this.alert.remove();
-				});
+				listener(this.closeAlertButton, "click", this.hideAlert);
+			}
+
+			hideAlert = () => {
+				this.alert.remove();
 			}
 		}
 

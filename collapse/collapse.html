@@ -52,17 +52,17 @@
 			border: 1px solid var(--neutral-300);
 		}
 
-		.collapse-active::after {
+		.collapse--active::after {
 			content: "\2212";
 		}
 
-		.collapse-active,
+		.collapse--active,
 		.collapse__button:focus {
 			outline-offset: -1px;
 			outline: 2px solid var(--primary-900);
 		}
 
-		.collapse-message-active {
+		.collapse-message--active {
 			display: block;
 		}
 	</style>
@@ -151,20 +151,22 @@
 			toggleCollapse(collapse) {
 				const collapseMessage = collapse.nextElementSibling;
 
-				collapse.classList.toggle("collapse-active");
-				collapseMessage.classList.toggle("collapse-message-active");
+				collapse.classList.toggle("collapse--active");
+				collapseMessage.classList.toggle("collapse-message--active");
 
 				this.hidePreviousCollapse(collapseMessage);
 			}
 
 			hidePreviousCollapse(collapseMsg) {
-				if (this.previousCollapseMsg === collapseMsg) this.previousCollapseMsg = "";
+				if (this.previousCollapseMsg === collapseMsg) {
+					this.previousCollapseMsg = ""
+				}
 
 				if (!this.previousCollapseMsg) {
 					this.previousCollapseMsg = collapseMsg;
 				} else {
-					this.previousCollapseMsg.previousElementSibling.classList.remove("collapse-active");
-					this.previousCollapseMsg.classList.remove("collapse-message-active");
+					this.previousCollapseMsg.previousElementSibling.classList.remove("collapse--active");
+					this.previousCollapseMsg.classList.remove("collapse-message--active");
 					this.previousCollapseMsg = collapseMsg;
 				}
 			}
