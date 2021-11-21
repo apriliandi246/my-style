@@ -77,11 +77,11 @@
 			outline: 2px solid var(--primary-900);
 		}
 
-		.dropdown-animation {
+		.dropdown--animate {
 			animation: dropdown 140ms;
 		}
 
-		.dropdow-active {
+		.dropdown--collapse {
 			display: block;
 		}
 
@@ -117,7 +117,7 @@
 			</svg>
 		</button>
 
-		<div class="dropdown__items dropdown-animation">
+		<div class="dropdown__items dropdown--animate">
 			<a href="#" class="dropdown__item">Home</a>
 			<a href="#" class="dropdown__item">About</a>
 			<a href="#" class="dropdown__item">Partner</a>
@@ -129,7 +129,7 @@
 	<br><br><br><br>
 
 	<script type="module">
-		"use strict"
+		"use strict";
 
 		import { listener } from "../../js/utils/dom.js";
 
@@ -149,11 +149,11 @@
 			}
 
 			toggleDropdownMenus = () => {
-				this.dropdownMenus.classList.toggle("dropdow-active");
+				this.dropdownMenus.classList.toggle("dropdown--collapse");
 			}
 
 			clickOutside = (event) => {
-				const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdow-active");
+				const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdown--collapse");
 
 				if (dropdownMenusStatus) {
 					const dropdownParentElement = this.dropdownButton.parentElement;
@@ -165,7 +165,7 @@
 			}
 
 			escapePress = (event) => {
-				const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdow-active");
+				const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdown--collapse");
 
 				if (event.keyCode === 27 && dropdownMenusStatus) {
 					this.toggleDropdownMenus();
