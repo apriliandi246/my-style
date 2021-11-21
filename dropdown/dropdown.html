@@ -52,7 +52,7 @@
 			position: absolute;
 			border-radius: 4px;
 			background-color: var(--neutral-50);
-			border: 2px solid var(--neutral-300);
+			border: 1px solid var(--neutral-300);
 		}
 
 		.dropdown__item {
@@ -125,6 +125,9 @@
 		</div>
 	</div>
 
+	<br><br><br><br>
+	<br><br><br><br>
+
 	<script type="module">
 		"use strict"
 
@@ -140,8 +143,8 @@
 
 			addEventListener() {
 				listener(document.body, "click", this.clickOutside);
-				listener(this.dropdownMenus, "keydown", this.handleEscape);
-				listener(this.dropdownButton, "keydown", this.handleEscape);
+				listener(this.dropdownMenus, "keydown", this.escapePress);
+				listener(this.dropdownButton, "keydown", this.escapePress);
 				listener(this.dropdownButton, "click", this.toggleDropdownMenus);
 			}
 
@@ -161,7 +164,7 @@
 				}
 			}
 
-			handleEscape = (event) => {
+			escapePress = (event) => {
 				const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdow-active");
 
 				if (event.keyCode === 27 && dropdownMenusStatus) {

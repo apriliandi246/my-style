@@ -110,7 +110,7 @@
 			}
 
 			addEventListener() {
-				listener(this.modal, "keydown", this.handleEscape);
+				listener(this.modal, "keydown", this.escapePress);
 				listener(this.modalOverlay, "click", this.toggleModal);
 				listener(this.modalTriggerButton, "click", this.toggleModal);
 			}
@@ -120,7 +120,7 @@
 				this.modalOverlay.classList.toggle("active-modal");
 			}
 
-			handleEscape = (event) => {
+			escapePress = (event) => {
 				if (event.keyCode === 27) {
 					const modalStatus = this.modalOverlay.classList.contains("active-modal");
 
