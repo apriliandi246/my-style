@@ -243,17 +243,11 @@ textarea:disabled {
 }
 
 ul {
-	list-style: disc;
 	font-family: var(--font-family);
 }
 
 ol {
-	list-style: decimal;
 	font-family: var(--font-family);
-}
-
-ol li::marker {
-	font-weight: bold;
 }
 
 pre,
