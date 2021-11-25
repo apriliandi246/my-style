@@ -33,6 +33,7 @@ For naming convention, I'm using `BEM`.
 - [x] Input
 - [x] Loading
 - [x] Modal
+- [x] Navbar
 - [x] Quote
 - [x] Select
 - [x] Skeleton
