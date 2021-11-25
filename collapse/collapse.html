@@ -23,11 +23,11 @@
 		.collapse__button {
 			width: 100%;
 			display: flex;
-			font-size: 16px;
 			cursor: pointer;
 			border-radius: 0;
-			padding: 15px 16px;
 			align-items: center;
+			padding: 1.5rem 1.6rem;
+			font-size: var(--text-16x);
 			justify-content: space-between;
 			background-color: var(--neutral-50);
 			border: 1px solid var(--neutral-300);
@@ -35,8 +35,8 @@
 
 		.collapse__button::after {
 			color: #000;
-			font-size: 18px;
 			content: "\002B";
+			font-size: var(--text-18x);
 		}
 
 		.collapse__button:disabled::after {
@@ -45,9 +45,9 @@
 
 		.collapse__message {
 			display: none;
-			padding: 16px;
-			line-height: 27px;
+			padding: 1.6rem;
 			border-radius: 4px;
+			line-height: 2.7rem;
 			background-color: var(--neutral-50);
 			border: 1px solid var(--neutral-300);
 		}

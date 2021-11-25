@@ -23,17 +23,17 @@
 	--h6-line-height: 22px;
 
 	/* Font Size */
-	--text-12x: 12px;
-	--text-14x: 14px;
-	--text-16x: 16px;
-	--text-18x: 18px;
-	--text-20x: 20px;
-	--text-24x: 24px;
-	--text-30x: 30px;
-	--text-36x: 36px;
-	--text-48x: 48px;
-	--text-60x: 60px;
-	--text-72x: 72px;
+	--text-12x: 1.2rem;
+	--text-14x: 1.4rem;
+	--text-16x: 1.6rem;
+	--text-18x: 1.8rem;
+	--text-20x: 2rem;
+	--text-24x: 2.4rem;
+	--text-30x: 3rem;
+	--text-36x: 3.6rem;
+	--text-48x: 4.8rem;
+	--text-60x: 6rem;
+	--text-72x: 7.2rem;
 
 	/* Spaces */
 	--space-0x: 0px;
@@ -177,6 +177,10 @@
 
 * {
 	font-family: var(--font-family);
+}
+
+html {
+	font-size: 62.5%;
 }
 
 body {
