@@ -6,71 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="../../css-global/global.css" />
+	<link rel="stylesheet" href="./css/css-code-1.css">
+	<script defer src="./javascript/css-code-1.js"></script>
 	<title>CSS code 1</title>
-
-	<style>
-		body {
-			padding: 100px;
-		}
-
-		.code-container {
-			overflow-x: auto;
-			position: relative;
-			border-radius: 4px;
-			padding-left: 2.4rem;
-			padding-right: 2.4rem;
-			background-color: var(--primary-900);
-		}
-
-		.code-container::-webkit-scrollbar {
-			background-color: var(--primary-800);
-		}
-
-		.code-container::-webkit-scrollbar-thumb {
-			background-color: var(--primary-600);
-		}
-
-		.code-block {
-			letter-spacing: 0.2px;
-			color: var(--info-50);
-			font: 500 var(--text-16x)/2.5rem monospace;
-		}
-
-		.code-copy {
-			top: 0;
-			right: 0;
-			border: none;
-			padding: 0.7rem;
-			margin-top: 1rem;
-			font-weight: 600;
-			position: absolute;
-			margin-right: 1.6rem;
-			letter-spacing: 0.6px;
-			color: var(--neutral-50);
-			font-size: var(--text-16x);
-			transition: background-color 100ms;
-			background-color: var(--secondary-800);
-		}
-
-		.code-copy:hover {
-			background-color: var(--primary-700);
-		}
-
-		.code-copy:focus {
-			outline-offset: -1px;
-			outline: 2px solid var(--neutral-50);
-		}
-
-		.code-copy:disabled {
-			background-color: var(--primary-600);
-		}
-	</style>
 </head>
 
 <body>
 	<div class="code-container">
 		<pre>
-<code class="code-block" id="code-block">
+<code class="code-block">
 .component {
   white-space: pre-line;
   display: block;
@@ -90,39 +34,6 @@
 		</pre>
 		<button class="code-copy" id="code-copy">Copy</button>
 	</div>
-
-	<script type="module">
-		"use strict";
-
-		import { listener } from "../../js/utils/dom.js";
-
-		class CodeBlock {
-			constructor() {
-				this.codeBlock = document.getElementById("code-block");
-				this.buttonCopy = document.getElementById("code-copy");
-
-				this.addEventListener();
-			}
-
-			addEventListener() {
-				listener(this.buttonCopy, "click", this.copyBlockOfCode);
-			}
-
-			copyBlockOfCode = async () => {
-				let copiedDelay;
-
-				await navigator.clipboard.writeText(this.codeBlock.textContent);
-				this.buttonCopy.textContent = "Copied";
-
-				setTimeout(() => {
-					this.buttonCopy.textContent = "Copy";
-					clearTimeout(copiedDelay);
-				}, 700);
-			}
-		}
-
-		new CodeBlock();
-	</script>
 </body>
 
 </html>

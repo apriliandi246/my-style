@@ -1,0 +1,25 @@
+body {
+	padding: 100px;
+}
+
+/* ---------------------------- */
+
+.spinner {
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	border-radius: 100%;
+	border-top-color: transparent;
+	border: 0.6rem solid var(--primary-900);
+	animation: spinner 900ms linear infinite;
+}
+
+@keyframes spinner {
+	to {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}

@@ -4,23 +4,23 @@
 	--title-article-font: "Merriweather", serif;
 
 	/* Heading */
-	--h1-font-size: 45px;
-	--h1-line-height: 55px;
+	--h1-font-size: 4.5rem;
+	--h1-line-height: 5.5rem;
 
-	--h2-font-size: 32px;
-	--h2-line-height: 38px;
+	--h2-font-size: 3.2rem;
+	--h2-line-height: 3.8rem;
 
-	--h3-font-size: 28px;
-	--h3-line-height: 34px;
+	--h3-font-size: 2.8rem;
+	--h3-line-height: 3.4rem;
 
-	--h4-font-size: 23px;
-	--h4-line-height: 28px;
+	--h4-font-size: 2.3rem;
+	--h4-line-height: 2.8rem;
 
-	--h5-font-size: 20px;
-	--h5-line-height: 25px;
+	--h5-font-size: 2rem;
+	--h5-line-height: 2.5rem;
 
-	--h6-font-size: 18px;
-	--h6-line-height: 22px;
+	--h6-font-size: 1.8rem;
+	--h6-line-height: 2.2rem;
 
 	/* Font Size */
 	--text-12x: 1.2rem;
@@ -36,30 +36,30 @@
 	--text-72x: 7.2rem;
 
 	/* Spaces */
-	--space-0x: 0px;
-	--space-4x: 4px;
-	--space-9x: 8px;
-	--space-12x: 12px;
-	--space-16x: 16px;
-	--space-20x: 20px;
-	--space-24x: 24px;
-	--space-28x: 28px;
-	--space-32x: 32px;
-	--space-40x: 40px;
-	--space-48x: 48px;
-	--space-56x: 56px;
-	--space-64x: 64px;
-	--space-72x: 72px;
-	--space-80x: 80px;
-	--space-88x: 88px;
-	--space-96x: 96px;
-	--space-104x: 104px;
-	--space-112x: 112px;
-	--space-120x: 120px;
-	--space-128x: 128px;
-	--space-136x: 136px;
-	--space-144x: 144px;
-	--space-152x: 152px;
+	--space-0x: 0;
+	--space-4x: 0.4rem;
+	--space-8x: 0.8rem;
+	--space-12x: 1.2rem;
+	--space-16x: 1.6rem;
+	--space-20x: 2rem;
+	--space-24x: 2.4rem;
+	--space-28x: 2.8rem;
+	--space-32x: 3.2rem;
+	--space-40x: 4rem;
+	--space-48x: 4.8rem;
+	--space-56x: 5.6rem;
+	--space-64x: 6.4rem;
+	--space-72x: 7.2rem;
+	--space-80x: 8rem;
+	--space-88x: 8.8rem;
+	--space-96x: 9.6rem;
+	--space-104x: 10.4rem;
+	--space-112x: 11.2rem;
+	--space-120x: 12rem;
+	--space-128x: 12.8rem;
+	--space-136x: 13.6rem;
+	--space-144x: 14.4rem;
+	--space-152x: 15.2rem;
 
 	/*
 		🚀 Primary Colors

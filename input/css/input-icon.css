@@ -1,0 +1,44 @@
+body {
+	padding: 100px;
+}
+
+/* ---------------------------- */
+
+.input-wrapper {
+	position: relative;
+}
+
+.input-wrapper > svg {
+	top: 0;
+	left: 0;
+	margin-top: 1rem;
+	position: absolute;
+	margin-left: 1.6rem;
+}
+
+.input {
+	width: 100%;
+	color: #000;
+	border-radius: 0.4rem;
+	font-size: var(--text-16x);
+	background-color: var(--neutral-50);
+	padding: 0.8rem 1.4rem 0.8rem 5.2rem;
+	border: 0.1rem solid var(--neutral-300);
+}
+
+.input:focus {
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid var(--primary-900);
+}
+
+.input:focus + svg {
+	stroke: var(--primary-800);
+}
+
+.input:disabled + svg {
+	stroke: #ababab;
+}
+
+.input:disabled::placeholder {
+	color: #ababab;
+}

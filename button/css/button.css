@@ -1,0 +1,20 @@
+body {
+	padding: 100px;
+}
+
+/* ---------------------------- */
+
+.button {
+	display: flex;
+	align-items: center;
+	padding: 0.8rem 1.4rem;
+	color: var(--primary-900);
+	font-size: var(--text-16x);
+	background-color: var(--neutral-50);
+	border: 0.1rem solid var(--neutral-300);
+}
+
+.button:focus {
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid var(--primary-900);
+}

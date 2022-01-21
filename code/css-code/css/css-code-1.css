@@ -1,0 +1,55 @@
+body {
+	padding: 100px;
+}
+
+/* ---------------------------- */
+
+.code-container {
+	overflow-x: auto;
+	position: relative;
+	padding-left: 2.4rem;
+	border-radius: 0.4rem;
+	padding-right: 2.4rem;
+	background-color: var(--primary-900);
+}
+
+.code-container::-webkit-scrollbar {
+	background-color: var(--primary-800);
+}
+
+.code-container::-webkit-scrollbar-thumb {
+	background-color: var(--primary-600);
+}
+
+.code-block {
+	color: var(--info-50);
+	font: 500 var(--text-16x) / 2.5rem monospace;
+}
+
+.code-copy {
+	top: 0;
+	right: 0;
+	border: none;
+	padding: 0.7rem;
+	margin-top: 1rem;
+	font-weight: 600;
+	position: absolute;
+	margin-right: 1.6rem;
+	color: var(--neutral-50);
+	font-size: var(--text-16x);
+	transition: background-color 100ms;
+	background-color: var(--secondary-800);
+}
+
+.code-copy:hover {
+	background-color: var(--primary-700);
+}
+
+.code-copy:focus {
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid var(--neutral-50);
+}
+
+.code-copy:disabled {
+	background-color: var(--primary-600);
+}

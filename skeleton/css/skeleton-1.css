@@ -1,0 +1,47 @@
+body {
+	padding: 100px;
+}
+
+/* ----------------------------------------- */
+
+.circle {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 100%;
+	background-color: var(--neutral-100);
+	border: 0.1rem solid var(--neutral-300);
+}
+
+.block {
+	width: 25rem;
+	height: 4rem;
+	border-radius: 0.5rem;
+	background-color: var(--neutral-100);
+	border: 0.1rem solid var(--neutral-300);
+}
+
+.large-block {
+	width: 50rem;
+	height: 25rem;
+	border-radius: 0.5rem;
+	background-color: var(--neutral-100);
+	border: 0.1rem solid var(--neutral-300);
+}
+
+.skeleton-animation {
+	animation: skeleton 900ms ease-in-out infinite;
+}
+
+@keyframes skeleton {
+	0% {
+		background-color: rgba(249, 250, 251, 0.3);
+	}
+
+	50% {
+		background-color: rgba(249, 250, 251, 1);
+	}
+
+	100% {
+		background-color: rgba(249, 250, 251, 0.3);
+	}
+}
