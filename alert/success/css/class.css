@@ -11,6 +11,7 @@ body {
 	padding: 1.1rem 1.4rem;
 	justify-content: space-between;
 	background-color: var(--success-300);
+	border: 0.1rem solid var(--success-600);
 }
 
 .success-alert__main {

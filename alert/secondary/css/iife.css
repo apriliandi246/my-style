@@ -11,6 +11,7 @@ body {
 	padding: 1.1rem 1.4rem;
 	justify-content: space-between;
 	background-color: var(--secondary-300);
+	border: 0.1rem solid var(--secondary-600);
 }
 
 .secondary-alert__message {

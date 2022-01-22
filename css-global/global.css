@@ -242,8 +242,9 @@ input:disabled,
 button:disabled,
 select:disabled,
 textarea:disabled {
-	color: #ababab;
-	background-color: #eee;
+	color: #b8b1b1;
+	background-color: #ebe6e6;
+	border: 0.1rem solid var(--primary-200);
 }
 
 ul {
@@ -281,7 +282,7 @@ button,
 select,
 optgroup,
 textarea {
-	border-radius: 4px;
+	border-radius: 0.4rem;
 	font-family: var(--font-family);
 	outline-color: var(--primary-900);
 }

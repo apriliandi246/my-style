@@ -10,6 +10,7 @@ body {
 	border-radius: 0.4rem;
 	padding: 1.2rem 1.4rem;
 	background-color: var(--error-300);
+	border: 0.1rem solid var(--error-600);
 }
 
 .error-alert__message {
