@@ -8,15 +8,6 @@ body {
 	position: relative;
 }
 
-.select-input-wrapper > svg {
-	top: 0;
-	right: 0;
-	margin-top: 3.7rem;
-	position: absolute;
-	margin-right: 1.3rem;
-	pointer-events: none;
-}
-
 .select-label {
 	color: #000;
 	margin-bottom: 0.4rem;
@@ -27,10 +18,9 @@ body {
 .select-input {
 	width: 100%;
 	color: #000;
-	appearance: none;
 	border-radius: 0.4rem;
-	padding: 0.8rem 1.4rem;
 	font-size: var(--text-16x);
+	padding: 0.8rem 1rem 0.8rem 1.4rem;
 	background-color: var(--neutral-50);
 	border: 0.1rem solid var(--neutral-400);
 }
@@ -38,8 +28,4 @@ body {
 .select-input:focus {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid var(--primary-900);
-}
-
-.select-input:disabled + svg {
-	stroke: #ababab;
 }
