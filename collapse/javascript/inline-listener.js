@@ -1,13 +1,12 @@
 function toggleCollapse(event) {
-	const collapseBtn = event.target;
-	const collapseContent = collapseBtn.nextElementSibling;
-	const displayValue = collapseContent.style.display;
+	const collapseMsg = event.target.nextElementSibling;
+	const displayValue = collapseMsg.style.display;
 
-	collapseBtn.classList.toggle("collapse--active");
+	event.target.classList.toggle("collapse--active");
 
 	if (displayValue === "" || displayValue === "none") {
-		collapseContent.style.display = "block";
+		collapseMsg.style.display = "block";
 	} else {
-		collapseContent.style.display = "none";
+		collapseMsg.style.display = "none";
 	}
 }

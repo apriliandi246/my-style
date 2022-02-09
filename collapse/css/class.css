@@ -44,19 +44,3 @@ body {
 .collapse-message--active {
 	display: block;
 }
-
-.collapse--animate {
-	animation: collapse 150ms;
-}
-
-@keyframes collapse {
-	from {
-		opacity: 0;
-		transform: translateY(-0.2rem);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}

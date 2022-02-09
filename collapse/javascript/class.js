@@ -6,9 +6,7 @@ class Collapse {
 	}
 
 	addEventListener() {
-		const collapseElements = this.collapseComponents.length;
-
-		for (let index = 0; index < collapseElements; index++) {
+		for (let index = 0; index < this.collapseComponents.length; index++) {
 			this.collapseComponents[index].addEventListener("click", () => {
 				this.toggleCollapse(this.collapseComponents[index]);
 			});
