@@ -10,7 +10,7 @@ body {
 	border-radius: 0.4rem;
 	padding: 1.1rem 1.4rem;
 	justify-content: space-between;
-	background-color: var(--success-300);
+	background-color: var(--success-500);
 	border: 0.1rem solid var(--success-600);
 }
 
@@ -21,7 +21,7 @@ body {
 
 .success-alert__message {
 	order: 2;
-	color: var(--neutral-900);
+	color: #fff;
 	font-size: var(--text-16x);
 }
 
@@ -44,7 +44,7 @@ body {
 
 .success-alert__close:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid #fff;
 }
 
 .success-alert__close:hover {

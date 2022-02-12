@@ -6,11 +6,12 @@ body {
 
 .warning-alert {
 	display: flex;
-	border-radius: 0.4rem;
 	align-items: center;
+	border-radius: 0.4rem;
 	padding: 1.1rem 1.4rem;
 	justify-content: space-between;
-	background-color: var(--warning-300);
+	background-color: var(--warning-500);
+	border: 0.1rem solid var(--warning-600);
 }
 
 .warning-alert__main {
@@ -20,7 +21,7 @@ body {
 
 .warning-alert__message {
 	order: 2;
-	color: var(--neutral-900);
+	color: #000;
 	font-size: var(--text-16x);
 }
 
@@ -35,7 +36,6 @@ body {
 	border-radius: 100%;
 	background-color: transparent;
 	transition: background-color 100ms;
-	border: 0.1rem solid var(--warning-600);
 }
 
 .warning-alert__close svg {

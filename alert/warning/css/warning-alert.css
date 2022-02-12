@@ -9,13 +9,13 @@ body {
 	align-items: center;
 	border-radius: 0.4rem;
 	padding: 1.2rem 1.4rem;
-	background-color: var(--warning-300);
+	background-color: var(--warning-500);
 	border: 0.1rem solid var(--warning-600);
 }
 
 .warning-alert__message {
 	order: 2;
-	color: var(--neutral-900);
+	color: #000;
 	font-size: var(--text-16x);
 }
 
