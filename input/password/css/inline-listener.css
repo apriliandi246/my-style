@@ -14,17 +14,17 @@ body {
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
 	background-color: var(--neutral-50);
-	padding: 0.8rem 5.2rem 0.8rem 1.4rem;
+	padding: 0.8rem 4.8rem 0.8rem 1.4rem;
 	border: 0.1rem solid var(--neutral-400);
 }
 
 .input:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid var(--primary-900);
+	outline: 0.2rem solid #000;
 }
 
 .input:focus + .password-btn-toggle .password-input-icon {
-	stroke: var(--primary-900);
+	stroke: #000;
 }
 
 .input:disabled::placeholder {
@@ -37,8 +37,8 @@ body {
 	border: none;
 	margin-top: 0.7rem;
 	position: absolute;
+	margin-right: 1rem;
 	border-radius: 100%;
-	margin-right: 1.3rem;
 	padding: 0.3rem 0.4rem;
 	background-color: transparent;
 }
@@ -49,9 +49,9 @@ body {
 
 .password-btn-toggle:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid var(--primary-900);
+	outline: 0.2rem solid #000;
 }
 
 .password-btn-toggle:focus > svg {
-	stroke: var(--primary-900);
+	stroke: #000;
 }

@@ -37,5 +37,5 @@ body {
 .collapse--active,
 .collapse__button:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid var(--primary-900);
+	outline: 0.2rem solid #000;
 }

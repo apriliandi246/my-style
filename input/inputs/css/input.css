@@ -16,11 +16,7 @@ body {
 
 .input:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid var(--primary-900);
-}
-
-.input:disabled + svg {
-	stroke: #ababab;
+	outline: 0.2rem solid #000;
 }
 
 .input:disabled::placeholder {

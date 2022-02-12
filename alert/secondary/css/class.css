@@ -10,8 +10,8 @@ body {
 	border-radius: 0.4rem;
 	padding: 1.1rem 1.4rem;
 	justify-content: space-between;
-	background-color: var(--secondary-500);
-	border: 0.1rem solid var(--secondary-600);
+	background-color: var(--secondary-600);
+	border: 0.1rem solid var(--secondary-700);
 }
 
 .secondary-alert__message {
@@ -37,5 +37,5 @@ body {
 }
 
 .secondary-alert__close:hover {
-	background-color: var(--secondary-400);
+	background-color: var(--secondary-700);
 }

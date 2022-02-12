@@ -53,14 +53,19 @@ body {
 	background-color: var(--neutral-200);
 }
 
+.dropdown__item:first-child {
+	border-radius: 0.4rem 0.4rem 0 0;
+}
+
 .dropdown__item:last-child {
 	margin-bottom: 0;
+	border-radius: 0 0 0.4rem 0.4rem;
 }
 
 .dropdown__item:focus,
 .dropdown__button:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid var(--primary-900);
+	outline: 0.2rem solid #000;
 }
 
 .dropdown--animate {

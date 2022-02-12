@@ -32,7 +32,6 @@ body {
 	border: none;
 	padding: 0.7rem;
 	margin-top: 1rem;
-	font-weight: 600;
 	position: absolute;
 	margin-right: 1.6rem;
 	letter-spacing: 0.6px;
@@ -48,7 +47,7 @@ body {
 
 .code-copy:focus {
 	outline-offset: -1px;
-	outline: 2px solid var(--neutral-50);
+	outline: 2px solid #fff;
 }
 
 .code-copy:disabled {

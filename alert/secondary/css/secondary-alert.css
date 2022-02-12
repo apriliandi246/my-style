@@ -9,8 +9,8 @@ body {
 	align-items: center;
 	border-radius: 0.4rem;
 	padding: 1.2rem 1.4rem;
-	background-color: var(--secondary-500);
-	border: 0.1rem solid var(--secondary-600);
+	background-color: var(--secondary-600);
+	border: 0.1rem solid var(--secondary-700);
 }
 
 .secondary-alert__message {
