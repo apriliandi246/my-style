@@ -1,6 +1,6 @@
 body {
 	padding: 100px;
-	background-color: rgba(29, 29, 29, 0.94);
+	background-color: #1d1d1df0;
 }
 
 /* ---------------------------- */
@@ -12,9 +12,9 @@ body {
 	line-height: 2.7rem;
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
-	background-color: rgba(118, 118, 128, 0.24);
-	border: 0.2rem solid rgba(118, 118, 128, 0.24);
-	border-left: 0.8rem solid rgba(118, 118, 128, 0.24);
+	background-color: #7676803d;
+	border: 0.2rem solid #7676803d;
+	border-left: 0.8rem solid #7676803d;
 }
 
 .quote::before {

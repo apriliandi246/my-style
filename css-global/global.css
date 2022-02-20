@@ -235,9 +235,9 @@ input:disabled,
 button:disabled,
 select:disabled,
 textarea:disabled {
-	color: #ababab;
+	color: #5a5252;
 	cursor: not-allowed;
-	background-color: rgba(126, 126, 136, 0.24);
+	background-color: #7e7e883d;
 }
 
 ul {

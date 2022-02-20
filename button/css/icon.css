@@ -1,6 +1,6 @@
 body {
 	padding: 100px;
-	background: rgba(29, 29, 29, 0.94);
+	background-color: #1d1d1df0;
 }
 
 /* ---------------------------- */
@@ -10,8 +10,8 @@ body {
 	align-items: center;
 	padding: 0.6rem 1.2rem;
 	font-size: var(--text-16x);
-	background-color: rgba(118, 118, 128, 0.24);
-	border: 0.1rem solid rgba(118, 118, 128, 0.24);
+	background-color: #7676803d;
+	border: 0.1rem solid #7676803d;
 }
 
 .button:focus {
@@ -38,6 +38,6 @@ body {
 	outline: 0.2rem solid #fff;
 }
 
-.button-icon:disabled > svg {
+.button-icon:disabled svg {
 	stroke: #5a5252;
 }

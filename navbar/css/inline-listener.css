@@ -1,6 +1,6 @@
 body {
 	height: 100vh;
-	background-color: rgba(29, 29, 29, 0.94);
+	background-color: #1d1d1df0;
 }
 
 /* ---------------------------- */
@@ -9,10 +9,10 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	background-color: #7676803d;
 	justify-content: space-between;
 	padding: 1.6rem 1.4rem 1.6rem 1.8rem;
-	background-color: rgba(118, 118, 128, 0.24);
-	border-bottom: 0.1rem solid rgba(118, 118, 128, 0.24);
+	border-bottom: 0.1rem solid #7676803d;
 }
 
 .navbar__brand {
@@ -53,7 +53,7 @@ body {
 	margin-bottom: 2.1rem;
 	padding-bottom: 0.5rem;
 	font-size: var(--text-16x);
-	border-bottom: 0.1rem solid rgba(118, 118, 128, 0.24);
+	border-bottom: 0.1rem solid #7676803d;
 }
 
 .navbar__menu-item:last-child {

@@ -1,6 +1,6 @@
 body {
 	padding: 100px;
-	background: rgba(29, 29, 29, 0.94);
+	background-color: #1d1d1df0;
 }
 
 /* ---------------------------- */
@@ -14,14 +14,14 @@ body {
 	color: #fff;
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
+	background-color: #7676803d;
+	border: 0.1rem solid #7676803d;
 	padding: 0.8rem 4.8rem 0.8rem 1.4rem;
-	background-color: rgba(118, 118, 128, 0.24);
-	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .input:focus {
 	outline-offset: -0.1rem;
-	outline: 0.1rem solid #fff;
+	outline: 0.2rem solid #fff;
 }
 
 .input::placeholder {
