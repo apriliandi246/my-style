@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -10,26 +11,30 @@ body {
 
 .input {
 	width: 100%;
-	color: #000;
+	color: #fff;
 	border-radius: 0.4rem;
 	padding: 0.8rem 1.4rem;
 	font-size: var(--text-16x);
-	background-color: var(--neutral-50);
-	border: 0.1rem solid var(--neutral-400);
+	background-color: rgba(118, 118, 128, 0.24);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
+}
+
+.input-label {
+	color: #fff;
+	margin-bottom: 0.4rem;
+	display: inline-block;
+	font-size: var(--text-16x);
 }
 
 .input:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid #fff;
+}
+
+.input::placeholder {
+	color: #9b8484;
 }
 
 .input:disabled::placeholder {
-	color: #ababab;
-}
-
-.input-label {
-	color: #000;
-	margin-bottom: 0.4rem;
-	display: inline-block;
-	font-size: var(--text-16x);
+	color: #5a5252;
 }

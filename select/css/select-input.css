@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -10,15 +11,20 @@ body {
 
 .select-input {
 	width: 100%;
-	color: #000;
+	color: #fff;
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
 	padding: 0.8rem 1rem 0.8rem 1.4rem;
-	background-color: var(--neutral-50);
-	border: 0.1rem solid var(--neutral-400);
+	background-color: rgba(118, 118, 128, 0.24);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .select-input:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid #fff;
+}
+
+.select-input option {
+	color: #fff;
+	background-color: #463d3d;
 }

@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -10,8 +11,9 @@ body {
 	height: 5rem;
 	position: absolute;
 	border-radius: 100%;
-	border: 0.6rem solid var(--primary-200);
-	border-top-color: var(--primary-900);
+	border: 0.6rem solid #5a5252;
+	border-top-color: #fff;
+	border-right-color: #fff;
 	animation: spinner 800ms linear infinite;
 }
 

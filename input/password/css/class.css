@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -10,25 +11,29 @@ body {
 
 .input {
 	width: 100%;
-	color: #000;
+	color: #fff;
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
-	background-color: var(--neutral-50);
 	padding: 0.8rem 4.8rem 0.8rem 1.4rem;
-	border: 0.1rem solid var(--neutral-400);
+	background-color: rgba(118, 118, 128, 0.24);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .input:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.1rem solid #fff;
 }
 
-.input:focus + .password-btn-toggle .password-input-icon {
-	stroke: #000;
+.input::placeholder {
+	color: #9b8484;
 }
 
 .input:disabled::placeholder {
-	color: #ababab;
+	color: #5a5252;
+}
+
+.input:focus + .password-btn-toggle .password-input-icon {
+	stroke: #fff;
 }
 
 .password-btn-toggle {
@@ -49,11 +54,11 @@ body {
 
 .password-btn-toggle:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid var(--primary-900);
+	outline: 0.2rem solid #fff;
 }
 
 .password-btn-toggle:focus > svg {
-	stroke: var(--primary-900);
+	stroke: #fff;
 }
 
 .password-icon-unactive {

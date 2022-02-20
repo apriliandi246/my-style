@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -9,6 +10,7 @@ body {
 	left: 25%;
 	z-index: 3;
 	width: 50%;
+	color: #fff;
 	padding: 2rem;
 	display: none;
 	position: fixed;
@@ -16,7 +18,8 @@ body {
 	margin-right: auto;
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
-	background-color: var(--neutral-50);
+	background-color: rgba(118, 118, 128, 0.24);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .modal-overlay {
@@ -27,7 +30,7 @@ body {
 	height: 100%;
 	display: none;
 	position: fixed;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .active-modal {

@@ -1,20 +1,21 @@
 body {
 	padding: 100px;
+	background: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
 
 .button {
+	color: #fff;
 	display: flex;
 	align-items: center;
 	padding: 0.8rem 1.4rem;
-	color: var(--primary-900);
 	font-size: var(--text-16x);
-	background-color: var(--neutral-50);
-	border: 0.1rem solid var(--neutral-400);
+	background-color: rgba(118, 118, 128, 0.24);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .button:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid #fff;
 }

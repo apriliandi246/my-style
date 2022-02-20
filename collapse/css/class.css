@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -10,6 +11,7 @@ body {
 
 .collapse__button {
 	width: 100%;
+	color: #fff;
 	display: flex;
 	cursor: pointer;
 	align-items: center;
@@ -17,28 +19,25 @@ body {
 	padding: 1.5rem 1.6rem;
 	font-size: var(--text-16x);
 	justify-content: space-between;
-	background-color: var(--neutral-50);
-	border: 0.1rem solid var(--neutral-400);
-}
-
-.collapse__button:disabled::after {
-	color: #ababab;
+	background-color: rgba(118, 118, 128, 0.24);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .collapse__message {
+	color: #fff;
 	display: none;
 	padding: 1.6rem;
 	line-height: 2.7rem;
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
-	background-color: var(--neutral-50);
-	border: 0.1rem solid var(--neutral-400);
+	background-color: rgba(118, 118, 128, 0.24);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .collapse--active,
 .collapse__button:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid #fff;
 }
 
 .collapse-message--active {

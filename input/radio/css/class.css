@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -23,7 +24,7 @@ body {
 
 .radio-input:focus {
 	outline-offset: 0.4rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid #fff;
 }
 
 .radio-input::after {

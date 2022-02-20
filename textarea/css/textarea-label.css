@@ -1,33 +1,34 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
 
 .field {
 	width: 100%;
-	color: #000;
+	color: #fff;
 	resize: vertical;
 	line-height: 2.7rem;
 	border-radius: 0.4rem;
 	padding: 1.2rem 1.8rem;
 	font-size: var(--text-16x);
-	background-color: var(--neutral-50);
-	border: 0.1rem solid var(--neutral-400);
+	background-color: rgba(118, 118, 128, 0.24);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .field:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
-}
-
-.field-label {
-	color: #000;
-	margin-bottom: 0.4rem;
-	display: inline-block;
-	font-size: var(--text-16x);
+	outline: 0.2rem solid #fff;
 }
 
 .field:disabled::placeholder {
-	color: #ababab;
+	color: #5a5252;
+}
+
+.field-label {
+	color: #fff;
+	margin-bottom: 0.4rem;
+	display: inline-block;
+	font-size: var(--text-16x);
 }

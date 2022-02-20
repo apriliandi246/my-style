@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ----------------------------------------- */
@@ -8,37 +9,22 @@ body {
 	width: 5rem;
 	height: 5rem;
 	border-radius: 100%;
-	border: 0.1rem solid var(--neutral-400);
+	background-color: rgba(118, 118, 128, 0.3);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .block {
 	width: 25rem;
 	height: 4rem;
 	border-radius: 0.5rem;
-	border: 0.1rem solid var(--neutral-400);
+	background-color: rgba(118, 118, 128, 0.3);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .large-block {
 	width: 50rem;
 	height: 25rem;
 	border-radius: 0.5rem;
-	border: 0.1rem solid var(--neutral-400);
-}
-
-.skeleton-animation {
-	animation: skeleton 900ms ease-in-out infinite;
-}
-
-@keyframes skeleton {
-	0% {
-		background-color: rgba(249, 250, 251, 0.4);
-	}
-
-	50% {
-		background-color: #ebe6e6;
-	}
-
-	100% {
-		background-color: rgba(249, 250, 251, 0.4);
-	}
+	background-color: rgba(118, 118, 128, 0.3);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }

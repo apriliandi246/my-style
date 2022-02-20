@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -9,25 +10,17 @@ body {
 	height: 5rem;
 	position: absolute;
 	border-radius: 100%;
-	border-top-color: var(--primary-900);
-	border: 0.6rem solid var(--primary-100);
-	border-bottom-color: var(--primary-900);
-	animation: widthSpinner 1s linear infinite;
+	border: 0.6rem solid #5a5252;
+	border-top-color: #fff;
+	animation: spinner 800ms linear infinite;
 }
 
-@keyframes widthSpinner {
-	0% {
-		border-width: 0.9rem;
+@keyframes spinner {
+	to {
 		transform: rotate(0deg);
 	}
 
-	50% {
-		border-width: 0.3rem;
-		transform: rotate(180deg);
-	}
-
-	100% {
-		border-width: 0.9rem;
+	to {
 		transform: rotate(360deg);
 	}
 }

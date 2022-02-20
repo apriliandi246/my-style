@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ----------------------------------------- */
@@ -8,48 +9,39 @@ body {
 	width: 5rem;
 	height: 5rem;
 	border-radius: 100%;
-	background-size: 30rem;
-	background-repeat: no-repeat;
-	background-color: var(--neutral-100);
-	border: 0.1rem solid var(--neutral-400);
+	animation: skeleton 1s ease-in infinite;
+	background-color: rgba(118, 118, 128, 0.3);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .block {
 	width: 25rem;
 	height: 4rem;
 	border-radius: 0.5rem;
-	background-size: 30rem;
-	background-repeat: no-repeat;
-	background-color: var(--neutral-100);
-	border: 0.1rem solid var(--neutral-400);
+	animation: skeleton 1s ease-in infinite;
+	background-color: rgba(118, 118, 128, 0.3);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .large-block {
 	width: 50rem;
 	height: 25rem;
 	border-radius: 0.5rem;
-	background-size: 30rem;
-	background-repeat: no-repeat;
-	background-color: var(--neutral-100);
-	border: 0.1rem solid var(--neutral-400);
-}
-
-.skeleton-animation {
-	animation: skeleton 900ms ease infinite;
-	background-image: linear-gradient(
-		100deg,
-		#f9fafb,
-		rgba(229, 231, 235, 0.9),
-		#f9fafb
-	);
+	animation: skeleton 1s ease-in infinite;
+	background-color: rgba(118, 118, 128, 0.3);
+	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 @keyframes skeleton {
 	0% {
-		background-position: -50rem;
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
 	}
 
 	100% {
-		background-position: calc(40rem + 100%);
+		opacity: 1;
 	}
 }

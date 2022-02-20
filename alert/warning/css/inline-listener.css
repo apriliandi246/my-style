@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: rgba(29, 29, 29, 0.94);
 }
 
 /* ---------------------------- */
@@ -11,7 +12,6 @@ body {
 	padding: 1.1rem 1.4rem;
 	justify-content: space-between;
 	background-color: var(--warning-500);
-	border: 0.1rem solid var(--warning-600);
 }
 
 .warning-alert__main {
