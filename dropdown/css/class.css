@@ -62,28 +62,17 @@ body {
 	border-radius: 0 0 0.4rem 0.4rem;
 }
 
-.dropdown__item:focus,
 .dropdown__button:focus {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #000;
 }
 
-.dropdown--animate {
-	animation: dropdown 140ms;
+.dropdown__item:focus {
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid #000;
+	background-color: var(--neutral-200);
 }
 
 .dropdown--collapse {
 	display: block;
-}
-
-@keyframes dropdown {
-	from {
-		opacity: 0;
-		transform: translateY(-2rem);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
 }

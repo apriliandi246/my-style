@@ -9,8 +9,8 @@ body {
 	height: 5rem;
 	border-radius: 100%;
 	background-size: 30rem;
+	background-color: #f3f5f7;
 	background-repeat: no-repeat;
-	background-color: var(--neutral-100);
 	border: 0.1rem solid var(--neutral-400);
 }
 
@@ -19,8 +19,8 @@ body {
 	height: 4rem;
 	border-radius: 0.5rem;
 	background-size: 30rem;
+	background-color: #f3f5f7;
 	background-repeat: no-repeat;
-	background-color: var(--neutral-100);
 	border: 0.1rem solid var(--neutral-400);
 }
 
@@ -29,8 +29,8 @@ body {
 	height: 25rem;
 	border-radius: 0.5rem;
 	background-size: 30rem;
+	background-color: #f3f5f7;
 	background-repeat: no-repeat;
-	background-color: var(--neutral-100);
 	border: 0.1rem solid var(--neutral-400);
 }
 

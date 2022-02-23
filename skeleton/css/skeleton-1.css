@@ -8,6 +8,7 @@ body {
 	width: 5rem;
 	height: 5rem;
 	border-radius: 100%;
+	background-color: #f3f5f7;
 	border: 0.1rem solid var(--neutral-400);
 }
 
@@ -15,6 +16,7 @@ body {
 	width: 25rem;
 	height: 4rem;
 	border-radius: 0.5rem;
+	background-color: #f3f5f7;
 	border: 0.1rem solid var(--neutral-400);
 }
 
@@ -22,23 +24,6 @@ body {
 	width: 50rem;
 	height: 25rem;
 	border-radius: 0.5rem;
+	background-color: #f3f5f7;
 	border: 0.1rem solid var(--neutral-400);
-}
-
-.skeleton-animation {
-	animation: skeleton 900ms ease-in-out infinite;
-}
-
-@keyframes skeleton {
-	0% {
-		background-color: rgba(249, 250, 251, 0.4);
-	}
-
-	50% {
-		background-color: #ebe6e6;
-	}
-
-	100% {
-		background-color: rgba(249, 250, 251, 0.4);
-	}
 }
