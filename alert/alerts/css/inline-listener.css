@@ -36,7 +36,3 @@ body {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #fff;
 }
-
-.secondary-alert__close:hover {
-	background-color: var(--secondary-700);
-}

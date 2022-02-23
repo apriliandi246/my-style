@@ -46,7 +46,3 @@ body {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #fff;
 }
-
-.success-alert__close:hover {
-	background-color: var(--success-400);
-}
