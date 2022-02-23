@@ -23,6 +23,10 @@ body {
 	border: 0.1rem solid #7676803d;
 }
 
+.collapse__button svg {
+	pointer-events: none;
+}
+
 .collapse__message {
 	color: #fff;
 	display: none;
