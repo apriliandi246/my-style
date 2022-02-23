@@ -1,4 +1,5 @@
 body {
+	height: 100vh;
 	padding: 100px;
 	background-color: #1d1d1df0;
 }
@@ -71,20 +72,4 @@ body {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #fff;
 	background-color: #1d1d1d80;
-}
-
-.dropdown--animate {
-	animation: dropdown 140ms;
-}
-
-@keyframes dropdown {
-	from {
-		opacity: 0;
-		transform: translateY(-2rem);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
 }

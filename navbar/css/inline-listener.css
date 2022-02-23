@@ -37,7 +37,6 @@ body {
 }
 
 .navbar__btn-menu:focus {
-	border-radius: 0;
 	outline-offset: -0.2rem;
 	outline: 0.2rem solid #fff;
 }
@@ -86,12 +85,14 @@ body {
 	.navbar__menus {
 		width: auto;
 		display: flex;
+		margin-top: 0;
 		max-width: 100%;
 	}
 
 	.navbar__menu-item {
 		border-bottom: 0;
 		margin-bottom: 0;
+		padding-bottom: 0;
 		margin-right: 4rem;
 	}
 

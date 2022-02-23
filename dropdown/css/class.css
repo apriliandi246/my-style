@@ -1,4 +1,5 @@
 body {
+	height: 100vh;
 	padding: 100px;
 	background-color: #1d1d1df0;
 }
@@ -74,22 +75,6 @@ body {
 	background-color: #1d1d1d80;
 }
 
-.dropdown--animate {
-	animation: dropdown 140ms;
-}
-
 .dropdown--collapse {
 	display: block;
-}
-
-@keyframes dropdown {
-	from {
-		opacity: 0;
-		transform: translateY(-2rem);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
 }
