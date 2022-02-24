@@ -14,13 +14,13 @@ body {
 	border: 0.1rem solid var(--neutral-400);
 }
 
-.button:disabled > svg {
-	stroke: #ababab;
-}
-
 .button:focus {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #000;
+}
+
+.button:disabled > svg {
+	stroke: #ababab;
 }
 
 .icon-rigth {

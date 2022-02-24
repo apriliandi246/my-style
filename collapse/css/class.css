@@ -4,10 +4,6 @@ body {
 
 /* ---------------------------- */
 
-.collapse {
-	margin-bottom: 1.4rem;
-}
-
 .collapse__button {
 	width: 100%;
 	color: #000;
@@ -22,12 +18,12 @@ body {
 	border: 0.1rem solid var(--neutral-400);
 }
 
-.collapse__button svg {
-	pointer-events: none;
-}
-
 .collapse__button:disabled::after {
 	color: #ababab;
+}
+
+.collapse__button svg {
+	pointer-events: none;
 }
 
 .collapse__message {

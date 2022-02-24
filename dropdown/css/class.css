@@ -20,6 +20,11 @@ body {
 	border: 0.1rem solid var(--neutral-400);
 }
 
+.dropdown__button:focus {
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid #000;
+}
+
 .dropdown__button > svg {
 	margin-left: 0.6rem;
 	pointer-events: none;
@@ -49,10 +54,6 @@ body {
 	padding: 1rem 8rem 1rem 1.3rem;
 }
 
-.dropdown__item:hover {
-	background-color: var(--neutral-200);
-}
-
 .dropdown__item:first-child {
 	border-radius: 0.4rem 0.4rem 0 0;
 }
@@ -62,15 +63,9 @@ body {
 	border-radius: 0 0 0.4rem 0.4rem;
 }
 
-.dropdown__button:focus {
-	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
-}
-
 .dropdown__item:focus {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #000;
-	background-color: var(--neutral-200);
 }
 
 .dropdown--collapse {

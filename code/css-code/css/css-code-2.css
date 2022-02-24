@@ -28,19 +28,15 @@ body {
 .code-copy {
 	top: 0;
 	right: 0;
+	color: #fff;
 	border: none;
 	padding: 0.7rem;
 	margin-top: 1rem;
 	position: absolute;
 	margin-right: 1.6rem;
-	color: var(--neutral-50);
 	font-size: var(--text-16x);
-	transition: background-color 100ms;
-	background-color: var(--secondary-800);
-}
-
-.code-copy:hover {
-	background-color: var(--primary-700);
+	background-color: #7676803d;
+	border: 0.1rem solid #7676803d;
 }
 
 .code-copy:focus {

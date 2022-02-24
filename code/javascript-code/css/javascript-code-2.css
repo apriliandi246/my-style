@@ -7,7 +7,7 @@ body {
 .code-container {
 	overflow-x: auto;
 	position: relative;
-	border-radius: 4px;
+	border-radius: 0.4rem;
 	padding: 0 2.4rem 1.2rem 2.4rem;
 	background-color: var(--primary-900);
 }
@@ -28,25 +28,20 @@ body {
 .code-copy {
 	top: 0;
 	right: 0;
+	color: #fff;
 	border: none;
 	padding: 0.7rem;
 	margin-top: 1rem;
 	position: absolute;
 	margin-right: 1.6rem;
-	letter-spacing: 0.6px;
-	color: var(--neutral-50);
 	font-size: var(--text-16x);
-	transition: background-color 100ms;
-	background-color: var(--secondary-800);
-}
-
-.code-copy:hover {
-	background-color: var(--secondary-700);
+	background-color: #7676803d;
+	border: 0.1rem solid #7676803d;
 }
 
 .code-copy:focus {
-	outline-offset: -1px;
-	outline: 2px solid #fff;
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid #fff;
 }
 
 .code-copy:disabled {
