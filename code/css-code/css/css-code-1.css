@@ -9,9 +9,9 @@ body {
 	overflow-x: auto;
 	position: relative;
 	border-radius: 0.4rem;
+	background-color: #7676804d;
+	border: 0.1rem solid #7676803d;
 	padding: 0 2.4rem 1.2rem 2.4rem;
-	background-color: rgba(118, 118, 128, 0.3);
-	border: 0.1rem solid rgba(118, 118, 128, 0.24);
 }
 
 .code-container::-webkit-scrollbar {
@@ -37,8 +37,8 @@ body {
 	padding: 0.7rem 1rem;
 	margin-right: 1.6rem;
 	font-size: var(--text-16x);
-	background-color: rgba(118, 118, 128, 0.24);
-	border: 0.1rem solid rgba(118, 118, 128, 0.24);
+	background-color: #7676803d;
+	border: 0.1rem solid #7676803d;
 }
 
 .code-copy:focus {
