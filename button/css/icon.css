@@ -8,7 +8,6 @@ body {
 	display: flex;
 	align-items: center;
 	padding: 0.6rem 1.2rem;
-	color: var(--primary-900);
 	font-size: var(--text-16x);
 	background-color: var(--neutral-50);
 	border: 0.1rem solid var(--neutral-400);
@@ -16,7 +15,7 @@ body {
 
 .button:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid var(--primary-900);
+	outline: 0.2rem solid #000;
 }
 
 .button:disabled > svg {

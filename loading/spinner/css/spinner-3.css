@@ -9,9 +9,9 @@ body {
 	height: 5rem;
 	position: absolute;
 	border-radius: 100%;
-	border-top-color: var(--primary-900);
+	border-top-color: #000;
 	border: 0.6rem solid var(--primary-100);
-	border-bottom-color: var(--primary-900);
+	border-bottom-color: #000;
 	animation: widthSpinner 1s linear infinite;
 }
 

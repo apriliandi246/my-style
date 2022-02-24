@@ -21,7 +21,7 @@ body {
 }
 
 .code-block {
-	color: var(--info-50);
+	color: #fff;
 	font: 500 var(--text-16x) / 2.5rem monospace;
 }
 

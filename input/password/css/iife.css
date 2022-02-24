@@ -49,11 +49,11 @@ body {
 
 .password-btn-toggle:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid var(--primary-900);
+	outline: 0.2rem solid #000;
 }
 
 .password-btn-toggle:focus > svg {
-	stroke: var(--primary-900);
+	stroke: #000;
 }
 
 .password-icon-unactive {

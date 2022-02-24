@@ -17,7 +17,7 @@ body {
 	width: 2rem;
 	height: 2rem;
 	border-radius: 100%;
-	background-color: var(--primary-900);
+	background-color: #000;
 	animation: bouncer 500ms ease-in-out infinite alternate;
 }
 

@@ -9,7 +9,7 @@ body {
 	height: 5rem;
 	position: absolute;
 	border-radius: 100%;
-	border: 0.6rem solid var(--primary-900);
+	border: 0.6rem solid #000;
 	border-top-color: transparent;
 	animation: spinner 900ms linear infinite;
 }

@@ -35,11 +35,11 @@ body {
 }
 
 .modal-animation {
-	animation: modal 240ms;
+	animation: modal 210ms;
 }
 
 .modal-overlay-animation {
-	animation: modalWrapper 230ms;
+	animation: modalWrapper 200ms;
 }
 
 @keyframes modal {
