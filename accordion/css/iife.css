@@ -1,0 +1,52 @@
+body {
+	padding: 100px;
+}
+
+/* ---------------------------- */
+
+.accordion__button {
+	width: 100%;
+	color: #000;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	border-radius: 0.4rem;
+	padding: 1.5rem 1.6rem;
+	font-size: var(--text-16x);
+	justify-content: space-between;
+	background-color: var(--neutral-50);
+	border: 0.1rem solid var(--neutral-400);
+}
+
+.accordion__button:disabled::after {
+	color: #ababab;
+}
+
+.accordion__button svg {
+	pointer-events: none;
+}
+
+.accordion__message {
+	color: #000;
+	display: none;
+	padding: 1.6rem;
+	line-height: 2.7rem;
+	border-radius: 0.4rem;
+	font-size: var(--text-16x);
+	background-color: var(--neutral-50);
+	border: 0.1rem solid var(--neutral-400);
+}
+
+.accordion--active,
+.accordion__button:focus {
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid #000;
+}
+
+.accordion-message--active {
+	display: block;
+}
+
+.accordion--active svg {
+	transform: rotate(180deg);
+}
