@@ -10,6 +10,13 @@ function showModal() {
 		modal.style.display = "none";
 		modalOverlay.style.display = "none";
 	}
+
+	document.body.addEventListener("keydown", (event) => {
+		if (event.key === "Escape") {
+			modal.style.display = "none";
+			modalOverlay.style.display = "none";
+		}
+	});
 }
 
 function hideModal(event) {
