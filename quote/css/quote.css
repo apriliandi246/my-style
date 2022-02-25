@@ -12,7 +12,7 @@ body {
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
 	background-color: var(--neutral-50);
-	border: 0.2rem solid var(--secondary-500);
+	border: 0.1rem solid var(--secondary-500);
 	border-left: 0.7rem solid var(--secondary-500);
 }
 

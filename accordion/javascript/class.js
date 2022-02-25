@@ -1,4 +1,4 @@
-class Collapse {
+class Accordion {
 	constructor() {
 		this.previousAccordionMsg = "";
 		this.accordionComponents = document.getElementsByClassName("accordion__button");
@@ -36,4 +36,4 @@ class Collapse {
 	}
 }
 
-new Collapse();
+new Accordion();
