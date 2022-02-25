@@ -17,6 +17,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 0.4rem;
+	animation: modal 260ms;
 	font-size: var(--text-16x);
 	background-color: #7676803d;
 	border: 0.1rem solid #7676803d;
@@ -30,6 +31,7 @@ body {
 	height: 100%;
 	display: none;
 	position: fixed;
+	animation: modal 200ms;
 	background-color: #0000004d;
 }
 
@@ -37,25 +39,7 @@ body {
 	display: block;
 }
 
-.modal-animation {
-	animation: modal 210ms;
-}
-
-.modal-overlay-animation {
-	animation: modalWrapper 200ms;
-}
-
 @keyframes modal {
-	from {
-		transform: scale(0.7);
-	}
-
-	to {
-		transform: scale(1);
-	}
-}
-
-@keyframes modalWrapper {
 	from {
 		opacity: 0;
 	}

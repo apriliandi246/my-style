@@ -56,10 +56,6 @@ body {
 	padding: 1rem 8rem 1rem 1.3rem;
 }
 
-.dropdown__item:hover {
-	background-color: #1d1d1d80;
-}
-
 .dropdown__item:first-child {
 	border-radius: 0.4rem 0.4rem 0 0;
 }
@@ -72,7 +68,6 @@ body {
 .dropdown__item:focus {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #fff;
-	background-color: #1d1d1d80;
 }
 
 .dropdown--collapse {

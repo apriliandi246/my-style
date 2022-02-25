@@ -8,7 +8,7 @@ class Navbar {
 
 	addEventListener() {
 		this.navbarBtnMenus.addEventListener("click", () => {
-			this.navbar.classList.toggle("navbar__menus--collapse");
+			this.navbarMenus.classList.toggle("navbar__menus--collapse");
 		});
 
 		document.body.addEventListener("click", (event) => {

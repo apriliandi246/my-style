@@ -12,4 +12,11 @@
 		modal.classList.toggle("active-modal");
 		modalOverlay.classList.toggle("active-modal");
 	});
+
+	document.body.addEventListener("keydown", (event) => {
+		if (event.key === "Escape") {
+			modal.classList.remove("active-modal");
+			modalOverlay.classList.remove("active-modal");
+		}
+	});
 })();
