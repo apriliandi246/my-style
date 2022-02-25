@@ -47,3 +47,7 @@ body {
 .collapse-message--active {
 	display: block;
 }
+
+.collapse--active svg {
+	transform: rotate(180deg);
+}
