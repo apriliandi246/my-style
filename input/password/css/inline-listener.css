@@ -57,3 +57,7 @@ body {
 .password-btn-toggle:focus svg {
 	stroke: #000;
 }
+
+.password-icon-unactive {
+	display: none;
+}
