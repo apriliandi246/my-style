@@ -30,6 +30,7 @@ body {
 
 .collapse__message {
 	color: #000;
+	display: none;
 	padding: 1.6rem;
 	line-height: 2.7rem;
 	border-radius: 0.4rem;
@@ -46,4 +47,8 @@ body {
 
 .collapse--active svg {
 	transform: rotate(180deg);
+}
+
+.collapse-message--active {
+	display: block;
 }

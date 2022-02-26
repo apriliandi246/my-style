@@ -3,25 +3,26 @@
 	const dropdownMenu = dropdownBtn.nextElementSibling;
 
 	dropdownBtn.addEventListener("click", () => {
-		const menuDisplayValue = dropdownMenu.style.display;
-
-		if (menuDisplayValue === "" || menuDisplayValue === "none") {
-			dropdownMenu.style.display = "block";
-		} else {
-			dropdownMenu.style.display = "none";
-		}
+		dropdownMenu.classList.toggle("dropdown--collapse");
 	});
 
 	dropdownBtn.addEventListener("keydown", (event) => {
-		if (event.key === "Escape") dropdownMenu.style.display = "none";
+		if (event.key === "Escape") {
+			dropdownMenu.classList.remove("dropdown--collapse");
+		}
 	});
 
 	dropdownMenu.addEventListener("keydown", (event) => {
-		if (event.key === "Escape") dropdownMenu.style.display = "none";
+		if (event.key === "Escape") {
+			dropdownMenu.classList.remove("dropdown--collapse");
+		}
 	});
 
 	document.body.addEventListener("click", (event) => {
 		const dropdown = dropdownBtn.parentElement;
-		if (!dropdown.contains(event.target)) dropdownMenu.style.display = "none";
+
+		if (!dropdown.contains(event.target)) {
+			dropdownMenu.classList.remove("dropdown--collapse");
+		}
 	});
 })();
