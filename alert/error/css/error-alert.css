@@ -21,5 +21,7 @@ body {
 
 .error-alert__icon {
 	order: 1;
+	width: 2.4rem;
+	height: 2.4rem;
 	margin-right: 1.4rem;
 }

@@ -27,6 +27,8 @@ body {
 
 .warning-alert__icon {
 	order: 1;
+	width: 2.4rem;
+	height: 2.4rem;
 	margin-right: 1.4rem;
 }
 
@@ -38,6 +40,8 @@ body {
 }
 
 .warning-alert__close svg {
+	width: 2.4rem;
+	height: 2.4rem;
 	pointer-events: none;
 }
 

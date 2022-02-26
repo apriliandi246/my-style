@@ -23,12 +23,16 @@ body {
 	stroke: #ababab;
 }
 
+.button svg {
+	width: 2.4rem;
+	height: 2.4rem;
+	pointer-events: none;
+}
+
 .icon-rigth {
 	margin-left: 0.5rem;
-	pointer-events: none;
 }
 
 .icon-left {
 	margin-right: 0.8rem;
-	pointer-events: none;
 }

@@ -22,6 +22,12 @@ body {
 	stroke: #ababab;
 }
 
+.button svg {
+	width: 2.4rem;
+	height: 2.4rem;
+	pointer-events: none;
+}
+
 /* ----------------------------------------- */
 
 .button-icon {
@@ -39,4 +45,10 @@ body {
 
 .button-icon:disabled > svg {
 	stroke: #ababab;
+}
+
+.button-icon svg {
+	width: 2.4rem;
+	height: 2.4rem;
+	pointer-events: none;
 }

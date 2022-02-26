@@ -25,12 +25,14 @@ body {
 	outline: 0.2rem solid #000;
 }
 
-.dropdown__button > svg {
+.dropdown__button svg {
+	width: 2.4rem;
+	height: 2.4rem;
 	margin-left: 0.6rem;
 	pointer-events: none;
 }
 
-.dropdown__button:disabled > svg {
+.dropdown__button:disabled svg {
 	stroke: #ababab;
 }
 
