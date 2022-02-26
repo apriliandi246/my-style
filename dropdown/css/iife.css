@@ -39,6 +39,7 @@ body {
 .dropdown__items {
 	top: 0;
 	z-index: 9999;
+	display: none;
 	margin-top: 5.5rem;
 	position: absolute;
 	border-radius: 0.4rem;
@@ -67,4 +68,8 @@ body {
 .dropdown__item:focus {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #fff;
+}
+
+.dropdown--collapse {
+	display: block;
 }

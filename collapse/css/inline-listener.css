@@ -40,10 +40,10 @@ body {
 	outline: 0.2rem solid #fff;
 }
 
-.collapse-message--active {
-	display: block;
-}
-
 .collapse--active svg {
 	transform: rotate(180deg);
+}
+
+.collapse-message--active {
+	display: block;
 }
