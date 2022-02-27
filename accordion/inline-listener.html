@@ -6,16 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../../css-global/global.css" />
-	<link rel="stylesheet" href="./css/class.css">
-	<script defer src="./javascript/class.js"></script>
-	<title>Accordion - Class</title>
+	<link rel="stylesheet" href="../css-global/global.css">
+	<link rel="stylesheet" href="./css/iife.css">
+	<script src="./javascript/inline-listener.js"></script>
+	<title>Accordion - IIFE</title>
 </head>
 
 <body>
-	<div id="accordions">
-
-
+	<div onclick={toggleAccordions(event)}>
 		<div class="accordion">
 			<button class="accordion__button">
 				What is HTML ????
@@ -23,7 +21,6 @@
 					fill="none"
 					stroke="#000"
 					stroke-width="2"
-					stroke="#363a44"
 					viewBox="0 0 24 24"
 					stroke-linecap="round"
 					stroke-linejoin="round"
