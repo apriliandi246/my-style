@@ -19,7 +19,12 @@ body {
 	outline: 0.2rem solid #fff;
 }
 
-.button:disabled > svg {
+.button svg {
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.button:disabled svg {
 	stroke: #5a5252;
 }
 
@@ -36,6 +41,11 @@ body {
 .button-icon:focus {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #fff;
+}
+
+.button-icon svg {
+	width: 2.4rem;
+	height: 2.4rem;
 }
 
 .button-icon:disabled svg {

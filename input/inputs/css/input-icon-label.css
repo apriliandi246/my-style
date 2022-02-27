@@ -9,9 +9,11 @@ body {
 	position: relative;
 }
 
-.input-wrapper > svg {
+.input-wrapper svg {
 	top: 0;
 	left: 0;
+	width: 2.4rem;
+	height: 2.4rem;
 	position: absolute;
 	margin-top: 3.8rem;
 	margin-left: 1.6rem;

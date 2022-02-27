@@ -23,6 +23,8 @@ body {
 }
 
 .dropdown__button svg {
+	width: 2.4rem;
+	height: 2.4rem;
 	margin-left: 0.6rem;
 	pointer-events: none;
 }

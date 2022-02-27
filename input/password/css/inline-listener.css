@@ -49,6 +49,8 @@ body {
 }
 
 .password-btn-toggle svg {
+	width: 2.4rem;
+	height: 2.4rem;
 	pointer-events: none;
 }
 
@@ -57,7 +59,7 @@ body {
 	outline: 0.2rem solid #fff;
 }
 
-.password-btn-toggle:focus > svg {
+.password-btn-toggle:focus svg {
 	stroke: #fff;
 }
 
