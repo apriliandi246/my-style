@@ -18,7 +18,7 @@ body {
 	outline: 0.2rem solid #000;
 }
 
-.button:disabled > svg {
+.button:disabled svg {
 	stroke: #ababab;
 }
 
@@ -43,7 +43,7 @@ body {
 	outline: 0.2rem solid #000;
 }
 
-.button-icon:disabled > svg {
+.button-icon:disabled svg {
 	stroke: #ababab;
 }
 

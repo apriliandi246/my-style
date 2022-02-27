@@ -19,7 +19,7 @@ body {
 	outline: 0.2rem solid #000;
 }
 
-.button:disabled > svg {
+.button:disabled svg {
 	stroke: #ababab;
 }
 
