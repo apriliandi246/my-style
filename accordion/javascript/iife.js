@@ -1,25 +1,26 @@
 (function () {
 	let previousAccordionMsg = "";
-	const accordionComponents = document.getElementsByClassName("accordion__button");
+	let accordions = document.getElementById("accordions");
 
-	for (let index = 0; index < accordionComponents.length; index++) {
-		accordionComponents[index].addEventListener("click", () => {
-			const accordionMessage = accordionComponents[index].nextElementSibling;
+	accordions.addEventListener("click", (event) => {
+		if (event.target.tagName === "BUTTON") {
+			const accordionBtn = event.target;
+			const accordionMsg = accordionBtn.nextElementSibling;
 
-			accordionComponents[index].classList.toggle("accordion--active");
-			accordionMessage.classList.toggle("accordion-message--active");
+			accordionBtn.classList.toggle("accordion--active");
+			accordionMsg.classList.toggle("accordion-message--active");
 
-			if (previousAccordionMsg === accordionMessage) {
+			if (previousAccordionMsg === accordionMsg) {
 				previousAccordionMsg = "";
 			}
 
 			if (!previousAccordionMsg) {
-				previousAccordionMsg = accordionMessage;
+				previousAccordionMsg = accordionMsg;
 			} else {
 				previousAccordionMsg.previousElementSibling.classList.remove("accordion--active");
 				previousAccordionMsg.classList.remove("accordion-message--active");
-				previousAccordionMsg = accordionMessage;
+				previousAccordionMsg = accordionMsg;
 			}
-		});
-	}
+		}
+	});
 })();
