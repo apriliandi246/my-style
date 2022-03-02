@@ -5,10 +5,6 @@ body {
 
 /* ---------------------------- */
 
-.select-input-wrapper {
-	position: relative;
-}
-
 .select-input {
 	width: 100%;
 	color: #fff;
@@ -27,4 +23,12 @@ body {
 .select-input option {
 	color: #fff;
 	background-color: #463d3d;
+}
+
+/* select with label */
+.select-label {
+	color: #fff;
+	margin-bottom: 0.4rem;
+	display: inline-block;
+	font-size: var(--text-16x);
 }

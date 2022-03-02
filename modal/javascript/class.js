@@ -13,14 +13,14 @@ class Modal {
 	}
 
 	toggleModal = () => {
-		this.modal.classList.toggle("active-modal");
-		this.modalOverlay.classList.toggle("active-modal");
+		this.modal.classList.toggle("modal--active");
+		this.modalOverlay.classList.toggle("modal--active");
 	};
 
 	escapePress = (event) => {
 		if (event.key === "Escape") {
-			this.modal.classList.remove("active-modal");
-			this.modalOverlay.classList.remove("active-modal");
+			this.modal.classList.remove("modal--active");
+			this.modalOverlay.classList.remove("modal--active");
 		}
 	};
 }

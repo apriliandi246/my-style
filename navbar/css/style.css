@@ -33,8 +33,8 @@ body {
 }
 
 .navbar__btn-menu svg {
-	width: 2.8rem;
-	height: 2.8rem;
+	width: 2.4rem;
+	height: 2.4rem;
 	pointer-events: none;
 }
 
@@ -96,10 +96,6 @@ body {
 		margin-bottom: 0;
 		padding-bottom: 0;
 		margin-right: 4rem;
-	}
-
-	.navbar__menu-item:first-child {
-		margin-top: 0;
 	}
 
 	.navbar__menu-item:last-child {
