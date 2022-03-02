@@ -24,3 +24,11 @@ body {
 .field:disabled::placeholder {
 	color: #ababab;
 }
+
+/* textarea with label */
+.field-label {
+	color: #000;
+	margin-bottom: 0.4rem;
+	display: inline-block;
+	font-size: var(--text-16x);
+}

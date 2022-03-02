@@ -4,10 +4,6 @@ body {
 
 /* ---------------------------- */
 
-.select-input-wrapper {
-	position: relative;
-}
-
 .select-input {
 	width: 100%;
 	color: #000;
@@ -21,4 +17,12 @@ body {
 .select-input:focus {
 	outline-offset: -0.1rem;
 	outline: 0.2rem solid #000;
+}
+
+/* select with label */
+.select-label {
+	color: #000;
+	margin-bottom: 0.4rem;
+	display: inline-block;
+	font-size: var(--text-16x);
 }
