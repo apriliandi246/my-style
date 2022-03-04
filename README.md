@@ -1,4 +1,4 @@
-<h1 align="center">💅 my-style</h1>
+<h1 align="center">💅 my-style (🌕 light theme)</h1>
 
 <br>
 
