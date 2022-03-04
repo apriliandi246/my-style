@@ -1,0 +1,21 @@
+body {
+	padding: 100px;
+	background-color: #1d1d1df0;
+}
+
+/* ---------------------------- */
+
+.button {
+	border: 0;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	padding: 0.8rem 1.4rem;
+	font-size: var(--text-16x);
+	background-color: var(--info-700);
+}
+
+.button:focus {
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid #fff;
+}
