@@ -15,9 +15,7 @@ function toggleAccordions(event) {
 		if (!previousAccordionMsg) {
 			previousAccordionMsg = accordionMsg;
 		} else {
-			previousAccordionMsg.previousElementSibling.classList.remove(
-				"accordion--active"
-			);
+			previousAccordionMsg.previousElementSibling.classList.remove("accordion--active");
 			previousAccordionMsg.classList.remove("accordion-message--active");
 			previousAccordionMsg = accordionMsg;
 		}

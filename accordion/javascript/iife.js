@@ -1,6 +1,6 @@
 (function () {
 	let previousAccordionMsg = "";
-	let accordions = document.getElementById("accordions");
+	const accordions = document.getElementById("accordions");
 
 	accordions.addEventListener("click", (event) => {
 		if (event.target.tagName === "BUTTON") {
