@@ -1,0 +1,19 @@
+.container {
+	width: 60rem;
+	margin-top: 7rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.title {
+	line-clamp: 3;
+	overflow: hidden;
+	line-height: 4rem;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+.title::after {
+	content: "...";
+}
