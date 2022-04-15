@@ -14,13 +14,11 @@ body {
 }
 
 .info-alert__message {
-	order: 2;
 	color: #fff;
 	font-size: var(--text-16x);
 }
 
 .info-alert__icon {
-	order: 1;
 	width: 2.4rem;
 	height: 2.4rem;
 	margin-right: 1.4rem;

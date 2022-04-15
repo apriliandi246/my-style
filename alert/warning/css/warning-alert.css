@@ -14,13 +14,11 @@ body {
 }
 
 .warning-alert__message {
-	order: 2;
 	color: #000;
 	font-size: var(--text-16x);
 }
 
 .warning-alert__icon {
-	order: 1;
 	width: 2.4rem;
 	height: 2.4rem;
 	margin-right: 1.4rem;
