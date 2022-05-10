@@ -5,6 +5,12 @@
 
 	navbarToggleBtn.addEventListener("click", () => {
 		navbarMenus.classList.toggle("navbar__menus--collapse");
+
+		if (navbarMenus.classList.contains("navbar__menus--collapse")) {
+			navbarToggleBtn.setAttribute("aria-expanded", true);
+		} else {
+			navbarToggleBtn.setAttribute("aria-expanded", false);
+		}
 	});
 
 	document.body.addEventListener("click", (event) => {

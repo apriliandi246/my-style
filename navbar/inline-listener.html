@@ -16,11 +16,18 @@
 	<nav class="navbar">
 		<a href="#" class="navbar__brand">Navbar</a>
 
-		<button class="navbar__btn-menu" onclick={toggleNavbar(event)}>
+		<button
+			type="button"
+			aria-expanded="false"
+			class="navbar__btn-menu"
+			aria-controls="navbar-menus"
+			onclick={toggleNavbar(event)}
+			aria-label="Toggle navigation">
 			<svg
 				fill="none"
 				stroke-width="2"
 				stroke="#111827"
+				aria-hidden="true"
 				viewBox="0 0 24 24"
 				stroke-linecap="round"
 				stroke-linejoin="round"
@@ -31,13 +38,15 @@
 			</svg>
 		</button>
 
-		<ul class="navbar__menus">
-			<li class="navbar__menu-item"><a href="#">Home</a></li>
-			<li class="navbar__menu-item"><a href="#">About</a></li>
-			<li class="navbar__menu-item"><a href="#">Features</a></li>
-			<li class="navbar__menu-item"><a href="#">Pricing</a></li>
-			<li class="navbar__menu-item"><a href="#">Career</a></li>
-		</ul>
+		<div class="navbar__menus" id="navbar-menus">
+			<ul>
+				<li class="navbar__menu-item"><a href="#">Home</a></li>
+				<li class="navbar__menu-item"><a href="#">About</a></li>
+				<li class="navbar__menu-item"><a href="#">Features</a></li>
+				<li class="navbar__menu-item"><a href="#">Pricing</a></li>
+				<li class="navbar__menu-item"><a href="#">Career</a></li>
+			</ul>
+		</div>
 	</nav>
 </body>
 

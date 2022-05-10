@@ -91,6 +91,10 @@ body {
 		max-width: 100%;
 	}
 
+	.navbar__menus ul {
+		display: flex;
+	}
+
 	.navbar__menu-item {
 		border-bottom: 0;
 		margin-bottom: 0;
