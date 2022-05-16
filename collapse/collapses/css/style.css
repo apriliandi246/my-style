@@ -4,6 +4,14 @@ body {
 
 /* ---------------------------- */
 
+.collapse {
+	margin-bottom: 1.2rem;
+}
+
+.collapse:last-child {
+	margin-bottom: 0;
+}
+
 .collapse__button {
 	width: 100%;
 	color: #000;

@@ -3,7 +3,6 @@ class Navbar {
 		this.navbarBtnMenus = document.getElementById("navbar-btn-menus");
 		this.navbarMenus = this.navbarBtnMenus.nextElementSibling;
 		this.navbar = this.navbarBtnMenus.parentElement;
-
 		this.addEventListener();
 	}
 

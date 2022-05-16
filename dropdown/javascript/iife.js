@@ -4,17 +4,25 @@
 
 	dropdownBtn.addEventListener("click", () => {
 		dropdownMenu.classList.toggle("dropdown--collapse");
-	});
 
-	dropdownBtn.addEventListener("keydown", (event) => {
-		if (event.key === "Escape") {
-			dropdownMenu.classList.remove("dropdown--collapse");
+		if (dropdownMenu.classList.contains("dropdown--collapse")) {
+			dropdownBtn.setAttribute("aria-expanded", true);
+		} else {
+			dropdownBtn.setAttribute("aria-expanded", false);
 		}
 	});
 
-	dropdownMenu.addEventListener("keydown", (event) => {
+	dropdownBtn.addEventListener("keyup", (event) => {
 		if (event.key === "Escape") {
 			dropdownMenu.classList.remove("dropdown--collapse");
+			dropdownBtn.setAttribute("aria-expanded", false);
+		}
+	});
+
+	dropdownMenu.addEventListener("keyup", (event) => {
+		if (event.key === "Escape") {
+			dropdownMenu.classList.remove("dropdown--collapse");
+			dropdownBtn.setAttribute("aria-expanded", false);
 		}
 	});
 
@@ -23,6 +31,7 @@
 
 		if (!dropdown.contains(event.target)) {
 			dropdownMenu.classList.remove("dropdown--collapse");
+			dropdownBtn.setAttribute("aria-expanded", false);
 		}
 	});
 })();

@@ -13,12 +13,18 @@
 
 <body>
 	<div class="dropdown">
-		<button class="dropdown__button" id="dropdown">
+		<button
+			type="button"
+			id="dropdown"
+			aria-expanded="false"
+			class="dropdown__button"
+			aria-controls="dropdown-menu">
 			Dropdown
 			<svg
 				fill="none"
 				stroke="#000"
 				stroke-width="2"
+				aria-hidden="true"
 				viewBox="0 0 24 24"
 				stroke-linecap="round"
 				stroke-linejoin="round"
@@ -27,7 +33,7 @@
 			</svg>
 		</button>
 
-		<div class="dropdown__items">
+		<div class="dropdown__items" id="dropdown-menu">
 			<a href="#" class="dropdown__item">Home</a>
 			<a href="#" class="dropdown__item">About</a>
 			<a href="#" class="dropdown__item">Partner</a>
