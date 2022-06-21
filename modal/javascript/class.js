@@ -9,7 +9,7 @@ class Modal {
 	addEventListener() {
 		this.modalOverlay.addEventListener("click", this.toggleModal);
 		this.modalTriggerButton.addEventListener("click", this.toggleModal);
-		document.body.addEventListener("keydown", this.escapePress);
+		document.addEventListener("keydown", this.escapePress);
 	}
 
 	toggleModal = () => {
@@ -18,7 +18,7 @@ class Modal {
 	};
 
 	escapePress = (event) => {
-		if (event.key === "Escape") {
+		if (event.key.toLowerCase() === "escape") {
 			this.modal.classList.remove("active-modal");
 			this.modalOverlay.classList.remove("active-modal");
 		}

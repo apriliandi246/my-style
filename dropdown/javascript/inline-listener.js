@@ -1,4 +1,4 @@
-function onClickDropdown(event) {
+function dropdownFunc(event) {
 	const dropdownButton = event.target;
 	const dropdownMenu = dropdownButton.nextElementSibling;
 
@@ -10,6 +10,34 @@ function onClickDropdown(event) {
 		dropdownButton.setAttribute("aria-expanded", false);
 	}
 
+	dropdownButton.addEventListener("keydown", (event) => {
+		if (event.shiftKey && event.key.toLowerCase() === "tab") {
+			dropdownButton.setAttribute("aria-expanded", false);
+			dropdownMenu.classList.remove("dropdown--collapse");
+		}
+
+		if (event.key.toLowerCase() === "escape") {
+			dropdownButton.setAttribute("aria-expanded", false);
+			dropdownMenu.classList.remove("dropdown--collapse");
+		}
+	});
+
+	dropdownMenu.addEventListener("keydown", (event) => {
+		if (event.key.toLowerCase() === "escape") {
+			dropdownButton.setAttribute("aria-expanded", false);
+			dropdownMenu.classList.remove("dropdown--collapse");
+		}
+	});
+
+	dropdownMenu.lastElementChild.addEventListener("keydown", (event) => {
+		if (event.shiftKey && event.key.toLowerCase()) return;
+
+		if (event.key.toLowerCase() === "tab") {
+			dropdownButton.setAttribute("aria-expanded", false);
+			dropdownMenu.classList.remove("dropdown--collapse");
+		}
+	});
+
 	document.body.addEventListener("click", (event) => {
 		const dropdownMenusStatus = dropdownMenu.classList.contains("dropdown--collapse");
 
@@ -20,20 +48,4 @@ function onClickDropdown(event) {
 			}
 		}
 	});
-}
-
-function onEscapeDropdown(event) {
-	if (event.key === "Escape") {
-		const currentTagEl = event.target.tagName.toLowerCase();
-
-		if (currentTagEl === "a") {
-			event.target.parentElement.classList.remove("dropdown--collapse");
-			event.target.parentElement.previousElementSibling.setAttribute("aria-expanded",false);
-		}
-
-		if (currentTagEl === "button") {
-			event.target.nextElementSibling.classList.remove("dropdown--collapse");
-			event.target.setAttribute("aria-expanded", false);
-		}
-	}
 }

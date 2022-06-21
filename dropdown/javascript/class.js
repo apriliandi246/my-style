@@ -6,9 +6,43 @@ class Dropdown {
 	}
 
 	addEventListener() {
-		this.dropdownButton.addEventListener("click", this.toggleDropdownMenus);
-		this.dropdownMenus.addEventListener("keyup", this.escapePress);
-		this.dropdownButton.addEventListener("keyup", this.escapePress);
+		this.dropdownButton.addEventListener("click", () => {
+			this.dropdownMenus.classList.toggle("dropdown--collapse");
+
+			if (this.dropdownMenus.classList.contains("dropdown--collapse")) {
+				this.dropdownButton.setAttribute("aria-expanded", true);
+			} else {
+				this.dropdownButton.setAttribute("aria-expanded", false);
+			}
+		});
+
+		this.dropdownButton.addEventListener("keydown", (event) => {
+			if (event.shiftKey && event.key.toLocaleLowerCase() === "tab") {
+				this.dropdownButton.setAttribute("aria-expanded", false);
+				this.dropdownMenus.classList.remove("dropdown--collapse");
+			}
+
+			if (event.key.toLocaleLowerCase() === "escape") {
+				this.dropdownButton.setAttribute("aria-expanded", false);
+				this.dropdownMenus.classList.remove("dropdown--collapse");
+			}
+		});
+
+		this.dropdownMenus.addEventListener("keydown", (event) => {
+			if (event.key.toLocaleLowerCase() === "escape") {
+				this.dropdownButton.setAttribute("aria-expanded", false);
+				this.dropdownMenus.classList.remove("dropdown--collapse");
+			}
+		});
+
+		this.dropdownMenus.lastElementChild.addEventListener("keydown", (event) => {
+			if (event.shiftKey && event.key.toLocaleLowerCase() === "tab") return;
+
+			if (event.key.toLocaleLowerCase() === "tab") {
+				this.dropdownButton.setAttribute("aria-expanded", false);
+				this.dropdownMenus.classList.remove("dropdown--collapse");
+			}
+		});
 
 		document.body.addEventListener("click", (event) => {
 			const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdown--collapse");
@@ -17,29 +51,12 @@ class Dropdown {
 				const dropdownParentElement = this.dropdownButton.parentElement;
 
 				if (!dropdownParentElement.contains(event.target)) {
-					this.toggleDropdownMenus();
+					this.dropdownButton.setAttribute("aria-expanded", false);
+					this.dropdownMenus.classList.remove("dropdown--collapse");
 				}
 			}
 		});
 	}
-
-	escapePress = (event) => {
-		const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdown--collapse");
-
-		if (event.key === "Escape" && dropdownMenusStatus) {
-			this.toggleDropdownMenus();
-		}
-	};
-
-	toggleDropdownMenus = () => {
-		this.dropdownMenus.classList.toggle("dropdown--collapse");
-
-		if (this.dropdownMenus.classList.contains("dropdown--collapse")) {
-			this.dropdownButton.setAttribute("aria-expanded", true);
-		} else {
-			this.dropdownButton.setAttribute("aria-expanded", false);
-		}
-	};
 }
 
 new Dropdown();

@@ -13,8 +13,8 @@
 		modalOverlay.classList.toggle("active-modal");
 	});
 
-	document.body.addEventListener("keydown", (event) => {
-		if (event.key === "Escape") {
+	document.addEventListener("keydown", (event) => {
+		if (event.key.toLocaleLowerCase() === "escape") {
 			modal.classList.remove("active-modal");
 			modalOverlay.classList.remove("active-modal");
 		}

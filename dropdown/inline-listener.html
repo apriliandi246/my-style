@@ -18,8 +18,7 @@
 			aria-expanded="false"
 			class="dropdown__button"
 			aria-controls="dropdown-menu"
-			onclick={onClickDropdown(event)}
-			onkeyup="onEscapeDropdown(event)">
+			onclick={dropdownFunc(event)}>
 			Dropdown
 			<svg
 				fill="none"
@@ -33,10 +32,7 @@
 			</svg>
 		</button>
 
-		<div
-			id="dropdown-menu"
-			class="dropdown__items"
-			onkeyup="onEscapeDropdown(event)">
+		<div id="dropdown-menu" class="dropdown__items">
 			<a href="#" class="dropdown__item">Home</a>
 			<a href="#" class="dropdown__item">About</a>
 			<a href="#" class="dropdown__item">Partner</a>

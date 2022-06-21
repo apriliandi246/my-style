@@ -1,37 +1,58 @@
 (function () {
 	const dropdownBtn = document.getElementById("dropdown");
-	const dropdownMenu = dropdownBtn.nextElementSibling;
+	const dropdownMenus = dropdownBtn.nextElementSibling;
 
 	dropdownBtn.addEventListener("click", () => {
-		dropdownMenu.classList.toggle("dropdown--collapse");
+		dropdownMenus.classList.toggle("dropdown--collapse");
 
-		if (dropdownMenu.classList.contains("dropdown--collapse")) {
+		if (dropdownMenus.classList.contains("dropdown--collapse")) {
 			dropdownBtn.setAttribute("aria-expanded", true);
 		} else {
 			dropdownBtn.setAttribute("aria-expanded", false);
 		}
+
+		document.body.addEventListener("click", (event) => {
+			const dropdown = dropdownBtn.parentElement;
+
+			if (!dropdown.contains(event.target)) {
+				dropdownBtn.setAttribute("aria-expanded", false);
+				dropdownMenus.classList.remove("dropdown--collapse");
+			}
+		});
 	});
 
-	dropdownBtn.addEventListener("keyup", (event) => {
-		if (event.key === "Escape") {
-			dropdownMenu.classList.remove("dropdown--collapse");
+	dropdownBtn.addEventListener("focusout", () => {
+		if (!dropdownMenus.classList.contains("dropdown--collapse")) {
 			dropdownBtn.setAttribute("aria-expanded", false);
+			dropdownMenus.classList.remove("dropdown--collapse");
 		}
 	});
 
-	dropdownMenu.addEventListener("keyup", (event) => {
-		if (event.key === "Escape") {
-			dropdownMenu.classList.remove("dropdown--collapse");
+	dropdownBtn.addEventListener("keydown", (event) => {
+		if (event.shiftKey && event.key.toLowerCase() === "tab") {
 			dropdownBtn.setAttribute("aria-expanded", false);
+			dropdownMenus.classList.remove("dropdown--collapse");
+		}
+
+		if (event.key.toLowerCase() === "escape") {
+			dropdownBtn.setAttribute("aria-expanded", false);
+			dropdownMenus.classList.remove("dropdown--collapse");
 		}
 	});
 
-	document.body.addEventListener("click", (event) => {
-		const dropdown = dropdownBtn.parentElement;
-
-		if (!dropdown.contains(event.target)) {
-			dropdownMenu.classList.remove("dropdown--collapse");
+	dropdownMenus.addEventListener("keydown", (event) => {
+		if (event.key.toLowerCase() === "escape") {
 			dropdownBtn.setAttribute("aria-expanded", false);
+			dropdownMenus.classList.remove("dropdown--collapse");
+		}
+	});
+
+	dropdownMenus.lastElementChild.addEventListener("keydown", (event) => {
+		if (event.shiftKey && event.key.toLowerCase() === "tab") return;
+
+		if (event.key.toLowerCase() === "tab") {
+			dropdownBtn.setAttribute("aria-expanded", false);
+			dropdownMenus.classList.remove("dropdown--collapse");
 		}
 	});
 })();
