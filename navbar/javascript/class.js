@@ -1,27 +1,18 @@
 class Navbar {
 	constructor() {
-		this.navbarBtnMenus = document.getElementById("navbar-btn-menus");
-		this.navbarMenus = this.navbarBtnMenus.nextElementSibling;
-		this.navbar = this.navbarBtnMenus.parentElement;
+		this.toggleBtn = document.getElementById("navbar-toggle-btn");
+		this.navbarMenus = this.toggleBtn.nextElementSibling;
 		this.addEventListener();
 	}
 
 	addEventListener() {
-		this.navbarBtnMenus.addEventListener("click", () => {
+		this.toggleBtn.addEventListener("click", () => {
 			this.navbarMenus.classList.toggle("navbar__menus--collapse");
 
 			if (this.navbarMenus.classList.contains("navbar__menus--collapse")) {
-				this.navbarBtnMenus.setAttribute("aria-expanded", true);
+				this.toggleBtn.setAttribute("aria-expanded", true);
 			} else {
-				this.navbarBtnMenus.setAttribute("aria-expanded", false);
-			}
-		});
-
-		document.body.addEventListener("click", (event) => {
-			const isContainNabarElements = this.navbar.contains(event.target);
-
-			if (!isContainNabarElements) {
-				this.navbarMenus.classList.remove("navbar__menus--collapse");
+				this.toggleBtn.setAttribute("aria-expanded", false);
 			}
 		});
 	}

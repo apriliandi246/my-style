@@ -5,104 +5,90 @@ body {
 /* ---------------------------- */
 
 .navbar {
+	padding-top: 1.4rem;
+	padding-bottom: 1.4rem;
+	border-bottom: 0.1rem solid var(--neutral-300);
+}
+
+.navbar__wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	background-color: var(--neutral-50);
-	padding: 1.6rem 1.4rem 1.6rem 1.8rem;
-	border-bottom: 0.1rem solid var(--neutral-300);
 }
 
 .navbar__brand {
-	font-weight: 500;
-	font-size: 2.2rem;
-	color: var(--neutral-700);
+	text-decoration: none;
 }
 
 .navbar__brand:focus {
-	outline-offset: 0.6rem;
-	outline: 0.2rem solid #000;
-}
-
-.navbar__btn-menu {
-	border: 0;
-	padding: 0.4rem;
-	background-color: transparent;
-}
-
-.navbar__btn-menu svg {
-	width: 2.8rem;
-	height: 2.8rem;
-	pointer-events: none;
-}
-
-.navbar__btn-menu:focus {
-	border-radius: 0;
-	outline-offset: -0.2rem;
-	outline: 0.2rem solid #000;
-}
-
-.navbar__menus {
-	width: 100%;
-	display: none;
-	margin-top: 1.5rem;
-}
-
-.navbar__menu-item {
-	list-style: none;
-	margin-bottom: 2.1rem;
-	padding-bottom: 0.5rem;
-	font-size: var(--text-16x);
-	border-bottom: 0.1rem solid var(--neutral-300);
-}
-
-.navbar__menu-item:last-child {
-	border-bottom: 0;
-	margin-bottom: 0;
-}
-
-.navbar__menu-item > a {
-	color: #000;
-}
-
-.navbar__menu-item > a:focus {
 	outline-offset: 0.5rem;
 	outline: 0.2rem solid #000;
 }
 
-.navbar__menus--collapse {
+.navbar__brand img {
 	display: block;
 }
 
-@media screen and (min-width: 670px) {
-	.navbar {
-		padding-right: 1.8rem;
-	}
+.navbar__toggle-btn {
+	border: none;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	background-color: transparent;
+}
 
-	.navbar__btn-menu {
-		display: none;
-	}
+.navbar__toggle-btn svg {
+	width: 3rem;
+	height: auto;
+	display: block;
+	pointer-events: none;
+}
 
+.navbar__menus {
+	gap: 4rem;
+	width: auto;
+	display: flex;
+	max-width: 100%;
+	align-items: center;
+}
+
+.navbar__menus a {
+	color: #000;
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.navbar__menus a:focus {
+	outline-offset: 0.5rem;
+	outline: 0.2rem solid #000;
+}
+
+.navbar__toggle-btn {
+	display: none;
+	border-radius: 0;
+}
+
+@media screen and (max-width: 992px) {
 	.navbar__menus {
-		width: auto;
+		width: 100%;
+		display: none;
+		margin-top: 2rem;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.navbar__menus--collapse {
+		gap: 2rem;
 		display: flex;
-		margin-top: 0;
-		max-width: 100%;
 	}
 
-	.navbar__menus ul {
-		display: flex;
+	.navbar__toggle-btn {
+		display: block;
 	}
 
-	.navbar__menu-item {
-		border-bottom: 0;
-		margin-bottom: 0;
-		padding-bottom: 0;
-		margin-right: 4rem;
-	}
-
-	.navbar__menu-item:last-child {
-		margin-right: 0;
+	.navbar__toggle-btn:focus {
+		outline-offset: 0.3rem;
+		outline: 0.2rem solid #000;
 	}
 }
