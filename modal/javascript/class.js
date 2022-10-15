@@ -3,26 +3,37 @@ class Modal {
 		this.modal = document.getElementById("modal");
 		this.modalOverlay = document.getElementById("modal-overlay");
 		this.modalTriggerButton = document.getElementById("show-modal-btn");
-		this.addEventListener();
+		this.triggerListeners();
 	}
 
-	addEventListener() {
-		this.modalOverlay.addEventListener("click", this.toggleModal);
-		this.modalTriggerButton.addEventListener("click", this.toggleModal);
-		document.addEventListener("keydown", this.escapePress);
+	triggerListeners() {
+		this.show();
+		this.escPress();
+		this.clickOutside();
 	}
 
-	toggleModal = () => {
-		this.modal.classList.toggle("active-modal");
-		this.modalOverlay.classList.toggle("active-modal");
-	};
+	show() {
+		this.modalTriggerButton.addEventListener("click", () => {
+			this.modal.classList.toggle("active-modal");
+			this.modalOverlay.classList.toggle("active-modal");
+		});
+	}
 
-	escapePress = (event) => {
-		if (event.key.toLowerCase() === "escape") {
-			this.modal.classList.remove("active-modal");
-			this.modalOverlay.classList.remove("active-modal");
-		}
-	};
+	clickOutside() {
+		this.modalOverlay.addEventListener("click", () => {
+			this.modal.classList.toggle("active-modal");
+			this.modalOverlay.classList.toggle("active-modal");
+		});
+	}
+
+	escPress() {
+		document.addEventListener("keydown", (event) => {
+			if (event.key.toLowerCase() === "escape") {
+				this.modal.classList.remove("active-modal");
+				this.modalOverlay.classList.remove("active-modal");
+			}
+		});
+	}
 }
 
 new Modal();

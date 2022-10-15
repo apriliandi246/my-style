@@ -2,10 +2,16 @@ class Dropdown {
 	constructor() {
 		this.dropdownButton = document.getElementById("dropdown");
 		this.dropdownMenus = this.dropdownButton.nextElementSibling;
-		this.addEventListener();
+		this.triggerListeners();
 	}
 
-	addEventListener() {
+	triggerListeners() {
+		this.toggle();
+		this.keyboardEvent();
+		this.clickOutside();
+	}
+
+	toggle() {
 		this.dropdownButton.addEventListener("click", () => {
 			this.dropdownMenus.classList.toggle("dropdown--collapse");
 
@@ -15,7 +21,9 @@ class Dropdown {
 				this.dropdownButton.setAttribute("aria-expanded", false);
 			}
 		});
+	}
 
+	keyboardEvent() {
 		this.dropdownButton.addEventListener("keydown", (event) => {
 			if (event.shiftKey && event.key.toLocaleLowerCase() === "tab") {
 				this.dropdownButton.setAttribute("aria-expanded", false);
@@ -43,7 +51,9 @@ class Dropdown {
 				this.dropdownMenus.classList.remove("dropdown--collapse");
 			}
 		});
+	}
 
+	clickOutside() {
 		document.body.addEventListener("click", (event) => {
 			const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdown--collapse");
 

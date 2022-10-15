@@ -1,13 +1,15 @@
 class Alert {
 	constructor() {
 		this.alerts = document.getElementsByClassName("alert");
-		this.addEventListener();
+		this.triggerListeners();
 	}
 
-	addEventListener() {
-		const totalAlertElements = this.alerts.length;
+	triggerListeners() {
+		this.close();
+	}
 
-		for (let index = 0; index < totalAlertElements; index++) {
+	close() {
+		for (let index = 0; index < this.alerts.length; index++) {
 			const currentAlertBtn = this.alerts[index].lastElementChild;
 
 			currentAlertBtn.addEventListener("click", (event) => {

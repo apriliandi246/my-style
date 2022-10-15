@@ -3,10 +3,14 @@ class Collapse {
 		this.collapse = document.getElementById("collapse");
 		this.collapseBtn = this.collapse.firstElementChild.firstElementChild;
 		this.collapseMsg = this.collapse.lastElementChild.firstElementChild;
-		this.addEventListener();
+		this.triggerListeners();
 	}
 
-	addEventListener() {
+	triggerListeners() {
+		this.toggle();
+	}
+
+	toggle() {
 		this.collapseBtn.addEventListener("click", () => {
 			this.collapseBtn.classList.toggle("collapse--active");
 			this.collapseMsg.classList.toggle("collapse-message--active");

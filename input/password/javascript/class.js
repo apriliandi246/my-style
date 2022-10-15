@@ -2,11 +2,14 @@ class PasswordToggle {
 	constructor() {
 		this.passwordButtonToggle = document.getElementById("password-toogle-btn");
 		this.passwordInput = this.passwordButtonToggle.previousElementSibling;
-
-		this.addEventListener();
+		this.triggerListeners();
 	}
 
-	addEventListener() {
+	triggerListeners() {
+		this.passwordToggleEvent();
+	}
+
+	passwordToggleEvent() {
 		this.passwordButtonToggle.addEventListener("click", () => {
 			const eyeIcon = this.passwordButtonToggle.firstElementChild;
 			const eyeOffIcon = this.passwordButtonToggle.lastElementChild;

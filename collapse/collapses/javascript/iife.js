@@ -2,8 +2,12 @@
 	const collapses = document.getElementById("collapses");
 
 	collapses.addEventListener("click", (event) => {
-		if (event.target.tagName === "BUTTON") {
-			const collapseBtn = event.target;
+		const collapseBtn = event.target;
+
+		if (
+			collapseBtn.tagName === "BUTTON" &&
+			collapseBtn.classList.contains("collapse__button")
+		) {
 			const collapseMsg = collapseBtn.parentElement.nextElementSibling.firstElementChild;
 
 			collapseBtn.classList.toggle("collapse--active");

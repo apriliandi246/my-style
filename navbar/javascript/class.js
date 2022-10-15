@@ -2,10 +2,14 @@ class Navbar {
 	constructor() {
 		this.toggleBtn = document.getElementById("navbar-toggle-btn");
 		this.navbarMenus = this.toggleBtn.nextElementSibling;
-		this.addEventListener();
+		this.triggerListeners();
 	}
 
-	addEventListener() {
+	triggerListeners() {
+		this.toggle();
+	}
+
+	toggle() {
 		this.toggleBtn.addEventListener("click", () => {
 			this.navbarMenus.classList.toggle("navbar__menus--collapse");
 

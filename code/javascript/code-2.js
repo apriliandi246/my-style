@@ -1,13 +1,18 @@
 class CodeBlock {
 	constructor() {
 		this.codeBlocks = document.getElementsByClassName("code-block");
-		this.addEventListener();
+		this.triggerListeners();
 	}
 
-	addEventListener() {
+	triggerListeners() {
+		this.copyToClipboard();
+	}
+
+	copyToClipboard() {
 		for (let index = 0; index < this.codeBlocks.length; index++) {
 			const blockOfCode = this.codeBlocks[index].textContent;
-			const buttonCopy = this.codeBlocks[index].parentElement.nextElementSibling;
+			const buttonCopy =
+				this.codeBlocks[index].parentElement.nextElementSibling;
 
 			buttonCopy.addEventListener("click", async () => {
 				let copiedDelay;

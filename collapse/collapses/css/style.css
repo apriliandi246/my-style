@@ -31,9 +31,10 @@ body {
 }
 
 .collapse__button svg {
+	height: auto;
 	width: 2.4rem;
-	height: 2.4rem;
 	pointer-events: none;
+	transition: transform 200ms;
 }
 
 .collapse__message {
