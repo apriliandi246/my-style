@@ -1,0 +1,70 @@
+body {
+	padding: 4rem;
+}
+
+/* ---------------------------------- */
+
+.tree-view button {
+	color: #000;
+	border: none;
+	display: flex;
+	cursor: pointer;
+	font-size: 15px;
+	align-items: center;
+	background-color: transparent;
+}
+
+.tree-view button:hover {
+	color: #000;
+}
+
+.tree-view button svg {
+	height: auto;
+	width: 2.3rem;
+	display: block;
+	margin-right: 4px;
+	pointer-events: none;
+	transition: transform 200ms;
+}
+
+.tree-view button:focus {
+	outline: none;
+}
+
+.tree-view__detail-wrapper {
+	display: none;
+	margin-left: 30px;
+}
+
+.tree-view__item-nested {
+	margin-top: 10px;
+}
+
+.tree-view__details button {
+	margin-bottom: 10px;
+}
+
+.tree-view__details button:last-child {
+	margin-bottom: 0;
+}
+
+.tree-view__btn-menu {
+	margin-bottom: 10px;
+}
+
+.tree-view__collapse {
+	display: block;
+}
+
+.tree-view-btn__active {
+	font-weight: 700;
+}
+
+.tree-view-btn__active svg {
+	stroke-width: 3;
+	transform: rotate(-180deg);
+}
+
+.tree-view {
+	margin-bottom: 15px;
+}
