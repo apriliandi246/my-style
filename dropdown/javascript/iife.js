@@ -29,28 +29,36 @@
 	});
 
 	dropdownBtn.addEventListener("keydown", (event) => {
-		if (event.shiftKey && event.key.toLowerCase() === "tab") {
+		const isShiftKeyboardKey = event.shiftKey;
+		const keyboardKey = event.key.toLowerCase();
+
+		if (isShiftKeyboardKey && keyboardKey === "tab") {
 			dropdownBtn.setAttribute("aria-expanded", false);
 			dropdownMenus.classList.remove("dropdown--collapse");
 		}
 
-		if (event.key.toLowerCase() === "escape") {
+		if (keyboardKey === "escape") {
 			dropdownBtn.setAttribute("aria-expanded", false);
 			dropdownMenus.classList.remove("dropdown--collapse");
 		}
 	});
 
 	dropdownMenus.addEventListener("keydown", (event) => {
-		if (event.key.toLowerCase() === "escape") {
+		const keyboardKey = event.key.toLowerCase();
+
+		if (keyboardKey === "escape") {
 			dropdownBtn.setAttribute("aria-expanded", false);
 			dropdownMenus.classList.remove("dropdown--collapse");
 		}
 	});
 
 	dropdownMenus.lastElementChild.addEventListener("keydown", (event) => {
-		if (event.shiftKey && event.key.toLowerCase() === "tab") return;
+		const isShiftKeyboardKey = event.shiftKey;
+		const keyboardKey = event.key.toLowerCase();
 
-		if (event.key.toLowerCase() === "tab") {
+		if (isShiftKeyboardKey === true && keyboardKey === "tab") return;
+
+		if (keyboardKey === "tab") {
 			dropdownBtn.setAttribute("aria-expanded", false);
 			dropdownMenus.classList.remove("dropdown--collapse");
 		}

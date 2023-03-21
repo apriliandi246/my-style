@@ -1,28 +1,30 @@
 body {
 	padding: 100px;
+	background-color: var(--body-bg-color-light);
 }
 
 /* ---------------------------- */
 
 .dropdown {
+	width: fit-content;
 	position: relative;
-	display: inline-block;
 }
 
 .dropdown__button {
 	width: 100%;
-	color: #000;
 	display: flex;
+	cursor: pointer;
 	align-items: center;
 	padding: 0.8rem 1.4rem;
 	font-size: var(--text-16x);
-	background-color: var(--neutral-50);
+	color: var(--main-font-color-light);
 	border: 0.1rem solid var(--neutral-400);
+	background-color: var(--main-bg-color-component-light);
 }
 
 .dropdown__button:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid var(--main-font-color-light);
 }
 
 .dropdown__button svg {
@@ -43,17 +45,19 @@ body {
 	margin-top: 5.5rem;
 	position: absolute;
 	border-radius: 0.4rem;
-	background-color: var(--neutral-50);
 	border: 0.1rem solid var(--neutral-400);
+	background-color: var(--main-bg-color-component-light);
 }
 
 .dropdown__item {
 	width: 100%;
-	color: #000;
 	display: block;
 	margin-bottom: 0.3rem;
+	text-decoration: none;
 	font-size: var(--text-16x);
 	padding: 1rem 8rem 1rem 1.3rem;
+	font-family: var(--font-family);
+	color: var(--main-font-color-light);
 }
 
 .dropdown__item:first-child {
@@ -67,7 +71,7 @@ body {
 
 .dropdown__item:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid var(--main-font-color-light);
 }
 
 .dropdown--collapse {

@@ -1,7 +1,18 @@
 :root {
 	/* Font Family */
 	--font-family: "Poppins", sans-serif;
-	--title-article-font: "Merriweather", serif;
+
+	/* Background color for body */
+	--body-bg-color-light: #eaebec;
+	--body-bg-color-dark: #1d1d1df0;
+
+	/* Main font color */
+	--main-font-color-light: #000;
+	--main-font-color-dark: #fff;
+
+	/* Main background color component */
+	--main-bg-color-component-light: #f9fafb;
+	--main-bg-color-component-dark: #7676803d;
 
 	/* Heading */
 	--h1-font-size: 4.5rem;
@@ -165,143 +176,4 @@
 	--error-700: #ab091e;
 	--error-800: #8a041a;
 	--error-900: #610316;
-}
-
-*,
-::after,
-::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-* {
-	font-family: var(--font-family);
-}
-
-html {
-	font-size: 62.5%;
-}
-
-body {
-	background-color: var(--primary-50);
-}
-
-h1 {
-	font-weight: var(--bold);
-	font-size: var(--h1-font-size);
-	line-height: var(--h1-line-height);
-}
-
-h2 {
-	font-weight: var(--bold);
-	font-size: var(--h2-font-size);
-	line-height: var(--h2-line-height);
-}
-
-h3 {
-	font-weight: var(--bold);
-	font-size: var(--h3-font-size);
-	line-height: var(--h3-line-height);
-}
-
-h4 {
-	font-weight: var(--bold);
-	font-size: var(--h4-font-size);
-	line-height: var(--h4-line-height);
-}
-
-h5 {
-	font-weight: var(--bold);
-	font-size: var(--h5-font-size);
-	line-height: var(--h5-line-height);
-}
-
-h6 {
-	font-weight: var(--bold);
-	font-size: var(--h6-font-size);
-	line-height: var(--h6-line-height);
-}
-
-input:disabled,
-select:disabled,
-button:disabled,
-textarea:disabled {
-	cursor: not-allowed;
-}
-
-input,
-button,
-select,
-option,
-textarea {
-	font-family: var(--font-family);
-}
-
-input:disabled,
-button:disabled,
-select:disabled,
-textarea:disabled {
-	color: #b8b1b1;
-	background-color: #ebe6e6;
-	border: 0.1rem solid var(--primary-200);
-}
-
-ul {
-	font-family: var(--font-family);
-}
-
-ol {
-	font-family: var(--font-family);
-}
-
-pre,
-kbd,
-code,
-samp {
-	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-		"Liberation Mono", "Courier New", monospace;
-}
-
-img,
-video {
-	height: auto;
-	max-width: 100%;
-}
-
-textarea {
-	resize: vertical;
-}
-
-button {
-	cursor: pointer;
-}
-
-input,
-button,
-select,
-optgroup,
-textarea {
-	border-radius: 0.4rem;
-	font-family: var(--font-family);
-	outline-color: var(--primary-900);
-}
-
-img,
-svg,
-video,
-audio,
-embed,
-iframe,
-canvas,
-object {
-	display: block;
-}
-
-a {
-	text-decoration: none;
-}
-
-::-ms-reveal {
-	display: none;
 }

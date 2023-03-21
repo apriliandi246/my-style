@@ -5,6 +5,7 @@ class Accordions {
 		this.accordions = document.getElementById("accordions");
 		this.firstAccordion = this.accordions.firstElementChild.firstElementChild.firstElementChild;
 		this.lastAccordion = this.accordions.lastElementChild.firstElementChild.firstElementChild;
+		
 		this.triggerListeners();
 	}
 

@@ -7,8 +7,9 @@ class Dropdown {
 
 	triggerListeners() {
 		this.toggle();
-		this.keyboardEvent();
 		this.clickOutside();
+		this.escapeKeyboardEvent();
+		this.shiftTabKeyboardEvent();
 	}
 
 	toggle() {
@@ -23,30 +24,44 @@ class Dropdown {
 		});
 	}
 
-	keyboardEvent() {
+	escapeKeyboardEvent() {
 		this.dropdownButton.addEventListener("keydown", (event) => {
-			if (event.shiftKey && event.key.toLocaleLowerCase() === "tab") {
-				this.dropdownButton.setAttribute("aria-expanded", false);
-				this.dropdownMenus.classList.remove("dropdown--collapse");
-			}
+			const keyboardKey = event.key.toLowerCase();
 
-			if (event.key.toLocaleLowerCase() === "escape") {
+			if (keyboardKey === "escape") {
 				this.dropdownButton.setAttribute("aria-expanded", false);
 				this.dropdownMenus.classList.remove("dropdown--collapse");
 			}
 		});
 
 		this.dropdownMenus.addEventListener("keydown", (event) => {
-			if (event.key.toLocaleLowerCase() === "escape") {
+			const keyboardKey = event.key.toLowerCase();
+
+			if (keyboardKey === "escape") {
+				this.dropdownButton.setAttribute("aria-expanded", false);
+				this.dropdownMenus.classList.remove("dropdown--collapse");
+			}
+		});
+	}
+
+	shiftTabKeyboardEvent() {
+		this.dropdownButton.addEventListener("keydown", (event) => {
+			const isShiftKeyboardKey = event.shiftKey;
+			const keyboardKey = event.key.toLocaleLowerCase();
+
+			if (isShiftKeyboardKey === true && keyboardKey === "tab") {
 				this.dropdownButton.setAttribute("aria-expanded", false);
 				this.dropdownMenus.classList.remove("dropdown--collapse");
 			}
 		});
 
 		this.dropdownMenus.lastElementChild.addEventListener("keydown", (event) => {
-			if (event.shiftKey && event.key.toLocaleLowerCase() === "tab") return;
+			const isShiftKeyboardKey = event.shiftKey;
+			const keyboardKey = event.key.toLocaleLowerCase();
 
-			if (event.key.toLocaleLowerCase() === "tab") {
+			if (isShiftKeyboardKey === true && keyboardKey === "tab") return;
+
+			if (keyboardKey === "tab") {
 				this.dropdownButton.setAttribute("aria-expanded", false);
 				this.dropdownMenus.classList.remove("dropdown--collapse");
 			}
@@ -57,10 +72,10 @@ class Dropdown {
 		document.body.addEventListener("click", (event) => {
 			const dropdownMenusStatus = this.dropdownMenus.classList.contains("dropdown--collapse");
 
-			if (dropdownMenusStatus) {
-				const dropdownParentElement = this.dropdownButton.parentElement;
+			if (dropdownMenusStatus === true) {
+				const isContainDropdownEl = this.dropdownButton.parentElement.contains(event.target);
 
-				if (!dropdownParentElement.contains(event.target)) {
+				if (isContainDropdownEl === false) {
 					this.dropdownButton.setAttribute("aria-expanded", false);
 					this.dropdownMenus.classList.remove("dropdown--collapse");
 				}

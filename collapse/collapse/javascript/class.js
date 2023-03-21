@@ -1,8 +1,9 @@
 class Collapse {
 	constructor() {
 		this.collapse = document.getElementById("collapse");
-		this.collapseBtn = this.collapse.firstElementChild.firstElementChild;
 		this.collapseMsg = this.collapse.lastElementChild.firstElementChild;
+		this.collapseBtn = this.collapse.firstElementChild.firstElementChild;
+
 		this.triggerListeners();
 	}
 

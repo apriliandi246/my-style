@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: var(--body-bg-color-light);
 }
 
 /* ---------------------------- */
@@ -14,7 +15,6 @@ body {
 
 .accordion__button {
 	width: 100%;
-	color: #000;
 	display: flex;
 	cursor: pointer;
 	align-items: center;
@@ -22,35 +22,42 @@ body {
 	padding: 1.5rem 1.6rem;
 	font-size: var(--text-16x);
 	justify-content: space-between;
-	background-color: var(--neutral-50);
+	color: var(--main-font-color-light);
 	border: 0.1rem solid var(--neutral-400);
+	background-color: var(--main-bg-color-component-light);
 }
 
-.accordion__button:disabled::after {
+.accordion__button:disabled {
 	color: #ababab;
+}
+
+.accordion__button:disabled svg {
+	stroke: #ababab;
 }
 
 .accordion__button svg {
 	width: 2.4rem;
 	height: 2.4rem;
 	pointer-events: none;
+	stroke: var(--main-font-color-light);
 }
 
 .accordion__message {
-	color: #000;
 	display: none;
 	padding: 1.6rem;
 	line-height: 2.7rem;
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
-	background-color: var(--neutral-50);
+	font-family: var(--font-family);
+	color: var(--main-font-color-light);
 	border: 0.1rem solid var(--neutral-400);
+	background-color: var(--main-bg-color-component-light);
 }
 
 .accordion--active,
 .accordion__button:focus {
 	outline-offset: -0.1rem;
-	outline: 0.2rem solid #000;
+	outline: 0.2rem solid var(--main-font-color-light);
 }
 
 .accordion-message--active {

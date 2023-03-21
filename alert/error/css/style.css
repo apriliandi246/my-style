@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: var(--primary-50);
 }
 
 /* ---------------------------- */
@@ -22,6 +23,7 @@ body {
 .error-alert__message {
 	color: #fff;
 	font-size: var(--text-16x);
+	font-family: var(--font-family);
 }
 
 .error-alert__icon {

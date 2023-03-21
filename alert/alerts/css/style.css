@@ -1,5 +1,6 @@
 body {
 	padding: 100px;
+	background-color: var(--primary-50);
 }
 
 /* ---------------------------- */
@@ -17,11 +18,13 @@ body {
 .secondary-alert__message {
 	color: #fff;
 	font-size: var(--text-16x);
+	font-family: var(--font-family);
 }
 
 .secondary-alert__close {
 	border: none;
 	padding: 0.2rem;
+	cursor: pointer;
 	border-radius: 100%;
 	background-color: transparent;
 }
