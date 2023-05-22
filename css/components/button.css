@@ -23,6 +23,10 @@
 .button.button--danger:focus {
 	outline-color: #000;
 }
+
+.button.button--danger svg.button__icon {
+	stroke: #fff;
+}
 /* Button - Danger */
 
 /* Button - Info */
@@ -35,19 +39,11 @@
 .button.button--info:focus {
 	outline-color: #000;
 }
+
+.button.button--info svg.button__icon {
+	stroke: #fff;
+}
 /* Button - Info */
-
-/* Button - Secondary */
-.button.button--secondary {
-	color: #fff;
-	border-color: var(--secondary-700);
-	background-color: var(--secondary-600);
-}
-
-.button.button--secondary:focus {
-	outline-color: #000;
-}
-/* Button - Secondary */
 
 /* Button - Success */
 .button.button--success {
@@ -58,6 +54,10 @@
 
 .button.button--success:focus {
 	outline-color: #000;
+}
+
+.button.button--success svg.button__icon {
+	stroke: #fff;
 }
 /* Button - Success */
 
@@ -71,9 +71,12 @@
 .button.button--warning:focus {
 	outline-color: #000;
 }
+
+.button.button--warning svg.button__icon {
+	stroke: #000;
+}
 /* Button - Warning */
 
-/* Button - Base */
 .button {
 	display: flex;
 	align-items: center;
@@ -88,4 +91,17 @@
 	outline-width: 0.2rem;
 	outline-offset: -0.1rem;
 }
-/* Button - Base */
+
+.button svg.button__icon {
+	width: 2.4rem;
+	height: 2.4rem;
+	pointer-events: none;
+}
+
+.button svg.button__icon.button__icon--right {
+	margin-left: 0.8rem;
+}
+
+.button svg.button__icon.button__icon--left {
+	margin-right: 0.8rem;
+}
