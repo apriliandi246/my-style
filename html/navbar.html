@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/components/navbar.css">
+	<script defer src="../javascript/components/navbar.js"></script>
+	<title>Navbar</title>
+</head>
+
+<body>
+	<header class="navbar">
+		<div class="container navbar__wrapper">
+			<a href="#" class="navbar__brand">
+				<h1>Navbar</h1>
+			</a>
+
+			<button
+				type="button"
+				aria-expanded="false"
+				id="navbar-toggle-btn"
+				class="navbar__toggle-btn"
+				aria-controls="navbar-menus"
+				aria-label="Toggle navigation">
+				<svg
+					fill="none"
+					stroke="#000"
+					stroke-width="2"
+					aria-hidden="true"
+					viewBox="0 0 24 24"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					xmlns="http://www.w3.org/2000/svg">
+					<line x1="3" y1="12" x2="21" y2="12"></line>
+					<line x1="3" y1="6" x2="21" y2="6"></line>
+					<line x1="3" y1="18" x2="21" y2="18"></line>
+				</svg>
+			</button>
+
+			<nav class="navbar__menus" id="navbar-menus">
+				<a href="#">Home</a>
+				<a href="#">About Us</a>
+				<a href="#">Product</a>
+				<a href="#">Pages</a>
+				<a href="#">Contact Us</a>
+			</nav>
+		</div>
+	</header>
+</body>
+
+</html>

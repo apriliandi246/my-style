@@ -22,6 +22,7 @@ body {
 .warning-alert__message {
 	color: #000;
 	font-size: var(--text-16x);
+	font-family: var(--font-family);
 }
 
 .warning-alert__icon {
@@ -40,6 +41,7 @@ body {
 .warning-alert__close svg {
 	width: 2.4rem;
 	height: 2.4rem;
+	display: block;
 	pointer-events: none;
 }
 

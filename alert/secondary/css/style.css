@@ -17,6 +17,7 @@ body {
 .secondary-alert__message {
 	color: #fff;
 	font-size: var(--text-16x);
+	font-family: var(--font-family);
 }
 
 .secondary-alert__close {
@@ -29,6 +30,7 @@ body {
 .secondary-alert__close svg {
 	width: 2.4rem;
 	height: 2.4rem;
+	display: block;
 	pointer-events: none;
 }
 

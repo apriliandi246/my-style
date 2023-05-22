@@ -1,0 +1,38 @@
+@import "../global/reset.css";
+@import "../global/theme.css";
+
+.field textarea {
+	width: 100%;
+	color: #000;
+	resize: vertical;
+	line-height: 2.7rem;
+	padding: 1rem 1.2rem;
+	border-radius: 0.4rem;
+	font-size: var(--text-16x);
+	font-family: var(--font-family);
+	background-color: var(--neutral-50);
+	border: 0.1rem solid var(--neutral-400);
+}
+
+.field textarea:focus {
+	outline-offset: -0.1rem;
+	outline: 0.2rem solid #000;
+}
+
+.field textarea:disabled {
+	color: #b8b1b1;
+	background-color: #ebe6e6;
+	border: 0.1rem solid var(--primary-200);
+}
+
+.field textarea:disabled::placeholder {
+	color: #ababab;
+}
+
+.field label {
+	color: #000;
+	margin-bottom: 0.4rem;
+	display: inline-block;
+	font-size: var(--text-16x);
+	font-family: var(--font-family);
+}

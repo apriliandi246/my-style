@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/components/collapse.css">
+	<script defer src="../javascript/components/collapse.js"></script>
+	<title>Collapse</title>
+</head>
+
+<body>
+	<div class="collapse collapse--light" id="collapse">
+		<h3>
+			<button
+				id="sect1"
+				type="button"
+				aria-expanded="false"
+				class="collapse__button"
+				aria-controls="collapse1">
+				What is overengineering ????
+				<svg
+					fill="none"
+					stroke="#000"
+					stroke-width="2"
+					aria-hidden="true"
+					viewBox="0 0 24 24"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					xmlns="http://www.w3.org/2000/svg">
+					<polyline points="6 9 12 15 18 9"></polyline>
+				</svg>
+			</button>
+		</h3>
+
+		<div id="collapse1" role="region" aria-labelledby="sect1">
+			<p class="collapse__message">
+				Overengineering (or over-engineering) is the act of designing a product or providing a solution to a problem in an elaborate or complicated
+				manner, where a simpler solution can be demonstrated to exist with the same efficiency and effectiveness as that of the original design.
+			</p>
+		</div>
+	</div>
+
+	<br><br>
+
+	<div class="collapse collapse--light" id="collapse">
+		<h3>
+			<button
+				disabled
+				id="sect1"
+				type="button"
+				aria-expanded="false"
+				class="collapse__button"
+				aria-controls="collapse1">
+				What is overengineering ????
+				<svg
+					fill="none"
+					stroke="#000"
+					stroke-width="2"
+					aria-hidden="true"
+					viewBox="0 0 24 24"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					xmlns="http://www.w3.org/2000/svg">
+					<polyline points="6 9 12 15 18 9"></polyline>
+				</svg>
+			</button>
+		</h3>
+
+		<div id="collapse1" role="region" aria-labelledby="sect1">
+			<p class="collapse__message">
+				Overengineering (or over-engineering) is the act of designing a product or providing a solution to a problem in an elaborate or complicated
+				manner, where a simpler solution can be demonstrated to exist with the same efficiency and effectiveness as that of the original design.
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>

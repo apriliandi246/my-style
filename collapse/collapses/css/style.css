@@ -44,6 +44,7 @@ body {
 	line-height: 2.7rem;
 	border-radius: 0.4rem;
 	font-size: var(--text-16x);
+	font-family: var(--font-family);
 	background-color: var(--neutral-50);
 	border: 0.1rem solid var(--neutral-400);
 }

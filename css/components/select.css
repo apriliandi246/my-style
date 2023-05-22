@@ -1,0 +1,23 @@
+@import "../global/reset.css";
+@import "../global/theme.css";
+
+.select {
+	width: 100%;
+	padding: 0.8rem 1.4rem;
+	font-size: var(--text-16x);
+	background-color: var(--neutral-50);
+	border: 0.1rem solid var(--neutral-400);
+}
+
+.select:disabled {
+	color: #b8b1b1;
+	background-color: #ebe6e6;
+	border: 0.1rem solid var(--primary-200);
+}
+
+.select-wrapper .select-label {
+	margin-bottom: 0.4rem;
+	display: inline-block;
+	font-size: var(--text-16x);
+	font-family: var(--font-family);
+}

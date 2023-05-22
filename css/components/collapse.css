@@ -1,0 +1,66 @@
+@import "../global/reset.css";
+@import "../global/theme.css";
+
+.collapse__button {
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	border-style: solid;
+	border-width: 0.1rem;
+	border-radius: 0.4rem;
+	padding: 1.5rem 1.6rem;
+	font-size: var(--text-16x);
+	justify-content: space-between;
+	border-color: var(--neutral-400);
+	color: var(--main-font-color-light);
+	background-color: var(--main-bg-color-component-light);
+}
+
+.collapse__button:disabled {
+	color: #b8b1b1;
+	background-color: #ebe6e6;
+	border: 0.1rem solid var(--primary-200);
+}
+
+.collapse__button svg {
+	width: 2.4rem;
+	height: 2.4rem;
+	pointer-events: none;
+	transition: transform 200ms;
+	stroke: var(--main-font-color-light);
+}
+
+.collapse__button:disabled svg {
+	stroke: #b8b1b1;
+}
+
+.collapse__message {
+	display: none;
+	padding: 1.6rem;
+	line-height: 2.7rem;
+	border-style: solid;
+	border-width: 0.1rem;
+	border-radius: 0.4rem;
+	font-size: var(--text-16x);
+	font-family: var(--font-family);
+	border-color: var(--neutral-400);
+	color: var(--main-font-color-light);
+	background-color: var(--main-bg-color-component-light);
+}
+
+.collapse--active,
+.collapse__button:focus {
+	outline-style: solid;
+	outline-width: 0.2rem;
+	outline-offset: -0.1rem;
+	outline-color: var(--main-font-color-light);
+}
+
+.collapse-message--active {
+	display: block;
+}
+
+.collapse--active svg {
+	transform: rotate(180deg);
+}

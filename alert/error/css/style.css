@@ -42,6 +42,7 @@ body {
 .error-alert__close svg {
 	width: 2.4rem;
 	height: 2.4rem;
+	display: block;
 	pointer-events: none;
 }
 

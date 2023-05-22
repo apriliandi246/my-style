@@ -1,0 +1,42 @@
+@import "../global/reset.css";
+@import "../global/theme.css";
+
+.circle {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 100%;
+}
+
+.block {
+	width: 25rem;
+	height: 4rem;
+	border-radius: 0.5rem;
+}
+
+.large-block {
+	width: 50rem;
+	height: 25rem;
+	border-radius: 0.5rem;
+}
+
+.skeleton {
+	background-size: 30rem;
+	background-color: #f3f5f7;
+	background-repeat: no-repeat;
+	border: 0.1rem solid var(--neutral-400);
+}
+
+.skeleton--animate {
+	animation: skeleton-animate 900ms ease infinite;
+	background-image: linear-gradient(100deg, #f9fafb, #e5e7ebe6, #f9fafb);
+}
+
+@keyframes skeleton-animate {
+	0% {
+		background-position: -50rem;
+	}
+
+	100% {
+		background-position: calc(40rem + 100%);
+	}
+}

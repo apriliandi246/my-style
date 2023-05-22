@@ -1,16 +1,19 @@
 class Alert {
+	#closeAlertButton;
+
 	constructor() {
-		this.closeAlertButton = document.getElementById("error-btn-close");
-		this.triggerListeners();
+		this.#closeAlertButton = document.getElementById("error-btn-close");
+
+		this.#main();
 	}
 
-	triggerListeners() {
-		this.close();
+	#main() {
+		this.#close();
 	}
 
-	close() {
-		this.closeAlertButton.addEventListener("click", (event) => {
-			event.target.parentElement.remove();
+	#close() {
+		this.#closeAlertButton.addEventListener("click", () => {
+			this.#closeAlertButton.parentElement.remove();
 		});
 	}
 }

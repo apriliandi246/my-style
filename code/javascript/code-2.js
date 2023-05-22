@@ -1,23 +1,29 @@
 class CodeBlock {
+	#codeBlocks;
+
 	constructor() {
-		this.codeBlocks = document.getElementsByClassName("code-block");
-		this.triggerListeners();
+		this.#codeBlocks = document.getElementsByClassName("code-block");
+
+		this.#main();
 	}
 
-	triggerListeners() {
-		this.copyToClipboard();
+	#main() {
+		this.#copyToClipboard();
 	}
 
-	copyToClipboard() {
-		for (let index = 0; index < this.codeBlocks.length; index++) {
-			const blockOfCode = this.codeBlocks[index].textContent;
+	#copyToClipboard() {
+		const totalCodeBlocks = this.#codeBlocks.length;
+
+		for (let index = 0; index < totalCodeBlocks; index++) {
+			const blockOfCode = this.#codeBlocks[index].textContent;
 			const buttonCopy =
-				this.codeBlocks[index].parentElement.nextElementSibling;
+				this.#codeBlocks[index].parentElement.nextElementSibling;
 
 			buttonCopy.addEventListener("click", async () => {
 				let copiedDelay;
 
 				await navigator.clipboard.writeText(blockOfCode);
+
 				buttonCopy.textContent = "Copied";
 
 				copiedDelay = setTimeout(() => {
