@@ -1,0 +1,41 @@
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+input:disabled,
+select:disabled,
+button:disabled,
+textarea:disabled {
+	cursor: not-allowed;
+}
+
+pre,
+kbd,
+code,
+samp {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+	border-radius: 0.4rem;
+}
+
+button {
+	cursor: pointer;
+}
+
+::-ms-reveal {
+	display: none;
+}

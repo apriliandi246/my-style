@@ -1,0 +1,21 @@
+/* Variant Info color */
+.mys-btn-info-color {
+	--mys-color-variant-btn-text-color: #fff;
+	--mys-color-variant-btn-bg-color: #035388;
+	--mys-color-variant-btn-bg-color-hover: #02436e;
+	--mys-color-variant-btn-bg-color-active: #02375a;
+
+	color: var(--mys-color-variant-btn-text-color);
+	border-color: var(--mys-color-variant-btn-bg-color);
+	background-color: var(--mys-color-variant-btn-bg-color);
+}
+
+.mys-btn-info-color:hover {
+	border-color: var(--mys-color-variant-btn-bg-color-hover);
+	background-color: var(--mys-color-variant-btn-bg-color-hover);
+}
+
+.mys-btn-info-color:active {
+	border-color: var(--mys-color-variant-btn-bg-color-active);
+	background-color: var(--mys-color-variant-btn-bg-color-active);
+}

@@ -1,0 +1,9 @@
+/*
+	Prefix: --mys-font-family, --mys-font-family-sans-serif, --mys-font-family-serif.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap");
+
+:root {
+	--mys-font-family-sans-serif: "Poppins", sans-serif;
+}

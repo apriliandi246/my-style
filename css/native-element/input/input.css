@@ -1,0 +1,18 @@
+.mys-input {
+	width: 100%;
+	font-size: 1.6rem;
+	border-style: solid;
+	border-width: 0.1rem;
+	padding: 0.8rem 1.4rem;
+}
+
+.mys-input:disabled {
+	opacity: 0.66;
+	pointer-events: none;
+}
+
+.mys-input-theme {
+	color: var(--mys-theme-text-color);
+	border-color: var(--mys-theme-input-border-color);
+	background-color: var(--mys-theme-input-bg-color);
+}

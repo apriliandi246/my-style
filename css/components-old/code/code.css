@@ -1,0 +1,54 @@
+@import "../global/reset.css";
+@import "../global/theme.css";
+
+.code {
+	overflow-x: auto;
+	position: relative;
+	border-radius: 0.4rem;
+	padding: 0 2.4rem 1.2rem 2.4rem;
+
+	background-color: var(--primary-900);
+}
+
+.code::-webkit-scrollbar {
+	background-color: var(--primary-800);
+}
+
+.code::-webkit-scrollbar-thumb {
+	background-color: var(--primary-600);
+}
+
+.code__block {
+	font: 500 var(--text-16x) / 2.5rem monospace;
+
+	color: #fff;
+}
+
+.code__btn-copy {
+	top: 0;
+	right: 0;
+	border: none;
+	padding: 0.7rem;
+	margin-top: 1rem;
+	position: absolute;
+	border-style: solid;
+	margin-right: 1.6rem;
+	border-width: 0.1rem;
+	font-size: var(--text-16x);
+
+	color: #fff;
+	border-color: #7676803d;
+	background-color: #7676803d;
+}
+
+.code__btn-copy:focus {
+	outline-style: solid;
+	outline-width: 0.2rem;
+	outline-offset: -0.1rem;
+
+	outline-color: #fff;
+}
+
+.code__btn-copy:disabled {
+	background-color: var(--primary-600);
+}

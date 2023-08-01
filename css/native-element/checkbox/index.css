@@ -1,0 +1,26 @@
+.mys-checkbox {
+	/* Use Data URLs for the icon */
+	--mys-checkbox-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+
+	width: 1.9rem;
+	height: 1.9rem;
+	appearance: none;
+	vertical-align: top;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 0.1rem solid var(--mys-theme-btn-border-color);
+	background-color: var(--mys-checkbox-bg-color-unchecked);
+	transition: background-color ease-in-out 100ms, border-color ease-in-out 100ms;
+}
+
+.mys-checkbox:checked {
+	background-image: var(--mys-checkbox-icon);
+	border-color: var(--mys-checkbox-bg-color-checked);
+	background-color: var(--mys-checkbox-bg-color-checked);
+}
+
+.mys-checkbox:disabled {
+	opacity: 0.66;
+	pointer-events: none;
+}

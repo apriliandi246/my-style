@@ -1,0 +1,116 @@
+/*
+	Prefix: --mys-color
+*/
+
+:root {
+	/*
+		Primary Color:
+			- A primary color is the color displayed most frequently across your app's screens and components.
+			- Your primary color can be used to make a color theme for your app, including dark and light primary color variants.
+	*/
+	--mys-color-primary-50: #eaebec;
+	--mys-color-primary-100: #d6d7d9;
+	--mys-color-primary-200: #c2c3c6;
+	--mys-color-primary-300: #aeb0b4;
+	--mys-color-primary-400: #9a9ca1;
+	--mys-color-primary-500: #86888e;
+	--mys-color-primary-600: #72757c;
+	--mys-color-primary-700: #5e6169;
+	--mys-color-primary-800: #4a4d56;
+	--mys-color-primary-900: #363a44;
+
+	/*
+		Secondary Color:
+		- A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of your UI.
+		- Secondary colors are best for:
+			- Floating action buttons
+			- Selection controls, like sliders and switches
+			- Highlighting selected text
+			- Progress bars
+			- Links and headlines
+	*/
+	--mys-color-secondary-50: #effcf6;
+	--mys-color-secondary-100: #c6f7e2;
+	--mys-color-secondary-200: #8eedc7;
+	--mys-color-secondary-300: #65d6ad;
+	--mys-color-secondary-400: #3ebd93;
+	--mys-color-secondary-500: #27ab83;
+	--mys-color-secondary-600: #199473;
+	--mys-color-secondary-700: #147d64;
+	--mys-color-secondary-800: #0c6b58;
+	--mys-color-secondary-900: #014d40;
+
+	/*
+		Neutral Color:
+		- These are the colors you will use the most and will make up the majority of your UI. Use them for most of your text, backgrounds, and borders, as well as for things like secondary buttons and links.
+	*/
+	--mys-color-neutral-50: #f9fafb;
+	--mys-color-neutral-100: #f3f4f6;
+	--mys-color-neutral-200: #e5e7eb;
+	--mys-color-neutral-300: #d1d5db;
+	--mys-color-neutral-400: #9ca3af;
+	--mys-color-neutral-500: #6b7280;
+	--mys-color-neutral-600: #4b5563;
+	--mys-color-neutral-700: #374151;
+	--mys-color-neutral-800: #1f2937;
+	--mys-color-neutral-900: #111827;
+
+	/*
+		Information
+	*/
+	--mys-color-info-50: #e3f8ff;
+	--mys-color-info-100: #b3ecff;
+	--mys-color-info-200: #81defd;
+	--mys-color-info-300: #5ed0fa;
+	--mys-color-info-400: #40c3f7;
+	--mys-color-info-500: #2bb0ed;
+	--mys-color-info-600: #1992d4;
+	--mys-color-info-700: #127fbf;
+	--mys-color-info-800: #0b69a3;
+	--mys-color-info-900: #035388;
+	--mys-color-info-text-color: #fff;
+
+	/*
+		Success, safe, and when something is right
+	*/
+	--mys-color-success-50: #e3f9e5;
+	--mys-color-success-100: #c1f2c7;
+	--mys-color-success-200: #91e697;
+	--mys-color-success-300: #51ca58;
+	--mys-color-success-400: #31b237;
+	--mys-color-success-500: #18981d;
+	--mys-color-success-600: #0f8613;
+	--mys-color-success-700: #0e7817;
+	--mys-color-success-800: #07600e;
+	--mys-color-success-900: #014807;
+	--mys-color-success-text-color: #fff;
+
+	/*
+		Warning, alert, and caution
+	*/
+	--mys-color-warning-50: #fffbea;
+	--mys-color-warning-100: #fff3c4;
+	--mys-color-warning-200: #fce588;
+	--mys-color-warning-300: #fadb5f;
+	--mys-color-warning-400: #f7c948;
+	--mys-color-warning-500: #f0b429;
+	--mys-color-warning-600: #de911d;
+	--mys-color-warning-700: #cb6e17;
+	--mys-color-warning-800: #b44d12;
+	--mys-color-warning-900: #8d2b0b;
+	--mys-color-warning-text-color: #000;
+
+	/*
+		Error, danger, and wrong
+	*/
+	--mys-color-danger-50: #ffe3e3;
+	--mys-color-danger-100: #ffbdbd;
+	--mys-color-danger-200: #ffbdbd;
+	--mys-color-danger-300: #f86a6a;
+	--mys-color-danger-400: #ef4e4e;
+	--mys-color-danger-500: #e12d39;
+	--mys-color-danger-600: #cf1124;
+	--mys-color-danger-700: #ab091e;
+	--mys-color-danger-800: #8a041a;
+	--mys-color-danger-900: #610316;
+}

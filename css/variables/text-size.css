@@ -1,0 +1,17 @@
+/*
+	Prefix: --mys-text-size
+*/
+
+:root {
+	--mys-text-size-12x: 1.2rem;
+	--mys-text-size-14x: 1.4rem;
+	--mys-text-size-16x: 1.6rem;
+	--mys-text-size-18x: 1.8rem;
+	--mys-text-size-20x: 2rem;
+	--mys-text-size-24x: 2.4rem;
+	--mys-text-size-30x: 3rem;
+	--mys-text-size-36x: 3.6rem;
+	--mys-text-size-48x: 4.8rem;
+	--mys-text-size-60x: 6rem;
+	--mys-text-size-72x: 7.2rem;
+}

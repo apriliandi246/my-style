@@ -1,0 +1,23 @@
+/*
+	Prefix: --mys-heading-[heading level]
+*/
+
+:root {
+	--mys-heading-one-text-size: 4.5rem;
+	--mys-heading-one-line-height: 5.5rem;
+
+	--mys-heading-two-text-size: 3.2rem;
+	--mys-heading-two-line-height: 3.8rem;
+
+	--mys-heading-three-text-size: 2.8rem;
+	--mys-heading-three-line-height: 3.4rem;
+
+	--mys-heading-four-text-size: 2.3rem;
+	--mys-heading-four-line-height: 2.8rem;
+
+	--mys-heading-five-text-size: 2rem;
+	--mys-heading-five-line-height: 2.5rem;
+
+	--mys-heading-six-text-size: 1.8rem;
+	--mys-heading-six-line-height: 2.2rem;
+}

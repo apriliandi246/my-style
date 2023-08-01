@@ -1,0 +1,15 @@
+{
+	"name": "my-style",
+	"version": "1.0.0",
+	"description": "My dsimple design system, so I dont have write from scratch again",
+	"main": "index.js",
+	"scripts": {
+		"dev": "serve"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"serve": "^14.2.0"
+	}
+}

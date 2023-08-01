@@ -1,0 +1,55 @@
+/*
+	Prefix: --mys-theme
+*/
+
+:root[data-mys-theme="light"] {
+	--mys-theme-body-bg-color: #eaebec;
+
+	/* Anchor */
+	--mys-theme-anchor-text-color: #01107d;
+	--mys-theme-anchor-text-color-hover: #035388;
+
+	/* Button */
+	--mys-theme-btn-text-color: #000;
+	--mys-theme-btn-bg-color: #fff;
+	--mys-theme-btn-border-color: #adb3bd;
+	--mys-theme-btn-bg-color-hover: #e3e3e3;
+	--mys-theme-btn-bg-color-active: #d1d7db;
+
+	/* Input */
+	--mys-theme-text-color: #000;
+	--mys-theme-input-bg-color: #fff;
+	--mys-theme-input-border-color: #9ca3af;
+
+	/* Checkbox */
+	--mys-checkbox-bg-color-unchecked: #fff;
+	--mys-checkbox-bg-color-checked: #035388;
+}
+
+:root[data-mys-theme="dark"] {
+	--mys-theme-body-bg-color: #181818;
+
+	/* Anchor */
+	--mys-theme-anchor-text-color: #2bb0ed;
+	--mys-theme-anchor-text-color-hover: #40c3f7;
+
+	/* Button */
+	--mys-theme-btn-text-color: #fff;
+	--mys-theme-btn-bg-color: #7676803d;
+	--mys-theme-btn-border-color: #564343;
+	--mys-theme-btn-bg-color-hover: #343439;
+	--mys-theme-btn-bg-color-active: #3b3b41;
+
+	/* Input */
+	--mys-theme-text-color: #fff;
+	--mys-theme-input-bg-color: #7676803d;
+	--mys-theme-input-border-color: #564343;
+
+	/* Checkbox */
+	--mys-checkbox-bg-color-unchecked: #7676803d;
+	--mys-checkbox-bg-color-checked: #1376b7;
+}
+
+body {
+	background-color: var(--mys-theme-body-bg-color);
+}

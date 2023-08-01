@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-mys-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/base/index.css">
+	<link rel="stylesheet" href="../../../css/variables/index.css">
+	<link rel="stylesheet" href="../../../css/native-element/checkbox/index.css">
+	<title>Checkbox</title>
+</head>
+
+<body style="padding: 100px;">
+	<div class="just-for-this-test">
+		<button id="btn-theme">Toggle theme</button>
+		<button id="toggle-disabled">Toggle disabled</button>
+		<br><br><br><br><br><br>
+	</div>
+
+	<input type="checkbox" class="mys-checkbox">
+
+	<script>
+		const rootHTML = document.documentElement;
+		const btnComps = document.querySelectorAll(".mys-checkbox");
+		const btnToggleTheme = document.getElementById("btn-theme");
+		const btnToggleDisabled = document.getElementById("toggle-disabled");
+
+		btnToggleTheme.addEventListener("click", () => {
+			const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
+
+			if (currentTheme === "light") {
+				rootHTML.setAttribute("data-mys-theme", "dark");
+			} else {
+				rootHTML.setAttribute("data-mys-theme", "light");
+			}
+		});
+
+		btnToggleDisabled.addEventListener("click", () => {
+			for (let index = 0; index < btnComps.length; index++) {
+				const btn = btnComps[index];
+				const currentDisabledStatus = btn.disabled;
+
+				if (currentDisabledStatus === false) {
+					btn.disabled = true;
+				} else {
+					btn.disabled = false;
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

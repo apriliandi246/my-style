@@ -1,0 +1,80 @@
+@import "../global/reset.css";
+@import "../global/theme.css";
+
+.collapse__button {
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	border-style: solid;
+	border-width: 0.1rem;
+	border-radius: 0.4rem;
+	padding: 1.5rem 1.6rem;
+	font-size: var(--text-16x);
+	justify-content: space-between;
+
+	border-color: var(--neutral-400);
+	color: var(--main-font-color-light);
+	background-color: var(--main-bg-color-component-light);
+}
+
+.collapse__button:disabled {
+	border-color: var(--primary-200);
+	color: var(--main-font-color-light-disabled);
+	background-color: var(--main-bg-color-component-light-disabled);
+}
+
+.collapse__button svg {
+	width: 2.4rem;
+	height: 2.4rem;
+	pointer-events: none;
+	transition: transform 200ms;
+
+	stroke: var(--main-font-color-light);
+}
+
+.collapse__button:disabled svg {
+	stroke: var(--main-font-color-light-disabled);
+}
+
+.collapse__message {
+	display: none;
+	padding: 1.6rem;
+	margin-top: 1rem;
+	line-height: 2.7rem;
+	border-style: solid;
+	border-width: 0.1rem;
+	border-radius: 0.4rem;
+	font-size: var(--text-16x);
+	font-family: var(--font-family);
+
+	border-color: var(--neutral-400);
+	color: var(--main-font-color-light);
+	background-color: var(--main-bg-color-component-light);
+}
+
+.collapse .collapse-message--active {
+	display: block;
+}
+
+/* .collapse--active,
+.collapse__button:focus {
+	outline-style: solid;
+	outline-width: 0.2rem;
+	outline-offset: -0.1rem;
+
+	outline-color: var(--main-font-color-light);
+} */
+
+/* Fixing issue that Safari does not support outline has border radius */
+.collapse__button:focus {
+	z-index: 1;
+	outline: none;
+	position: relative;
+	border-color: transparent;
+	box-shadow: 0 0 0 0.2rem var(--main-font-color-light);
+}
+
+.collapse--active svg {
+	transform: rotate(180deg);
+}
