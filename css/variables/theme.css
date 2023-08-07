@@ -21,9 +21,15 @@
 	--mys-theme-input-bg-color: #fff;
 	--mys-theme-input-border-color: #9ca3af;
 
-	/* Checkbox */
-	--mys-checkbox-bg-color-unchecked: #fff;
-	--mys-checkbox-bg-color-checked: #035388;
+	/* Checkbox Input */
+	--mys-checkbox-input-bg-color-unchecked: #fff;
+	--mys-checkbox-input-bg-color-checked: #035388;
+	--mys-checkbox-input-btn-border-color: #adb3bd;
+
+	/* Radio Input */
+	--mys-radio-input-bg-color-unchecked: #fff;
+	--mys-radio-input-bg-color-checked: #035388;
+	--mys-radio-input-btn-border-color: #adb3bd;
 }
 
 :root[data-mys-theme="dark"] {
@@ -45,9 +51,15 @@
 	--mys-theme-input-bg-color: #7676803d;
 	--mys-theme-input-border-color: #564343;
 
-	/* Checkbox */
-	--mys-checkbox-bg-color-unchecked: #7676803d;
-	--mys-checkbox-bg-color-checked: #1376b7;
+	/* Checkbox Input */
+	--mys-checkbox-input-bg-color-checked: #1376b7;
+	--mys-checkbox-input-btn-border-color: #564343;
+	--mys-checkbox-input-bg-color-unchecked: #7676803d;
+
+	/* Radio Input */
+	--mys-radio-input-bg-color-checked: #1376b7;
+	--mys-radio-input-btn-border-color: #564343;
+	--mys-radio-input-bg-color-unchecked: #7676803d;
 }
 
 body {
