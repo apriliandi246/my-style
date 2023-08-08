@@ -16,10 +16,10 @@
 	--mys-theme-btn-bg-color-hover: #e3e3e3;
 	--mys-theme-btn-bg-color-active: #d1d7db;
 
-	/* Input */
-	--mys-theme-text-color: #000;
-	--mys-theme-input-bg-color: #fff;
-	--mys-theme-input-border-color: #9ca3af;
+	/* Regular Input */
+	--mys-regular-input-text-color: #000;
+	--mys-regular-input-bg-color: #fff;
+	--mys-regular-input-border-color: #9ca3af;
 
 	/* Checkbox Input */
 	--mys-checkbox-input-bg-color-unchecked: #fff;
@@ -30,6 +30,12 @@
 	--mys-radio-input-bg-color-unchecked: #fff;
 	--mys-radio-input-bg-color-checked: #035388;
 	--mys-radio-input-btn-border-color: #adb3bd;
+
+	/* Select Input */
+	--mys-select-input-text-color: #000;
+	--mys-select-input-bg-color: #fff;
+	--mys-select-input-border-color: #9ca3af;
+	--mys-select-input-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
 :root[data-mys-theme="dark"] {
@@ -46,10 +52,10 @@
 	--mys-theme-btn-bg-color-hover: #343439;
 	--mys-theme-btn-bg-color-active: #3b3b41;
 
-	/* Input */
-	--mys-theme-text-color: #fff;
-	--mys-theme-input-bg-color: #7676803d;
-	--mys-theme-input-border-color: #564343;
+	/* Regular Input */
+	--mys-regular-input-text-color: #fff;
+	--mys-regular-input-bg-color: #7676803d;
+	--mys-regular-input-border-color: #564343;
 
 	/* Checkbox Input */
 	--mys-checkbox-input-bg-color-checked: #1376b7;
@@ -60,6 +66,12 @@
 	--mys-radio-input-bg-color-checked: #1376b7;
 	--mys-radio-input-btn-border-color: #564343;
 	--mys-radio-input-bg-color-unchecked: #7676803d;
+
+	/* Select Input */
+	--mys-select-input-text-color: #fff;
+	--mys-select-input-bg-color: #7676803d;
+	--mys-select-input-border-color: #564343;
+	--mys-select-input-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
 body {

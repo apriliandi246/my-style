@@ -4,15 +4,12 @@
 	border-style: solid;
 	border-width: 0.1rem;
 	padding: 0.8rem 1.4rem;
+	color: var(--mys-regular-input-text-color);
+	border-color: var(--mys-regular-input-border-color);
+	background-color: var(--mys-regular-input-bg-color);
 }
 
 .mys-input:disabled {
 	opacity: 0.66;
 	pointer-events: none;
-}
-
-.mys-input-theme {
-	color: var(--mys-theme-text-color);
-	border-color: var(--mys-theme-input-border-color);
-	background-color: var(--mys-theme-input-bg-color);
 }
