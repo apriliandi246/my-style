@@ -1,0 +1,15 @@
+.mys-progress {
+	width: 100%;
+	height: 2.3rem;
+	overflow: hidden;
+	border-radius: 2.5rem;
+	background-color: var(--mys-progressbar-bg-color);
+}
+
+.mys-progress__value {
+	--mys-progress-current-value: 20%;
+
+	height: 100%;
+	width: var(--mys-progress-current-value);
+	background-color: var(--mys-progressbar-value-bg-color);
+}

@@ -36,6 +36,10 @@
 	--mys-select-input-bg-color: #fff;
 	--mys-select-input-border-color: #9ca3af;
 	--mys-select-input-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+	/* Progressbar */
+	--mys-progressbar-bg-color: #fff;
+	--mys-progressbar-value-bg-color: #035388;
 }
 
 :root[data-mys-theme="dark"] {
@@ -72,6 +76,10 @@
 	--mys-select-input-bg-color: #7676803d;
 	--mys-select-input-border-color: #564343;
 	--mys-select-input-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+	/* Progressbar */
+	--mys-progressbar-bg-color: #7676803d;
+	--mys-progressbar-value-bg-color: #1376b7;
 }
 
 body {
