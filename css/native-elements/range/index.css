@@ -6,6 +6,7 @@
 	width: 100%;
 	cursor: pointer;
 	appearance: none;
+	border-radius: 0.4rem;
 	height: var(--mys-input-range-bar-height);
 	background-color: var(--mys-input-range-bar-bg-color);
 }

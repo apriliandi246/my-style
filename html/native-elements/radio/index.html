@@ -4,10 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/base/index.css">
+	<link rel="stylesheet" href="../../../css/base/index.css">
 	<link rel="stylesheet" href="../../../css/variables/index.css">
-	<link rel="stylesheet" href="../../../css/native-element/checkbox/index.css">
-	<title>Checkbox</title>
+	<link rel="stylesheet" href="../../../css/native-elements/radio/index.css">
+	<title>Radio</title>
 </head>
 
 <body style="padding: 100px;">
@@ -19,13 +19,14 @@
 
 	<!-- Actual code -->
 
-	<input type="checkbox" class="mys-checkbox">
+	<input type="radio" class="mys-radio-input" name="gender" id="male">
+	<input type="radio" class="mys-radio-input" name="gender" id="female">
 
 	<!-- Actual code -->
 
 	<script>
 		const rootHTML = document.documentElement;
-		const btnComps = document.querySelectorAll(".mys-checkbox");
+		const btnComps = document.querySelectorAll(".mys-radio-input");
 		const btnToggleTheme = document.getElementById("btn-theme");
 		const btnToggleDisabled = document.getElementById("toggle-disabled");
 

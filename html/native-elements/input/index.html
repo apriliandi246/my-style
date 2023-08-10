@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../../css/base/index.css">
 	<link rel="stylesheet" href="../../../css/variables/index.css">
-	<link rel="stylesheet" href="../../../css/native-element/textarea/index.css">
-	<title>Textarea</title>
+	<link rel="stylesheet" href="../../../css/native-elements/input/input.css">
+	<title>Input Text</title>
 </head>
 
 <body style="padding: 100px;">
@@ -19,13 +19,13 @@
 
 	<!-- Actual code -->
 
-	<textarea class="mys-textarea" cols="30" rows="10"></textarea>
+	<input type="text" class="mys-input mys-input-theme">
 
 	<!-- Actual code -->
 
 	<script>
 		const rootHTML = document.documentElement;
-		const components = document.querySelectorAll(".mys-textarea");
+		const btnComps = document.querySelectorAll(".mys-input");
 		const btnToggleTheme = document.getElementById("btn-theme");
 		const btnToggleDisabled = document.getElementById("toggle-disabled");
 
@@ -40,14 +40,14 @@
 		});
 
 		btnToggleDisabled.addEventListener("click", () => {
-			for (let index = 0; index < components.length; index++) {
-				const component = components[index];
-				const currentDisabledStatus = component.disabled;
+			for (let index = 0; index < btnComps.length; index++) {
+				const btn = btnComps[index];
+				const currentDisabledStatus = btn.disabled;
 
 				if (currentDisabledStatus === false) {
-					component.disabled = true;
+					btn.disabled = true;
 				} else {
-					component.disabled = false;
+					btn.disabled = false;
 				}
 			}
 		});
