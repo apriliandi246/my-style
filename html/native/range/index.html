@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-mys-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../../css/base/index.css">
+	<link rel="stylesheet" href="../../../css/variables/index.css">
+	<link rel="stylesheet" href="../../../css/native-element/range/index.css">
+	<title>Range Input</title>
+</head>
+
+<body style="padding: 100px;">
+	<div class="just-for-this-test">
+		<button id="btn-theme">Toggle theme</button>
+		<button id="toggle-disabled">Toggle disabled</button>
+		<br><br><br><br><br><br>
+	</div>
+
+	<input id="range" class="mys-range-input" type="range" min="0" max="100">
+
+	<script>
+		const range = document.getElementById("range");
+
+		range.addEventListener("input", (event) => {
+			console.log(event.target.value);
+		});
+
+		const rootHTML = document.documentElement;
+		const components = document.querySelectorAll(".mys-range-input");
+		const btnToggleTheme = document.getElementById("btn-theme");
+		const btnToggleDisabled = document.getElementById("toggle-disabled");
+
+		btnToggleTheme.addEventListener("click", () => {
+			const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
+
+			if (currentTheme === "light") {
+				rootHTML.setAttribute("data-mys-theme", "dark");
+			} else {
+				rootHTML.setAttribute("data-mys-theme", "light");
+			}
+		});
+
+		btnToggleDisabled.addEventListener("click", () => {
+			for (let index = 0; index < components.length; index++) {
+				const component = components[index];
+				const currentDisabledStatus = component.disabled;
+
+				if (currentDisabledStatus === false) {
+					component.disabled = true;
+				} else {
+					component.disabled = false;
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
