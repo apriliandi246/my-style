@@ -1,6 +1,7 @@
 .mys-textarea {
 	width: 100%;
 	font-size: 1.6rem;
+	border-radius: 0.4rem;
 	padding: 0.8rem 1.4rem;
 	color: var(--mys-regular-input-text-color);
 	font-family: var(--mys-font-family-sans-serif);
