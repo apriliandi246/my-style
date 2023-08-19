@@ -51,6 +51,9 @@
 	--mys-table-td-bg-color: #f2f2f2;
 	--mys-table-th-text-color: #000;
 	--mys-table-td-text-color: #000;
+
+	/* Spinner */
+	--mys-spinner-bg-color: #000;
 }
 
 :root[data-mys-theme="dark"] {
@@ -102,6 +105,9 @@
 	--mys-table-td-bg-color: #171719;
 	--mys-table-th-text-color: #fff;
 	--mys-table-td-text-color: #fff;
+
+	/* Spinner */
+	--mys-spinner-bg-color: #fff;
 }
 
 body {
