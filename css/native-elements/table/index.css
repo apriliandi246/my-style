@@ -1,0 +1,26 @@
+.mys-table {
+	width: 100%;
+	font-size: 1.6rem;
+	border-collapse: collapse;
+	color: var(--mys-table-text-color);
+	font-family: var(--mys-font-family-sans-serif);
+}
+
+.mys-table td,
+.mys-table th {
+	padding: 1.3rem;
+}
+
+.mys-table th {
+	text-align: center;
+	padding-block: 1.3rem;
+	color: var(--mys-table-th-text-color);
+	background-color: var(--mys-table-th-bg-color);
+	border: 0.1rem solid var(--mys-table-border-color);
+}
+
+.mys-table td {
+	color: var(--mys-table-td-text-color);
+	background-color: var(--mys-table-td-bg-color);
+	border: 0.1rem solid var(--mys-table-border-color);
+}

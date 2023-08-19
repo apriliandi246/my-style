@@ -44,6 +44,13 @@
 	/* Progressbar */
 	--mys-progressbar-bg-color: #adb3bd;
 	--mys-progressbar-value-bg-color: #035388;
+
+	/* Table */
+	--mys-table-border-color: #adb3bd;
+	--mys-table-th-bg-color: #e3e3e3;
+	--mys-table-td-bg-color: #f2f2f2;
+	--mys-table-th-text-color: #000;
+	--mys-table-td-text-color: #000;
 }
 
 :root[data-mys-theme="dark"] {
@@ -88,6 +95,13 @@
 	/* Progressbar */
 	--mys-progressbar-bg-color: #564343;
 	--mys-progressbar-value-bg-color: #1376b7;
+
+	/* Table */
+	--mys-table-border-color: #564343;
+	--mys-table-th-bg-color: #7676803d;
+	--mys-table-td-bg-color: #171719;
+	--mys-table-th-text-color: #fff;
+	--mys-table-td-text-color: #fff;
 }
 
 body {
