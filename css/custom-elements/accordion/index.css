@@ -1,0 +1,5 @@
+.accordion__body {
+	--mys-accordion-visibility-status: none;
+
+	display: var(--mys-accordion-visibility-status);
+}

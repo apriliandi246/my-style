@@ -1,0 +1,5 @@
+.mys-dropdown__menu {
+	--mys-dropdown-menu-visibility-status: none;
+
+	display: var(--mys-dropdown-menu-visibility-status);
+}

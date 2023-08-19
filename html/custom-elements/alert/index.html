@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-mys-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../../css/base/index.css">
+	<link rel="stylesheet" href="../../../css/variables/index.css">
+	<link rel="stylesheet" href="../../../css/custom-elements/alert/index.css">
+	<script type="module" src="../../../javascript/custom-elements/alert/index.js"></script>
+	<title>Alert</title>
+</head>
+
+<body style="padding: 100px;">
+	<div class="just-for-this-test">
+		<button id="btn-theme">Toggle theme</button>
+		<br><br><br><br>
+	</div>
+
+	<!-- Actual code -->
+
+	<div role="alert" class="mys-alert">
+		<p class="mys-alert__message">Example alert message</p>
+	</div>
+
+	<br><br>
+
+	<div role="alert" class="mys-alert">
+		<p class="mys-alert__message">Example alert message</p>
+		<button type="button" aria-label="Close" data-mys-comp="alert" class="mys-alert__close-btn"></button>
+	</div>
+
+	<br><br>
+
+	<div role="alert" class="mys-alert">
+		<p class="mys-alert__message">Example alert message</p>
+		<button type="button" aria-label="Close" data-mys-comp="alert" class="mys-alert__close-btn"></button>
+	</div>
+
+	<!-- Actual code -->
+
+	<script>
+		const rootHTML = document.documentElement;
+		const btnToggleTheme = document.getElementById("btn-theme");
+
+		btnToggleTheme.addEventListener("click", () => {
+			const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
+
+			if (currentTheme === "light") {
+				rootHTML.setAttribute("data-mys-theme", "dark");
+			} else {
+				rootHTML.setAttribute("data-mys-theme", "light");
+			}
+		});
+	</script>
+</body>
+
+</html>
