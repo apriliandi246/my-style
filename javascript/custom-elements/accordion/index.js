@@ -1,12 +1,10 @@
 import BaseComponent from "../../base/index.js";
 
 class AccordionGroup extends BaseComponent {
-	#rootElement;
 	#componentName;
 	#accordionsActive;
 	#CSSVariableVisibility;
 	#classNameAccordionBtn;
-	#dataAttributeComponent;
 	#classNameAccordionGroup;
 
 	constructor() {
@@ -14,10 +12,8 @@ class AccordionGroup extends BaseComponent {
 
 		this.#accordionsActive = {};
 		this.#componentName = "accordion";
-		this.#rootElement = this.getRootElement();
-		this.#classNameAccordionGroup = ".accordion-group";
-		this.#classNameAccordionBtn = ".accordion__button";
-		this.#dataAttributeComponent = this.getDataAttributeComponent();
+		this.#classNameAccordionGroup = "accordion-group";
+		this.#classNameAccordionBtn = "accordion__button";
 		this.#CSSVariableVisibility = "--mys-accordion-visibility-status";
 
 		this.#main();
@@ -28,11 +24,13 @@ class AccordionGroup extends BaseComponent {
 	}
 
 	#eventDelegation() {
-		this.#rootElement.addEventListener("click", (event) => {
-			const currentElementTarget = event.target.closest(`[${this.#dataAttributeComponent}]`);
+		const HTMLRootElement = this.getRootElement();
+
+		HTMLRootElement.addEventListener("click", (event) => {
+			const currentElementTarget = event.target.closest(`[${this.getDataAttributeComponent()}]`);
 
 			if (currentElementTarget !== null) {
-				const currentComponentName = currentElementTarget.getAttribute(this.#dataAttributeComponent).trim();
+				const currentComponentName = currentElementTarget.getAttribute(this.getDataAttributeComponent()).trim();
 
 				if (currentComponentName === this.#componentName) {
 					this.#toggle(currentElementTarget);
@@ -44,10 +42,11 @@ class AccordionGroup extends BaseComponent {
 	#toggle(element) {
 		const accordionBtn = element;
 		const accordionName = accordionBtn.getAttribute("data-mys-accordion-body");
-		const accordionParentGroup = accordionBtn.closest(this.#classNameAccordionGroup);
+		const accordionParentGroup = accordionBtn.closest(`.${this.#classNameAccordionGroup}`);
 		const accordionParentGroupName = accordionParentGroup.getAttribute("id");
 		const accordionBody = accordionParentGroup.querySelector(`#${accordionName}`);
 
+		// There is no active accordion
 		if (this.#accordionsActive.hasOwnProperty(accordionParentGroupName) === false) {
 			accordionBody.style.setProperty(this.#CSSVariableVisibility, "block");
 			accordionBtn.setAttribute("aria-expanded", "true");
@@ -57,6 +56,7 @@ class AccordionGroup extends BaseComponent {
 			return;
 		}
 
+		// When clicking the same accordion
 		if (this.#accordionsActive[accordionParentGroupName] === accordionName) {
 			accordionBody.style.setProperty(this.#CSSVariableVisibility, "none");
 			accordionBtn.setAttribute("aria-expanded", "false");
@@ -66,11 +66,12 @@ class AccordionGroup extends BaseComponent {
 			return;
 		}
 
+		// When clicking another accordion while another is active
 		if (this.#accordionsActive[accordionParentGroupName] !== accordionName) {
 			const previousAccordionBody = accordionParentGroup.querySelector(
 				`#${this.#accordionsActive[accordionParentGroupName]}`
 			);
-			const previousAccordionBtn = previousAccordionBody.parentElement.querySelector(this.#classNameAccordionBtn);
+			const previousAccordionBtn = previousAccordionBody.parentElement.querySelector(`.${this.#classNameAccordionBtn}`);
 
 			previousAccordionBody.style.setProperty(this.#CSSVariableVisibility, "none");
 			previousAccordionBtn.setAttribute("aria-expanded", "false");

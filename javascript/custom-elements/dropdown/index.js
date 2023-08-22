@@ -36,6 +36,7 @@ class Dropdown extends BaseComponent {
 				}
 			}
 
+			// Click outside
 			if (currentElementTarget === null && this.#dropdownActive !== null) {
 				this.#toggle(this.#dropdownActive);
 			}
@@ -72,8 +73,9 @@ class Dropdown extends BaseComponent {
 			return;
 		}
 
-		if (this.#dropdownActive !== dropdownBtn) {
+		if (this.#dropdownActive !== null && this.#dropdownActive !== dropdownBtn) {
 			const dropdownMenuActive = this.#dropdownActive.nextElementSibling;
+
 			dropdownMenuActive.style.setProperty(this.#CSSVariableVisibilityMenu, "none");
 			this.#dropdownActive.setAttribute("aria-expanded", "false");
 
