@@ -1,0 +1,76 @@
+<!--
+	NOTED....
+	https://web.dev/learn/html/dialog
+	https://stackoverflow.com/questions/58818299/css-variables-not-working-in-dialogbackdrop
+-->
+
+<!DOCTYPE html>
+<html lang="en" data-mys-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../../css/base/index.css">
+	<link rel="stylesheet" href="../../../css/variables/index.css">
+	<link rel="stylesheet" href="../../../css/native-elements/modal/index.css">
+	<script type="module" src="../../../javascript/native-elements/modal/index.js"></script>
+	<title>Modal</title>
+</head>
+
+<body style="padding: 100px;">
+	<div class="just-for-this-test">
+		<button id="btn-theme">Toggle theme</button>
+		<br><br><br><br>
+	</div>
+
+	<!-- Actual code -->
+
+	<button type="button" data-modal-target="modalOne" data-mys-comp="modal">Show the dialog 1</button>
+	<button type="button" data-modal-target="modalTwo" data-mys-comp="modal">Show the dialog 2</button>
+
+	<dialog id="modalOne" class="mys-modal">
+		<div class="mys-modal__body">
+			<h1>Modal 1</h1>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, amet? Repellat minima doloremque voluptatem tempora in repellendus facere
+				accusantium quasi iusto, sed illo omnis deserunt eligendi nesciunt veritatis aliquam sit.
+			</p>
+		</div>
+
+		<button type="button" class="mys-modal__close-btn">Close</button>
+	</dialog>
+
+	<dialog id="modalTwo" class="mys-modal">
+		<div class="mys-modal__body">
+			<h1>Modal 2</h1>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, amet? Repellat minima doloremque voluptatem tempora in repellendus facere
+				accusantium quasi iusto, sed illo omnis deserunt eligendi nesciunt veritatis aliquam sit.
+			</p>
+		</div>
+
+		<button type="button" class="mys-modal__close-btn">Close</button>
+	</dialog>
+
+	<!-- Actual code -->
+
+	<script>
+		const rootHTML = document.documentElement;
+		const btnToggleTheme = document.getElementById("btn-theme");
+
+		btnToggleTheme.addEventListener("click", () => {
+			const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
+
+			if (currentTheme === "light") {
+				rootHTML.setAttribute("data-mys-theme", "dark");
+			} else {
+				rootHTML.setAttribute("data-mys-theme", "light");
+			}
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.mys-modal {
+	margin: auto;
+	animation: modal 200ms;
+}
+
+.mys-modal::backdrop {
+	animation: modal 200ms;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes modal {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
