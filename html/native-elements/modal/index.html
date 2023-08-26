@@ -26,8 +26,8 @@
 
 	<!-- Actual code -->
 
-	<button type="button" data-modal-target="modalOne" data-mys-comp="modal">Show the dialog 1</button>
-	<button type="button" data-modal-target="modalTwo" data-mys-comp="modal">Show the dialog 2</button>
+	<button type="button" data-mys-modal-target="modalOne" data-mys-comp="modal">Show the dialog 1</button>
+	<button type="button" data-mys-modal-target="modalTwo" data-mys-comp="modal">Show the dialog 2</button>
 
 	<dialog id="modalOne" class="mys-modal">
 		<div class="mys-modal__body">
@@ -39,7 +39,12 @@
 			</p>
 		</div>
 
-		<button type="button" class="mys-modal__close-btn">Close</button>
+		<button
+			type="button"
+			data-mys-modal-btn-close="modalOne"
+			class="mys-modal__close-btn">
+			Close
+		</button>
 	</dialog>
 
 	<dialog id="modalTwo" class="mys-modal">
@@ -52,7 +57,12 @@
 			</p>
 		</div>
 
-		<button type="button" class="mys-modal__close-btn">Close</button>
+		<button
+			type="button"
+			data-mys-modal-btn-close="modalTwo"
+			class="mys-modal__close-btn">
+			Close
+		</button>
 	</dialog>
 
 	<!-- Actual code -->

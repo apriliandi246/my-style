@@ -43,16 +43,6 @@ class Dropdown extends BaseComponent {
 		});
 	}
 
-	#escape() {
-		this.#rootElement.addEventListener("keydown", (event) => {
-			const keyboardKey = event.key.toLowerCase().trim();
-
-			if (keyboardKey === "escape") {
-				this.#toggle(this.#dropdownActive);
-			}
-		});
-	}
-
 	#toggle(element) {
 		const dropdownBtn = element;
 		const dropdownMenu = dropdownBtn.nextElementSibling;
@@ -86,6 +76,16 @@ class Dropdown extends BaseComponent {
 
 			return;
 		}
+	}
+
+	#escape() {
+		this.#rootElement.addEventListener("keydown", (event) => {
+			const keyboardKey = event.key.toLowerCase().trim();
+
+			if (keyboardKey === "escape") {
+				this.#toggle(this.#dropdownActive);
+			}
+		});
 	}
 }
 

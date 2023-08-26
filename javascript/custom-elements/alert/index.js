@@ -19,20 +19,21 @@ class Alert extends BaseComponent {
 		const HTMLRootElement = this.getRootElement();
 
 		HTMLRootElement.addEventListener("click", (event) => {
-			const currentElementTarget = event.target.closest(`[${this.getDataAttributeComponent()}]`);
+			const componentSelector = `[${this.getDataAttributeComponent()}]`;
+			const currentElementTarget = event.target.closest(componentSelector);
 
 			if (currentElementTarget !== null) {
 				const currentComponentName = currentElementTarget.getAttribute(this.getDataAttributeComponent()).trim();
 
 				if (currentComponentName === this.#componentName) {
-					this.#close(currentElementTarget);
+					const alert = currentElementTarget.parentElement;
+					this.#close(alert);
 				}
 			}
 		});
 	}
 
-	#close(element) {
-		const alert = element.parentElement;
+	#close(alert) {
 		alert.remove();
 	}
 }
