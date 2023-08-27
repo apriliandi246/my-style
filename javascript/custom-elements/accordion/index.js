@@ -1,20 +1,24 @@
 import BaseComponent from "../../base/index.js";
 
 class AccordionGroup extends BaseComponent {
-	#componentName;
+	#COMPONENT_NAME;
 	#accordionsActive;
-	#CSSVariableVisibility;
-	#classNameAccordionBtn;
-	#classNameAccordionGroup;
+	#accordionBodyCSSVariableVisibility;
+	#accordionBtnSelector;
+	#accordionParentGroupSelector;
+	#accordionBodyDataAttribute;
 
 	constructor() {
 		super();
 
+		// component state
 		this.#accordionsActive = {};
-		this.#componentName = "accordion";
-		this.#classNameAccordionGroup = "accordion-group";
-		this.#classNameAccordionBtn = "accordion__button";
-		this.#CSSVariableVisibility = "--mys-accordion-visibility-status";
+
+		this.#COMPONENT_NAME = "accordion";
+		this.#accordionParentGroupSelector = "mys-accordion-group";
+		this.#accordionBtnSelector = "mys-accordion__button";
+		this.#accordionBodyDataAttribute = "data-mys-accordion-body";
+		this.#accordionBodyCSSVariableVisibility = "--mys-accordion-visibility-status";
 
 		this.#main();
 	}
@@ -27,59 +31,57 @@ class AccordionGroup extends BaseComponent {
 		const HTMLRootElement = this.getRootElement();
 
 		HTMLRootElement.addEventListener("click", (event) => {
-			const currentElementTarget = event.target.closest(`[${this.getDataAttributeComponent()}]`);
+			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
+			const currentTargetElement = event.target.closest(currentTargetElementSelector);
 
-			if (currentElementTarget !== null) {
-				const currentComponentName = currentElementTarget.getAttribute(this.getDataAttributeComponent()).trim();
+			if (currentTargetElement !== null) {
+				const currentTargetElementName = currentTargetElement.getAttribute(this.getDataAttributeComponent()).trim();
 
-				if (currentComponentName === this.#componentName) {
-					this.#toggle(currentElementTarget);
+				if (currentTargetElementName === this.#COMPONENT_NAME) {
+					this.#toogle(currentTargetElement);
 				}
 			}
 		});
 	}
 
-	#toggle(element) {
-		const accordionBtn = element;
-		const accordionName = accordionBtn.getAttribute("data-mys-accordion-body");
-		const accordionParentGroup = accordionBtn.closest(`.${this.#classNameAccordionGroup}`);
-		const accordionParentGroupName = accordionParentGroup.getAttribute("id");
-		const accordionBody = accordionParentGroup.querySelector(`#${accordionName}`);
+	#toogle(element) {
+		const accordionBtnElement = element;
+		const accordionParentGroupElement = accordionBtnElement.closest(`.${this.#accordionParentGroupSelector}`);
+		const accordionParentGroupID = accordionParentGroupElement.getAttribute("id");
+		const accordionBodyDataAttribute = accordionBtnElement.getAttribute(this.#accordionBodyDataAttribute);
+		const accordionBodyElement = accordionParentGroupElement.querySelector(`#${accordionBodyDataAttribute}`);
 
-		// There is no active accordion
-		if (this.#accordionsActive.hasOwnProperty(accordionParentGroupName) === false) {
-			accordionBody.style.setProperty(this.#CSSVariableVisibility, "block");
-			accordionBtn.setAttribute("aria-expanded", "true");
+		if (this.#accordionsActive.hasOwnProperty(accordionParentGroupID) === false) {
+			accordionBodyElement.style.setProperty(this.#accordionBodyCSSVariableVisibility, "block");
+			accordionBtnElement.setAttribute("aria-expanded", "true");
 
-			this.#accordionsActive[accordionParentGroupName] = accordionName;
-
-			return;
-		}
-
-		// When clicking the same accordion
-		if (this.#accordionsActive[accordionParentGroupName] === accordionName) {
-			accordionBody.style.setProperty(this.#CSSVariableVisibility, "none");
-			accordionBtn.setAttribute("aria-expanded", "false");
-
-			delete this.#accordionsActive[accordionParentGroupName];
+			this.#accordionsActive[accordionParentGroupID] = accordionBodyDataAttribute;
 
 			return;
 		}
 
-		// When clicking another accordion while another is active
-		if (this.#accordionsActive[accordionParentGroupName] !== accordionName) {
-			const previousAccordionBody = accordionParentGroup.querySelector(
-				`#${this.#accordionsActive[accordionParentGroupName]}`
-			);
-			const previousAccordionBtn = previousAccordionBody.parentElement.querySelector(`.${this.#classNameAccordionBtn}`);
+		if (this.#accordionsActive[accordionParentGroupID] === accordionBodyDataAttribute) {
+			accordionBodyElement.style.setProperty(this.#accordionBodyCSSVariableVisibility, "none");
+			accordionBtnElement.setAttribute("aria-expended", "false");
 
-			previousAccordionBody.style.setProperty(this.#CSSVariableVisibility, "none");
-			previousAccordionBtn.setAttribute("aria-expanded", "false");
+			delete this.#accordionsActive[accordionParentGroupID];
 
-			accordionBody.style.setProperty(this.#CSSVariableVisibility, "block");
-			accordionBtn.setAttribute("aria-expanded", "true");
+			return;
+		}
 
-			this.#accordionsActive[accordionParentGroupName] = accordionName;
+		if (this.#accordionsActive[accordionParentGroupID] !== accordionBodyDataAttribute) {
+			const prevAccordionBodySelector = `#${this.#accordionsActive[accordionParentGroupID]}`;
+			const prevAccordionBodyElement = accordionParentGroupElement.querySelector(prevAccordionBodySelector);
+			const prevAccordionParentElement = prevAccordionBodyElement.parentElement;
+			const prevAccordionBtnElement = prevAccordionParentElement.querySelector(`.${this.#accordionBtnSelector}`);
+
+			prevAccordionBodyElement.style.setProperty(this.#accordionBodyCSSVariableVisibility, "none");
+			prevAccordionBtnElement.setAttribute("aria-expended", "false");
+
+			accordionBodyElement.style.setProperty(this.#accordionBodyCSSVariableVisibility, "block");
+			accordionBtnElement.setAttribute("aria-expanded", "true");
+
+			this.#accordionsActive[accordionParentGroupID] = accordionBodyDataAttribute;
 
 			return;
 		}

@@ -1,14 +1,14 @@
 class BaseComponent {
-	#EVENT_DELEGATION_ROOT;
+	#HTML_EVENT_DELEGATION_ROOT_ELEMENT;
 	#DATA_ATTRIBUTE_COMPONENT;
 
 	constructor() {
 		this.#DATA_ATTRIBUTE_COMPONENT = "data-mys-comp";
-		this.#EVENT_DELEGATION_ROOT = document.documentElement;
+		this.#HTML_EVENT_DELEGATION_ROOT_ELEMENT = document.documentElement;
 	}
 
 	getRootElement() {
-		return this.#EVENT_DELEGATION_ROOT;
+		return this.#HTML_EVENT_DELEGATION_ROOT_ELEMENT;
 	}
 
 	getDataAttributeComponent() {

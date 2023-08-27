@@ -1,12 +1,12 @@
 import BaseComponent from "../../base/index.js";
 
 class Alert extends BaseComponent {
-	#componentName;
+	#COMPONENT_NAME;
 
 	constructor() {
 		super();
 
-		this.#componentName = "alert";
+		this.#COMPONENT_NAME = "alert";
 
 		this.#main();
 	}
@@ -19,14 +19,14 @@ class Alert extends BaseComponent {
 		const HTMLRootElement = this.getRootElement();
 
 		HTMLRootElement.addEventListener("click", (event) => {
-			const componentSelector = `[${this.getDataAttributeComponent()}]`;
-			const currentElementTarget = event.target.closest(componentSelector);
+			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
+			const currentTargetElement = event.target.closest(currentTargetElementSelector);
 
-			if (currentElementTarget !== null) {
-				const currentComponentName = currentElementTarget.getAttribute(this.getDataAttributeComponent()).trim();
+			if (currentTargetElement !== null) {
+				const currentTargetElementName = currentTargetElement.getAttribute(this.getDataAttributeComponent()).trim();
 
-				if (currentComponentName === this.#componentName) {
-					const alert = currentElementTarget.parentElement;
+				if (currentTargetElementName === this.#COMPONENT_NAME) {
+					const alert = currentTargetElement.parentElement;
 					this.#close(alert);
 				}
 			}

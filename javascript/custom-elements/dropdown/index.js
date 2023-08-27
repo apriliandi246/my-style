@@ -1,20 +1,21 @@
 import BaseComponent from "../../base/index.js";
 
 class Dropdown extends BaseComponent {
-	#rootElement;
-	#componentName;
-	#dropdownActive;
-	#dataAttributeComponent;
-	#CSSVariableVisibilityMenu;
+	#COMPONENT_NAME;
+	#HTMLRootElement;
+	#dropdownActiveElement;
+	#dropdownMenuCSSVariableVisibility;
 
 	constructor() {
 		super();
 
-		this.#dropdownActive = null;
-		this.#componentName = "dropdown";
-		this.#rootElement = this.getRootElement();
-		this.#dataAttributeComponent = this.getDataAttributeComponent();
-		this.#CSSVariableVisibilityMenu = "--mys-dropdown-menu-visibility-status";
+		// component state
+		this.#dropdownActiveElement = null;
+
+		this.#COMPONENT_NAME = "dropdown";
+		this.#dropdownMenuCSSVariableVisibility = "--mys-dropdown-menu-visibility-status";
+
+		this.#HTMLRootElement = this.getRootElement();
 
 		this.#main();
 	}
@@ -22,68 +23,78 @@ class Dropdown extends BaseComponent {
 	#main() {
 		this.#eventDelegation();
 		this.#escape();
+		this.#clickOutside();
 	}
 
 	#eventDelegation() {
-		this.#rootElement.addEventListener("click", (event) => {
-			const currentElementTarget = event.target.closest(`[${this.#dataAttributeComponent}]`);
+		this.#HTMLRootElement.addEventListener("click", (event) => {
+			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
+			const currentTargetElement = event.target.closest(currentTargetElementSelector);
 
-			if (currentElementTarget !== null) {
-				const currentComponentName = currentElementTarget.getAttribute(this.#dataAttributeComponent).trim();
+			if (currentTargetElement !== null) {
+				const currentTargetElementName = currentTargetElement.getAttribute(this.getDataAttributeComponent()).trim();
 
-				if (currentComponentName === this.#componentName) {
-					this.#toggle(currentElementTarget);
+				if (currentTargetElementName === this.#COMPONENT_NAME) {
+					this.#toggle(currentTargetElement);
 				}
-			}
-
-			// Click outside
-			if (currentElementTarget === null && this.#dropdownActive !== null) {
-				this.#toggle(this.#dropdownActive);
 			}
 		});
 	}
 
 	#toggle(element) {
-		const dropdownBtn = element;
-		const dropdownMenu = dropdownBtn.nextElementSibling;
+		const dropdownBtnElement = element;
+		const dropdownMenuElement = dropdownBtnElement.nextElementSibling;
 
-		if (this.#dropdownActive === null) {
-			dropdownMenu.style.setProperty(this.#CSSVariableVisibilityMenu, "block");
-			dropdownBtn.setAttribute("aria-expanded", "true");
-			this.#dropdownActive = dropdownBtn;
+		if (this.#dropdownActiveElement === null) {
+			dropdownMenuElement.style.setProperty(this.#dropdownMenuCSSVariableVisibility, "block");
+			dropdownBtnElement.setAttribute("aria-expanded", "true");
 
-			return;
-		}
-
-		if (this.#dropdownActive === dropdownBtn) {
-			dropdownMenu.style.setProperty(this.#CSSVariableVisibilityMenu, "none");
-			dropdownBtn.setAttribute("aria-expanded", "false");
-			this.#dropdownActive = null;
+			this.#dropdownActiveElement = dropdownBtnElement;
 
 			return;
 		}
 
-		if (this.#dropdownActive !== null && this.#dropdownActive !== dropdownBtn) {
-			const dropdownMenuActive = this.#dropdownActive.nextElementSibling;
+		if (this.#dropdownActiveElement === dropdownBtnElement) {
+			dropdownMenuElement.style.setProperty(this.#dropdownMenuCSSVariableVisibility, "none");
+			dropdownBtnElement.setAttribute("aria-expanded", "false");
 
-			dropdownMenuActive.style.setProperty(this.#CSSVariableVisibilityMenu, "none");
-			this.#dropdownActive.setAttribute("aria-expanded", "false");
+			this.#dropdownActiveElement = null;
 
-			dropdownMenu.style.setProperty(this.#CSSVariableVisibilityMenu, "block");
-			dropdownBtn.setAttribute("aria-expanded", "true");
+			return;
+		}
 
-			this.#dropdownActive = dropdownBtn;
+		if (this.#dropdownActiveElement !== null && this.#dropdownActiveElement !== dropdownBtnElement) {
+			const dropdownMenuElementActive = this.#dropdownActiveElement.nextElementSibling;
+
+			dropdownMenuElementActive.style.setProperty(this.#dropdownMenuCSSVariableVisibility, "none");
+			this.#dropdownActiveElement.setAttribute("aria-expanded", "false");
+
+			dropdownMenuElement.style.setProperty(this.#dropdownMenuCSSVariableVisibility, "block");
+			dropdownBtnElement.setAttribute("aria-expanded", "true");
+
+			this.#dropdownActiveElement = dropdownBtnElement;
 
 			return;
 		}
 	}
 
 	#escape() {
-		this.#rootElement.addEventListener("keydown", (event) => {
+		this.#HTMLRootElement.addEventListener("keydown", (event) => {
 			const keyboardKey = event.key.toLowerCase().trim();
 
-			if (keyboardKey === "escape") {
-				this.#toggle(this.#dropdownActive);
+			if (keyboardKey === "escape" && this.#dropdownActiveElement !== null) {
+				this.#toggle(this.#dropdownActiveElement);
+			}
+		});
+	}
+
+	#clickOutside() {
+		this.#HTMLRootElement.addEventListener("click", (event) => {
+			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
+			const currentTargetElement = event.target.closest(currentTargetElementSelector);
+
+			if (currentTargetElement === null && this.#dropdownActiveElement !== null) {
+				this.#toggle(this.#dropdownActiveElement);
 			}
 		});
 	}

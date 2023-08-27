@@ -2,16 +2,16 @@ import BaseComponent from "../../base/index.js";
 
 class Modal extends BaseComponent {
 	#bodyElement;
-	#componentName;
-	#modalDataTargetAttribute;
-	#modalCloseBtnDataAttribute;
+	#COMPONENT_NAME;
+	#modalTargetDataAttr;
+	#modalBtnCloseDataAttr;
 
 	constructor() {
 		super();
 
-		this.#componentName = "modal";
-		this.#modalDataTargetAttribute = "data-mys-modal-target";
-		this.#modalCloseBtnDataAttribute = "data-mys-modal-btn-close";
+		this.#COMPONENT_NAME = "modal";
+		this.#modalTargetDataAttr = "data-mys-modal-target";
+		this.#modalBtnCloseDataAttr = "data-mys-modal-btn-close";
 
 		this.#bodyElement = document.body;
 
@@ -26,40 +26,40 @@ class Modal extends BaseComponent {
 		const HTMLRootElement = this.getRootElement();
 
 		HTMLRootElement.addEventListener("click", (event) => {
-			const componentSelector = `[${this.getDataAttributeComponent()}]`;
-			const currentElementTarget = event.target.closest(componentSelector);
+			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
+			const currentTargetElement = event.target.closest(currentTargetElementSelector);
 
-			if (currentElementTarget !== null) {
-				const currentComponentName = currentElementTarget.getAttribute(this.getDataAttributeComponent()).trim();
+			if (currentTargetElement !== null) {
+				const currentTargetElementName = currentTargetElement.getAttribute(this.getDataAttributeComponent()).trim();
 
-				if (currentComponentName === this.#componentName) {
-					const modalTargetName = currentElementTarget.getAttribute(this.#modalDataTargetAttribute);
-					const modal = document.getElementById(modalTargetName);
+				if (currentTargetElementName === this.#COMPONENT_NAME) {
+					const modalTargetDataAttr = currentTargetElement.getAttribute(this.#modalTargetDataAttr);
+					const modalElement = document.getElementById(modalTargetDataAttr);
 
-					this.#open(modal);
-					this.#closeModalBtn(modal);
+					this.#open(modalElement);
+					this.#btnCloseModal(modalElement);
 				}
 			}
 		});
 	}
 
-	#open(modal) {
+	#open(modalElement) {
 		this.#bodyElement.style.overflow = "hidden";
-		modal.showModal();
+		modalElement.showModal();
 	}
 
-	#close(modal) {
-		modal.close();
+	#close(modalElement) {
+		modalElement.close();
 		this.#bodyElement.style.removeProperty("overflow");
 	}
 
-	#closeModalBtn(modal) {
-		const modalID = modal.getAttribute("id");
-		const btnSelector = `[${this.#modalCloseBtnDataAttribute}=${modalID}]`;
-		const btn = modal.querySelector(btnSelector);
+	#btnCloseModal(modalElement) {
+		const modalElementIdAttr = modalElement.getAttribute("id");
+		const modalBtnCloseSelector = `[${this.#modalBtnCloseDataAttr}=${modalElementIdAttr}]`;
+		const modalBtnCloseElement = modalElement.querySelector(modalBtnCloseSelector);
 
-		btn.addEventListener("click", () => {
-			this.#close(modal);
+		modalBtnCloseElement.addEventListener("click", () => {
+			this.#close(modalElement);
 		});
 	}
 }
