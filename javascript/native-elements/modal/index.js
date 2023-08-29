@@ -1,19 +1,21 @@
-import BaseComponent from "../../base/index.js";
+import EventDelegation from "../../event-delegation/index.js";
 
-class Modal extends BaseComponent {
+class Modal {
 	#bodyElement;
+	#rootElement;
 	#COMPONENT_NAME;
 	#modalTargetDataAttr;
 	#modalBtnCloseDataAttr;
+	#eventDelegationRootElement;
 
 	constructor() {
-		super();
-
 		this.#COMPONENT_NAME = "modal";
 		this.#modalTargetDataAttr = "data-mys-modal-target";
 		this.#modalBtnCloseDataAttr = "data-mys-modal-btn-close";
 
 		this.#bodyElement = document.body;
+		this.#eventDelegationRootElement = new EventDelegation();
+		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
 
 		this.#main();
 	}
@@ -23,28 +25,22 @@ class Modal extends BaseComponent {
 	}
 
 	#eventDelegation() {
-		const HTMLRootElement = this.getRootElement();
+		this.#rootElement.addEventListener("click", (event) => {
+			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
+			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
-		HTMLRootElement.addEventListener("click", (event) => {
-			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
-			const currentTargetElement = event.target.closest(currentTargetElementSelector);
+			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
+				const modalTargetDataAttr = currentTargetElement.getAttribute(this.#modalTargetDataAttr);
+				const modalElement = document.getElementById(modalTargetDataAttr);
 
-			if (currentTargetElement !== null) {
-				const currentTargetElementName = currentTargetElement.getAttribute(this.getDataAttributeComponent()).trim();
-
-				if (currentTargetElementName === this.#COMPONENT_NAME) {
-					const modalTargetDataAttr = currentTargetElement.getAttribute(this.#modalTargetDataAttr);
-					const modalElement = document.getElementById(modalTargetDataAttr);
-
-					this.#open(modalElement);
-					this.#btnCloseModal(modalElement);
-				}
+				this.#open(modalElement);
+				this.#btnCloseModal(modalElement);
 			}
 		});
 	}
 
 	#open(modalElement) {
-		this.#bodyElement.style.overflow = "hidden";
+		this.#bodyElement.style.setProperty("overlfow", "hidden");
 		modalElement.showModal();
 	}
 

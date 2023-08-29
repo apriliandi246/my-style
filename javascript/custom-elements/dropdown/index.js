@@ -1,21 +1,21 @@
-import BaseComponent from "../../base/index.js";
+import EventDelegation from "../../event-delegation/index.js";
 
-class Dropdown extends BaseComponent {
+class Dropdown {
+	#rootElement;
 	#COMPONENT_NAME;
-	#HTMLRootElement;
 	#dropdownActiveElement;
+	#eventDelegationRootElement;
 	#dropdownMenuCSSVariableVisibility;
 
 	constructor() {
-		super();
-
 		// component state
 		this.#dropdownActiveElement = null;
 
 		this.#COMPONENT_NAME = "dropdown";
 		this.#dropdownMenuCSSVariableVisibility = "--mys-dropdown-menu-visibility-status";
 
-		this.#HTMLRootElement = this.getRootElement();
+		this.#eventDelegationRootElement = new EventDelegation();
+		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
 
 		this.#main();
 	}
@@ -27,16 +27,12 @@ class Dropdown extends BaseComponent {
 	}
 
 	#eventDelegation() {
-		this.#HTMLRootElement.addEventListener("click", (event) => {
-			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
-			const currentTargetElement = event.target.closest(currentTargetElementSelector);
+		this.#rootElement.addEventListener("click", (event) => {
+			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
+			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
-			if (currentTargetElement !== null) {
-				const currentTargetElementName = currentTargetElement.getAttribute(this.getDataAttributeComponent()).trim();
-
-				if (currentTargetElementName === this.#COMPONENT_NAME) {
-					this.#toggle(currentTargetElement);
-				}
+			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
+				this.#toggle(currentTargetElement);
 			}
 		});
 	}
@@ -79,7 +75,7 @@ class Dropdown extends BaseComponent {
 	}
 
 	#escape() {
-		this.#HTMLRootElement.addEventListener("keydown", (event) => {
+		this.#rootElement.addEventListener("keydown", (event) => {
 			const keyboardKey = event.key.toLowerCase().trim();
 
 			if (keyboardKey === "escape" && this.#dropdownActiveElement !== null) {
@@ -89,9 +85,9 @@ class Dropdown extends BaseComponent {
 	}
 
 	#clickOutside() {
-		this.#HTMLRootElement.addEventListener("click", (event) => {
-			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
-			const currentTargetElement = event.target.closest(currentTargetElementSelector);
+		this.#rootElement.addEventListener("click", (event) => {
+			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
+			const { currentTargetElement } = elementTargetData;
 
 			if (currentTargetElement === null && this.#dropdownActiveElement !== null) {
 				this.#toggle(this.#dropdownActiveElement);

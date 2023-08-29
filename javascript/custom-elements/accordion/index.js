@@ -1,24 +1,27 @@
-import BaseComponent from "../../base/index.js";
+import EventDelegation from "../../event-delegation/index.js";
 
-class AccordionGroup extends BaseComponent {
+class AccordionGroup {
+	#rootElement;
 	#COMPONENT_NAME;
 	#accordionsActive;
-	#accordionBodyCSSVariableVisibility;
 	#accordionBtnSelector;
-	#accordionParentGroupSelector;
 	#accordionBodyDataAttribute;
+	#eventDelegationRootElement;
+	#accordionParentGroupSelector;
+	#accordionBodyCSSVariableVisibility;
 
 	constructor() {
-		super();
-
 		// component state
 		this.#accordionsActive = {};
 
 		this.#COMPONENT_NAME = "accordion";
-		this.#accordionParentGroupSelector = "mys-accordion-group";
 		this.#accordionBtnSelector = "mys-accordion__button";
+		this.#accordionParentGroupSelector = "mys-accordion-group";
 		this.#accordionBodyDataAttribute = "data-mys-accordion-body";
 		this.#accordionBodyCSSVariableVisibility = "--mys-accordion-visibility-status";
+
+		this.#eventDelegationRootElement = new EventDelegation();
+		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
 
 		this.#main();
 	}
@@ -28,18 +31,12 @@ class AccordionGroup extends BaseComponent {
 	}
 
 	#eventDelegation() {
-		const HTMLRootElement = this.getRootElement();
+		this.#rootElement.addEventListener("click", (event) => {
+			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
+			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
-		HTMLRootElement.addEventListener("click", (event) => {
-			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
-			const currentTargetElement = event.target.closest(currentTargetElementSelector);
-
-			if (currentTargetElement !== null) {
-				const currentTargetElementName = currentTargetElement.getAttribute(this.getDataAttributeComponent()).trim();
-
-				if (currentTargetElementName === this.#COMPONENT_NAME) {
-					this.#toogle(currentTargetElement);
-				}
+			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
+				this.#toogle(currentTargetElement);
 			}
 		});
 	}

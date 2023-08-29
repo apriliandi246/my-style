@@ -1,12 +1,15 @@
-import BaseComponent from "../../base/index.js";
+import EventDelegation from "../../event-delegation/index.js";
 
-class Alert extends BaseComponent {
+class Alert {
+	#rootElement;
 	#COMPONENT_NAME;
+	#eventDelegationRootElement;
 
 	constructor() {
-		super();
-
 		this.#COMPONENT_NAME = "alert";
+
+		this.#eventDelegationRootElement = new EventDelegation();
+		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
 
 		this.#main();
 	}
@@ -16,19 +19,13 @@ class Alert extends BaseComponent {
 	}
 
 	#eventDelegation() {
-		const HTMLRootElement = this.getRootElement();
+		this.#rootElement.addEventListener("click", (event) => {
+			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
+			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
-		HTMLRootElement.addEventListener("click", (event) => {
-			const currentTargetElementSelector = `[${this.getDataAttributeComponent()}]`;
-			const currentTargetElement = event.target.closest(currentTargetElementSelector);
-
-			if (currentTargetElement !== null) {
-				const currentTargetElementName = currentTargetElement.getAttribute(this.getDataAttributeComponent()).trim();
-
-				if (currentTargetElementName === this.#COMPONENT_NAME) {
-					const alert = currentTargetElement.parentElement;
-					this.#close(alert);
-				}
+			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
+				const alert = currentTargetElement.parentElement;
+				this.#close(alert);
 			}
 		});
 	}
