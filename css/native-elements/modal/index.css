@@ -1,11 +1,20 @@
 .mys-modal {
 	margin: auto;
+	padding: 1.4rem;
+	max-width: 70rem;
+	border-radius: 0.4rem;
 	animation: modal 200ms;
+	background-color: var(--mys-modal-bg-color);
+	border: 0.1rem solid var(--mys-modal-border-color);
 }
 
 .mys-modal::backdrop {
 	animation: modal 200ms;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mys-modal__body {
+	color: var(--mys-modal-text-color);
 }
 
 @keyframes modal {

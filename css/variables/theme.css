@@ -54,6 +54,11 @@
 
 	/* Spinner */
 	--mys-spinner-bg-color: #000;
+
+	/* Modal */
+	--mys-modal-text-color: #000;
+	--mys-modal-bg-color: #fff;
+	--mys-modal-border-color: #787b81;
 }
 
 :root[data-mys-theme="dark"] {
@@ -108,6 +113,11 @@
 
 	/* Spinner */
 	--mys-spinner-bg-color: #fff;
+
+	/* Modal */
+	--mys-modal-text-color: #fff;
+	--mys-modal-bg-color: #7676803d;
+	--mys-modal-border-color: #564343;
 }
 
 body {
