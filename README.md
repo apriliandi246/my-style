@@ -1,10 +1,10 @@
-<h1 align="center">💅 my-style (🌕 light theme)</h1>
+<h1 align="center">💅 my-style</h1>
 
 <br>
 
 ### 👨‍💻 About
 
-Just default `CSS` style/UI component for almost my personal projetcs _(for now)_.
+Simple design system styles for my personal project....
 
 <h3 align="center">. . .</h3>
 
@@ -20,23 +20,5 @@ Just default `CSS` style/UI component for almost my personal projetcs _(for now)
 
 For naming convention, I'm using `BEM`.
 [Click here](https://en.bem.info/) for more detail.
-
-<h3 align="center">. . .</h3>
-
-### Components
-
-- [x] Alert
-- [x] Button
-- [x] Code
-- [x] Collapse
-- [x] Dropdown
-- [x] Input
-- [x] Loading
-- [x] Modal
-- [x] Navbar
-- [x] Quote
-- [x] Select
-- [x] Skeleton
-- [x] Textarea
 
 <h3 align="right">(⌐■_■)</h3>
