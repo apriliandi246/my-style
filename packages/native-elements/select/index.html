@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-mys-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../css/base/index.css" />
+		<link rel="stylesheet" href="../../css/variables/index.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Select</title>
+	</head>
+
+	<body>
+		<select class="mys-select-input">
+			<option hidden value="">-- Pleased choose an option --</option>
+			<option value="dog">Dog</option>
+			<option value="cat">Cat</option>
+			<option value="hamster">Hamster</option>
+			<option value="parrot">Parrot</option>
+			<option value="spider">Spider</option>
+			<option value="goldfish">Goldfish</option>
+		</select>
+
+		<script src="../../__dev_helpers__/themeMode.js"></script>
+		<script src="../../__dev_helpers__/disableElement.js"></script>
+		<script>
+			disableElement(".mys-select-input");
+		</script>
+	</body>
+</html>

@@ -1,9 +1,0 @@
-.invalid-value {
-	border: 0.1rem solid var(--error-500);
-}
-
-.invalid-value:focus {
-	outline-offset: 0;
-	border: 0.1rem solid var(--error-500);
-	outline: 0.2rem solid var(--error-500);
-}

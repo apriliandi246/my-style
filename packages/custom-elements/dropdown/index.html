@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-mys-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../css/base/index.css" />
+		<link rel="stylesheet" href="../../css/variables/index.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Alert</title>
+	</head>
+
+	<body>
+		<div class="mys-dropdown">
+			<button type="button" aria-expanded="false" data-mys-comp="dropdown" class="dropdown__button" aria-controls="dropdown-menu">
+				Dropdown
+			</button>
+
+			<div class="mys-dropdown__menu" id="dropdown-menu">
+				<a href="#" class="mys-dropdown__item">Home</a>
+				<a href="#" class="mys-dropdown__item">About</a>
+				<a href="#" class="mys-dropdown__item">Partner</a>
+				<a href="#" class="mys-dropdown__item">Register</a>
+			</div>
+		</div>
+
+		<br /><br /><br /><br />
+
+		<div class="mys-dropdown">
+			<button type="button" aria-expanded="false" data-mys-comp="dropdown" class="dropdown__button" aria-controls="dropdown-menu">
+				Dropdown
+			</button>
+
+			<div class="mys-dropdown__menu" id="dropdown-menu">
+				<a href="#" class="mys-dropdown__item">Home</a>
+				<a href="#" class="mys-dropdown__item">About</a>
+				<a href="#" class="mys-dropdown__item">Partner</a>
+				<a href="#" class="mys-dropdown__item">Register</a>
+			</div>
+		</div>
+
+		<script src="../../__dev_helpers__/themeMode.js"></script>
+		<script src="../../__dev_helpers__/disableElement.js"></script>
+		<script type="module" src="./script.js"></script>
+		<script>
+			disableElement(".dropdown__button");
+		</script>
+	</body>
+</html>
