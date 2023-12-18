@@ -57,5 +57,10 @@ body {
 	font-size: 1.6rem;
 	position: absolute;
 	margin-left: 1.5rem;
-	transition: top 200ms, left 200ms, color 200ms, margin-top 200ms, margin-left 200ms;
+	transition:
+		top 200ms,
+		left 200ms,
+		color 200ms,
+		margin-top 200ms,
+		margin-left 200ms;
 }

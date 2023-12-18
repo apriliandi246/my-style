@@ -7,7 +7,9 @@
 	border-radius: 0.4rem;
 	padding: 0.6rem 1.2rem;
 	font-family: var(--mys-font-family-sans-serif);
-	transition: background-color 100ms ease-in-out, border-color 100ms ease-in-out;
+	transition:
+		background-color 100ms ease-in-out,
+		border-color 100ms ease-in-out;
 }
 
 .mys-btn:disabled {

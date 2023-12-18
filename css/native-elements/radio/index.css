@@ -10,7 +10,9 @@
 	background-repeat: no-repeat;
 	background-color: var(--mys-radio-input-bg-color-unchecked);
 	border: 0.1rem solid var(--mys-radio-input-btn-border-color);
-	transition: background-color ease-in-out 100ms, border-color ease-in-out 100ms;
+	transition:
+		background-color ease-in-out 100ms,
+		border-color ease-in-out 100ms;
 }
 
 .mys-radio-input:checked {

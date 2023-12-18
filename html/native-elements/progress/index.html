@@ -1,45 +1,43 @@
 <!-- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-mys-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../css/base/index.css" />
+		<link rel="stylesheet" href="../../../css/variables/index.css" />
+		<link rel="stylesheet" href="../../../css/native-elements/progress/index.css" />
+		<title>Progressbar</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../../../css/base/index.css">
-	<link rel="stylesheet" href="../../../css/variables/index.css">
-	<link rel="stylesheet" href="../../../css/native-elements/progress/index.css">
-	<title>Progressbar</title>
-</head>
+	<body style="padding: 100px">
+		<div class="just-for-this-test">
+			<button id="btn-theme">Toggle theme</button>
+			<br /><br /><br /><br /><br /><br />
+		</div>
 
-<body style="padding: 100px;">
-	<div class="just-for-this-test">
-		<button id="btn-theme">Toggle theme</button>
-		<br><br><br><br><br><br>
-	</div>
+		<!-- Actual code -->
 
-	<!-- Actual code -->
+		<div class="mys-progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+			<div class="mys-progress__value"></div>
+		</div>
 
-	<div class="mys-progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-		<div class="mys-progress__value"></div>
-	</div>
+		<!-- Actual code -->
 
-	<!-- Actual code -->
+		<script>
+			const rootHTML = document.documentElement;
+			const btnToggleTheme = document.getElementById("btn-theme");
 
-	<script>
-		const rootHTML = document.documentElement;
-		const btnToggleTheme = document.getElementById("btn-theme");
+			btnToggleTheme.addEventListener("click", () => {
+				const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
 
-		btnToggleTheme.addEventListener("click", () => {
-			const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
-
-			if (currentTheme === "light") {
-				rootHTML.setAttribute("data-mys-theme", "dark");
-			} else {
-				rootHTML.setAttribute("data-mys-theme", "light");
-			}
-		});
-	</script>
-</body>
-
+				if (currentTheme === "light") {
+					rootHTML.setAttribute("data-mys-theme", "dark");
+				} else {
+					rootHTML.setAttribute("data-mys-theme", "light");
+				}
+			});
+		</script>
+	</body>
 </html>

@@ -1,65 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-mys-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../css/base/index.css" />
+		<link rel="stylesheet" href="../../../css/variables/index.css" />
+		<link rel="stylesheet" href="../../../css/native-elements/select/index.css" />
+		<title>Select Input</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../../../css/base/index.css">
-	<link rel="stylesheet" href="../../../css/variables/index.css">
-	<link rel="stylesheet" href="../../../css/native-elements/select/index.css">
-	<title>Select Input</title>
-</head>
+	<body style="padding: 100px">
+		<div class="just-for-this-test">
+			<button id="btn-theme">Toggle theme</button>
+			<button id="toggle-disabled">Toggle disabled</button>
+			<br /><br /><br /><br /><br /><br />
+		</div>
 
-<body style="padding: 100px;">
-	<div class="just-for-this-test">
-		<button id="btn-theme">Toggle theme</button>
-		<button id="toggle-disabled">Toggle disabled</button>
-		<br><br><br><br><br><br>
-	</div>
+		<!-- Actual code -->
 
-	<!-- Actual code -->
+		<select class="mys-select-input">
+			<option hidden value="">-- Pleased choose an option --</option>
+			<option value="dog">Dog</option>
+			<option value="cat">Cat</option>
+			<option value="hamster">Hamster</option>
+			<option value="parrot">Parrot</option>
+			<option value="spider">Spider</option>
+			<option value="goldfish">Goldfish</option>
+		</select>
 
-	<select class="mys-select-input">
-		<option hidden value="">-- Pleased choose an option --</option>
-		<option value="dog">Dog</option>
-		<option value="cat">Cat</option>
-		<option value="hamster">Hamster</option>
-		<option value="parrot">Parrot</option>
-		<option value="spider">Spider</option>
-		<option value="goldfish">Goldfish</option>
-	</select>
+		<!-- Actual code -->
 
-	<!-- Actual code -->
+		<script>
+			const rootHTML = document.documentElement;
+			const components = document.querySelectorAll(".mys-select-input");
+			const btnToggleTheme = document.getElementById("btn-theme");
+			const btnToggleDisabled = document.getElementById("toggle-disabled");
 
-	<script>
-		const rootHTML = document.documentElement;
-		const components = document.querySelectorAll(".mys-select-input");
-		const btnToggleTheme = document.getElementById("btn-theme");
-		const btnToggleDisabled = document.getElementById("toggle-disabled");
+			btnToggleTheme.addEventListener("click", () => {
+				const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
 
-		btnToggleTheme.addEventListener("click", () => {
-			const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
-
-			if (currentTheme === "light") {
-				rootHTML.setAttribute("data-mys-theme", "dark");
-			} else {
-				rootHTML.setAttribute("data-mys-theme", "light");
-			}
-		});
-
-		btnToggleDisabled.addEventListener("click", () => {
-			for (let index = 0; index < components.length; index++) {
-				const component = components[index];
-				const currentDisabledStatus = component.disabled;
-
-				if (currentDisabledStatus === false) {
-					component.disabled = true;
+				if (currentTheme === "light") {
+					rootHTML.setAttribute("data-mys-theme", "dark");
 				} else {
-					component.disabled = false;
+					rootHTML.setAttribute("data-mys-theme", "light");
 				}
-			}
-		});
-	</script>
-</body>
+			});
 
+			btnToggleDisabled.addEventListener("click", () => {
+				for (let index = 0; index < components.length; index++) {
+					const component = components[index];
+					const currentDisabledStatus = component.disabled;
+
+					if (currentDisabledStatus === false) {
+						component.disabled = true;
+					} else {
+						component.disabled = false;
+					}
+				}
+			});
+		</script>
+	</body>
 </html>

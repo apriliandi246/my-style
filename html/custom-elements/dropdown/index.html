@@ -1,78 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-mys-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../css/base/index.css" />
+		<link rel="stylesheet" href="../../../css/variables/index.css" />
+		<link rel="stylesheet" href="../../../css/custom-elements/dropdown/index.css" />
+		<script type="module" src="../../../javascript/custom-elements/dropdown/index.js"></script>
+		<title>Dropdown</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../../../css/base/index.css">
-	<link rel="stylesheet" href="../../../css/variables/index.css">
-	<link rel="stylesheet" href="../../../css/custom-elements/dropdown/index.css">
-	<script type="module" src="../../../javascript/custom-elements/dropdown/index.js"></script>
-	<title>Dropdown</title>
-</head>
-
-<body style="padding: 100px;">
-	<div class="just-for-this-test">
-		<button id="btn-theme">Toggle theme</button>
-		<br><br><br><br>
-	</div>
-
-	<!-- Actual code -->
-
-	<div class="mys-dropdown">
-		<button
-			type="button"
-			aria-expanded="false"
-			data-mys-comp="dropdown"
-			class="dropdown__button"
-			aria-controls="dropdown-menu">
-			Dropdown
-		</button>
-
-		<div class="mys-dropdown__menu" id="dropdown-menu">
-			<a href="#" class="mys-dropdown__item">Home</a>
-			<a href="#" class="mys-dropdown__item">About</a>
-			<a href="#" class="mys-dropdown__item">Partner</a>
-			<a href="#" class="mys-dropdown__item">Register</a>
+	<body style="padding: 100px">
+		<div class="just-for-this-test">
+			<button id="btn-theme">Toggle theme</button>
+			<br /><br /><br /><br />
 		</div>
-	</div>
 
-	<br><br>
+		<!-- Actual code -->
 
-	<div class="mys-dropdown">
-		<button
-			type="button"
-			aria-expanded="false"
-			data-mys-comp="dropdown"
-			class="dropdown__button"
-			aria-controls="dropdown-menu">
-			Dropdown
-		</button>
+		<div class="mys-dropdown">
+			<button
+				type="button"
+				aria-expanded="false"
+				data-mys-comp="dropdown"
+				class="dropdown__button"
+				aria-controls="dropdown-menu">
+				Dropdown
+			</button>
 
-		<div class="mys-dropdown__menu" id="dropdown-menu">
-			<a href="#" class="mys-dropdown__item">Home</a>
-			<a href="#" class="mys-dropdown__item">About</a>
-			<a href="#" class="mys-dropdown__item">Partner</a>
-			<a href="#" class="mys-dropdown__item">Register</a>
+			<div class="mys-dropdown__menu" id="dropdown-menu">
+				<a href="#" class="mys-dropdown__item">Home</a>
+				<a href="#" class="mys-dropdown__item">About</a>
+				<a href="#" class="mys-dropdown__item">Partner</a>
+				<a href="#" class="mys-dropdown__item">Register</a>
+			</div>
 		</div>
-	</div>
 
-	<!-- Actual code -->
+		<br /><br />
 
-	<script>
-		const rootHTML = document.documentElement;
-		const btnToggleTheme = document.getElementById("btn-theme");
+		<div class="mys-dropdown">
+			<button
+				type="button"
+				aria-expanded="false"
+				data-mys-comp="dropdown"
+				class="dropdown__button"
+				aria-controls="dropdown-menu">
+				Dropdown
+			</button>
 
-		btnToggleTheme.addEventListener("click", () => {
-			const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
+			<div class="mys-dropdown__menu" id="dropdown-menu">
+				<a href="#" class="mys-dropdown__item">Home</a>
+				<a href="#" class="mys-dropdown__item">About</a>
+				<a href="#" class="mys-dropdown__item">Partner</a>
+				<a href="#" class="mys-dropdown__item">Register</a>
+			</div>
+		</div>
 
-			if (currentTheme === "light") {
-				rootHTML.setAttribute("data-mys-theme", "dark");
-			} else {
-				rootHTML.setAttribute("data-mys-theme", "light");
-			}
-		});
-	</script>
-</body>
+		<!-- Actual code -->
 
+		<script>
+			const rootHTML = document.documentElement;
+			const btnToggleTheme = document.getElementById("btn-theme");
+
+			btnToggleTheme.addEventListener("click", () => {
+				const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
+
+				if (currentTheme === "light") {
+					rootHTML.setAttribute("data-mys-theme", "dark");
+				} else {
+					rootHTML.setAttribute("data-mys-theme", "light");
+				}
+			});
+		</script>
+	</body>
 </html>

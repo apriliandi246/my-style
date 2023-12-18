@@ -11,7 +11,9 @@
 	background-repeat: no-repeat;
 	background-color: var(--mys-checkbox-input-bg-color-unchecked);
 	border: 0.1rem solid var(--mys-checkbox-input-btn-border-color);
-	transition: background-color ease-in-out 100ms, border-color ease-in-out 100ms;
+	transition:
+		background-color ease-in-out 100ms,
+		border-color ease-in-out 100ms;
 }
 
 .mys-checkbox:checked {
