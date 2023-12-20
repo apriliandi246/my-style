@@ -1,25 +1,25 @@
-.mys-alert {
+.han-alert {
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.mys-alert__message {
+.han-alert__message {
 	font-size: 1.6rem;
-	font-family: var(--mys-font-family-sans-serif);
+	font-family: var(--han-font-family-sans-serif);
 }
 
-.mys-alert__close-btn {
-	--mys-alert-btn-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+.han-alert__close-btn {
+	--han-alert-btn-close-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 
-	width: 2rem;
-	height: 2rem;
+	width: 1.5rem;
+	height: 1.5rem;
 	border: none;
 	cursor: pointer;
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: transparent;
-	background-image: var(--mys-alert-btn-close-icon);
+	background-image: var(--han-alert-btn-close-icon);
 }

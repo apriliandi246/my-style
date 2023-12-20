@@ -1,26 +1,26 @@
-.mys-table {
+.han-table {
 	width: 100%;
 	font-size: 1.6rem;
 	border-collapse: collapse;
-	color: var(--mys-table-text-color);
-	font-family: var(--mys-font-family-sans-serif);
+	color: var(--han-table-text-color);
+	font-family: var(--han-font-family-sans-serif);
 }
 
-.mys-table td,
-.mys-table th {
+.han-table td,
+.han-table th {
 	padding: 1.3rem;
 }
 
-.mys-table th {
+.han-table th {
 	text-align: center;
 	padding-block: 1.3rem;
-	color: var(--mys-table-th-text-color);
-	background-color: var(--mys-table-th-bg-color);
-	border: 0.1rem solid var(--mys-table-border-color);
+	color: var(--han-table-th-text-color);
+	background-color: var(--han-table-th-bg-color);
+	border: 0.1rem solid var(--han-table-border-color);
 }
 
-.mys-table td {
-	color: var(--mys-table-td-text-color);
-	background-color: var(--mys-table-td-bg-color);
-	border: 0.1rem solid var(--mys-table-border-color);
+.han-table td {
+	color: var(--han-table-td-text-color);
+	background-color: var(--han-table-td-bg-color);
+	border: 0.1rem solid var(--han-table-border-color);
 }

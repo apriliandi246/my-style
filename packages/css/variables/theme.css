@@ -1,125 +1,127 @@
-/*
-	Prefix: --mys-theme
-*/
-
-:root[data-mys-theme="light"] {
-	--mys-theme-body-bg-color: #eaebec;
+:root[data-han-theme="light"] {
+	--han-theme-body-bg-color: #eaebec;
 
 	/* Anchor */
-	--mys-theme-anchor-text-color: #01107d;
-	--mys-theme-anchor-text-color-hover: #035388;
+	--han-theme-anchor-text-color: #01107d;
+	--han-theme-anchor-text-color-hover: #035388;
 
 	/* Button */
-	--mys-theme-btn-text-color: #000;
-	--mys-theme-btn-bg-color: #fff;
-	--mys-theme-btn-border-color: #adb3bd;
-	--mys-theme-btn-bg-color-hover: #e3e3e3;
-	--mys-theme-btn-bg-color-active: #d1d7db;
+	--han-theme-btn-text-color: #000;
+	--han-theme-btn-bg-color: #fff;
+	--han-theme-btn-border-color: #adb3bd;
+	--han-theme-btn-bg-color-hover: #e3e3e3;
+	--han-theme-btn-bg-color-active: #d1d7db;
 
 	/* Regular Input */
-	--mys-regular-input-text-color: #000;
-	--mys-regular-input-bg-color: #fff;
-	--mys-regular-input-border-color: #9ca3af;
+	--han-regular-input-text-color: #000;
+	--han-regular-input-bg-color: #fff;
+	--han-regular-input-border-color: #9ca3af;
 
 	/* Checkbox Input */
-	--mys-checkbox-input-bg-color-unchecked: #fff;
-	--mys-checkbox-input-bg-color-checked: #035388;
-	--mys-checkbox-input-btn-border-color: #adb3bd;
+	--han-checkbox-input-bg-color-unchecked: #fff;
+	--han-checkbox-input-bg-color-checked: #035388;
+	--han-checkbox-input-btn-border-color: #adb3bd;
 
 	/* Radio Input */
-	--mys-radio-input-bg-color-unchecked: #fff;
-	--mys-radio-input-bg-color-checked: #035388;
-	--mys-radio-input-btn-border-color: #adb3bd;
+	--han-radio-input-bg-color-unchecked: #fff;
+	--han-radio-input-bg-color-checked: #035388;
+	--han-radio-input-btn-border-color: #adb3bd;
 
 	/* Select Input */
-	--mys-select-input-text-color: #000;
-	--mys-select-input-bg-color: #fff;
-	--mys-select-input-border-color: #9ca3af;
-	--mys-select-input-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+	--han-select-input-text-color: #000;
+	--han-select-input-bg-color: #fff;
+	--han-select-input-border-color: #9ca3af;
+	--han-select-input-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 
 	/* Range Input */
-	--mys-input-range-bar-bg-color: #adb3bd;
-	--mys-input-range-thumb-bg-color: #035388;
+	--han-input-range-bar-bg-color: #adb3bd;
+	--han-input-range-thumb-bg-color: #035388;
 
 	/* Progressbar */
-	--mys-progressbar-bg-color: #adb3bd;
-	--mys-progressbar-value-bg-color: #035388;
+	--han-progressbar-bg-color: #adb3bd;
+	--han-progressbar-value-bg-color: #035388;
 
 	/* Table */
-	--mys-table-border-color: #adb3bd;
-	--mys-table-th-bg-color: #e3e3e3;
-	--mys-table-td-bg-color: #f2f2f2;
-	--mys-table-th-text-color: #000;
-	--mys-table-td-text-color: #000;
+	--han-table-border-color: #adb3bd;
+	--han-table-th-bg-color: #e3e3e3;
+	--han-table-td-bg-color: #f2f2f2;
+	--han-table-th-text-color: #000;
+	--han-table-td-text-color: #000;
 
 	/* Spinner */
-	--mys-spinner-bg-color: #000;
+	--han-spinner-bg-color: #000;
 
 	/* Modal */
-	--mys-modal-text-color: #000;
-	--mys-modal-bg-color: #fff;
-	--mys-modal-border-color: #787b81;
+	--han-modal-text-color: #000;
+	--han-modal-bg-color: #fff;
+	--han-modal-border-color: #787b81;
+
+	/* Accordion */
+	--han-accordion-icon: url("data:image/svg+xml,%3Csvg width='23' height='23' fill='none' stroke-width='2' viewBox='0 0 24 24' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
-:root[data-mys-theme="dark"] {
-	--mys-theme-body-bg-color: #181818;
+:root[data-han-theme="dark"] {
+	--han-theme-body-bg-color: #181818;
 
 	/* Anchor */
-	--mys-theme-anchor-text-color: #2bb0ed;
-	--mys-theme-anchor-text-color-hover: #40c3f7;
+	--han-theme-anchor-text-color: #2bb0ed;
+	--han-theme-anchor-text-color-hover: #40c3f7;
 
 	/* Button */
-	--mys-theme-btn-text-color: #fff;
-	--mys-theme-btn-bg-color: #7676803d;
-	--mys-theme-btn-border-color: #564343;
-	--mys-theme-btn-bg-color-hover: #343439;
-	--mys-theme-btn-bg-color-active: #3b3b41;
+	--han-theme-btn-text-color: #fff;
+	--han-theme-btn-bg-color: #7676803d;
+	--han-theme-btn-border-color: #564343;
+	--han-theme-btn-bg-color-hover: #343439;
+	--han-theme-btn-bg-color-active: #3b3b41;
 
 	/* Regular Input */
-	--mys-regular-input-text-color: #fff;
-	--mys-regular-input-bg-color: #7676803d;
-	--mys-regular-input-border-color: #564343;
+	--han-regular-input-text-color: #fff;
+	--han-regular-input-bg-color: #7676803d;
+	--han-regular-input-border-color: #564343;
 
 	/* Checkbox Input */
-	--mys-checkbox-input-bg-color-checked: #1376b7;
-	--mys-checkbox-input-btn-border-color: #564343;
-	--mys-checkbox-input-bg-color-unchecked: #7676803d;
+	--han-checkbox-input-bg-color-checked: #1376b7;
+	--han-checkbox-input-btn-border-color: #564343;
+	--han-checkbox-input-bg-color-unchecked: #7676803d;
 
 	/* Radio Input */
-	--mys-radio-input-bg-color-checked: #1376b7;
-	--mys-radio-input-btn-border-color: #564343;
-	--mys-radio-input-bg-color-unchecked: #7676803d;
+	--han-radio-input-bg-color-checked: #1376b7;
+	--han-radio-input-btn-border-color: #564343;
+	--han-radio-input-bg-color-unchecked: #7676803d;
 
 	/* Select Input */
-	--mys-select-input-text-color: #fff;
-	--mys-select-input-bg-color: #7676803d;
-	--mys-select-input-border-color: #564343;
-	--mys-select-input-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+	--han-select-input-text-color: #fff;
+	--han-select-input-bg-color: #7676803d;
+	--han-select-input-border-color: #564343;
+	--han-select-input-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 
 	/* Range Input */
-	--mys-input-range-bar-bg-color: #564343;
-	--mys-input-range-thumb-bg-color: #1376b7;
+	--han-input-range-bar-bg-color: #564343;
+	--han-input-range-thumb-bg-color: #1376b7;
 
 	/* Progressbar */
-	--mys-progressbar-bg-color: #564343;
-	--mys-progressbar-value-bg-color: #1376b7;
+	--han-progressbar-bg-color: #564343;
+	--han-progressbar-value-bg-color: #1376b7;
 
 	/* Table */
-	--mys-table-border-color: #564343;
-	--mys-table-th-bg-color: #7676803d;
-	--mys-table-td-bg-color: #171719;
-	--mys-table-th-text-color: #fff;
-	--mys-table-td-text-color: #fff;
+	--han-table-border-color: #564343;
+	--han-table-th-bg-color: #7676803d;
+	--han-table-td-bg-color: #171719;
+	--han-table-th-text-color: #fff;
+	--han-table-td-text-color: #fff;
 
 	/* Spinner */
-	--mys-spinner-bg-color: #fff;
+	--han-spinner-bg-color: #fff;
 
 	/* Modal */
-	--mys-modal-text-color: #fff;
-	--mys-modal-bg-color: #7676803d;
-	--mys-modal-border-color: #564343;
+	--han-modal-text-color: #fff;
+	--han-modal-bg-color: #7676803d;
+	--han-modal-border-color: #564343;
+
+	/* Accordion */
+	--han-accordion-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 body {
-	background-color: var(--mys-theme-body-bg-color);
+	background-color: var(--han-theme-body-bg-color);
 }

@@ -1,21 +1,21 @@
 /* Variant Success color */
-.mys-btn-success-color {
-	--mys-color-variant-btn-text-color: #fff;
-	--mys-color-variant-btn-bg-color: #07600e;
-	--mys-color-variant-btn-bg-color-hover: #014807;
-	--mys-color-variant-btn-bg-color-active: #053c0a;
+.han-btn-success-color {
+	--han-color-variant-btn-text-color: #fff;
+	--han-color-variant-btn-bg-color: #07600e;
+	--han-color-variant-btn-bg-color-hover: #014807;
+	--han-color-variant-btn-bg-color-active: #053c0a;
 
-	color: var(--mys-color-variant-btn-text-color);
-	border-color: var(--mys-color-variant-btn-bg-color);
-	background-color: var(--mys-color-variant-btn-bg-color);
+	color: var(--han-color-variant-btn-text-color);
+	border-color: var(--han-color-variant-btn-bg-color);
+	background-color: var(--han-color-variant-btn-bg-color);
 }
 
-.mys-btn-success-color:hover {
-	border-color: var(--mys-color-variant-btn-bg-color-hover);
-	background-color: var(--mys-color-variant-btn-bg-color-hover);
+.han-btn-success-color:hover {
+	border-color: var(--han-color-variant-btn-bg-color-hover);
+	background-color: var(--han-color-variant-btn-bg-color-hover);
 }
 
-.mys-btn-success-color:active {
-	border-color: var(--mys-color-variant-btn-bg-color-active);
-	background-color: var(--mys-color-variant-btn-bg-color-active);
+.han-btn-success-color:active {
+	border-color: var(--han-color-variant-btn-bg-color-active);
+	background-color: var(--han-color-variant-btn-bg-color-active);
 }

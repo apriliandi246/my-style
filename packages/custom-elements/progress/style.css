@@ -1,17 +1,17 @@
-.mys-progress {
-	--mys-progress-bar-height: 1.7rem;
+.han-progress {
+	--han-progress-bar-height: 1.7rem;
 
 	width: 100%;
 	overflow: hidden;
 	border-radius: 2.5rem;
-	height: var(--mys-progress-bar-height);
-	background-color: var(--mys-input-range-bar-bg-color);
+	height: var(--han-progress-bar-height);
+	background-color: var(--han-input-range-bar-bg-color);
 }
 
-.mys-progress__value {
-	--mys-progress-current-value: 20%;
+.han-progress__value {
+	--han-progress-current-value: 20%;
 
 	height: 100%;
-	width: var(--mys-progress-current-value);
-	background-color: var(--mys-progressbar-value-bg-color);
+	width: var(--han-progress-current-value);
+	background-color: var(--han-progressbar-value-bg-color);
 }

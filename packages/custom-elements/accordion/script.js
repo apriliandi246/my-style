@@ -4,21 +4,18 @@ class AccordionGroup {
 	#rootElement;
 	#COMPONENT_NAME;
 	#accordionsActive;
-	#accordionBtnSelector;
 	#accordionBodyDataAttribute;
 	#eventDelegationRootElement;
-	#accordionParentGroupSelector;
-	#accordionBodyCSSVariableVisibility;
+	#accordionContainerGroupDataAttr;
+	#accordionBtnTargetDataAttr;
 
 	constructor() {
-		// component state
 		this.#accordionsActive = {};
 
 		this.#COMPONENT_NAME = "accordion";
-		this.#accordionBtnSelector = "mys-accordion__button";
-		this.#accordionParentGroupSelector = "mys-accordion-group";
-		this.#accordionBodyDataAttribute = "data-mys-accordion-body";
-		this.#accordionBodyCSSVariableVisibility = "--mys-accordion-visibility-status";
+		this.#accordionBtnTargetDataAttr = "data-han-content-target";
+		this.#accordionBodyDataAttribute = "data-han-accordion-content";
+		this.#accordionContainerGroupDataAttr = "data-han-accordion-container";
 
 		this.#eventDelegationRootElement = new EventDelegation();
 		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
@@ -42,43 +39,51 @@ class AccordionGroup {
 	}
 
 	#toogle(element) {
-		const accordionBtnElement = element;
-		const accordionParentGroupElement = accordionBtnElement.closest(`.${this.#accordionParentGroupSelector}`);
-		const accordionParentGroupID = accordionParentGroupElement.getAttribute("id");
-		const accordionBodyDataAttribute = accordionBtnElement.getAttribute(this.#accordionBodyDataAttribute);
-		const accordionBodyElement = accordionParentGroupElement.querySelector(`#${accordionBodyDataAttribute}`);
+		const btnElement = element;
+		const btnContentTargetDataAttr = btnElement.getAttribute(`${this.#accordionBtnTargetDataAttr}`);
 
-		if (this.#accordionsActive.hasOwnProperty(accordionParentGroupID) === false) {
-			accordionBodyElement.style.setProperty(this.#accordionBodyCSSVariableVisibility, "block");
-			accordionBtnElement.setAttribute("aria-expanded", "true");
+		const containerGroupElement = btnElement.closest(`[${this.#accordionContainerGroupDataAttr}]`);
+		const containerGroupDataAttr = containerGroupElement.getAttribute(this.#accordionContainerGroupDataAttr);
 
-			this.#accordionsActive[accordionParentGroupID] = accordionBodyDataAttribute;
+		const bodyContentElement = containerGroupElement.querySelector(`[${this.#accordionBodyDataAttribute}=${btnContentTargetDataAttr}]`);
+		const bodyDataAttr = bodyContentElement.getAttribute(`${this.#accordionBodyDataAttribute}`);
 
-			return;
-		}
+		if (this.#accordionsActive.hasOwnProperty(containerGroupDataAttr) === false) {
+			this.#accordionsActive[containerGroupDataAttr] = bodyDataAttr;
 
-		if (this.#accordionsActive[accordionParentGroupID] === accordionBodyDataAttribute) {
-			accordionBodyElement.style.setProperty(this.#accordionBodyCSSVariableVisibility, "none");
-			accordionBtnElement.setAttribute("aria-expended", "false");
-
-			delete this.#accordionsActive[accordionParentGroupID];
+			btnElement.classList.add("han-accordion__button--active");
+			btnElement.setAttribute("aria-expanded", "true");
+			bodyContentElement.style.display = "block";
 
 			return;
 		}
 
-		if (this.#accordionsActive[accordionParentGroupID] !== accordionBodyDataAttribute) {
-			const prevAccordionBodySelector = `#${this.#accordionsActive[accordionParentGroupID]}`;
-			const prevAccordionBodyElement = accordionParentGroupElement.querySelector(prevAccordionBodySelector);
-			const prevAccordionParentElement = prevAccordionBodyElement.parentElement;
-			const prevAccordionBtnElement = prevAccordionParentElement.querySelector(`.${this.#accordionBtnSelector}`);
+		if (this.#accordionsActive[containerGroupDataAttr] === bodyDataAttr) {
+			delete this.#accordionsActive[containerGroupDataAttr];
 
-			prevAccordionBodyElement.style.setProperty(this.#accordionBodyCSSVariableVisibility, "none");
-			prevAccordionBtnElement.setAttribute("aria-expended", "false");
+			btnElement.classList.remove("han-accordion__button--active");
+			btnElement.setAttribute("aria-expanded", "false");
+			bodyContentElement.style.display = "none";
 
-			accordionBodyElement.style.setProperty(this.#accordionBodyCSSVariableVisibility, "block");
-			accordionBtnElement.setAttribute("aria-expanded", "true");
+			return;
+		}
 
-			this.#accordionsActive[accordionParentGroupID] = accordionBodyDataAttribute;
+		if (this.#accordionsActive[containerGroupDataAttr] !== bodyDataAttr) {
+			const prevActiveBtnSelector = `button[${this.#accordionBtnTargetDataAttr}=${this.#accordionsActive[containerGroupDataAttr]}]`;
+			const prevActiveBtnElement = containerGroupElement.querySelector(prevActiveBtnSelector);
+
+			const prevActiveBodyContentSelector = `[${this.#accordionBodyDataAttribute}=${this.#accordionsActive[containerGroupDataAttr]}]`;
+			const prevActiveBodyContentElement = containerGroupElement.querySelector(prevActiveBodyContentSelector);
+
+			prevActiveBtnElement.classList.remove("han-accordion__button--active");
+			prevActiveBtnElement.setAttribute("aria-expanded", "false");
+			prevActiveBodyContentElement.style.display = "none";
+
+			btnElement.classList.add("han-accordion__button--active");
+			btnElement.setAttribute("aria-expanded", "true");
+			bodyContentElement.style.display = "block";
+
+			this.#accordionsActive[containerGroupDataAttr] = bodyDataAttr;
 
 			return;
 		}

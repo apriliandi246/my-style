@@ -1,15 +1,15 @@
-.mys-input {
+.han-input {
 	width: 100%;
 	font-size: 1.6rem;
 	border-radius: 0.4rem;
 	padding: 0.8rem 1.4rem;
-	color: var(--mys-regular-input-text-color);
-	font-family: var(--mys-font-family-sans-serif);
-	background-color: var(--mys-regular-input-bg-color);
-	border: 0.1rem solid var(--mys-regular-input-border-color);
+	color: var(--han-regular-input-text-color);
+	font-family: var(--han-font-family-sans-serif);
+	background-color: var(--han-regular-input-bg-color);
+	border: 0.1rem solid var(--han-regular-input-border-color);
 }
 
-.mys-input:disabled {
+.han-input:disabled {
 	opacity: 0.66;
 	pointer-events: none;
 }

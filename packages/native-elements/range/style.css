@@ -1,34 +1,34 @@
-.mys-range-input {
-	--mys-input-range-bar-height: 0.8rem;
-	--mys-input-range-thumb-width: 2.3rem;
-	--mys-input-range-thumb-height: 2.3rem;
+.han-range-input {
+	--han-input-range-bar-height: 0.8rem;
+	--han-input-range-thumb-width: 2.3rem;
+	--han-input-range-thumb-height: 2.3rem;
 
 	width: 100%;
 	cursor: pointer;
 	appearance: none;
 	border-radius: 0.4rem;
-	height: var(--mys-input-range-bar-height);
-	background-color: var(--mys-input-range-bar-bg-color);
+	height: var(--han-input-range-bar-height);
+	background-color: var(--han-input-range-bar-bg-color);
 }
 
-.mys-range-input::-webkit-slider-thumb {
+.han-range-input::-webkit-slider-thumb {
 	appearance: none;
 	border-radius: 100%;
-	width: var(--mys-input-range-thumb-width);
-	height: var(--mys-input-range-thumb-height);
-	background-color: var(--mys-input-range-thumb-bg-color);
+	width: var(--han-input-range-thumb-width);
+	height: var(--han-input-range-thumb-height);
+	background-color: var(--han-input-range-thumb-bg-color);
 }
 
-.mys-range-input::-moz-range-thumb {
+.han-range-input::-moz-range-thumb {
 	border: none;
 	appearance: none;
 	border-radius: 100%;
-	width: var(--mys-input-range-thumb-width);
-	height: var(--mys-input-range-thumb-height);
-	background-color: var(--mys-input-range-thumb-bg-color);
+	width: var(--han-input-range-thumb-width);
+	height: var(--han-input-range-thumb-height);
+	background-color: var(--han-input-range-thumb-bg-color);
 }
 
-.mys-range-input:disabled {
+.han-range-input:disabled {
 	opacity: 0.66;
 	pointer-events: none;
 }

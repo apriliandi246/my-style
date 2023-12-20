@@ -10,8 +10,8 @@ class Modal {
 
 	constructor() {
 		this.#COMPONENT_NAME = "modal";
-		this.#modalTargetDataAttr = "data-mys-modal-target";
-		this.#modalBtnCloseDataAttr = "data-mys-modal-btn-close";
+		this.#modalTargetDataAttr = "data-han-modal-target";
+		this.#modalBtnCloseDataAttr = "data-han-modal-btn-close";
 
 		this.#bodyElement = document.body;
 		this.#eventDelegationRootElement = new EventDelegation();

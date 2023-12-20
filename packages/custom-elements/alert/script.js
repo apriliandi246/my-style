@@ -24,14 +24,14 @@ class Alert {
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
 			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
-				const alert = currentTargetElement.parentElement;
-				this.#close(alert);
+				const alertElement = currentTargetElement.parentElement;
+				this.#close(alertElement);
 			}
 		});
 	}
 
-	#close(alert) {
-		alert.remove();
+	#close(alertElement) {
+		alertElement.remove();
 	}
 }
 

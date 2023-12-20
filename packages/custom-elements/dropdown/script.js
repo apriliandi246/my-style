@@ -5,14 +5,10 @@ class Dropdown {
 	#COMPONENT_NAME;
 	#dropdownActiveElement;
 	#eventDelegationRootElement;
-	#dropdownMenuCSSVariableVisibility;
 
 	constructor() {
-		// component state
-		this.#dropdownActiveElement = null;
-
 		this.#COMPONENT_NAME = "dropdown";
-		this.#dropdownMenuCSSVariableVisibility = "--mys-dropdown-menu-visibility-status";
+		this.#dropdownActiveElement = null;
 
 		this.#eventDelegationRootElement = new EventDelegation();
 		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
@@ -42,7 +38,7 @@ class Dropdown {
 		const dropdownMenuElement = dropdownBtnElement.nextElementSibling;
 
 		if (this.#dropdownActiveElement === null) {
-			dropdownMenuElement.style.setProperty(this.#dropdownMenuCSSVariableVisibility, "block");
+			dropdownMenuElement.style.display = "block";
 			dropdownBtnElement.setAttribute("aria-expanded", "true");
 
 			this.#dropdownActiveElement = dropdownBtnElement;
@@ -51,7 +47,7 @@ class Dropdown {
 		}
 
 		if (this.#dropdownActiveElement === dropdownBtnElement) {
-			dropdownMenuElement.style.setProperty(this.#dropdownMenuCSSVariableVisibility, "none");
+			dropdownMenuElement.style.display = "none";
 			dropdownBtnElement.setAttribute("aria-expanded", "false");
 
 			this.#dropdownActiveElement = null;
@@ -62,10 +58,10 @@ class Dropdown {
 		if (this.#dropdownActiveElement !== null && this.#dropdownActiveElement !== dropdownBtnElement) {
 			const dropdownMenuElementActive = this.#dropdownActiveElement.nextElementSibling;
 
-			dropdownMenuElementActive.style.setProperty(this.#dropdownMenuCSSVariableVisibility, "none");
+			dropdownMenuElementActive.style.display = "none";
 			this.#dropdownActiveElement.setAttribute("aria-expanded", "false");
 
-			dropdownMenuElement.style.setProperty(this.#dropdownMenuCSSVariableVisibility, "block");
+			dropdownMenuElement.style.display = "block";
 			dropdownBtnElement.setAttribute("aria-expanded", "true");
 
 			this.#dropdownActiveElement = dropdownBtnElement;

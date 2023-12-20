@@ -3,7 +3,7 @@ class EventDelegation {
 	#COMPONENT_DATA_ATTRIBUTE;
 
 	constructor() {
-		this.#COMPONENT_DATA_ATTRIBUTE = "data-mys-comp";
+		this.#COMPONENT_DATA_ATTRIBUTE = "data-han-comp";
 		this.#DELEGATION_ROOT_ELEMENT = document.documentElement;
 	}
 

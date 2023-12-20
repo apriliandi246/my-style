@@ -16,12 +16,16 @@ divElement.appendChild(buttonElement);
 bodyElement.insertBefore(divElement, bodyElement.firstChild);
 bodyElement.style.padding = "100px";
 
+rootHTML.style.colorScheme = "light";
+
 buttonElement.addEventListener("click", () => {
-	const currentTheme = rootHTML.getAttribute("data-mys-theme").trim();
+	const currentTheme = rootHTML.getAttribute("data-han-theme").trim();
 
 	if (currentTheme === "light") {
-		rootHTML.setAttribute("data-mys-theme", "dark");
+		rootHTML.style.colorScheme = "dark";
+		rootHTML.setAttribute("data-han-theme", "dark");
 	} else {
-		rootHTML.setAttribute("data-mys-theme", "light");
+		rootHTML.style.colorScheme = "light";
+		rootHTML.setAttribute("data-han-theme", "light");
 	}
 });
