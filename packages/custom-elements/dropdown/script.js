@@ -7,8 +7,9 @@ class Dropdown {
 	#eventDelegationRootElement;
 
 	constructor() {
-		this.#COMPONENT_NAME = "dropdown";
 		this.#dropdownActiveElement = null;
+
+		this.#COMPONENT_NAME = "dropdown";
 
 		this.#eventDelegationRootElement = new EventDelegation();
 		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
@@ -34,37 +35,37 @@ class Dropdown {
 	}
 
 	#toggle(element) {
-		const dropdownBtnElement = element;
-		const dropdownMenuElement = dropdownBtnElement.nextElementSibling;
+		const btnElement = element;
+		const menuElement = btnElement.nextElementSibling;
 
 		if (this.#dropdownActiveElement === null) {
-			dropdownMenuElement.style.display = "block";
-			dropdownBtnElement.setAttribute("aria-expanded", "true");
+			menuElement.style.display = "block";
+			btnElement.setAttribute("aria-expanded", "true");
 
-			this.#dropdownActiveElement = dropdownBtnElement;
+			this.#dropdownActiveElement = btnElement;
 
 			return;
 		}
 
-		if (this.#dropdownActiveElement === dropdownBtnElement) {
-			dropdownMenuElement.style.display = "none";
-			dropdownBtnElement.setAttribute("aria-expanded", "false");
+		if (this.#dropdownActiveElement === btnElement) {
+			menuElement.style.display = "none";
+			btnElement.setAttribute("aria-expanded", "false");
 
 			this.#dropdownActiveElement = null;
 
 			return;
 		}
 
-		if (this.#dropdownActiveElement !== null && this.#dropdownActiveElement !== dropdownBtnElement) {
-			const dropdownMenuElementActive = this.#dropdownActiveElement.nextElementSibling;
+		if (this.#dropdownActiveElement !== null && this.#dropdownActiveElement !== btnElement) {
+			const menuElementActive = this.#dropdownActiveElement.nextElementSibling;
 
-			dropdownMenuElementActive.style.display = "none";
+			menuElementActive.style.display = "none";
 			this.#dropdownActiveElement.setAttribute("aria-expanded", "false");
 
-			dropdownMenuElement.style.display = "block";
-			dropdownBtnElement.setAttribute("aria-expanded", "true");
+			menuElement.style.display = "block";
+			btnElement.setAttribute("aria-expanded", "true");
 
-			this.#dropdownActiveElement = dropdownBtnElement;
+			this.#dropdownActiveElement = btnElement;
 
 			return;
 		}

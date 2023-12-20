@@ -1,17 +1,19 @@
-import EventDelegation from "../../utils/eventDelegation.js";
+import EventDelegation from "../../js/utils/eventDelegation.js";
 
 class Modal {
 	#bodyElement;
 	#rootElement;
+	#modalDataAttr;
 	#COMPONENT_NAME;
 	#modalTargetDataAttr;
-	#modalBtnCloseDataAttr;
+	#btnCloseDataAttr;
 	#eventDelegationRootElement;
 
 	constructor() {
 		this.#COMPONENT_NAME = "modal";
+		this.#modalDataAttr = "data-han-modal";
 		this.#modalTargetDataAttr = "data-han-modal-target";
-		this.#modalBtnCloseDataAttr = "data-han-modal-btn-close";
+		this.#btnCloseDataAttr = "data-han-modal-btn-close";
 
 		this.#bodyElement = document.body;
 		this.#eventDelegationRootElement = new EventDelegation();
@@ -29,9 +31,9 @@ class Modal {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
-			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
+			if (currentTargetElement !== null && currentTargetElementName === this.#COMPONENT_NAME) {
 				const modalTargetDataAttr = currentTargetElement.getAttribute(this.#modalTargetDataAttr);
-				const modalElement = document.getElementById(modalTargetDataAttr);
+				const modalElement = document.querySelector(`[${this.#modalDataAttr}=${modalTargetDataAttr}]`);
 
 				this.#open(modalElement);
 				this.#btnCloseModal(modalElement);
@@ -50,8 +52,8 @@ class Modal {
 	}
 
 	#btnCloseModal(modalElement) {
-		const modalElementIdAttr = modalElement.getAttribute("id");
-		const modalBtnCloseSelector = `[${this.#modalBtnCloseDataAttr}=${modalElementIdAttr}]`;
+		const modalElementDataAttr = modalElement.getAttribute(this.#modalDataAttr);
+		const modalBtnCloseSelector = `[${this.#btnCloseDataAttr}=${modalElementDataAttr}]`;
 		const modalBtnCloseElement = modalElement.querySelector(modalBtnCloseSelector);
 
 		modalBtnCloseElement.addEventListener("click", () => {

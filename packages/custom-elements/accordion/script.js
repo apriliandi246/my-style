@@ -4,18 +4,18 @@ class AccordionGroup {
 	#rootElement;
 	#COMPONENT_NAME;
 	#accordionsActive;
-	#accordionBodyDataAttribute;
+	#btnTargetDataAttr;
+	#contentDataAttribute;
+	#containerGroupDataAttr;
 	#eventDelegationRootElement;
-	#accordionContainerGroupDataAttr;
-	#accordionBtnTargetDataAttr;
 
 	constructor() {
 		this.#accordionsActive = {};
 
 		this.#COMPONENT_NAME = "accordion";
-		this.#accordionBtnTargetDataAttr = "data-han-content-target";
-		this.#accordionBodyDataAttribute = "data-han-accordion-content";
-		this.#accordionContainerGroupDataAttr = "data-han-accordion-container";
+		this.#btnTargetDataAttr = "data-han-content-target";
+		this.#contentDataAttribute = "data-han-accordion-content";
+		this.#containerGroupDataAttr = "data-han-accordion-container";
 
 		this.#eventDelegationRootElement = new EventDelegation();
 		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
@@ -40,13 +40,13 @@ class AccordionGroup {
 
 	#toogle(element) {
 		const btnElement = element;
-		const btnContentTargetDataAttr = btnElement.getAttribute(`${this.#accordionBtnTargetDataAttr}`);
+		const btnContentTargetDataAttr = btnElement.getAttribute(`${this.#btnTargetDataAttr}`);
 
-		const containerGroupElement = btnElement.closest(`[${this.#accordionContainerGroupDataAttr}]`);
-		const containerGroupDataAttr = containerGroupElement.getAttribute(this.#accordionContainerGroupDataAttr);
+		const containerGroupElement = btnElement.closest(`[${this.#containerGroupDataAttr}]`);
+		const containerGroupDataAttr = containerGroupElement.getAttribute(this.#containerGroupDataAttr);
 
-		const bodyContentElement = containerGroupElement.querySelector(`[${this.#accordionBodyDataAttribute}=${btnContentTargetDataAttr}]`);
-		const bodyDataAttr = bodyContentElement.getAttribute(`${this.#accordionBodyDataAttribute}`);
+		const bodyContentElement = containerGroupElement.querySelector(`[${this.#contentDataAttribute}=${btnContentTargetDataAttr}]`);
+		const bodyDataAttr = bodyContentElement.getAttribute(`${this.#contentDataAttribute}`);
 
 		if (this.#accordionsActive.hasOwnProperty(containerGroupDataAttr) === false) {
 			this.#accordionsActive[containerGroupDataAttr] = bodyDataAttr;
@@ -69,10 +69,10 @@ class AccordionGroup {
 		}
 
 		if (this.#accordionsActive[containerGroupDataAttr] !== bodyDataAttr) {
-			const prevActiveBtnSelector = `button[${this.#accordionBtnTargetDataAttr}=${this.#accordionsActive[containerGroupDataAttr]}]`;
+			const prevActiveBtnSelector = `button[${this.#btnTargetDataAttr}=${this.#accordionsActive[containerGroupDataAttr]}]`;
 			const prevActiveBtnElement = containerGroupElement.querySelector(prevActiveBtnSelector);
 
-			const prevActiveBodyContentSelector = `[${this.#accordionBodyDataAttribute}=${this.#accordionsActive[containerGroupDataAttr]}]`;
+			const prevActiveBodyContentSelector = `[${this.#contentDataAttribute}=${this.#accordionsActive[containerGroupDataAttr]}]`;
 			const prevActiveBodyContentElement = containerGroupElement.querySelector(prevActiveBodyContentSelector);
 
 			prevActiveBtnElement.classList.remove("han-accordion__button--active");

@@ -25,6 +25,7 @@ class Alert {
 
 			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
 				const alertElement = currentTargetElement.parentElement;
+
 				this.#close(alertElement);
 			}
 		});
