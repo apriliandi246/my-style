@@ -90,4 +90,4 @@ class AccordionGroup {
 	}
 }
 
-new AccordionGroup();
+export default AccordionGroup;
