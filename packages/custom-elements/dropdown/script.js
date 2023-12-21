@@ -7,6 +7,10 @@ class Dropdown {
 	#eventDelegationRootElement;
 
 	constructor() {
+		/*
+			this.#dropdownActiveElement = null; // Initial state
+			this.#dropdownActiveElement = HTMLButtonElement; // Current active dropdown button
+		*/
 		this.#dropdownActiveElement = null;
 
 		this.#COMPONENT_NAME = "dropdown";
@@ -39,7 +43,7 @@ class Dropdown {
 		const menuElement = btnElement.nextElementSibling;
 
 		if (this.#dropdownActiveElement === null) {
-			menuElement.style.display = "block";
+			menuElement.style.removeProperty("display");
 			btnElement.setAttribute("aria-expanded", "true");
 
 			this.#dropdownActiveElement = btnElement;
@@ -62,7 +66,7 @@ class Dropdown {
 			menuElementActive.style.display = "none";
 			this.#dropdownActiveElement.setAttribute("aria-expanded", "false");
 
-			menuElement.style.display = "block";
+			menuElement.style.removeProperty("display");
 			btnElement.setAttribute("aria-expanded", "true");
 
 			this.#dropdownActiveElement = btnElement;
@@ -93,4 +97,4 @@ class Dropdown {
 	}
 }
 
-new Dropdown();
+export default Dropdown;

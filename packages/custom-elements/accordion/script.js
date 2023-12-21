@@ -10,6 +10,10 @@ class AccordionGroup {
 	#eventDelegationRootElement;
 
 	constructor() {
+		/*
+			collapsibleGroupOne: collapsible--1,
+			collapsibleGroupTwo: collapsible--2
+		*/
 		this.#accordionsActive = {};
 
 		this.#COMPONENT_NAME = "accordion";

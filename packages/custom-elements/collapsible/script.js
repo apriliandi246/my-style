@@ -11,6 +11,12 @@ class CollapsibleGroup {
 	#eventDelegationRootElement;
 
 	constructor() {
+		/*
+			{
+				collapsibleGroupOne: [collapsible--1, collapsible--2, ....],
+				collapsibleGroupTwo: [collapsible--1, collapsible--2, ....]
+			}
+		*/
 		this.#activeCollapsibles = {};
 
 		this.#COMPONENT_NAME = "collapsible";
@@ -50,8 +56,6 @@ class CollapsibleGroup {
 		const bodyContentElement = containerGroupElement.querySelector(`[${this.#contentDataAttr}=${btnContentTargetDataAttr}]`);
 		const bodyDataAttr = bodyContentElement.getAttribute(`${this.#contentDataAttr}`);
 
-		console.log(this.#activeCollapsibles);
-
 		if (this.#activeCollapsibles.hasOwnProperty(containerGroupDataAttr) === false) {
 			this.#activeCollapsibles[containerGroupDataAttr] = [bodyDataAttr];
 
@@ -67,7 +71,7 @@ class CollapsibleGroup {
 
 			this.#activeCollapsibles[containerGroupDataAttr].splice(collapsibleIdx, 1);
 
-			btnElement.classList.add(this.#activeBtnClassname);
+			btnElement.classList.remove(this.#activeBtnClassname);
 			btnElement.setAttribute("aria-expanded", "false");
 			bodyContentElement.style.display = "none";
 
@@ -86,4 +90,4 @@ class CollapsibleGroup {
 	}
 }
 
-new CollapsibleGroup();
+export default CollapsibleGroup;

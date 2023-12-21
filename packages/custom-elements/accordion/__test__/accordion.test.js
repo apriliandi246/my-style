@@ -3,7 +3,9 @@ import "@testing-library/jest-dom";
 
 import AccordionGroup from "../script.js";
 
-const ACCORDION_GROUP_ONE = `
+const BUTTON_ACTIVE_CLASSNAME = "han-accordion__button--active";
+
+const ACCORDIONS = `
 <div id="accordionGroupOne" data-han-accordion-container="accordionGroupOne" class="han-accordion-group">
 	<div class="han-accordion">
 		<h3>
@@ -184,62 +186,60 @@ const ACCORDION_GROUP_ONE = `
 </div>
 `;
 
-const BUTTON_ACTIVE_CLASSNAME = "han-accordion__button--active";
-
 describe("Accordion", () => {
 	test("the accordion currently clicked become active", () => {
-		document.body.innerHTML = ACCORDION_GROUP_ONE;
+		document.body.innerHTML = ACCORDIONS;
 
 		new AccordionGroup();
 
-		const buttonElement = screen.getByText("What is HTML ????");
-		const contentElement = buttonElement.parentElement.nextElementSibling;
+		const btnElement = screen.getByText("What is HTML ????");
+		const contentElement = btnElement.parentElement.nextElementSibling;
 
-		fireEvent.click(buttonElement);
+		fireEvent.click(btnElement);
 
-		expect(buttonElement).toHaveAttribute("aria-expanded", "true");
-		expect(buttonElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+		expect(btnElement).toHaveAttribute("aria-expanded", "true");
+		expect(btnElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
 		expect(contentElement).not.toHaveStyle({ display: "none" });
 	});
 
 	test("the accordion currently clicked become active and become unactive if the accordion got click again", () => {
-		document.body.innerHTML = ACCORDION_GROUP_ONE;
+		document.body.innerHTML = ACCORDIONS;
 
 		new AccordionGroup();
 
-		const buttonElement = screen.getByText("What is HTML ????");
-		const contentElement = buttonElement.parentElement.nextElementSibling;
+		const btnElement = screen.getByText("What is HTML ????");
+		const contentElement = btnElement.parentElement.nextElementSibling;
 
-		fireEvent.click(buttonElement);
+		fireEvent.click(btnElement);
 
-		expect(buttonElement).toHaveAttribute("aria-expanded", "true");
-		expect(buttonElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+		expect(btnElement).toHaveAttribute("aria-expanded", "true");
+		expect(btnElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
 		expect(contentElement).not.toHaveStyle({ display: "none" });
 
-		fireEvent.click(buttonElement);
+		fireEvent.click(btnElement);
 
-		expect(buttonElement).toHaveAttribute("aria-expanded", "false");
-		expect(buttonElement).not.toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+		expect(btnElement).toHaveAttribute("aria-expanded", "false");
+		expect(btnElement).not.toHaveClass(BUTTON_ACTIVE_CLASSNAME);
 		expect(contentElement).toHaveStyle({ display: "none" });
 	});
 
 	test("the next accordion currently clicked become active and the previous one become unactive", () => {
-		document.body.innerHTML = ACCORDION_GROUP_ONE;
+		document.body.innerHTML = ACCORDIONS;
 
 		new AccordionGroup();
 
-		const prevButtonElement = screen.getByText("What is HTML ????");
-		const prevContentElement = prevButtonElement.parentElement.nextElementSibling;
+		const prevBtnElement = screen.getByText("What is HTML ????");
+		const prevContentElement = prevBtnElement.parentElement.nextElementSibling;
 
 		const nextButtonElement = screen.getByText("What is CSS ????");
 		const nextContentElement = nextButtonElement.parentElement.nextElementSibling;
 
-		fireEvent.click(prevButtonElement);
+		fireEvent.click(prevBtnElement);
 
 		fireEvent.click(nextButtonElement);
 
-		expect(prevButtonElement).toHaveAttribute("aria-expanded", "false");
-		expect(prevButtonElement).not.toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+		expect(prevBtnElement).toHaveAttribute("aria-expanded", "false");
+		expect(prevBtnElement).not.toHaveClass(BUTTON_ACTIVE_CLASSNAME);
 		expect(prevContentElement).toHaveStyle({ display: "none" });
 
 		expect(nextButtonElement).toHaveAttribute("aria-expanded", "true");
@@ -248,26 +248,80 @@ describe("Accordion", () => {
 	});
 
 	test("interact with other accordion group and other accordion group doesn't got any impact", () => {
-		document.body.innerHTML = ACCORDION_GROUP_ONE;
+		document.body.innerHTML = ACCORDIONS;
 
 		new AccordionGroup();
 
-		const groupOneButtonElement = screen.getByText("What is HTML ????");
-		const groupOneContentElement = groupOneButtonElement.parentElement.nextElementSibling;
+		const groupOneBtnElement = screen.getByText("What is HTML ????");
+		const groupOneContentElement = groupOneBtnElement.parentElement.nextElementSibling;
 
 		const groupTwoButtonElement = screen.getByText("What is Svelte JS ????");
 		const groupTwoContentElement = groupTwoButtonElement.parentElement.nextElementSibling;
 
-		fireEvent.click(groupOneButtonElement);
+		fireEvent.click(groupOneBtnElement);
 
 		fireEvent.click(groupTwoButtonElement);
 
-		expect(groupOneButtonElement).toHaveAttribute("aria-expanded", "true");
-		expect(groupOneButtonElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+		expect(groupOneBtnElement).toHaveAttribute("aria-expanded", "true");
+		expect(groupOneBtnElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
 		expect(groupOneContentElement).not.toHaveStyle({ display: "none" });
 
 		expect(groupTwoButtonElement).toHaveAttribute("aria-expanded", "true");
 		expect(groupTwoButtonElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
 		expect(groupTwoContentElement).not.toHaveStyle({ display: "none" });
+	});
+
+	test("click all accordions", () => {
+		document.body.innerHTML = ACCORDIONS;
+
+		new AccordionGroup();
+
+		const accordionGroupOneContainerElement = document.getElementById("accordionGroupOne");
+		const btnGroupOneElements = accordionGroupOneContainerElement.getElementsByTagName("button");
+		const btnGroupOneElementsTotal = btnGroupOneElements.length;
+
+		const accordionGroupTwoContainerElement = document.getElementById("accordionGroupTwo");
+		const btnGroupTwoElements = accordionGroupTwoContainerElement.getElementsByTagName("button");
+		const btnGroupTwoElementsTotal = btnGroupTwoElements.length;
+
+		for (let btnIndex = 0; btnIndex < btnGroupOneElementsTotal; btnIndex++) {
+			const btnElement = btnGroupOneElements[btnIndex];
+			const contentElement = btnElement.parentElement.nextElementSibling;
+
+			fireEvent.click(btnElement);
+
+			expect(btnElement).toHaveAttribute("aria-expanded", "true");
+			expect(btnElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+			expect(contentElement).not.toHaveStyle({ display: "none" });
+
+			if (btnIndex !== 0) {
+				const prevBtnElement = btnGroupOneElements[btnIndex - 1];
+				const prevContentElement = prevBtnElement.parentElement.nextElementSibling;
+
+				expect(prevBtnElement).toHaveAttribute("aria-expanded", "false");
+				expect(prevBtnElement).not.toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+				expect(prevContentElement).toHaveStyle({ display: "none" });
+			}
+		}
+
+		for (let btnIndex = 0; btnIndex < btnGroupTwoElementsTotal; btnIndex++) {
+			const btnElement = btnGroupTwoElements[btnIndex];
+			const contentElement = btnElement.parentElement.nextElementSibling;
+
+			fireEvent.click(btnElement);
+
+			expect(btnElement).toHaveAttribute("aria-expanded", "true");
+			expect(btnElement).toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+			expect(contentElement).not.toHaveStyle({ display: "none" });
+
+			if (btnIndex !== 0) {
+				const prevBtnElement = btnGroupTwoElements[btnIndex - 1];
+				const prevContentElement = prevBtnElement.parentElement.nextElementSibling;
+
+				expect(prevBtnElement).toHaveAttribute("aria-expanded", "false");
+				expect(prevBtnElement).not.toHaveClass(BUTTON_ACTIVE_CLASSNAME);
+				expect(prevContentElement).toHaveStyle({ display: "none" });
+			}
+		}
 	});
 });

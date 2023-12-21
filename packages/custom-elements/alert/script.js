@@ -36,4 +36,4 @@ class Alert {
 	}
 }
 
-new Alert();
+export default Alert;
