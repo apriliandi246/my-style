@@ -4,7 +4,7 @@
 
 ### 👨‍💻 About
 
-Simple design system styles for my personal project....
+Collection style of native and custom elements using vanilla HTML, CSS and Javascript....
 
 <h3 align="center">. . .</h3>
 
