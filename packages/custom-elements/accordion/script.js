@@ -11,8 +11,10 @@ class AccordionGroup {
 
 	constructor() {
 		/*
-			collapsibleGroupOne: collapsible--1,
-			collapsibleGroupTwo: collapsible--2
+			{
+				accordionGroupOne: accordion--1,
+				accordionGroupTwo: accordion--2
+			}
 		*/
 		this.#accordionsActive = {};
 
