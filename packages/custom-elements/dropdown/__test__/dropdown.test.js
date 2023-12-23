@@ -9,7 +9,7 @@ const DROPDOWNS = `
 		type="button"
 		id="dropdown--1--id"
 		aria-expanded="false"
-		data-han-comp="dropdown"
+		data-han-element-name="dropdown"
 		class="dropdown__button"
 		aria-controls="dropdown--1">
 		Dropdown 1
@@ -39,7 +39,7 @@ const DROPDOWNS = `
 		type="button"
 		id="dropdown--2--id"
 		aria-expanded="false"
-		data-han-comp="dropdown"
+		data-han-element-name="dropdown"
 		class="dropdown__button"
 		aria-controls="dropdown--2">
 		Dropdown 2
