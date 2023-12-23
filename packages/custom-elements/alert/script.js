@@ -3,10 +3,12 @@ import EventDelegation from "../../js/utils/eventDelegation.js";
 class Alert {
 	#rootElement;
 	#COMPONENT_NAME;
+	#containerDataAttr;
 	#eventDelegationRootElement;
 
 	constructor() {
 		this.#COMPONENT_NAME = "alert";
+		this.#containerDataAttr = "data-han-alert-container";
 
 		this.#eventDelegationRootElement = new EventDelegation();
 		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
@@ -24,7 +26,7 @@ class Alert {
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
 			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
-				const alertElement = currentTargetElement.parentElement;
+				const alertElement = currentTargetElement.closest(`[${this.#containerDataAttr}]`);
 
 				this.#close(alertElement);
 			}
