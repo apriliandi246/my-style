@@ -77,9 +77,9 @@ class Dropdown {
 
 	#escape() {
 		this.#rootElement.addEventListener("keydown", (event) => {
-			const keyboardKey = event.key.toLowerCase().trim();
+			const keyboardKey = event.key;
 
-			if (keyboardKey === "escape" && this.#dropdownActiveElement !== null) {
+			if (keyboardKey === "Escape" && this.#dropdownActiveElement !== null) {
 				this.#toggle(this.#dropdownActiveElement);
 			}
 		});

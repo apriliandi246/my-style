@@ -123,4 +123,44 @@ describe("Dropdown", () => {
 		expect(nextBtnElement).toHaveAttribute("aria-expanded", "true");
 		expect(nextContentElement).not.toHaveStyle({ display: "none" });
 	});
+
+	test("hide dropdown when Escape key is pressed", () => {
+		document.body.innerHTML = DROPDOWNS;
+
+		new Dropdown();
+
+		const btnElement = screen.getByText("Dropdown 1");
+		const contentElement = btnElement.nextElementSibling;
+
+		fireEvent.click(btnElement);
+
+		expect(btnElement).toHaveAttribute("aria-expanded", "true");
+		expect(contentElement).not.toHaveStyle({ display: "none" });
+
+		fireEvent.keyDown(document.documentElement, {
+			key: "Escape"
+		});
+
+		expect(btnElement).toHaveAttribute("aria-expanded", "false");
+		expect(contentElement).toHaveStyle({ display: "none" });
+	});
+
+	test("hide dropdown when click outside somewhere in document", () => {
+		document.body.innerHTML = DROPDOWNS;
+
+		new Dropdown();
+
+		const btnElement = screen.getByText("Dropdown 1");
+		const contentElement = btnElement.nextElementSibling;
+
+		fireEvent.click(btnElement);
+
+		expect(btnElement).toHaveAttribute("aria-expanded", "true");
+		expect(contentElement).not.toHaveStyle({ display: "none" });
+
+		fireEvent.click(document.documentElement);
+
+		expect(btnElement).toHaveAttribute("aria-expanded", "false");
+		expect(contentElement).toHaveStyle({ display: "none" });
+	});
 });
