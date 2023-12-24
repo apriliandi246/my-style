@@ -3,15 +3,15 @@ import EventDelegation from "../../js/utils/eventDelegation.js";
 class Dropdown {
 	#rootElement;
 	#COMPONENT_NAME;
-	#dropdownActiveElement;
+	#dropdownBtnActiveElement;
 	#eventDelegationRootElement;
 
 	constructor() {
 		/*
-			this.#dropdownActiveElement = null; // Initial state
-			this.#dropdownActiveElement = HTMLButtonElement; // Current active dropdown button
+			this.#dropdownBtnActiveElement = null; // Initial state
+			this.#dropdownBtnActiveElement = HTMLButtonElement; // Current active dropdown button
 		*/
-		this.#dropdownActiveElement = null;
+		this.#dropdownBtnActiveElement = null;
 
 		this.#COMPONENT_NAME = "dropdown";
 
@@ -22,12 +22,12 @@ class Dropdown {
 	}
 
 	#main() {
-		this.#eventDelegation();
-		this.#escape();
+		this.#toggleClick();
+		this.#keyboardEscape();
 		this.#clickOutside();
 	}
 
-	#eventDelegation() {
+	#toggleClick() {
 		this.#rootElement.addEventListener("click", (event) => {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
@@ -38,62 +38,65 @@ class Dropdown {
 		});
 	}
 
-	#toggle(element) {
-		const btnElement = element;
-		const menuElement = btnElement.nextElementSibling;
-
-		if (this.#dropdownActiveElement === null) {
-			menuElement.style.removeProperty("display");
-			btnElement.setAttribute("aria-expanded", "true");
-
-			this.#dropdownActiveElement = btnElement;
-
-			return;
-		}
-
-		if (this.#dropdownActiveElement === btnElement) {
-			menuElement.style.display = "none";
-			btnElement.setAttribute("aria-expanded", "false");
-
-			this.#dropdownActiveElement = null;
-
-			return;
-		}
-
-		if (this.#dropdownActiveElement !== null && this.#dropdownActiveElement !== btnElement) {
-			const menuElementActive = this.#dropdownActiveElement.nextElementSibling;
-
-			menuElementActive.style.display = "none";
-			this.#dropdownActiveElement.setAttribute("aria-expanded", "false");
-
-			menuElement.style.removeProperty("display");
-			btnElement.setAttribute("aria-expanded", "true");
-
-			this.#dropdownActiveElement = btnElement;
-
-			return;
-		}
-	}
-
-	#escape() {
-		this.#rootElement.addEventListener("keydown", (event) => {
-			const keyboardKey = event.key;
-
-			if (keyboardKey === "Escape" && this.#dropdownActiveElement !== null) {
-				this.#toggle(this.#dropdownActiveElement);
-			}
-		});
-	}
-
 	#clickOutside() {
 		this.#rootElement.addEventListener("click", (event) => {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement } = elementTargetData;
 
-			if (currentTargetElement === null && this.#dropdownActiveElement !== null) {
-				this.#toggle(this.#dropdownActiveElement);
+			if (currentTargetElement === null && this.#dropdownBtnActiveElement !== null) {
+				this.#toggle(this.#dropdownBtnActiveElement);
 			}
 		});
+	}
+
+	#keyboardEscape() {
+		this.#rootElement.addEventListener("keydown", (event) => {
+			const keyboardKey = event.key;
+
+			if (this.#dropdownBtnActiveElement !== null && keyboardKey === "Escape") {
+				this.#toggle(this.#dropdownBtnActiveElement);
+			}
+		});
+	}
+
+	/*
+		Toggle hide or show for dropdown content
+	*/
+	#toggle(element) {
+		const btnElement = element;
+		const menuElement = btnElement.nextElementSibling;
+
+		if (this.#dropdownBtnActiveElement === null) {
+			this.#dropdownBtnActiveElement = btnElement;
+
+			menuElement.style.removeProperty("display");
+			btnElement.setAttribute("aria-expanded", "true");
+
+			return;
+		}
+
+		if (this.#dropdownBtnActiveElement === btnElement) {
+			this.#dropdownBtnActiveElement = null;
+
+			menuElement.style.display = "none";
+			btnElement.setAttribute("aria-expanded", "false");
+
+			return;
+		}
+
+		if (this.#dropdownBtnActiveElement !== null && this.#dropdownBtnActiveElement !== btnElement) {
+			const menuElementActive = this.#dropdownBtnActiveElement.nextElementSibling;
+
+			menuElementActive.style.display = "none";
+			this.#dropdownBtnActiveElement.setAttribute("aria-expanded", "false");
+
+			menuElement.style.removeProperty("display");
+			btnElement.setAttribute("aria-expanded", "true");
+
+			this.#dropdownBtnActiveElement = btnElement;
+
+			return;
+		}
 	}
 }
 

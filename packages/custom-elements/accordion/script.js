@@ -30,10 +30,10 @@ class AccordionGroup {
 	}
 
 	#main() {
-		this.#eventDelegation();
+		this.#toggleClick();
 	}
 
-	#eventDelegation() {
+	#toggleClick() {
 		this.#rootElement.addEventListener("click", (event) => {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
@@ -44,6 +44,9 @@ class AccordionGroup {
 		});
 	}
 
+	/*
+		Toggle hide or show for accordion content
+	*/
 	#toogle(element) {
 		const btnElement = element;
 		const btnContentTargetDataAttr = btnElement.getAttribute(`${this.#btnTargetDataAttr}`);

@@ -9,9 +9,9 @@
 		<title>Modal</title>
 	</head>
 
-	<body>
-		<button type="button" data-han-modal-target="modalOne" data-han-element-name="modal">Show the dialog 1</button>
-		<button type="button" data-han-modal-target="modalTwo" data-han-element-name="modal">Show the dialog 2</button>
+	<body style="height: 1000px">
+		<button type="button" data-han-modal-target="modalOne" data-han-element-name="modal__trigger">Show the dialog 1</button>
+		<button type="button" data-han-modal-target="modalTwo" data-han-element-name="modal__trigger">Show the dialog 2</button>
 
 		<dialog data-han-modal="modalOne" class="han-modal">
 			<div class="han-modal__body">
@@ -44,7 +44,9 @@
 
 			<br />
 
-			<button type="button" data-han-modal-btn-close="modalOne" class="han-modal__close-btn">Close</button>
+			<button type="button" data-han-modal-btn-close="modalOne" data-han-element-name="modal__close" class="han-modal__close-btn">
+				Close
+			</button>
 		</dialog>
 
 		<dialog data-han-modal="modalTwo" class="han-modal">
@@ -78,10 +80,16 @@
 
 			<br />
 
-			<button type="button" data-han-modal-btn-close="modalTwo" class="han-modal__close-btn">Close</button>
+			<button type="button" data-han-modal-btn-close="modalTwo" data-han-element-name="modal__close" class="han-modal__close-btn">
+				Close
+			</button>
 		</dialog>
 
 		<script src="../../__dev_helpers__/themeMode.js"></script>
-		<script type="module" src="./script.js"></script>
+		<script type="module">
+			import Modal from "./script.js";
+
+			new Modal();
+		</script>
 	</body>
 </html>

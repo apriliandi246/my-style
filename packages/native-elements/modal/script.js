@@ -1,7 +1,6 @@
 import EventDelegation from "../../js/utils/eventDelegation.js";
 
 class Modal {
-	#bodyElement;
 	#rootElement;
 	#modalDataAttr;
 	#COMPONENT_NAME;
@@ -15,7 +14,6 @@ class Modal {
 		this.#modalTargetDataAttr = "data-han-modal-target";
 		this.#btnCloseDataAttr = "data-han-modal-btn-close";
 
-		this.#bodyElement = document.body;
 		this.#eventDelegationRootElement = new EventDelegation();
 		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
 
@@ -23,43 +21,39 @@ class Modal {
 	}
 
 	#main() {
-		this.#eventDelegation();
+		this.#open();
+		this.#close();
 	}
 
-	#eventDelegation() {
+	#open() {
 		this.#rootElement.addEventListener("click", (event) => {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
-			if (currentTargetElement !== null && currentTargetElementName === this.#COMPONENT_NAME) {
+			if (currentTargetElement !== null && currentTargetElementName === "modal__trigger") {
 				const modalTargetDataAttr = currentTargetElement.getAttribute(this.#modalTargetDataAttr);
 				const modalElement = document.querySelector(`[${this.#modalDataAttr}=${modalTargetDataAttr}]`);
 
-				this.#open(modalElement);
-				this.#btnCloseModal(modalElement);
+				modalElement.showModal();
+				this.#rootElement.style.setProperty("overflow", "hidden");
 			}
 		});
 	}
 
-	#open(modalElement) {
-		this.#bodyElement.style.setProperty("overlfow", "hidden");
-		modalElement.showModal();
-	}
+	#close() {
+		this.#rootElement.addEventListener("click", (event) => {
+			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
+			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
-	#close(modalElement) {
-		modalElement.close();
-		this.#bodyElement.style.removeProperty("overflow");
-	}
+			if (currentTargetElement !== null && currentTargetElementName === "modal__close") {
+				const modalSelector = `[${this.#modalDataAttr}=${currentTargetElement.getAttribute(this.#btnCloseDataAttr)}]`;
+				const modalElement = currentTargetElement.closest(modalSelector);
 
-	#btnCloseModal(modalElement) {
-		const modalElementDataAttr = modalElement.getAttribute(this.#modalDataAttr);
-		const modalBtnCloseSelector = `[${this.#btnCloseDataAttr}=${modalElementDataAttr}]`;
-		const modalBtnCloseElement = modalElement.querySelector(modalBtnCloseSelector);
-
-		modalBtnCloseElement.addEventListener("click", () => {
-			this.#close(modalElement);
+				modalElement.close();
+				this.#rootElement.style.removeProperty("overflow", "hidden");
+			}
 		});
 	}
 }
 
-new Modal();
+export default Modal;

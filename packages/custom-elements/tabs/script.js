@@ -21,13 +21,11 @@ class Tabs {
 	}
 
 	#main() {
-		this.#eventDelegation();
+		this.#clickOpenTab();
+		this.#keyboardOpenTab();
 	}
 
-	#eventDelegation() {
-		/*
-			Click event
-		*/
+	#clickOpenTab() {
 		this.#rootElement.addEventListener("click", (event) => {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
@@ -36,10 +34,9 @@ class Tabs {
 				this.#toggle(currentTargetElement);
 			}
 		});
+	}
 
-		/*
-			Keyboard event
-		*/
+	#keyboardOpenTab() {
 		this.#rootElement.addEventListener("keydown", (event) => {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
@@ -79,6 +76,9 @@ class Tabs {
 		});
 	}
 
+	/*
+		Toggle hide or show for tabpanels
+	*/
 	#toggle(element) {
 		const currentBtnElement = element;
 		const containerGroup = currentBtnElement.closest(`[${this.#containerGroupDataAttr}]`);

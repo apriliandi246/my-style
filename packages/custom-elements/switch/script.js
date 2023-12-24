@@ -9,8 +9,6 @@ class Switch {
 
 	constructor() {
 		/*
-			The state of the switch elements....
-
 			{
 				switch__one: "on",
 				switch__two: "on"
@@ -28,10 +26,11 @@ class Switch {
 	}
 
 	#main() {
-		this.#eventDelegation();
+		this.#toggleClick();
+		this.#toggleKeyboard();
 	}
 
-	#eventDelegation() {
+	#toggleClick() {
 		this.#rootElement.addEventListener("click", (event) => {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
@@ -40,10 +39,15 @@ class Switch {
 				this.#toggle(currentTargetElement);
 			}
 		});
+	}
 
+	#toggleKeyboard() {
 		this.#rootElement.addEventListener("keydown", (event) => {
 			const keyboardKey = event.key;
 
+			/*
+				Enter and Space key
+			*/
 			if (keyboardKey === "Enter" || keyboardKey === " ") {
 				const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 				const { currentTargetElement, currentTargetElementName } = elementTargetData;
@@ -55,6 +59,9 @@ class Switch {
 		});
 	}
 
+	/*
+		Toggle make the switch to be on or off
+	*/
 	#toggle(element) {
 		const switchElement = element;
 		const switchElementDataAttr = switchElement.getAttribute(this.#switchDataAttr);

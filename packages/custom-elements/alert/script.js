@@ -17,10 +17,10 @@ class Alert {
 	}
 
 	#main() {
-		this.#eventDelegation();
+		this.#close();
 	}
 
-	#eventDelegation() {
+	#close() {
 		this.#rootElement.addEventListener("click", (event) => {
 			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
@@ -28,13 +28,9 @@ class Alert {
 			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {
 				const alertElement = currentTargetElement.closest(`[${this.#containerDataAttr}]`);
 
-				this.#close(alertElement);
+				alertElement.remove();
 			}
 		});
-	}
-
-	#close(alertElement) {
-		alertElement.remove();
 	}
 }
 
