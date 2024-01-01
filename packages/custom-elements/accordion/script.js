@@ -7,7 +7,7 @@ class AccordionGroup {
 	#btnTargetDataAttr;
 	#contentDataAttribute;
 	#containerGroupDataAttr;
-	#eventDelegationRootElement;
+	#eventDelegation;
 
 	constructor() {
 		/*
@@ -23,8 +23,8 @@ class AccordionGroup {
 		this.#contentDataAttribute = "data-han-accordion-content";
 		this.#containerGroupDataAttr = "data-han-accordion-container";
 
-		this.#eventDelegationRootElement = new EventDelegation();
-		this.#rootElement = this.#eventDelegationRootElement.getRootElement();
+		this.#eventDelegation = new EventDelegation();
+		this.#rootElement = this.#eventDelegation.getRootElement();
 
 		this.#main();
 	}
@@ -35,7 +35,8 @@ class AccordionGroup {
 
 	#toggleClick() {
 		this.#rootElement.addEventListener("click", (event) => {
-			const elementTargetData = this.#eventDelegationRootElement.eventDelegationHTML(event.target);
+			// const elementTargetData = this.#eventDelegation.eventListenerDelegation(event.target);
+			const elementTargetData = this.#eventDelegation.eventDelegationHTML(event.target);
 			const { currentTargetElement, currentTargetElementName } = elementTargetData;
 
 			if (currentTargetElementName === this.#COMPONENT_NAME && currentTargetElement !== null) {

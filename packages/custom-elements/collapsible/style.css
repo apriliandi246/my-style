@@ -18,7 +18,7 @@
 	background-repeat: no-repeat;
 	background-position: right 0.6rem center;
 	background-image: var(--han-collapsible-icon);
-	font-family: var(--han-font-family-sans-serif);
+	font-family: var(--han-font-family);
 	background-color: var(--han-theme-btn-bg-color);
 	border-color: var(--han-theme-btn-border-color);
 }

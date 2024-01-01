@@ -3,7 +3,7 @@
 	font-size: 1.6rem;
 	border-collapse: collapse;
 	color: var(--han-table-text-color);
-	font-family: var(--han-font-family-sans-serif);
+	font-family: var(--han-font-family);
 }
 
 .han-table td,
