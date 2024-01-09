@@ -4,7 +4,7 @@
 
 ### 👨‍💻 About
 
-Collections style of native and custom elements just using vanilla HTML, CSS and Javascript....
+Collections style of native and custom elements just using vanilla HTML, CSS and Javascript for my personal projects....
 
 <h3 align="center">. . .</h3>
 

@@ -1,7 +1,7 @@
 {
 	"name": "my-style",
 	"version": "1.0.0",
-	"description": "<h1 align=\"center\">💅 my-style</h1>",
+	"description": "Collections styles elements/components using vanilla HTML, CSS and Javascript....",
 	"main": "index.js",
 	"scripts": {
 		"pretty": "prettier . --write",
