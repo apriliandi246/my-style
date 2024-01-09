@@ -1,0 +1,17 @@
+.han-progress {
+	--han-progress-bar-height: 1.7rem;
+
+	width: 100%;
+	overflow: hidden;
+	border-radius: 2.5rem;
+	height: var(--han-progress-bar-height);
+	background-color: var(--han-input-range-bar-bg-color);
+}
+
+.han-progress__value {
+	--han-progress-current-value: 20%;
+
+	height: 100%;
+	width: var(--han-progress-current-value);
+	background-color: var(--han-progressbar-value-bg-color);
+}

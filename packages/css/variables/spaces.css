@@ -1,0 +1,26 @@
+:root {
+	--han-space-0x: 0;
+	--han-space-4x: 0.4rem;
+	--han-space-8x: 0.8rem;
+	--han-space-12x: 1.2rem;
+	--han-space-16x: 1.6rem;
+	--han-space-20x: 2rem;
+	--han-space-24x: 2.4rem;
+	--han-space-28x: 2.8rem;
+	--han-space-32x: 3.2rem;
+	--han-space-40x: 4rem;
+	--han-space-48x: 4.8rem;
+	--han-space-56x: 5.6rem;
+	--han-space-64x: 6.4rem;
+	--han-space-72x: 7.2rem;
+	--han-space-80x: 8rem;
+	--han-space-88x: 8.8rem;
+	--han-space-96x: 9.6rem;
+	--han-space-104x: 10.4rem;
+	--han-space-112x: 11.2rem;
+	--han-space-120x: 12rem;
+	--han-space-128x: 12.8rem;
+	--han-space-136x: 13.6rem;
+	--han-space-144x: 14.4rem;
+	--han-space-152x: 15.2rem;
+}

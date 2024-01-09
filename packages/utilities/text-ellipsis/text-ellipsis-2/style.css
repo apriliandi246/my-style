@@ -1,0 +1,12 @@
+.container {
+	width: 60rem;
+	margin-top: 7rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

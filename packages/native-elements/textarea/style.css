@@ -1,0 +1,15 @@
+.han-textarea {
+	width: 100%;
+	font-size: 1.6rem;
+	border-radius: 0.4rem;
+	padding: 0.8rem 1.4rem;
+	color: var(--han-regular-input-text-color);
+	font-family: var(--han-font-family);
+	background-color: var(--han-regular-input-bg-color);
+	border: 0.1rem solid var(--han-regular-input-border-color);
+}
+
+.han-textarea:disabled {
+	opacity: 0.66;
+	pointer-events: none;
+}

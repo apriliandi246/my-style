@@ -1,0 +1,26 @@
+.han-table {
+	width: 100%;
+	font-size: 1.6rem;
+	border-collapse: collapse;
+	color: var(--han-table-text-color);
+	font-family: var(--han-font-family);
+}
+
+.han-table td,
+.han-table th {
+	padding: 1.3rem;
+}
+
+.han-table th {
+	text-align: center;
+	padding-block: 1.3rem;
+	color: var(--han-table-th-text-color);
+	background-color: var(--han-table-th-bg-color);
+	border: 0.1rem solid var(--han-table-border-color);
+}
+
+.han-table td {
+	color: var(--han-table-td-text-color);
+	background-color: var(--han-table-td-bg-color);
+	border: 0.1rem solid var(--han-table-border-color);
+}

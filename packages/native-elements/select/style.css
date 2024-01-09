@@ -1,0 +1,19 @@
+.han-select-input {
+	width: 100%;
+	appearance: none;
+	font-size: 1.6rem;
+	border-radius: 0.4rem;
+	background-size: 1.6rem;
+	background-repeat: no-repeat;
+	padding: 0.8rem 4.6rem 0.8rem 1.4rem;
+	background-position: right 1.6rem center;
+	color: var(--han-select-input-text-color);
+	background-image: var(--han-select-input-icon);
+	background-color: var(--han-select-input-bg-color);
+	border: 0.1rem solid var(--han-select-input-border-color);
+}
+
+.han-select-input:disabled {
+	opacity: 0.66;
+	pointer-events: none;
+}

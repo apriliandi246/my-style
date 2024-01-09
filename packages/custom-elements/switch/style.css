@@ -1,0 +1,39 @@
+[role="switch"] {
+	margin: 2px;
+	user-select: none;
+	border-radius: 5px;
+	padding: 4px 4px 8px 8px;
+	border: 0 solid #005a9c;
+}
+
+[role="switch"] .switch {
+	top: 6px;
+	width: 40px;
+	height: 20px;
+	position: relative;
+	border-radius: 12px;
+	display: inline-block;
+	border: 2px solid black;
+}
+
+[role="switch"] .switch span {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	display: inline-block;
+	border: 2px solid black;
+	border-radius: 8px;
+	height: 12px;
+	width: 12px;
+	background: black;
+}
+
+[role="switch"][aria-checked="true"] .switch span {
+	left: 21px;
+	background: green;
+	border-color: green;
+}
+
+[role="switch"]:focus span.switch {
+	background-color: white;
+}

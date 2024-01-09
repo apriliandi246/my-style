@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-han-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../css/base/index.css" />
+		<link rel="stylesheet" href="../../css/variables/index.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Alert</title>
+	</head>
+
+	<body>
+		<div role="alert" class="han-alert">
+			<p class="han-alert__message">Example alert message</p>
+		</div>
+
+		<br /><br />
+
+		<div role="alert" class="han-alert" data-han-alert-container="one">
+			<p class="han-alert__message">Alert One</p>
+			<button type="button" aria-label="close" data-han-element-name="alert" class="han-alert__close-btn"></button>
+		</div>
+
+		<br /><br />
+
+		<div role="alert" class="han-alert" data-han-alert-container="two">
+			<p class="han-alert__message">Alert Two</p>
+			<button type="button" aria-label="close" data-han-element-name="alert" class="han-alert__close-btn"></button>
+		</div>
+
+		<script src="../../__dev_helpers__/themeMode.js"></script>
+
+		<script type="module">
+			import Alert from "./script.js";
+
+			new Alert();
+		</script>
+	</body>
+</html>

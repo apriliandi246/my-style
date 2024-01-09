@@ -1,0 +1,9 @@
+.han-anchor-link {
+	font-size: 1.6rem;
+	color: var(--han-theme-anchor-text-color);
+	font-family: var(--han-font-family);
+}
+
+.han-anchor-link:hover {
+	color: var(--han-theme-anchor-text-color-hover);
+}

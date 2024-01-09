@@ -1,0 +1,34 @@
+.han-range-input {
+	--han-input-range-bar-height: 0.8rem;
+	--han-input-range-thumb-width: 2.3rem;
+	--han-input-range-thumb-height: 2.3rem;
+
+	width: 100%;
+	cursor: pointer;
+	appearance: none;
+	border-radius: 0.4rem;
+	height: var(--han-input-range-bar-height);
+	background-color: var(--han-input-range-bar-bg-color);
+}
+
+.han-range-input::-webkit-slider-thumb {
+	appearance: none;
+	border-radius: 100%;
+	width: var(--han-input-range-thumb-width);
+	height: var(--han-input-range-thumb-height);
+	background-color: var(--han-input-range-thumb-bg-color);
+}
+
+.han-range-input::-moz-range-thumb {
+	border: none;
+	appearance: none;
+	border-radius: 100%;
+	width: var(--han-input-range-thumb-width);
+	height: var(--han-input-range-thumb-height);
+	background-color: var(--han-input-range-thumb-bg-color);
+}
+
+.han-range-input:disabled {
+	opacity: 0.66;
+	pointer-events: none;
+}

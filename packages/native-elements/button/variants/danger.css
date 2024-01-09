@@ -1,0 +1,21 @@
+/* Variant Danger color */
+.han-btn-danger-color {
+	--han-color-variant-btn-text-color: #fff;
+	--han-color-variant-btn-bg-color: #ab091e;
+	--han-color-variant-btn-bg-color-hover: #910618;
+	--han-color-variant-btn-bg-color-active: #7e0515;
+
+	color: var(--han-color-variant-btn-text-color);
+	border-color: var(--han-color-variant-btn-bg-color);
+	background-color: var(--han-color-variant-btn-bg-color);
+}
+
+.han-btn-danger-color:hover {
+	border-color: var(--han-color-variant-btn-bg-color-hover);
+	background-color: var(--han-color-variant-btn-bg-color-hover);
+}
+
+.han-btn-danger-color:active {
+	border-color: var(--han-color-variant-btn-bg-color-active);
+	background-color: var(--han-color-variant-btn-bg-color-active);
+}

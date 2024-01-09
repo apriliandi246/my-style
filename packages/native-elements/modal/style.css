@@ -1,0 +1,28 @@
+.han-modal {
+	margin: auto;
+	padding: 1.4rem;
+	max-width: 70rem;
+	border-radius: 0.4rem;
+	animation: modal 200ms;
+	background-color: var(--han-modal-bg-color);
+	border: 0.1rem solid var(--han-modal-border-color);
+}
+
+.han-modal::backdrop {
+	animation: modal 200ms;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.han-modal__body {
+	color: var(--han-modal-text-color);
+}
+
+@keyframes modal {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

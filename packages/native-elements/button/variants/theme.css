@@ -1,0 +1,14 @@
+/* Theme color */
+.han-btn-theme-color {
+	color: var(--han-theme-btn-text-color);
+	background-color: var(--han-theme-btn-bg-color);
+	border-color: var(--han-theme-btn-border-color);
+}
+
+.han-btn-theme-color:hover {
+	background-color: var(--han-theme-btn-bg-color-hover);
+}
+
+.han-btn-theme-color:active {
+	background-color: var(--han-theme-btn-bg-color-active);
+}
